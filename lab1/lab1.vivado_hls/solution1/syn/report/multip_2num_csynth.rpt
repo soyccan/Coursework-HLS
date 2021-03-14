@@ -1,0 +1,139 @@
+
+
+================================================================
+== Vivado HLS Report for 'multip_2num'
+================================================================
+* Date:           Wed Mar  3 12:05:18 2021
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        hls_lab1
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 3.950 ns |   0.63 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        6|        6| 30.000 ns | 30.000 ns |    6|    6|   none  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       -|      -|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        0|      3|     359|    233|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|     41|    -|
+|Register         |        -|      -|     103|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      3|     462|    274|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      1|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------------+----------------------------+---------+-------+-----+-----+-----+
+    |           Instance           |           Module           | BRAM_18K| DSP48E|  FF | LUT | URAM|
+    +------------------------------+----------------------------+---------+-------+-----+-----+-----+
+    |multip_2num_AXILiteS_s_axi_U  |multip_2num_AXILiteS_s_axi  |        0|      0|  144|  232|    0|
+    |multip_2num_mul_3bkb_U1       |multip_2num_mul_3bkb        |        0|      3|  215|    1|    0|
+    +------------------------------+----------------------------+---------+-------+-----+-----+-----+
+    |Total                         |                            |        0|      3|  359|  233|    0|
+    +------------------------------+----------------------------+---------+-------+-----+-----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +-----------+----+-----------+-----+-----------+
+    |    Name   | LUT| Input Size| Bits| Total Bits|
+    +-----------+----+-----------+-----+-----------+
+    |ap_NS_fsm  |  41|          8|    1|          8|
+    +-----------+----+-----------+-----+-----------+
+    |Total      |  41|          8|    1|          8|
+    +-----------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------+----+----+-----+-----------+
+    |        Name        | FF | LUT| Bits| Const Bits|
+    +--------------------+----+----+-----+-----------+
+    |ap_CS_fsm           |   7|   0|    7|          0|
+    |mul_ln18_reg_59     |  32|   0|   32|          0|
+    |n32In1_read_reg_54  |  32|   0|   32|          0|
+    |n32In2_read_reg_49  |  32|   0|   32|          0|
+    +--------------------+----+----+-----+-----------+
+    |Total               | 103|   0|  103|          0|
+    +--------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+--------------+--------------+--------------+
+|        RTL Ports       | Dir | Bits|   Protocol   | Source Object|    C Type    |
++------------------------+-----+-----+--------------+--------------+--------------+
+|s_axi_AXILiteS_AWVALID  |  in |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_AWREADY  | out |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_AWADDR   |  in |    6|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_WVALID   |  in |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_WREADY   | out |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_WDATA    |  in |   32|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_WSTRB    |  in |    4|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_ARVALID  |  in |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_ARREADY  | out |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_ARADDR   |  in |    6|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_RVALID   | out |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_RREADY   |  in |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_RDATA    | out |   32|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_RRESP    | out |    2|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_BVALID   | out |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_BREADY   |  in |    1|     s_axi    |   AXILiteS   |    pointer   |
+|s_axi_AXILiteS_BRESP    | out |    2|     s_axi    |   AXILiteS   |    pointer   |
+|ap_clk                  |  in |    1| ap_ctrl_none |  multip_2num | return value |
+|ap_rst_n                |  in |    1| ap_ctrl_none |  multip_2num | return value |
++------------------------+-----+-----+--------------+--------------+--------------+
+

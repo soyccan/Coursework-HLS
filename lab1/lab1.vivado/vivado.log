@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Mar  6 19:57:47 2021
+# Process ID: 11312
+# Current directory: D:/Vivado/lab1_design
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22288 D:\Vivado\lab1_design\lab1_design.xpr
+# Log file: D:/Vivado/lab1_design/vivado.log
+# Journal file: D:/Vivado/lab1_design\vivado.jou
+#-----------------------------------------------------------
+start_gui
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Mar  6 19:58:12 2021...

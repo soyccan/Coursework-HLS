@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="Multiplication.cpp" path="D:\Vivado\lab1_hls\Multiplication.cpp"/>
+    <originFiles name="Multiplication.h" path="D:\Vivado\lab1_hls\Multiplication.h"/>
+  </source>
+  <testbench>
+    <originFiles name="MultipTester.cpp" path="D:\Vivado\lab1_hls\MultipTester.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

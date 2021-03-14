@@ -1,0 +1,6 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../lab1_design.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../../lab1_design.srcs/sources_1/bd/design_1/ipshared/2d50/hdl" --include "C:/Xilinx/Vivado/2019.2/data/xilinx_vip/include" \
+"design_1_wrapper_func_impl.v" \
+
+# Do not sort compile order
+nosort

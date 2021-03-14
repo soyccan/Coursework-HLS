@@ -1,0 +1,507 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Mar  3 12:28:54 2021
+# Process ID: 36968
+# Current directory: D:/Vivado/lab1_design/lab1_design.runs/design_1_multip_2num_0_0_synth_1
+# Command line: vivado.exe -log design_1_multip_2num_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_multip_2num_0_0.tcl
+# Log file: D:/Vivado/lab1_design/lab1_design.runs/design_1_multip_2num_0_0_synth_1/design_1_multip_2num_0_0.vds
+# Journal file: D:/Vivado/lab1_design/lab1_design.runs/design_1_multip_2num_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_multip_2num_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Vivado/lab1_hls'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+Command: synth_design -top design_1_multip_2num_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 22560 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 846.988 ; gain = 234.902
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_multip_2num_0_0' [d:/Vivado/lab1_design/lab1_design.srcs/sources_1/bd/design_1/ip/design_1_multip_2num_0_0/synth/design_1_multip_2num_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'multip_2num' [d:/Vivado/lab1_design/lab1_design.srcs/sources_1/bd/design_1/ipshared/c4f2/hdl/verilog/multip_2num.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 7'b0000001 
+	Parameter ap_ST_fsm_state2 bound to: 7'b0000010 
+	Parameter ap_ST_fsm_state3 bound to: 7'b0000100 
+	Parameter ap_ST_fsm_state4 bound to: 7'b0001000 
+	Parameter ap_ST_fsm_state5 bound to: 7'b0010000 
+	Parameter ap_ST_fsm_state6 bound to: 7'b0100000 
+	Parameter ap_ST_fsm_state7 bound to: 7'b1000000 
+	Parameter C_S_AXI_AXILITES_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_AXILITES_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_AXILITES_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_WSTRB_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [d:/Vivado/lab1_design/lab1_design.srcs/sources_1/bd/design_1/ipshared/c4f2/hdl/verilog/multip_2num.v:73]
+INFO: [Synth 8-6157] synthesizing module 'multip_2num_AXILiteS_s_axi' [d:/Vivado/lab1_design/lab1_design.srcs/sources_1/bd/design_1/ipshared/c4f2/hdl/verilog/multip_2num_AXILiteS_s_axi.v:6]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_N32IN1_DATA_0 bound to: 6'b010000 
+	Parameter ADDR_N32IN1_CTRL bound to: 6'b010100 
+	Parameter ADDR_N32IN2_DATA_0 bound to: 6'b011000 
+	Parameter ADDR_N32IN2_CTRL bound to: 6'b011100 
+	Parameter ADDR_PN32RESOUT_DATA_0 bound to: 6'b100000 
+	Parameter ADDR_PN32RESOUT_CTRL bound to: 6'b100100 
+	Parameter WRIDLE bound to: 2'b00 
+	Parameter WRDATA bound to: 2'b01 
+	Parameter WRRESP bound to: 2'b10 
+	Parameter WRRESET bound to: 2'b11 
+	Parameter RDIDLE bound to: 2'b00 
+	Parameter RDDATA bound to: 2'b01 
+	Parameter RDRESET bound to: 2'b10 
+	Parameter ADDR_BITS bound to: 6 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [d:/Vivado/lab1_design/lab1_design.srcs/sources_1/bd/design_1/ipshared/c4f2/hdl/verilog/multip_2num_AXILiteS_s_axi.v:178]
+INFO: [Synth 8-6155] done synthesizing module 'multip_2num_AXILiteS_s_axi' (1#1) [d:/Vivado/lab1_design/lab1_design.srcs/sources_1/bd/design_1/ipshared/c4f2/hdl/verilog/multip_2num_AXILiteS_s_axi.v:6]
+INFO: [Synth 8-6157] synthesizing module 'multip_2num_mul_3bkb' [d:/Vivado/lab1_design/lab1_design.srcs/sources_1/bd/design_1/ipshared/c4f2/hdl/verilog/multip_2num_mul_3bkb.v:35]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'multip_2num_mul_3bkb_MulnS_0' [d:/Vivado/lab1_design/lab1_design.srcs/sources_1/bd/design_1/ipshared/c4f2/hdl/verilog/multip_2num_mul_3bkb.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'multip_2num_mul_3bkb_MulnS_0' (2#1) [d:/Vivado/lab1_design/lab1_design.srcs/sources_1/bd/design_1/ipshared/c4f2/hdl/verilog/multip_2num_mul_3bkb.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'multip_2num_mul_3bkb' (3#1) [d:/Vivado/lab1_design/lab1_design.srcs/sources_1/bd/design_1/ipshared/c4f2/hdl/verilog/multip_2num_mul_3bkb.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'multip_2num' (4#1) [d:/Vivado/lab1_design/lab1_design.srcs/sources_1/bd/design_1/ipshared/c4f2/hdl/verilog/multip_2num.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_multip_2num_0_0' (5#1) [d:/Vivado/lab1_design/lab1_design.srcs/sources_1/bd/design_1/ip/design_1_multip_2num_0_0/synth/design_1_multip_2num_0_0.v:58]
+WARNING: [Synth 8-3331] design multip_2num_mul_3bkb has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 923.082 ; gain = 310.996
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 923.082 ; gain = 310.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 923.082 ; gain = 310.996
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 923.082 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Vivado/lab1_design/lab1_design.srcs/sources_1/bd/design_1/ip/design_1_multip_2num_0_0/constraints/multip_2num_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [d:/Vivado/lab1_design/lab1_design.srcs/sources_1/bd/design_1/ip/design_1_multip_2num_0_0/constraints/multip_2num_ooc.xdc] for cell 'inst'
+Parsing XDC File [D:/Vivado/lab1_design/lab1_design.runs/design_1_multip_2num_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Vivado/lab1_design/lab1_design.runs/design_1_multip_2num_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1017.461 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1029.133 ; gain = 11.672
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1029.133 ; gain = 417.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1029.133 ; gain = 417.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  D:/Vivado/lab1_design/lab1_design.runs/design_1_multip_2num_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1029.133 ; gain = 417.047
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'multip_2num_AXILiteS_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'multip_2num_AXILiteS_s_axi'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'multip_2num_AXILiteS_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'multip_2num_AXILiteS_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1029.133 ; gain = 417.047
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 12    
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   5 Input     32 Bit        Muxes := 1     
+	   8 Input      7 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module multip_2num_AXILiteS_s_axi 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   5 Input     32 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module multip_2num_mul_3bkb_MulnS_0 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
++---Multipliers : 
+	                32x32  Multipliers := 1     
+Module multip_2num 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 3     
+	                7 Bit    Registers := 1     
++---Muxes : 
+	   8 Input      7 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [d:/Vivado/lab1_design/lab1_design.srcs/sources_1/bd/design_1/ipshared/c4f2/hdl/verilog/multip_2num_mul_3bkb.v:23]
+WARNING: [Synth 8-6014] Unused sequential element multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff0_reg was removed.  [d:/Vivado/lab1_design/lab1_design.srcs/sources_1/bd/design_1/ipshared/c4f2/hdl/verilog/multip_2num_mul_3bkb.v:28]
+WARNING: [Synth 8-6014] Unused sequential element multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff0_reg was removed.  [d:/Vivado/lab1_design/lab1_design.srcs/sources_1/bd/design_1/ipshared/c4f2/hdl/verilog/multip_2num_mul_3bkb.v:28]
+WARNING: [Synth 8-6014] Unused sequential element multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg was removed.  [d:/Vivado/lab1_design/lab1_design.srcs/sources_1/bd/design_1/ipshared/c4f2/hdl/verilog/multip_2num_mul_3bkb.v:29]
+WARNING: [Synth 8-6014] Unused sequential element multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg was removed.  [d:/Vivado/lab1_design/lab1_design.srcs/sources_1/bd/design_1/ipshared/c4f2/hdl/verilog/multip_2num_mul_3bkb.v:22]
+DSP Report: Generating DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff0_reg, operation Mode is: (A''*B'')'.
+DSP Report: register multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff0_reg is absorbed into DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff0_reg.
+DSP Report: register multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff0_reg is absorbed into DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff0_reg.
+DSP Report: register multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff0_reg is absorbed into DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff0_reg.
+DSP Report: register multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff0_reg is absorbed into DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff0_reg.
+DSP Report: register multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff0_reg is absorbed into DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff0_reg.
+DSP Report: operator multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/tmp_product is absorbed into DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff0_reg.
+DSP Report: operator multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/tmp_product is absorbed into DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff0_reg.
+DSP Report: Generating DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg, operation Mode is: (PCIN>>17)+(A''*B'')'.
+DSP Report: register n32In1_read_reg_54_reg is absorbed into DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg.
+DSP Report: register multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/b_reg0_reg is absorbed into DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg.
+DSP Report: register multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg is absorbed into DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg.
+DSP Report: register multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg is absorbed into DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg.
+DSP Report: register multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg is absorbed into DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg.
+DSP Report: register multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff0_reg is absorbed into DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg.
+DSP Report: operator multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/tmp_product is absorbed into DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg.
+DSP Report: operator multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/tmp_product is absorbed into DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg.
+DSP Report: Generating DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg, operation Mode is: (PCIN+(A''*B'')')'.
+DSP Report: register multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/a_reg0_reg is absorbed into DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg.
+DSP Report: register multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff0_reg is absorbed into DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg.
+DSP Report: register multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg is absorbed into DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg.
+DSP Report: register multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff0_reg is absorbed into DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg.
+DSP Report: register multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg is absorbed into DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg.
+DSP Report: register multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg is absorbed into DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg.
+DSP Report: operator multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/tmp_product is absorbed into DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg.
+DSP Report: operator multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/tmp_product is absorbed into DSP multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_AXILiteS_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_AXILiteS_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[47]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[46]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[45]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[44]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[43]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[42]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[41]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[40]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[39]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[38]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[37]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[36]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[35]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[34]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[33]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[32]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[31]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[30]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[29]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[28]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[27]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[26]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[25]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[24]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[23]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[22]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[21]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[20]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[19]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[18]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff1_reg[17]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[47]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[46]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[45]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[44]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[43]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[42]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[41]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[40]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[39]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[38]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[37]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[36]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[35]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[34]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[33]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[32]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[31]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[30]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[29]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[28]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[27]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[26]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[25]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[24]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[23]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[22]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[21]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[20]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[19]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[18]) is unused and will be removed from module multip_2num.
+WARNING: [Synth 8-3332] Sequential element (multip_2num_mul_3bkb_U1/multip_2num_mul_3bkb_MulnS_0_U/buff2_reg[17]) is unused and will be removed from module multip_2num.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1029.133 ; gain = 417.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping	Report (see note below)
++------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping           | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|multip_2num | (A''*B'')'            | 18     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 0    | 
+|multip_2num | (PCIN>>17)+(A''*B'')' | 18     | 15     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|multip_2num | (PCIN+(A''*B'')')'    | 18     | 15     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
++------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1047.125 ; gain = 435.039
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1048.086 ; gain = 436.000
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 1062.227 ; gain = 450.141
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1078.027 ; gain = 465.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1078.027 ; gain = 465.941
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1078.027 ; gain = 465.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1078.027 ; gain = 465.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1078.027 ; gain = 465.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1078.027 ; gain = 465.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |DSP48E1_1 |     2|
+|2     |DSP48E1_2 |     1|
+|3     |LUT1      |     1|
+|4     |LUT2      |     2|
+|5     |LUT3      |    66|
+|6     |LUT4      |     5|
+|7     |LUT5      |     2|
+|8     |LUT6      |    67|
+|9     |FDRE      |   244|
+|10    |FDSE      |     1|
++------+----------+------+
+
+Report Instance Areas: 
++------+-------------------------------------+-----------------------------+------+
+|      |Instance                             |Module                       |Cells |
++------+-------------------------------------+-----------------------------+------+
+|1     |top                                  |                             |   391|
+|2     |  inst                               |multip_2num                  |   391|
+|3     |    multip_2num_AXILiteS_s_axi_U     |multip_2num_AXILiteS_s_axi   |   282|
+|4     |    multip_2num_mul_3bkb_U1          |multip_2num_mul_3bkb         |    37|
+|5     |      multip_2num_mul_3bkb_MulnS_0_U |multip_2num_mul_3bkb_MulnS_0 |    37|
++------+-------------------------------------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1078.027 ; gain = 465.941
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 68 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 1078.027 ; gain = 359.891
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1078.027 ; gain = 465.941
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1078.027 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1078.027 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+32 Infos, 69 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:42 . Memory (MB): peak = 1078.027 ; gain = 767.855
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1078.027 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Vivado/lab1_design/lab1_design.runs/design_1_multip_2num_0_0_synth_1/design_1_multip_2num_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_multip_2num_0_0, cache-ID = efbac196677529d9
+INFO: [Coretcl 2-1174] Renamed 4 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1078.027 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Vivado/lab1_design/lab1_design.runs/design_1_multip_2num_0_0_synth_1/design_1_multip_2num_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_multip_2num_0_0_utilization_synth.rpt -pb design_1_multip_2num_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Mar  3 12:29:41 2021...

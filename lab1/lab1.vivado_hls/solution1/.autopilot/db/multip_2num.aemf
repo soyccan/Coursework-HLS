@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1614744318891">
+  <ports id="1" name="n32In1" type="PortType" originalName="n32In1" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="n32In2" type="PortType" originalName="n32In2" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="pn32ResOut" type="PortType" originalName="pn32ResOut" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="20" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="22" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="23" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="24" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="27" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@ports.2"/>
+  <edges id="28" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.3"/>
+  <blocks id="17" name="multip_2num" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="n32In2_read" lineNumber="4" originalName="n32In2" fileName="hls_lab1/Multiplication.cpp" fileDirectory=".." contextFuncName="multip_2num" bitwidth="32" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hls_lab1/Multiplication.cpp" linenumber="4" fileDirectory="D:\Vivado" functionName="multip_2num"/>
+      <dataInputObjs>n32In2</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="n32In1_read" lineNumber="4" originalName="n32In1" fileName="hls_lab1/Multiplication.cpp" fileDirectory=".." contextFuncName="multip_2num" bitwidth="32" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hls_lab1/Multiplication.cpp" linenumber="4" fileDirectory="D:\Vivado" functionName="multip_2num"/>
+      <dataInputObjs>n32In1</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="mul_ln18" lineNumber="18" fileName="hls_lab1/Multiplication.cpp" fileDirectory=".." rtlName="multip_2num_mul_3bkb_U1" contextFuncName="multip_2num" bitwidth="32" opcode="mul" nodeLabel="1.0" nodeLatency="4" m_display="0" m_delay="3.95" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hls_lab1/Multiplication.cpp" linenumber="18" fileDirectory="D:\Vivado" functionName="multip_2num"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="pn32ResOut_write_ln18" lineNumber="18" fileName="hls_lab1/Multiplication.cpp" fileDirectory=".." contextFuncName="multip_2num" opcode="write" nodeLabel="6.0" m_display="0" m_delay="1.0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hls_lab1/Multiplication.cpp" linenumber="18" fileDirectory="D:\Vivado" functionName="multip_2num"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataOutputObjs>pn32ResOut</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="_ln20" lineNumber="20" fileName="hls_lab1/Multiplication.cpp" fileDirectory=".." contextFuncName="multip_2num" opcode="ret" nodeLabel="6.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="hls_lab1/Multiplication.cpp" linenumber="20" fileDirectory="D:\Vivado" functionName="multip_2num"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="hls_lab1/Multiplication.cpp">
+      <validLinenumbers>4</validLinenumbers>
+      <validLinenumbers>18</validLinenumbers>
+      <validLinenumbers>20</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <regnodes realName="mul_ln18_reg_59">
+    <nodeIds>14</nodeIds>
+  </regnodes>
+  <regnodes realName="n32In2_read_reg_49">
+    <nodeIds>8</nodeIds>
+  </regnodes>
+  <regnodes realName="n32In1_read_reg_54">
+    <nodeIds>9</nodeIds>
+  </regnodes>
+  <moduleNodes realName="grp_fu_45">
+    <nodeIds>14</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="n32In1_read_read_fu_32">
+    <nodeIds>9</nodeIds>
+  </ioNodes>
+  <ioNodes realName="n32In2_read_read_fu_26">
+    <nodeIds>8</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln18_write_fu_38">
+    <nodeIds>15</nodeIds>
+  </ioNodes>
+  <ioPorts name="n32In1">
+    <contents name="read">
+      <nodeIds>9</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="n32In2">
+    <contents name="read">
+      <nodeIds>8</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="pn32ResOut">
+    <contents name="write">
+      <nodeIds>15</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="14" stage="5" latency="5"/>
+    </states>
+    <states id="3">
+      <operations id="14" stage="4" latency="5"/>
+    </states>
+    <states id="4">
+      <operations id="14" stage="3" latency="5"/>
+    </states>
+    <states id="5">
+      <operations id="14" stage="2" latency="5"/>
+    </states>
+    <states id="6">
+      <operations id="14" stage="1" latency="5"/>
+    </states>
+    <states id="7">
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="multip_2num" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="6" mMaxLatency="6">
+      <basicBlocks>17</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>
