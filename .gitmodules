@@ -1,0 +1,6 @@
+[submodule "MSoC-HLS"]
+	path = MSoC-HLS
+	url = https://github.com/mediaic/MSoC-HLS
+[submodule "Vitis-Tutorials"]
+	path = Vitis-Tutorials
+	url = https://github.com/Xilinx/Vitis-Tutorials/
