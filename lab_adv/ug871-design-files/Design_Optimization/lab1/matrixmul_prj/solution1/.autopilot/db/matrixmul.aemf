@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1570863803294">
+  <ports id="1" name="a" type="PortType" originalName="a" coreName="RAM" bitwidth="8" iftype="IfTypeRegister" arraysize="9">
+    <dataOutputObjs>load</dataOutputObjs>
+  </ports>
+  <ports id="2" name="b" type="PortType" originalName="b" coreName="RAM" bitwidth="8" iftype="IfTypeRegister" arraysize="9">
+    <dataOutputObjs>load</dataOutputObjs>
+  </ports>
+  <ports id="3" name="res" type="PortType" originalName="res" coreName="RAM" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="9"/>
+  <edges id="73" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="76" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="77" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="78" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.1/@node_objs.0" is_back_edge="1"/>
+  <edges id="79" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="82" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="85" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="86" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="87" edge_type="CtrlEdge" source_obj="//@blocks.9" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="96" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.2/@node_objs.1"/>
+  <edges id="98" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3/@node_objs.0"/>
+  <edges id="99" source_obj="//@blocks.3/@node_objs.2" sink_obj="//@blocks.3/@node_objs.0" is_back_edge="1"/>
+  <edges id="100" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.3/@node_objs.0" is_back_edge="1"/>
+  <edges id="101" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.1"/>
+  <edges id="103" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.3/@node_objs.2"/>
+  <edges id="105" source_obj="//@blocks.3/@node_objs.1" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="106" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="107" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.3/@node_objs.3"/>
+  <edges id="109" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="116" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.4/@node_objs.1"/>
+  <edges id="119" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.5/@node_objs.0"/>
+  <edges id="120" source_obj="//@blocks.6/@node_objs.6" sink_obj="//@blocks.5/@node_objs.0" is_back_edge="1"/>
+  <edges id="121" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.5/@node_objs.0" is_back_edge="1"/>
+  <edges id="123" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.5/@node_objs.1"/>
+  <edges id="124" source_obj="//@blocks.5/@node_objs.4" sink_obj="//@blocks.5/@node_objs.1" is_back_edge="1"/>
+  <edges id="125" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.5/@node_objs.1" is_back_edge="1"/>
+  <edges id="126" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.5/@node_objs.2"/>
+  <edges id="128" source_obj="//@blocks.5/@node_objs.1" sink_obj="//@blocks.5/@node_objs.3"/>
+  <edges id="130" source_obj="//@blocks.5/@node_objs.1" sink_obj="//@blocks.5/@node_objs.4"/>
+  <edges id="132" source_obj="//@blocks.5/@node_objs.3" sink_obj="//@blocks.5/@node_objs.5"/>
+  <edges id="133" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.5/@node_objs.5"/>
+  <edges id="134" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.5/@node_objs.5"/>
+  <edges id="136" source_obj="//@blocks.2/@node_objs.0" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="148" source_obj="//@blocks.6/@node_objs.1" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="160" source_obj="//@blocks.6/@node_objs.5" sink_obj="//@blocks.6/@node_objs.6"/>
+  <edges id="161" source_obj="//@blocks.5/@node_objs.0" sink_obj="//@blocks.6/@node_objs.6"/>
+  <edges id="162" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.6/@node_objs.7"/>
+  <edges id="163" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.7/@node_objs.0"/>
+  <edges id="164" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.8/@node_objs.0"/>
+  <edges id="212" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="213" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.9"/>
+  <edges id="214" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@blocks.2"/>
+  <edges id="215" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@blocks.3"/>
+  <edges id="216" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.8"/>
+  <edges id="217" edge_type="CtrlEdge" source_obj="//@blocks.3" sink_obj="//@blocks.4"/>
+  <edges id="218" edge_type="CtrlEdge" source_obj="//@blocks.4" sink_obj="//@blocks.5"/>
+  <edges id="219" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.7"/>
+  <edges id="220" edge_type="CtrlEdge" source_obj="//@blocks.5" sink_obj="//@blocks.6"/>
+  <edges id="221" edge_type="CtrlEdge" source_obj="//@blocks.6" sink_obj="//@blocks.5" is_back_edge="1"/>
+  <edges id="222" edge_type="CtrlEdge" source_obj="//@blocks.7" sink_obj="//@blocks.3" is_back_edge="1"/>
+  <edges id="223" edge_type="CtrlEdge" source_obj="//@blocks.8" sink_obj="//@blocks.1" is_back_edge="1"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.2/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.4/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.3/@node_objs.0" sink_obj="//@blocks.6/@node_objs.2"/>
+  <edges id="-1" source_obj="//@blocks.4/@node_objs.0" sink_obj="//@blocks.5/@node_objs.2"/>
+  <edges id="-1" source_obj="//@blocks.5/@node_objs.1" sink_obj="//@blocks.6/@node_objs.0"/>
+  <edges id="-1" source_obj="//@blocks.5/@node_objs.1" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.6/@node_objs.0" sink_obj="//@blocks.6/@node_objs.3"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@blocks.6/@node_objs.3"/>
+  <edges id="-1" source_obj="//@blocks.5/@node_objs.1" sink_obj="//@blocks.6/@node_objs.1"/>
+  <edges id="-1" source_obj="//@blocks.6/@node_objs.2" sink_obj="//@blocks.6/@node_objs.4"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@blocks.6/@node_objs.4"/>
+  <edges id="-1" source_obj="//@blocks.6/@node_objs.3" sink_obj="//@blocks.6/@node_objs.5"/>
+  <edges id="-1" source_obj="//@blocks.6/@node_objs.4" sink_obj="//@blocks.6/@node_objs.5"/>
+  <blocks id="9" name="block_9" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_15</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="_ln54" lineNumber="54" fileName="matrixmul.cpp" fileDirectory=".." contextFuncName="matrixmul" opcode="br" m_display="0" m_delay="0.73" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="54" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <controlInputObjs>block_15</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="matrixmul.cpp">
+      <validLinenumbers>54</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="15" name="block_15" type="BlockType">
+    <controlInputObjs>block_9</controlInputObjs>
+    <controlInputObjs>Row_end</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_72</controlOutputObjs>
+    <controlOutputObjs>Row_begin</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="i_0" originalName="i" bitwidth="2" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <controlInputObjs>block_9</controlInputObjs>
+      <controlInputObjs>Row_end</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="icmp_ln54" lineNumber="54" fileName="matrixmul.cpp" fileDirectory=".." rtlName="icmp_ln54_fu_124_p2" contextFuncName="matrixmul" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.39" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="54" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="i" lineNumber="54" originalName="i" fileName="matrixmul.cpp" fileDirectory=".." rtlName="i_fu_130_p2" contextFuncName="matrixmul" bitwidth="2" opcode="add" nodeLabel="1.0" m_display="0" m_delay="0.62" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="54" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="_ln54" lineNumber="54" fileName="matrixmul.cpp" fileDirectory=".." contextFuncName="matrixmul" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="54" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>Row_begin</controlInputObjs>
+      <controlInputObjs>block_72</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="matrixmul.cpp">
+      <validLinenumbers>54</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="23" name="Row_begin" type="BlockType">
+    <controlInputObjs>block_15</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_29</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="sub_ln60" lineNumber="60" fileName="matrixmul.cpp" fileDirectory=".." rtlName="sub_ln60_fu_152_p2" contextFuncName="matrixmul" bitwidth="5" opcode="sub" nodeLabel="1.0" m_display="0" m_delay="0.8" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="60" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="_ln56" lineNumber="56" fileName="matrixmul.cpp" fileDirectory=".." contextFuncName="matrixmul" opcode="br" nodeLabel="1.0" m_display="0" m_delay="0.73" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="56" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <controlInputObjs>block_29</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="matrixmul.cpp">
+      <validLinenumbers>60</validLinenumbers>
+      <validLinenumbers>56</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="29" name="block_29" type="BlockType">
+    <controlInputObjs>Row_begin</controlInputObjs>
+    <controlInputObjs>Col_end</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>Row_end</controlOutputObjs>
+    <controlOutputObjs>Col_begin</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="j_0" originalName="j" bitwidth="2" opcode="phi" nodeLabel="2.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <controlInputObjs>Row_begin</controlInputObjs>
+      <controlInputObjs>Col_end</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="icmp_ln56" lineNumber="56" fileName="matrixmul.cpp" fileDirectory=".." rtlName="icmp_ln56_fu_158_p2" contextFuncName="matrixmul" bitwidth="1" opcode="icmp" nodeLabel="2.0" m_display="0" m_delay="0.39" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="56" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="j" lineNumber="56" originalName="j" fileName="matrixmul.cpp" fileDirectory=".." rtlName="j_fu_164_p2" contextFuncName="matrixmul" bitwidth="2" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.62" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="56" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="_ln56" lineNumber="56" fileName="matrixmul.cpp" fileDirectory=".." contextFuncName="matrixmul" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="56" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>Col_begin</controlInputObjs>
+      <controlInputObjs>Row_end</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="matrixmul.cpp">
+      <validLinenumbers>56</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="37" name="Col_begin" type="BlockType">
+    <controlInputObjs>block_29</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_45</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="add_ln57" lineNumber="57" fileName="matrixmul.cpp" fileDirectory=".." rtlName="add_ln57_fu_174_p2" contextFuncName="matrixmul" bitwidth="5" opcode="add" nodeLabel="2.0" m_display="0" m_delay="0.82" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="57" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="_ln59" lineNumber="59" fileName="matrixmul.cpp" fileDirectory=".." contextFuncName="matrixmul" opcode="br" nodeLabel="2.0" m_display="0" m_delay="0.73" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="59" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <controlInputObjs>block_45</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="matrixmul.cpp">
+      <validLinenumbers>57</validLinenumbers>
+      <validLinenumbers>59</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="45" name="block_45" type="BlockType">
+    <controlInputObjs>Col_begin</controlInputObjs>
+    <controlInputObjs>block_64</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>Col_end</controlOutputObjs>
+    <controlOutputObjs>block_64</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="res_load" lineNumber="60" fileName="matrixmul.cpp" fileDirectory=".." contextFuncName="matrixmul" bitwidth="16" opcode="phi" nodeLabel="3.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="60" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <controlInputObjs>Col_begin</controlInputObjs>
+      <controlInputObjs>block_64</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="k_0" originalName="k" bitwidth="2" opcode="phi" nodeLabel="3.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <controlInputObjs>Col_begin</controlInputObjs>
+      <controlInputObjs>block_64</controlInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="res_addr_write_ln60" lineNumber="60" fileName="matrixmul.cpp" fileDirectory=".." contextFuncName="matrixmul" opcode="store" nodeLabel="3.0" m_display="0" m_delay="0.73" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="60" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="icmp_ln59" lineNumber="59" fileName="matrixmul.cpp" fileDirectory=".." rtlName="icmp_ln59_fu_184_p2" contextFuncName="matrixmul" bitwidth="1" opcode="icmp" nodeLabel="3.0" m_display="0" m_delay="0.39" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="59" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>br</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="k" lineNumber="59" originalName="k" fileName="matrixmul.cpp" fileDirectory=".." rtlName="k_fu_190_p2" contextFuncName="matrixmul" bitwidth="2" opcode="add" nodeLabel="3.0" m_display="0" m_delay="0.62" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="59" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="_ln59" lineNumber="59" fileName="matrixmul.cpp" fileDirectory=".." contextFuncName="matrixmul" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="59" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <controlInputObjs>block_64</controlInputObjs>
+      <controlInputObjs>Col_end</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="matrixmul.cpp">
+      <validLinenumbers>60</validLinenumbers>
+      <validLinenumbers>59</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="64" name="block_64" type="BlockType">
+    <controlInputObjs>block_45</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_45</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="add_ln60_1" lineNumber="60" fileName="matrixmul.cpp" fileDirectory=".." rtlName="add_ln60_1_fu_200_p2" contextFuncName="matrixmul" bitwidth="5" opcode="add" nodeLabel="3.0" m_display="0" m_delay="0.82" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="60" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="sub_ln60_1" lineNumber="60" fileName="matrixmul.cpp" fileDirectory=".." rtlName="sub_ln60_1_fu_222_p2" contextFuncName="matrixmul" bitwidth="5" opcode="sub" nodeLabel="3.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="60" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="add_ln60_2" lineNumber="60" fileName="matrixmul.cpp" fileDirectory=".." rtlName="add_ln60_2_fu_228_p2" contextFuncName="matrixmul" bitwidth="5" opcode="add" nodeLabel="3.0" m_display="0" m_delay="0.6" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="60" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="57" name="a_load" lineNumber="60" fileName="matrixmul.cpp" fileDirectory=".." contextFuncName="matrixmul" bitwidth="8" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="0.73" m_topoIndex="38" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="60" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>a</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="59" name="b_load" lineNumber="60" fileName="matrixmul.cpp" fileDirectory=".." contextFuncName="matrixmul" bitwidth="8" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="0.73" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="60" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>b</dataInputObjs>
+      <dataOutputObjs>mul</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="61" name="mul_ln60" lineNumber="60" fileName="matrixmul.cpp" fileDirectory=".." rtlName="matrixmul_mac_mulbkb_U1" contextFuncName="matrixmul" bitwidth="16" opcode="mul" nodeLabel="4.0" m_display="0" m_delay="0.63" m_topoIndex="43" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="60" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="62" name="add_ln60" lineNumber="60" fileName="matrixmul.cpp" fileDirectory=".." rtlName="matrixmul_mac_mulbkb_U1" contextFuncName="matrixmul" bitwidth="16" opcode="add" nodeLabel="4.0" m_display="0" m_delay="2.2" m_topoIndex="44" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="60" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <dataInputObjs>mul</dataInputObjs>
+      <dataInputObjs>phi</dataInputObjs>
+      <dataOutputObjs>phi</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="63" name="_ln59" lineNumber="59" fileName="matrixmul.cpp" fileDirectory=".." contextFuncName="matrixmul" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="59" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <controlInputObjs>block_45</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="matrixmul.cpp">
+      <validLinenumbers>60</validLinenumbers>
+      <validLinenumbers>59</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="67" name="Col_end" type="BlockType">
+    <controlInputObjs>block_45</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_29</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="66" name="_ln56" lineNumber="56" fileName="matrixmul.cpp" fileDirectory=".." contextFuncName="matrixmul" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="56" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <controlInputObjs>block_29</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="matrixmul.cpp">
+      <validLinenumbers>56</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="70" name="Row_end" type="BlockType">
+    <controlInputObjs>block_29</controlInputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>block_15</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="69" name="_ln54" lineNumber="54" fileName="matrixmul.cpp" fileDirectory=".." contextFuncName="matrixmul" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="54" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+      <controlInputObjs>block_15</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="matrixmul.cpp">
+      <validLinenumbers>54</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="72" name="block_72" type="BlockType">
+    <controlInputObjs>block_15</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="71" name="_ln65" lineNumber="65" fileName="matrixmul.cpp" fileDirectory=".." contextFuncName="matrixmul" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="matrixmul.cpp" linenumber="65" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Design_Optimization\lab1" functionName="matrixmul"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="matrixmul.cpp">
+      <validLinenumbers>65</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <regnodes realName="i_0_reg_78">
+    <nodeIds>10</nodeIds>
+  </regnodes>
+  <regnodes realName="b_addr_reg_299">
+    <nodeIds>56</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln60_reg_304">
+    <nodeIds>62</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_257">
+    <nodeIds>13</nodeIds>
+  </regnodes>
+  <regnodes realName="a_addr_reg_294">
+    <nodeIds>50</nodeIds>
+  </regnodes>
+  <regnodes realName="res_addr_reg_281">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <regnodes realName="j_0_reg_89">
+    <nodeIds>24</nodeIds>
+  </regnodes>
+  <regnodes realName="j_reg_271">
+    <nodeIds>27</nodeIds>
+  </regnodes>
+  <regnodes realName="res_load_reg_100">
+    <nodeIds>38</nodeIds>
+  </regnodes>
+  <regnodes realName="k_reg_289">
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <regnodes realName="k_0_reg_113">
+    <nodeIds>39</nodeIds>
+  </regnodes>
+  <regnodes realName="sub_ln60_reg_262">
+    <nodeIds>21</nodeIds>
+  </regnodes>
+  <regnodes realName="zext_ln57_reg_276">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <expressionNodes realName="a_addr_gep_fu_52">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_0_phi_fu_93">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln60_3_fu_233">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_130">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln60_1_fu_148">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln60_1_fu_200">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_3_fu_210">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln60_1_fu_222">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="res_load_phi_fu_104">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln60_fu_136">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln60_fu_152">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln60_2_fu_228">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="b_addr_gep_fu_59">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="k_fu_190">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln56_fu_158">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="k_0_phi_fu_117">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="res_addr_gep_fu_40">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln60_1_fu_242">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln60_3_fu_218">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_0_phi_fu_82">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="j_fu_164">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln60_2_fu_205">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln57_fu_179">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_2_fu_140">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln57_fu_174">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln60_2_fu_196">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln54_fu_124">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="grp_fu_246">
+    <nodeIds>61</nodeIds>
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln57_fu_170">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln59_fu_184">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln60_fu_238">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <memoryPorts dataString="a">
+    <nodeIds>57</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="b">
+    <nodeIds>59</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="res">
+    <nodeIds>40</nodeIds>
+  </memoryPorts>
+  <ioPorts name="a(p0)">
+    <contents name="load">
+      <nodeIds>57</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="b(p0)">
+    <contents name="load">
+      <nodeIds>59</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="res(p0)">
+    <contents name="store">
+      <nodeIds>40</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="2" latency="2"/>
+      <operations id="59" stage="2" latency="2"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+    </states>
+    <states id="5">
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="2"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="2"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="matrixmul" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="79" mMaxLatency="79">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>10</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>9</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="Row" mII="-1" mDepth="-1" mMinTripCount="3" mMaxTripCount="3" mMinLatency="78" mMaxLatency="78" mType="1">
+      <subRegions>4</subRegions>
+      <subRegions>5</subRegions>
+      <subRegions>9</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Region 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>15</basicBlocks>
+      <basicBlocks>23</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="5" mTag="Col" mII="-1" mDepth="-1" mMinTripCount="3" mMaxTripCount="3" mMinLatency="24" mMaxLatency="24" mType="1">
+      <subRegions>6</subRegions>
+      <subRegions>7</subRegions>
+      <subRegions>8</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="6" mTag="Region 2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>29</basicBlocks>
+      <basicBlocks>37</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="7" mTag="Product" mII="-1" mDepth="-1" mMinTripCount="3" mMaxTripCount="3" mMinLatency="6" mMaxLatency="6" mType="1">
+      <basicBlocks>45</basicBlocks>
+      <basicBlocks>64</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="8" mTag="Region 3" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>67</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="9" mTag="Region 4" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>70</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="10" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>72</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

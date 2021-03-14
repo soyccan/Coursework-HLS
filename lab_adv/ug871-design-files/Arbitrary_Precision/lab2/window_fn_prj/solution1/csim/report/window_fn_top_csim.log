@@ -1,0 +1,41 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../window_fn_top.cpp in debug mode
+   Generating csim.exe
+Checking results against a tolerance of 0.001
+i = 0	hw_result = 0	 sw_result = 0.00000
+i = 1	hw_result = 0.61426	 sw_result = 0.61487
+i = 2	hw_result = 2.4355	 sw_result = 2.43585
+i = 3	hw_result = 5.3926	 sw_result = 5.39297
+i = 4	hw_result = 9.3721	 sw_result = 9.37258
+i = 5	hw_result = 14.222	 sw_result = 14.22175
+i = 6	hw_result = 19.754	 sw_result = 19.75413
+i = 7	hw_result = 25.757	 sw_result = 25.75711
+i = 8	hw_result = 31.999	 sw_result = 32.00000
+i = 9	hw_result = 38.242	 sw_result = 38.24289
+i = 10	hw_result = 44.245	 sw_result = 44.24587
+i = 11	hw_result = 49.777	 sw_result = 49.77825
+i = 12	hw_result = 54.627	 sw_result = 54.62742
+i = 13	hw_result = 58.606	 sw_result = 58.60703
+i = 14	hw_result = 61.563	 sw_result = 61.56414
+i = 15	hw_result = 63.385	 sw_result = 63.38513
+i = 16	hw_result = 64	 sw_result = 64.00000
+i = 17	hw_result = 63.385	 sw_result = 63.38513
+i = 18	hw_result = 61.563	 sw_result = 61.56414
+i = 19	hw_result = 58.606	 sw_result = 58.60703
+i = 20	hw_result = 54.627	 sw_result = 54.62742
+i = 21	hw_result = 49.777	 sw_result = 49.77825
+i = 22	hw_result = 44.245	 sw_result = 44.24587
+i = 23	hw_result = 38.242	 sw_result = 38.24289
+i = 24	hw_result = 32	 sw_result = 32.00000
+i = 25	hw_result = 25.757	 sw_result = 25.75711
+i = 26	hw_result = 19.754	 sw_result = 19.75413
+i = 27	hw_result = 14.222	 sw_result = 14.22175
+i = 28	hw_result = 9.3721	 sw_result = 9.37258
+i = 29	hw_result = 5.3926	 sw_result = 5.39297
+i = 30	hw_result = 2.4355	 sw_result = 2.43585
+i = 31	hw_result = 0.61426	 sw_result = 0.61487
+
+Test Passed
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

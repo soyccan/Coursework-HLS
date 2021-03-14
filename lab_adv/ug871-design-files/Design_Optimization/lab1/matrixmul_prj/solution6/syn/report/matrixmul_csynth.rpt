@@ -1,0 +1,211 @@
+
+
+================================================================
+== Vivado HLS Report for 'matrixmul'
+================================================================
+* Date:           Tue Feb 11 18:23:39 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        matrixmul_prj
+* Solution:       solution6
+* Product family: virtexuplus
+* Target device:  xcvu9p-flgb2104-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 13.33 ns | 7.566 ns |   1.67 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
+    |   min   |   max   |    min    |    max    | min | max |   Type   |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |        5|        5| 66.665 ns | 66.665 ns |    5|    5| function |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+-----+
+|         Name        | BRAM_18K| DSP48E|    FF   |   LUT   | URAM|
++---------------------+---------+-------+---------+---------+-----+
+|DSP                  |        -|     18|        -|        -|    -|
+|Expression           |        -|      0|        0|      364|    -|
+|FIFO                 |        -|      -|        -|        -|    -|
+|Instance             |        -|      -|        -|        -|    -|
+|Memory               |        -|      -|        -|        -|    -|
+|Multiplexer          |        -|      -|        -|      201|    -|
+|Register             |        -|      -|      343|        -|    -|
++---------------------+---------+-------+---------+---------+-----+
+|Total                |        0|     18|      343|      565|    0|
++---------------------+---------+-------+---------+---------+-----+
+|Available SLR        |     1440|   2280|   788160|   394080|  320|
++---------------------+---------+-------+---------+---------+-----+
+|Utilization SLR (%)  |        0|   ~0  |    ~0   |    ~0   |    0|
++---------------------+---------+-------+---------+---------+-----+
+|Available            |     4320|   6840|  2364480|  1182240|  960|
++---------------------+---------+-------+---------+---------+-----+
+|Utilization (%)      |        0|   ~0  |    ~0   |    ~0   |    0|
++---------------------+---------+-------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    +--------------------------+----------------------+--------------+
+    |         Instance         |        Module        |  Expression  |
+    +--------------------------+----------------------+--------------+
+    |matrixmul_mac_mulbkb_U1   |matrixmul_mac_mulbkb  | i0 + i1 * i2 |
+    |matrixmul_mac_mulbkb_U3   |matrixmul_mac_mulbkb  | i0 + i1 * i2 |
+    |matrixmul_mac_mulbkb_U5   |matrixmul_mac_mulbkb  | i0 + i1 * i2 |
+    |matrixmul_mac_mulbkb_U7   |matrixmul_mac_mulbkb  | i0 + i1 * i2 |
+    |matrixmul_mac_mulbkb_U9   |matrixmul_mac_mulbkb  | i0 + i1 * i2 |
+    |matrixmul_mac_mulbkb_U11  |matrixmul_mac_mulbkb  | i0 + i1 * i2 |
+    |matrixmul_mac_mulbkb_U13  |matrixmul_mac_mulbkb  | i0 + i1 * i2 |
+    |matrixmul_mac_mulbkb_U15  |matrixmul_mac_mulbkb  | i0 + i1 * i2 |
+    |matrixmul_mac_mulbkb_U17  |matrixmul_mac_mulbkb  | i0 + i1 * i2 |
+    |matrixmul_mac_mulcud_U2   |matrixmul_mac_mulcud  | i0 * i1 + i2 |
+    |matrixmul_mac_mulcud_U4   |matrixmul_mac_mulcud  | i0 * i1 + i2 |
+    |matrixmul_mac_mulcud_U6   |matrixmul_mac_mulcud  | i0 * i1 + i2 |
+    |matrixmul_mac_mulcud_U8   |matrixmul_mac_mulcud  | i0 * i1 + i2 |
+    |matrixmul_mac_mulcud_U10  |matrixmul_mac_mulcud  | i0 * i1 + i2 |
+    |matrixmul_mac_mulcud_U12  |matrixmul_mac_mulcud  | i0 * i1 + i2 |
+    |matrixmul_mac_mulcud_U14  |matrixmul_mac_mulcud  | i0 * i1 + i2 |
+    |matrixmul_mac_mulcud_U16  |matrixmul_mac_mulcud  | i0 * i1 + i2 |
+    |matrixmul_mac_mulcud_U18  |matrixmul_mac_mulcud  | i0 * i1 + i2 |
+    +--------------------------+----------------------+--------------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |grp_fu_426_p2              |     *    |      0|  0|  40|           8|           8|
+    |grp_fu_443_p2              |     *    |      0|  0|  40|           8|           8|
+    |grp_fu_460_p2              |     *    |      0|  0|  40|           8|           8|
+    |grp_fu_475_p2              |     *    |      0|  0|  40|           8|           8|
+    |grp_fu_490_p2              |     *    |      0|  0|  40|           8|           8|
+    |grp_fu_503_p2              |     *    |      0|  0|  40|           8|           8|
+    |grp_fu_516_p2              |     *    |      0|  0|  40|           8|           8|
+    |grp_fu_531_p2              |     *    |      0|  0|  40|           8|           8|
+    |grp_fu_546_p2              |     *    |      0|  0|  40|           8|           8|
+    |ap_block_pp0_stage0_11001  |    and   |      0|  0|   2|           1|           1|
+    |ap_enable_pp0              |    xor   |      0|  0|   2|           1|           2|
+    +---------------------------+----------+-------+---+----+------------+------------+
+    |Total                      |          |      0|  0| 364|          74|          75|
+    +---------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |a_address0               |  15|          3|    2|          6|
+    |ap_NS_fsm                |  33|          6|    1|          6|
+    |ap_enable_reg_pp0_iter0  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |b_address0               |  15|          3|    2|          6|
+    |res_address0             |  33|          6|    4|         24|
+    |res_address1             |  27|          5|    4|         20|
+    |res_d0                   |  33|          6|   16|         96|
+    |res_d1                   |  27|          5|   16|         80|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    | 201|         38|   47|        242|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+----+----+-----+-----------+
+    |             Name            | FF | LUT| Bits| Const Bits|
+    +-----------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                    |   5|   0|    5|          0|
+    |ap_enable_reg_pp0_iter0_reg  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1      |   1|   0|    1|          0|
+    |sext_ln60_10_reg_661         |  16|   0|   16|          0|
+    |sext_ln60_11_reg_667         |  16|   0|   16|          0|
+    |sext_ln60_12_reg_673         |  16|   0|   16|          0|
+    |sext_ln60_13_reg_679         |  16|   0|   16|          0|
+    |sext_ln60_14_reg_685         |  16|   0|   16|          0|
+    |sext_ln60_15_reg_706         |  16|   0|   16|          0|
+    |sext_ln60_16_reg_711         |  16|   0|   16|          0|
+    |sext_ln60_17_reg_716         |  16|   0|   16|          0|
+    |sext_ln60_1_reg_584          |  16|   0|   16|          0|
+    |sext_ln60_2_reg_590          |  16|   0|   16|          0|
+    |sext_ln60_3_reg_595          |  16|   0|   16|          0|
+    |sext_ln60_4_reg_601          |  16|   0|   16|          0|
+    |sext_ln60_5_reg_606          |  16|   0|   16|          0|
+    |sext_ln60_6_reg_612          |  16|   0|   16|          0|
+    |sext_ln60_7_reg_618          |  16|   0|   16|          0|
+    |sext_ln60_8_reg_624          |  16|   0|   16|          0|
+    |sext_ln60_9_reg_655          |  16|   0|   16|          0|
+    |sext_ln60_reg_579            |  16|   0|   16|          0|
+    |tmp_10_reg_696               |   8|   0|    8|          0|
+    |tmp_11_reg_701               |   8|   0|    8|          0|
+    |tmp_6_reg_640                |   8|   0|    8|          0|
+    |tmp_9_reg_645                |   8|   0|    8|          0|
+    |trunc_ln60_4_reg_635         |   8|   0|    8|          0|
+    |trunc_ln60_5_reg_691         |   8|   0|    8|          0|
+    +-----------------------------+----+----+-----+-----------+
+    |Total                        | 343|   0|  343|          0|
+    +-----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------+-----+-----+------------+--------------+--------------+
+|   RTL Ports  | Dir | Bits|  Protocol  | Source Object|    C Type    |
++--------------+-----+-----+------------+--------------+--------------+
+|ap_clk        |  in |    1| ap_ctrl_hs |   matrixmul  | return value |
+|ap_rst        |  in |    1| ap_ctrl_hs |   matrixmul  | return value |
+|ap_start      |  in |    1| ap_ctrl_hs |   matrixmul  | return value |
+|ap_done       | out |    1| ap_ctrl_hs |   matrixmul  | return value |
+|ap_idle       | out |    1| ap_ctrl_hs |   matrixmul  | return value |
+|ap_ready      | out |    1| ap_ctrl_hs |   matrixmul  | return value |
+|a_address0    | out |    2|  ap_memory |       a      |     array    |
+|a_ce0         | out |    1|  ap_memory |       a      |     array    |
+|a_q0          |  in |   24|  ap_memory |       a      |     array    |
+|a_address1    | out |    2|  ap_memory |       a      |     array    |
+|a_ce1         | out |    1|  ap_memory |       a      |     array    |
+|a_q1          |  in |   24|  ap_memory |       a      |     array    |
+|b_address0    | out |    2|  ap_memory |       b      |     array    |
+|b_ce0         | out |    1|  ap_memory |       b      |     array    |
+|b_q0          |  in |   24|  ap_memory |       b      |     array    |
+|b_address1    | out |    2|  ap_memory |       b      |     array    |
+|b_ce1         | out |    1|  ap_memory |       b      |     array    |
+|b_q1          |  in |   24|  ap_memory |       b      |     array    |
+|res_address0  | out |    4|  ap_memory |      res     |     array    |
+|res_ce0       | out |    1|  ap_memory |      res     |     array    |
+|res_we0       | out |    1|  ap_memory |      res     |     array    |
+|res_d0        | out |   16|  ap_memory |      res     |     array    |
+|res_address1  | out |    4|  ap_memory |      res     |     array    |
+|res_ce1       | out |    1|  ap_memory |      res     |     array    |
+|res_we1       | out |    1|  ap_memory |      res     |     array    |
+|res_d1        | out |   16|  ap_memory |      res     |     array    |
++--------------+-----+-----+------------+--------------+--------------+
+

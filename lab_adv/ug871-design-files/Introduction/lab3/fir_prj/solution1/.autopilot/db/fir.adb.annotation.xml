@@ -1,0 +1,14 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="17" filename="fir.c" linenumber="66" name="sext_ln66" contextFuncName="fir" moduleName="fir" rtlName="sext_ln66_fu_144_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Introduction\lab3"><\/item>
+<item  id="18" filename="fir.c" linenumber="66" name="tmp" contextFuncName="fir" moduleName="fir" rtlName="tmp_fu_148_p3" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Introduction\lab3"><\/item>
+<item  id="23" filename="fir.c" linenumber="67" name="icmp_ln67" contextFuncName="fir" moduleName="fir" rtlName="icmp_ln67_fu_156_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Introduction\lab3"><\/item>
+<item  id="26" filename="fir.c" linenumber="71" name="add_ln71" contextFuncName="fir" moduleName="fir" rtlName="grp_fu_137_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Introduction\lab3"><\/item>
+<item  id="27" filename="fir.c" linenumber="71" name="zext_ln71" contextFuncName="fir" moduleName="fir" rtlName="zext_ln71_fu_162_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Introduction\lab3"><\/item>
+<item  id="30" filename="fir.c" linenumber="71" name="zext_ln71_1" contextFuncName="fir" moduleName="fir" rtlName="zext_ln71_1_fu_167_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Introduction\lab3"><\/item>
+<item  id="39" filename="fir.c" linenumber="74" name="zext_ln74" contextFuncName="fir" moduleName="fir" rtlName="zext_ln74_fu_171_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Introduction\lab3"><\/item>
+<item  id="42" filename="fir.c" linenumber="74" name="mul_ln74" contextFuncName="fir" moduleName="fir" rtlName="mul_ln74_fu_175_p2" latency="0" BRAM="-1" DSP="3" FF="0" LUT="20" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Introduction\lab3"><\/item>
+<item  id="43" filename="fir.c" linenumber="74" name="acc" contextFuncName="fir" moduleName="fir" rtlName="acc_fu_181_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Introduction\lab3"><\/item>
+<item  id="44" filename="fir.c" linenumber="66" name="i" contextFuncName="fir" moduleName="fir" rtlName="grp_fu_137_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Introduction\lab3"><\/item>
+<\/annotationInfo>
+</annotationInfo>

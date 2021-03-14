@@ -1,0 +1,75 @@
+   Build using "C:/Xilinx/Vivado/2019.1/msys64/mingw64/bin/g++"
+   Compiling apatb_duc.cpp
+   Compiling (apcc) imf2.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'JiinLai' on host 'jiinlai-w10' (Windows NT_amd64 version 6.2) on Sat Oct 05 07:23:53 +0800 2019
+INFO: [HLS 200-10] In directory 'C:/wrk/ETH_ToE_Github/ug871-design-files/RTL_Verification/lab3/duc_prj/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_JiinLai/18524275574876
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) dds.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'JiinLai' on host 'jiinlai-w10' (Windows NT_amd64 version 6.2) on Sat Oct 05 07:24:04 +0800 2019
+INFO: [HLS 200-10] In directory 'C:/wrk/ETH_ToE_Github/ug871-design-files/RTL_Verification/lab3/duc_prj/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_JiinLai/154204285839157
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) mac.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'JiinLai' on host 'jiinlai-w10' (Windows NT_amd64 version 6.2) on Sat Oct 05 07:24:14 +0800 2019
+INFO: [HLS 200-10] In directory 'C:/wrk/ETH_ToE_Github/ug871-design-files/RTL_Verification/lab3/duc_prj/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_JiinLai/12312794351
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) duc_test.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'JiinLai' on host 'jiinlai-w10' (Windows NT_amd64 version 6.2) on Sat Oct 05 07:24:23 +0800 2019
+INFO: [HLS 200-10] In directory 'C:/wrk/ETH_ToE_Github/ug871-design-files/RTL_Verification/lab3/duc_prj/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_JiinLai/1736410704097
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) srrc.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'JiinLai' on host 'jiinlai-w10' (Windows NT_amd64 version 6.2) on Sat Oct 05 07:24:34 +0800 2019
+INFO: [HLS 200-10] In directory 'C:/wrk/ETH_ToE_Github/ug871-design-files/RTL_Verification/lab3/duc_prj/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_JiinLai/410421319018
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) imf3.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'JiinLai' on host 'jiinlai-w10' (Windows NT_amd64 version 6.2) on Sat Oct 05 07:24:44 +0800 2019
+INFO: [HLS 200-10] In directory 'C:/wrk/ETH_ToE_Github/ug871-design-files/RTL_Verification/lab3/duc_prj/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_JiinLai/1302431295806
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) imf1.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'JiinLai' on host 'jiinlai-w10' (Windows NT_amd64 version 6.2) on Sat Oct 05 07:24:56 +0800 2019
+INFO: [HLS 200-10] In directory 'C:/wrk/ETH_ToE_Github/ug871-design-files/RTL_Verification/lab3/duc_prj/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_JiinLai/1284442863645
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) mixer.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'JiinLai' on host 'jiinlai-w10' (Windows NT_amd64 version 6.2) on Sat Oct 05 07:25:06 +0800 2019
+INFO: [HLS 200-10] In directory 'C:/wrk/ETH_ToE_Github/ug871-design-files/RTL_Verification/lab3/duc_prj/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_JiinLai/795653203915
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) duc.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'JiinLai' on host 'jiinlai-w10' (Windows NT_amd64 version 6.2) on Sat Oct 05 07:25:16 +0800 2019
+INFO: [HLS 200-10] In directory 'C:/wrk/ETH_ToE_Github/ug871-design-files/RTL_Verification/lab3/duc_prj/solution1/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is C:/tmp/apcc_db_JiinLai/1204863135953
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe

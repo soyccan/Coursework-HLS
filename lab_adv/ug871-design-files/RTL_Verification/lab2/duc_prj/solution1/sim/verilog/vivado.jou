@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Feb 11 20:01:46 2020
+# Process ID: 19384
+# Current directory: C:/wrk/ETH_ToE_Github/ug871-design-files/RTL_Verification/lab2/duc_prj/solution1/sim/verilog
+# Command line: vivado.exe -source open_wave.tcl
+# Log file: C:/wrk/ETH_ToE_Github/ug871-design-files/RTL_Verification/lab2/duc_prj/solution1/sim/verilog/vivado.log
+# Journal file: C:/wrk/ETH_ToE_Github/ug871-design-files/RTL_Verification/lab2/duc_prj/solution1/sim/verilog\vivado.jou
+#-----------------------------------------------------------
+start_guissource open_wave.tcloopen_wave_config C:/wrk/ETH_ToE_Github/ug871-design-files/RTL_Verification/lab2/duc_prj/solution1/sim/verilog/duc.wcfgcsave_wave_config {C:/wrk/ETH_ToE_Github/ug871-design-files/RTL_Verification/lab2/duc_prj/solution1/sim/verilog/duc.wcfg}

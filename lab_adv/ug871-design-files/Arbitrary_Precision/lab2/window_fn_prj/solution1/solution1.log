@@ -1,0 +1,70 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1.3 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-1-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [Common 17-206] Exiting vivado_hls at Wed Oct  2 10:29:37 2019...
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1.3 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-1-e'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1.3 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-1-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'window_fn_top.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:07 ; elapsed = 00:00:26 . Memory (MB): peak = 187.266 ; gain = 93.441
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:07 ; elapsed = 00:00:26 . Memory (MB): peak = 187.266 ; gain = 93.441
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:09 ; elapsed = 00:00:31 . Memory (MB): peak = 267.363 ; gain = 173.539
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'xhls_window_fn::window_fn<ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<24, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<18, 2, (ap_q_mode)5, (ap_o_mode)3, 0>, 32, (xhls_window_fn::win_fn_t)1>::apply' into 'window_fn_top' (window_fn_top.cpp:64) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:09 ; elapsed = 00:00:31 . Memory (MB): peak = 300.188 ; gain = 206.363
+INFO: [XFORM 203-602] Inlining function 'xhls_window_fn::window_fn<ap_fixed<8, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<24, 8, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<18, 2, (ap_q_mode)5, (ap_o_mode)3, 0>, 32, (xhls_window_fn::win_fn_t)1>::apply' into 'window_fn_top' (window_fn_top.cpp:64) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:10 ; elapsed = 00:00:32 . Memory (MB): peak = 379.719 ; gain = 285.895
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:10 ; elapsed = 00:00:32 . Memory (MB): peak = 410.871 ; gain = 317.047
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'window_fn_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'window_fn_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 32.492 seconds; current allocated memory: 331.430 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 331.691 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'window_fn_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'window_fn_top/outdata_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'window_fn_top/indata_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'window_fn_top' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'window_fn_top_coeff_tab1' to 'window_fn_top_coebkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'window_fn_top_mul_mul_17ns_8s_24_1_1' to 'window_fn_top_mulcud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'window_fn_top_mulcud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'window_fn_top'.
+INFO: [HLS 200-111]  Elapsed time: 0.147 seconds; current allocated memory: 331.907 MB.
+INFO: [RTMG 210-279] Implementing memory 'window_fn_top_coebkb_rom' using distributed ROMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:11 ; elapsed = 00:00:34 . Memory (MB): peak = 420.867 ; gain = 327.043
+INFO: [VHDL 208-304] Generating VHDL RTL for window_fn_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for window_fn_top.
+INFO: [HLS 200-112] Total elapsed time: 34.161 seconds; peak allocated memory: 331.907 MB.

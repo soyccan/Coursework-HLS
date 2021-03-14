@@ -1,0 +1,7 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="20" filename="hls_macc.c" linenumber="12" name="select_ln12" contextFuncName="hls_macc" moduleName="hls_macc" rtlName="select_ln12_fu_67_p3" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="32" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Using_IP_with_Zynq\lab1\hls_macc"><\/item>
+<item  id="21" filename="hls_macc.c" linenumber="14" name="mul_ln14" contextFuncName="hls_macc" moduleName="hls_macc" rtlName="hls_macc_mul_32s_bkb_U1" latency="6" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Using_IP_with_Zynq\lab1\hls_macc"><\/item>
+<item  id="22" filename="hls_macc.c" linenumber="14" name="add_ln14" contextFuncName="hls_macc" moduleName="hls_macc" rtlName="add_ln14_fu_74_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\wrk\ETH_ToE_Github\ug871-design-files\Using_IP_with_Zynq\lab1\hls_macc"><\/item>
+<\/annotationInfo>
+</annotationInfo>

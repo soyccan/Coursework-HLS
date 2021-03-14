@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="hamming_window.cpp" path="C:\wrk\ETH_ToE_Github\ug871-design-files\C_Validation\lab3\hamming_window.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="hamming_window_test.cpp" path="C:\wrk\ETH_ToE_Github\ug871-design-files\C_Validation\lab3\hamming_window_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

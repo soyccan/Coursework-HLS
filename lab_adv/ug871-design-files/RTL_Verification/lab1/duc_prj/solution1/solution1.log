@@ -1,0 +1,412 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-10] Setting target device to 'xc7k160t-fbg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.71ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [Common 17-206] Exiting vivado_hls at Tue Feb 11 19:30:43 2020...
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.71ns.
+INFO: [HLS 200-10] Setting target device to 'xc7k160t-fbg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'duc.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'srrc.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'imf1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'imf2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'imf3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mixer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'dds.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mac.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:33 . Memory (MB): peak = 197.559 ; gain = 108.020
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:33 . Memory (MB): peak = 197.559 ; gain = 108.020
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:34 . Memory (MB): peak = 197.559 ; gain = 108.020
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'srrc_mac' into 'srrc' (srrc.c:21) automatically.
+INFO: [XFORM 203-602] Inlining function 'mac1' into 'imf1' (imf1.c:28) automatically.
+INFO: [XFORM 203-602] Inlining function 'mac2' into 'imf2' (imf2.c:27) automatically.
+INFO: [XFORM 203-602] Inlining function 'mac' into 'imf3' (imf3.c:30) automatically.
+INFO: [XFORM 203-602] Inlining function 'mult' into 'mix_SubDSP' (mixer.c:8) automatically.
+INFO: [XFORM 203-602] Inlining function 'mult' into 'mix_AddDSP' (mixer.c:17) automatically.
+INFO: [XFORM 203-602] Inlining function 'dds' into 'mixer' (mixer.c:49) automatically.
+INFO: [XFORM 203-602] Inlining function 'mix_SubDSP' into 'mixer' (mixer.c:58) automatically.
+INFO: [XFORM 203-602] Inlining function 'mix_AddDSP' into 'mixer' (mixer.c:60) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:34 . Memory (MB): peak = 197.559 ; gain = 108.020
+INFO: [XFORM 203-102] Partitioning array 'c.5' in dimension 2 automatically.
+INFO: [XFORM 203-602] Inlining function 'srrc_mac' into 'srrc' (srrc.c:21) automatically.
+INFO: [XFORM 203-602] Inlining function 'mac1' into 'imf1' (imf1.c:28) automatically.
+INFO: [XFORM 203-602] Inlining function 'mac2' into 'imf2' (imf2.c:27) automatically.
+INFO: [XFORM 203-602] Inlining function 'mac' into 'imf3' (imf3.c:30) automatically.
+INFO: [XFORM 203-602] Inlining function 'mult' into 'mix_SubDSP' (mixer.c:8) automatically.
+INFO: [XFORM 203-602] Inlining function 'mult' into 'mix_AddDSP' (mixer.c:17) automatically.
+INFO: [XFORM 203-602] Inlining function 'dds' into 'mixer' (mixer.c:49) automatically.
+INFO: [XFORM 203-602] Inlining function 'mix_SubDSP' into 'mixer' (mixer.c:58) automatically.
+INFO: [XFORM 203-602] Inlining function 'mix_AddDSP' into 'mixer' (mixer.c:60) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (srrc.c:19:18) to (srrc.c:24:3) in function 'srrc'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (srrc.c:30:3) to (srrc.c:34:1) in function 'srrc'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (imf3.c:26:18) to (imf3.c:37:5) in function 'imf3'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (imf2.c:25:18) to (imf2.c:30:3) in function 'imf2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (imf2.c:38:3) to (imf2.c:44:1) in function 'imf2'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (imf1.c:25:18) to (imf1.c:31:3) in function 'imf1'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (imf1.c:37:3) to (imf1.c:43:1) in function 'imf1'... converting 3 basic blocks.
+INFO: [XFORM 203-602] Inlining function 'srrc' into 'duc' (duc.c:29) automatically.
+INFO: [XFORM 203-602] Inlining function 'imf1' into 'duc' (duc.c:31) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:34 . Memory (MB): peak = 197.559 ; gain = 108.020
+INFO: [HLS 200-472] Inferring partial write operation for 'DI_cache' (mixer.c:46:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'shift_reg_p0' (imf3.c:33:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'shift_reg_p1' (imf3.c:34:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'shift_reg_p.3' (imf2.c:29:3)
+INFO: [HLS 200-472] Inferring partial write operation for 'shift_reg_p' (srrc.c:23:3)
+INFO: [HLS 200-472] Inferring partial write operation for 'shift_reg_p.2' (imf1.c:30:3)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:34 . Memory (MB): peak = 197.559 ; gain = 108.020
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'duc' ...
+WARNING: [SYN 201-107] Renaming port name 'duc/in' to 'duc/in_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'imf2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 34.519 seconds; current allocated memory: 141.847 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.096 seconds; current allocated memory: 142.042 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'imf3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.128 seconds; current allocated memory: 142.224 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.108 seconds; current allocated memory: 142.468 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mixer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (2.71ns) exceeds the target (target clock period: 2.71ns, clock uncertainty: 0.33875ns, effective delay budget: 2.37125ns).
+WARNING: [SCHED 204-21] The critical path in module 'mixer' consists of the following:
+	'sub' operation of DSP[52] ('tmp', mixer.c:7->mixer.c:58) [49]  (1.62 ns)
+	'mul' operation of DSP[52] ('mul_ln4', mixer.c:4->mixer.c:59) [52]  (1.09 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.156 seconds; current allocated memory: 142.762 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.108 seconds; current allocated memory: 143.002 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'duc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.169 seconds; current allocated memory: 143.299 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.179 seconds; current allocated memory: 143.731 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'imf2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'i_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'in_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'init_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'ch_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cnt' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'duc_mul_mul_18s_18s_36_4_1' to 'duc_mul_mul_18s_1bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'duc_mul_mul_18s_1bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'imf2'.
+INFO: [HLS 200-111]  Elapsed time: 0.258 seconds; current allocated memory: 144.247 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'imf3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'i_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'in_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'j' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'init_2' is power-on initialization.
+INFO: [RTGEN 206-100] Generating core module 'duc_mul_mul_18s_1bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'imf3'.
+INFO: [HLS 200-111]  Elapsed time: 0.285 seconds; current allocated memory: 144.894 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mixer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'i_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'init_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'ch_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'index' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'acc' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'duc_am_submul_16s_16s_18s_32_4_1' to 'duc_am_submul_16scud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'duc_ama_submuladd_18s_18s_16s_32s_32_3_1' to 'duc_ama_submuladddEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'duc_ama_addmuladd_18s_18s_16s_32s_32_3_1' to 'duc_ama_addmuladdeOg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'duc_am_submul_16scud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'duc_ama_addmuladdeOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'duc_ama_submuladddEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mixer'.
+INFO: [HLS 200-111]  Elapsed time: 0.372 seconds; current allocated memory: 145.516 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'duc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'duc/din_i' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'duc/freq' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'duc/dout_i' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'duc/dout_q' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'duc' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'i' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'in_r' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'init' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'ch' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'i_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'in_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'init_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'ch_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cnt_1' is power-on initialization.
+INFO: [RTGEN 206-100] Generating core module 'duc_mul_mul_18s_1bkb': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'duc'.
+INFO: [HLS 200-111]  Elapsed time: 0.399 seconds; current allocated memory: 146.492 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 369.00 MHz
+INFO: [RTMG 210-279] Implementing memory 'imf2_c_1_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'imf2_shift_reg_p_1_ram (RAM)' using distributed RAMs with power-on initialization.
+INFO: [RTMG 210-279] Implementing memory 'imf3_c_5_0_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'imf3_shift_reg_p0_ram (RAM)' using distributed RAMs with power-on initialization.
+INFO: [RTMG 210-279] Implementing memory 'imf3_c_5_1_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'mixer_DI_cache_ram (RAM)' using distributed RAMs with power-on initialization.
+INFO: [RTMG 210-279] Implementing memory 'mixer_dds_table_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'duc_c_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'duc_shift_reg_p_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-279] Implementing memory 'duc_c_2_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'duc_shift_reg_p_2_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:00:40 . Memory (MB): peak = 213.879 ; gain = 124.340
+INFO: [VHDL 208-304] Generating VHDL RTL for duc.
+INFO: [VLOG 209-307] Generating Verilog RTL for duc.
+INFO: [HLS 200-112] Total elapsed time: 40.06 seconds; peak allocated memory: 146.492 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.71ns.
+INFO: [HLS 200-10] Setting target device to 'xc7k160t-fbg484-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+ERROR: [COSIM 212-359] Aborting co-simulation: C TB simulation failed, nonzero return value '1'.
+ERROR: [COSIM 212-320] C TB testing failed, stop generating test vectors. Please check C TB or re-run cosim.
+ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.71ns.
+INFO: [HLS 200-10] Setting target device to 'xc7k160t-fbg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'duc.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'srrc.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'imf1.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'imf2.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'imf3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mixer.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'dds.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'mac.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:33 . Memory (MB): peak = 198.746 ; gain = 109.379
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:33 . Memory (MB): peak = 198.746 ; gain = 109.379
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:33 . Memory (MB): peak = 198.746 ; gain = 109.379
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'srrc_mac' into 'srrc' (srrc.c:21) automatically.
+INFO: [XFORM 203-602] Inlining function 'mac1' into 'imf1' (imf1.c:28) automatically.
+INFO: [XFORM 203-602] Inlining function 'mac2' into 'imf2' (imf2.c:27) automatically.
+INFO: [XFORM 203-602] Inlining function 'mac' into 'imf3' (imf3.c:30) automatically.
+INFO: [XFORM 203-602] Inlining function 'mult' into 'mix_SubDSP' (mixer.c:8) automatically.
+INFO: [XFORM 203-602] Inlining function 'mult' into 'mix_AddDSP' (mixer.c:17) automatically.
+INFO: [XFORM 203-602] Inlining function 'dds' into 'mixer' (mixer.c:49) automatically.
+INFO: [XFORM 203-602] Inlining function 'mix_SubDSP' into 'mixer' (mixer.c:58) automatically.
+INFO: [XFORM 203-602] Inlining function 'mix_AddDSP' into 'mixer' (mixer.c:60) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:33 . Memory (MB): peak = 198.746 ; gain = 109.379
+INFO: [XFORM 203-102] Partitioning array 'c.5' in dimension 2 automatically.
+INFO: [XFORM 203-602] Inlining function 'srrc_mac' into 'srrc' (srrc.c:21) automatically.
+INFO: [XFORM 203-602] Inlining function 'mac1' into 'imf1' (imf1.c:28) automatically.
+INFO: [XFORM 203-602] Inlining function 'mac2' into 'imf2' (imf2.c:27) automatically.
+INFO: [XFORM 203-602] Inlining function 'mac' into 'imf3' (imf3.c:30) automatically.
+INFO: [XFORM 203-602] Inlining function 'mult' into 'mix_SubDSP' (mixer.c:8) automatically.
+INFO: [XFORM 203-602] Inlining function 'mult' into 'mix_AddDSP' (mixer.c:17) automatically.
+INFO: [XFORM 203-602] Inlining function 'dds' into 'mixer' (mixer.c:49) automatically.
+INFO: [XFORM 203-602] Inlining function 'mix_SubDSP' into 'mixer' (mixer.c:58) automatically.
+INFO: [XFORM 203-602] Inlining function 'mix_AddDSP' into 'mixer' (mixer.c:60) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (srrc.c:19:18) to (srrc.c:24:3) in function 'srrc'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (srrc.c:30:3) to (srrc.c:34:1) in function 'srrc'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (imf3.c:26:18) to (imf3.c:37:5) in function 'imf3'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (imf2.c:25:18) to (imf2.c:30:3) in function 'imf2'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (imf2.c:38:3) to (imf2.c:44:1) in function 'imf2'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (imf1.c:25:18) to (imf1.c:31:3) in function 'imf1'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (imf1.c:37:3) to (imf1.c:43:1) in function 'imf1'... converting 3 basic blocks.
+INFO: [XFORM 203-602] Inlining function 'srrc' into 'duc' (duc.c:29) automatically.
+INFO: [XFORM 203-602] Inlining function 'imf1' into 'duc' (duc.c:31) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:34 . Memory (MB): peak = 198.746 ; gain = 109.379
+INFO: [HLS 200-472] Inferring partial write operation for 'DI_cache' (mixer.c:46:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'shift_reg_p0' (imf3.c:33:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'shift_reg_p1' (imf3.c:34:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'shift_reg_p.3' (imf2.c:29:3)
+INFO: [HLS 200-472] Inferring partial write operation for 'shift_reg_p' (srrc.c:23:3)
+INFO: [HLS 200-472] Inferring partial write operation for 'shift_reg_p.2' (imf1.c:30:3)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:34 . Memory (MB): peak = 198.746 ; gain = 109.379
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'duc' ...
+WARNING: [SYN 201-107] Renaming port name 'duc/in' to 'duc/in_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'imf2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 33.932 seconds; current allocated memory: 141.940 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.096 seconds; current allocated memory: 142.136 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'imf3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 142.318 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.107 seconds; current allocated memory: 142.562 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mixer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (2.71ns) exceeds the target (target clock period: 2.71ns, clock uncertainty: 0.33875ns, effective delay budget: 2.37125ns).
+WARNING: [SCHED 204-21] The critical path in module 'mixer' consists of the following:
+	'sub' operation of DSP[52] ('tmp', mixer.c:7->mixer.c:58) [49]  (1.62 ns)
+	'mul' operation of DSP[52] ('mul_ln4', mixer.c:4->mixer.c:59) [52]  (1.09 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.163 seconds; current allocated memory: 142.855 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.111 seconds; current allocated memory: 143.096 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'duc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.148 seconds; current allocated memory: 143.393 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.179 seconds; current allocated memory: 143.825 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'imf2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'i_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'in_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'init_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'ch_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cnt' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'duc_mul_mul_18s_18s_36_4_1' to 'duc_mul_mul_18s_1bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'duc_mul_mul_18s_1bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'imf2'.
+INFO: [HLS 200-111]  Elapsed time: 0.308 seconds; current allocated memory: 144.325 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'imf3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'i_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'in_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'j' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'init_2' is power-on initialization.
+INFO: [RTGEN 206-100] Generating core module 'duc_mul_mul_18s_1bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'imf3'.
+INFO: [HLS 200-111]  Elapsed time: 0.288 seconds; current allocated memory: 144.941 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mixer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'i_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'init_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'ch_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'index' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'acc' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'duc_am_submul_16s_16s_18s_32_4_1' to 'duc_am_submul_16scud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'duc_ama_submuladd_18s_18s_16s_32s_32_3_1' to 'duc_ama_submuladddEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'duc_ama_addmuladd_18s_18s_16s_32s_32_3_1' to 'duc_ama_addmuladdeOg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'duc_am_submul_16scud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'duc_ama_addmuladdeOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'duc_ama_submuladddEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mixer'.
+INFO: [HLS 200-111]  Elapsed time: 0.383 seconds; current allocated memory: 145.547 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'duc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'duc/din_i' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'duc/freq' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'duc/dout_i' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'duc/dout_q' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'duc' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'i' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'in_r' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'init' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'ch' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'i_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'in_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'init_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'ch_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cnt_1' is power-on initialization.
+INFO: [RTGEN 206-100] Generating core module 'duc_mul_mul_18s_1bkb': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'duc'.
+INFO: [HLS 200-111]  Elapsed time: 0.419 seconds; current allocated memory: 146.539 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 369.00 MHz
+INFO: [RTMG 210-279] Implementing memory 'imf2_c_1_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'imf2_shift_reg_p_1_ram (RAM)' using distributed RAMs with power-on initialization.
+INFO: [RTMG 210-279] Implementing memory 'imf3_c_5_0_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'imf3_shift_reg_p0_ram (RAM)' using distributed RAMs with power-on initialization.
+INFO: [RTMG 210-279] Implementing memory 'imf3_c_5_1_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'mixer_DI_cache_ram (RAM)' using distributed RAMs with power-on initialization.
+INFO: [RTMG 210-279] Implementing memory 'mixer_dds_table_rom' using distributed ROMs.
+INFO: [RTMG 210-279] Implementing memory 'duc_c_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'duc_shift_reg_p_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-279] Implementing memory 'duc_c_2_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'duc_shift_reg_p_2_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:39 . Memory (MB): peak = 214.270 ; gain = 124.902
+INFO: [VHDL 208-304] Generating VHDL RTL for duc.
+INFO: [VLOG 209-307] Generating Verilog RTL for duc.
+INFO: [HLS 200-112] Total elapsed time: 39.222 seconds; peak allocated memory: 146.539 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.71ns.
+INFO: [HLS 200-10] Setting target device to 'xc7k160t-fbg484-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
