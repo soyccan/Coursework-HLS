@@ -1,0 +1,37 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|               clk_fpga_0 |               clk_fpga_0 |                              design_1_i/fir_n11_maxi_0/inst/fir_n11_maxi_AXILiteS_s_axi_U/rdata_reg[15]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                               design_1_i/fir_n11_maxi_0/inst/fir_n11_maxi_AXILiteS_s_axi_U/rdata_reg[5]/D|
+|               clk_fpga_0 |               clk_fpga_0 | design_1_i/fir_n11_maxi_0/inst/fir_n11_maxi_gmem_m_axi_U/bus_write/bus_equal_gen.fifo_burst/pout_reg[2]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                              design_1_i/fir_n11_maxi_0/inst/fir_n11_maxi_AXILiteS_s_axi_U/rdata_reg[19]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                              design_1_i/fir_n11_maxi_0/inst/fir_n11_maxi_AXILiteS_s_axi_U/rdata_reg[16]/D|
+|               clk_fpga_0 |               clk_fpga_0 | design_1_i/fir_n11_maxi_0/inst/fir_n11_maxi_gmem_m_axi_U/bus_write/bus_equal_gen.fifo_burst/pout_reg[0]/D|
+|               clk_fpga_0 |               clk_fpga_0 |design_1_i/fir_n11_maxi_0/inst/fir_n11_maxi_gmem_m_axi_U/bus_write/bus_equal_gen.fifo_burst/data_vld_reg/D|
+|               clk_fpga_0 |               clk_fpga_0 |design_1_i/axi_mem_intercon/s00_couplers/auto_us/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/USE_RTL_LENGTH.length_counter_q_reg[2]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                              design_1_i/fir_n11_maxi_0/inst/fir_n11_maxi_AXILiteS_s_axi_U/rdata_reg[28]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                              design_1_i/fir_n11_maxi_0/inst/fir_n11_maxi_AXILiteS_s_axi_U/rdata_reg[29]/D|
+|               clk_fpga_0 |               clk_fpga_0 |design_1_i/axi_mem_intercon/s00_couplers/auto_us/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/USE_RTL_ADDR.addr_q_reg[4]/D|
+|               clk_fpga_0 |               clk_fpga_0 |design_1_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/cmd_depth_reg[1]/D|
+|               clk_fpga_0 |               clk_fpga_0 |design_1_i/axi_mem_intercon/s00_couplers/auto_us/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/USE_RTL_ADDR.addr_q_reg[3]/D|
+|               clk_fpga_0 |               clk_fpga_0 |design_1_i/axi_mem_intercon/s00_couplers/auto_us/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.write_addr_inst/GEN_CMD_QUEUE.cmd_queue/USE_RTL_ADDR.addr_q_reg[2]/D|
+|               clk_fpga_0 |               clk_fpga_0 | design_1_i/fir_n11_maxi_0/inst/fir_n11_maxi_gmem_m_axi_U/bus_write/bus_equal_gen.fifo_burst/pout_reg[1]/D|
+|               clk_fpga_0 |               clk_fpga_0 |design_1_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/cmd_depth_reg[5]/D|
+|               clk_fpga_0 |               clk_fpga_0 |design_1_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/cmd_depth_reg[4]/D|
+|               clk_fpga_0 |               clk_fpga_0 |design_1_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/split_in_progress_reg/D|
+|               clk_fpga_0 |               clk_fpga_0 |design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/wrap_cmd_0/axaddr_wrap_reg[5]/D|
+|               clk_fpga_0 |               clk_fpga_0 |  design_1_i/fir_n11_maxi_0/inst/fir_n11_maxi_gmem_m_axi_U/bus_write/bus_equal_gen.fifo_burst/full_n_reg/D|
+|               clk_fpga_0 |               clk_fpga_0 |design_1_i/axi_mem_intercon/s00_couplers/auto_us/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/USE_REGISTER.M_AXI_WVALID_q_reg/D|
+|               clk_fpga_0 |               clk_fpga_0 |design_1_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/cmd_depth_reg[2]/D|
+|               clk_fpga_0 |               clk_fpga_0 |design_1_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/cmd_depth_reg[3]/D|
+|               clk_fpga_0 |               clk_fpga_0 |               design_1_i/fir_n11_maxi_0/inst/fir_n11_maxi_gmem_m_axi_U/bus_read/buff_rdata/usedw_reg[5]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                 design_1_i/fir_n11_maxi_0/inst/fir_n11_maxi_gmem_m_axi_U/bus_read/fifo_rreq/pout_reg[2]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                              design_1_i/fir_n11_maxi_0/inst/fir_n11_maxi_AXILiteS_s_axi_U/rdata_reg[13]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                 design_1_i/fir_n11_maxi_0/inst/fir_n11_maxi_gmem_m_axi_U/bus_read/fifo_rreq/pout_reg[0]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                              design_1_i/fir_n11_maxi_0/inst/fir_n11_maxi_AXILiteS_s_axi_U/rdata_reg[31]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                              design_1_i/fir_n11_maxi_0/inst/fir_n11_maxi_AXILiteS_s_axi_U/rdata_reg[24]/D|
+|               clk_fpga_0 |               clk_fpga_0 |design_1_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/cmd_depth_reg[4]/D|
+|               clk_fpga_0 |               clk_fpga_0 |design_1_i/axi_mem_intercon/s00_couplers/auto_us/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst/USE_RTL_LENGTH.length_counter_q_reg[7]/D|
+|               clk_fpga_0 |               clk_fpga_0 |design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/incr_cmd_0/axaddr_incr_reg[5]/D|
+|               clk_fpga_0 |               clk_fpga_0 |design_1_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/cmd_depth_reg[5]/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="fir_n11_strm" xd:componentRef="fir_n11_strm" xd:initiationInterval="x" xd:clockPeriod="5.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="pstrmInput.data" xd:originalName="pstrmInput" xd:direction="in" xd:interfaceRef="pstrmInput" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="pstrmInput.keep" xd:originalName="pstrmInput" xd:direction="in" xd:interfaceRef="pstrmInput" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="pstrmInput.strb" xd:originalName="pstrmInput" xd:direction="in" xd:interfaceRef="pstrmInput" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="pstrmInput.user" xd:originalName="pstrmInput" xd:direction="in" xd:interfaceRef="pstrmInput" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="pstrmInput.last" xd:originalName="pstrmInput" xd:direction="in" xd:interfaceRef="pstrmInput" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="pstrmInput.id" xd:originalName="pstrmInput" xd:direction="in" xd:interfaceRef="pstrmInput" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="pstrmInput.dest" xd:originalName="pstrmInput" xd:direction="in" xd:interfaceRef="pstrmInput" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="pstrmOutput.data" xd:originalName="pstrmOutput" xd:direction="out" xd:interfaceRef="pstrmOutput" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="pstrmOutput.keep" xd:originalName="pstrmOutput" xd:direction="out" xd:interfaceRef="pstrmOutput" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="pstrmOutput.strb" xd:originalName="pstrmOutput" xd:direction="out" xd:interfaceRef="pstrmOutput" xd:busTypeRef="axis" xd:dataWidth="4"/>
+  <xd:arg xd:name="pstrmOutput.user" xd:originalName="pstrmOutput" xd:direction="out" xd:interfaceRef="pstrmOutput" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="pstrmOutput.last" xd:originalName="pstrmOutput" xd:direction="out" xd:interfaceRef="pstrmOutput" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="pstrmOutput.id" xd:originalName="pstrmOutput" xd:direction="out" xd:interfaceRef="pstrmOutput" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="pstrmOutput.dest" xd:originalName="pstrmOutput" xd:direction="out" xd:interfaceRef="pstrmOutput" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="an32Coef[]" xd:originalName="an32Coef" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x40" xd:arraySize="12" xd:dataWidth="32"/>
+  <xd:arg xd:name="regXferLeng" xd:originalName="regXferLeng" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x80" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="786" xd:FF="3741" xd:BRAM="2" xd:DSP="33"/>
+</xd:acceleratorMap>

@@ -1,0 +1,38 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.421932",
+   "Default View_TopLeft":"0,-325",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 8 -x 2640 -y 90 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 8 -x 2640 -y 110 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 7 -x 2370 -y 140 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 540 -y 430 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 200 -y 340 -defaultsOSRD
+preplace inst axi_dma_in_0 -pg 1 -lvl 3 -x 890 -y 90 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 6 -x 1970 -y 460 -defaultsOSRD
+preplace inst axi_dma_out_0 -pg 1 -lvl 5 -x 1620 -y 170 -defaultsOSRD
+preplace inst fir_n11_strm_0 -pg 1 -lvl 4 -x 1250 -y 150 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 8 20 230 370 230 690 190 1070 250 1440 280 1820 280 2140 250 2610
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 8 30 240 NJ 240 NJ 240 NJ 240 1420J 70 NJ 70 2120J 260 2600
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 5 380 250 710 200 1080 260 1450 290 1790
+preplace netloc processing_system7_0_FIXED_IO 1 7 1 NJ 110
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 2 720 180 1060J
+preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 700 60n
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 3 1 1080 80n
+preplace netloc axi_dma_1_M_AXI_S2MM 1 5 1 1800 150n
+preplace netloc processing_system7_0_DDR 1 7 1 NJ 90
+preplace netloc fir_n11_strm_0_pstrmOutput 1 4 1 1450 140n
+preplace netloc ps7_0_axi_periph_M02_AXI 1 2 3 NJ 450 NJ 450 1430
+preplace netloc axi_dma_0_M_AXI_MM2S 1 3 3 NJ 60 NJ 60 1810
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 7 390 270 NJ 270 NJ 270 NJ 270 NJ 270 NJ 270 2620
+preplace netloc axi_mem_intercon_M00_AXI 1 6 1 2130 130n
+levelinfo -pg 1 0 200 540 890 1250 1620 1970 2370 2640
+pagesize -pg 1 -db -bbox -sgen 0 0 2760 640
+"
+}
+{
+   "da_axi4_cnt":"7",
+   "da_ps7_cnt":"1"
+}

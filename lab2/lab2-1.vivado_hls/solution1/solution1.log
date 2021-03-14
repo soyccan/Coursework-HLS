@@ -1,0 +1,777 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lab2-1_hls/FIR.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 174.484 ; gain = 84.313
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 174.484 ; gain = 84.313
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 174.484 ; gain = 84.313
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 174.484 ; gain = 84.313
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'XFER_LOOP' (lab2-1_hls/FIR.cpp:22) in function 'fir_n11_strm' for pipelining.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'SHIFT_ACC_LOOP' (lab2-1_hls/FIR.cpp:27) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT_ACC_LOOP' (lab2-1_hls/FIR.cpp:27) in function 'fir_n11_strm' completely with a factor of 11.
+INFO: [XFORM 203-102] Partitioning array 'an32ShiftReg' automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'fir_n11_strm' (lab2-1_hls/FIR.cpp:4)...19 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 174.484 ; gain = 84.313
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 174.484 ; gain = 84.313
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir_n11_strm' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_n11_strm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'XFER_LOOP'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('an32Coef_load_3', lab2-1_hls/FIR.cpp:35) on array 'an32Coef' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'an32Coef'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 2, Final II = 11, Depth = 20.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 15.273 seconds; current allocated memory: 104.884 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.148 seconds; current allocated memory: 105.453 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_n11_strm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/an32Coef' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/regXferLeng_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir_n11_strm' to 's_axilite & ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_0' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'return', 'an32Coef' and 'regXferLeng_V' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'fir_n11_strm_mul_32s_32s_32_5_1' to 'fir_n11_strm_mul_bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fir_n11_strm_mul_bkb': 11 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_n11_strm'.
+INFO: [HLS 200-111]  Elapsed time: 0.253 seconds; current allocated memory: 106.855 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 228.78 MHz
+INFO: [RTMG 210-282] Generating pipelined core: 'fir_n11_strm_mul_bkb_MulnS_0'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 174.484 ; gain = 84.313
+INFO: [VHDL 208-304] Generating VHDL RTL for fir_n11_strm.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir_n11_strm.
+INFO: [HLS 200-112] Total elapsed time: 17.245 seconds; peak allocated memory: 106.855 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lab2-1_hls/FIR.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 174.418 ; gain = 105.746
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 174.418 ; gain = 105.746
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 174.418 ; gain = 105.746
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 174.418 ; gain = 105.746
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 174.418 ; gain = 105.746
+INFO: [HLS 200-472] Inferring partial write operation for 'an32ShiftReg' (lab2-1_hls/FIR.cpp:29:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'an32ShiftReg' (lab2-1_hls/FIR.cpp:32:5)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 174.418 ; gain = 105.746
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir_n11_strm' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_n11_strm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 14.057 seconds; current allocated memory: 104.202 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.064 seconds; current allocated memory: 104.521 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_n11_strm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/an32Coef' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/regXferLeng_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir_n11_strm' to 's_axilite & ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'fir_n11_strm_an32ShiftReg' to 'fir_n11_strm_an32bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Bundling port 'return', 'an32Coef' and 'regXferLeng_V' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'fir_n11_strm_mul_32s_32s_32_5_1' to 'fir_n11_strm_mul_cud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fir_n11_strm_mul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_n11_strm'.
+INFO: [HLS 200-111]  Elapsed time: 0.134 seconds; current allocated memory: 105.287 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 243.78 MHz
+INFO: [RTMG 210-282] Generating pipelined core: 'fir_n11_strm_mul_cud_MulnS_0'
+INFO: [RTMG 210-278] Implementing memory 'fir_n11_strm_an32bkb_ram (RAM)' using distributed RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 174.418 ; gain = 105.746
+INFO: [VHDL 208-304] Generating VHDL RTL for fir_n11_strm.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir_n11_strm.
+INFO: [HLS 200-112] Total elapsed time: 15.622 seconds; peak allocated memory: 105.287 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lab2-1_hls/FIR.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 175.270 ; gain = 85.316
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 175.270 ; gain = 85.316
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 175.270 ; gain = 85.316
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 175.270 ; gain = 85.316
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'XFER_LOOP' (lab2-1_hls/FIR.cpp:22) in function 'fir_n11_strm' for pipelining.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'SHIFT_ACC_LOOP' (lab2-1_hls/FIR.cpp:27) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT_ACC_LOOP' (lab2-1_hls/FIR.cpp:27) in function 'fir_n11_strm' completely with a factor of 11.
+INFO: [XFORM 203-102] Partitioning array 'an32ShiftReg' automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'fir_n11_strm' (lab2-1_hls/FIR.cpp:4)...19 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 175.270 ; gain = 85.316
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 175.270 ; gain = 85.316
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir_n11_strm' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_n11_strm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'XFER_LOOP'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('an32Coef_load_3', lab2-1_hls/FIR.cpp:35) on array 'an32Coef' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'an32Coef'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 2, Final II = 11, Depth = 20.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 14.078 seconds; current allocated memory: 104.844 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.129 seconds; current allocated memory: 105.444 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_n11_strm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/an32Coef' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/regXferLeng_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir_n11_strm' to 's_axilite & ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_0' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'return', 'an32Coef' and 'regXferLeng_V' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'fir_n11_strm_mul_32s_32s_32_5_1' to 'fir_n11_strm_mul_bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fir_n11_strm_mul_bkb': 11 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_n11_strm'.
+INFO: [HLS 200-111]  Elapsed time: 0.227 seconds; current allocated memory: 106.878 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 228.78 MHz
+INFO: [RTMG 210-282] Generating pipelined core: 'fir_n11_strm_mul_bkb_MulnS_0'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 175.270 ; gain = 85.316
+INFO: [VHDL 208-304] Generating VHDL RTL for fir_n11_strm.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir_n11_strm.
+INFO: [HLS 200-112] Total elapsed time: 16.13 seconds; peak allocated memory: 106.878 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lab2-1_hls/FIR.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 174.652 ; gain = 84.949
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 174.652 ; gain = 84.949
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 174.652 ; gain = 84.949
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 174.652 ; gain = 84.949
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 174.652 ; gain = 84.949
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'XFER_LOOP' (lab2-1_hls/FIR.cpp:22:65) in function 'fir_n11_strm' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'an32ShiftReg' (lab2-1_hls/FIR.cpp:29:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'an32ShiftReg' (lab2-1_hls/FIR.cpp:32:5)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 174.652 ; gain = 84.949
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir_n11_strm' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_n11_strm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'SHIFT_ACC_LOOP'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 2, Final II = 2, Depth = 8.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 12.243 seconds; current allocated memory: 104.365 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.072 seconds; current allocated memory: 104.702 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_n11_strm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/an32Coef' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/regXferLeng_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir_n11_strm' to 's_axilite & ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'fir_n11_strm_an32ShiftReg' to 'fir_n11_strm_an32bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Bundling port 'return', 'an32Coef' and 'regXferLeng_V' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'fir_n11_strm_mul_32s_32s_32_5_1' to 'fir_n11_strm_mul_cud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fir_n11_strm_mul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_n11_strm'.
+INFO: [HLS 200-111]  Elapsed time: 0.126 seconds; current allocated memory: 105.611 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 243.78 MHz
+INFO: [RTMG 210-282] Generating pipelined core: 'fir_n11_strm_mul_cud_MulnS_0'
+INFO: [RTMG 210-278] Implementing memory 'fir_n11_strm_an32bkb_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 174.652 ; gain = 84.949
+INFO: [VHDL 208-304] Generating VHDL RTL for fir_n11_strm.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir_n11_strm.
+INFO: [HLS 200-112] Total elapsed time: 13.779 seconds; peak allocated memory: 105.611 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lab2-1_hls/FIR.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 175.098 ; gain = 84.941
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 175.098 ; gain = 84.941
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 175.098 ; gain = 84.941
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 175.098 ; gain = 84.941
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'XFER_LOOP' (lab2-1_hls/FIR.cpp:22) in function 'fir_n11_strm' for pipelining.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'SHIFT_ACC_LOOP' (lab2-1_hls/FIR.cpp:27) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT_ACC_LOOP' (lab2-1_hls/FIR.cpp:27) in function 'fir_n11_strm' completely with a factor of 11.
+INFO: [XFORM 203-102] Partitioning array 'an32ShiftReg' automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'fir_n11_strm' (lab2-1_hls/FIR.cpp:4)...19 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 175.098 ; gain = 84.941
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 175.098 ; gain = 84.941
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir_n11_strm' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_n11_strm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'XFER_LOOP'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('an32Coef_load_3', lab2-1_hls/FIR.cpp:35) on array 'an32Coef' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'an32Coef'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 2, Final II = 11, Depth = 20.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 12.388 seconds; current allocated memory: 104.838 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.116 seconds; current allocated memory: 105.438 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_n11_strm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/an32Coef' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/regXferLeng_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir_n11_strm' to 's_axilite & ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_0' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'return', 'an32Coef' and 'regXferLeng_V' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'fir_n11_strm_mul_32s_32s_32_5_1' to 'fir_n11_strm_mul_bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fir_n11_strm_mul_bkb': 11 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_n11_strm'.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 106.856 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 228.78 MHz
+INFO: [RTMG 210-282] Generating pipelined core: 'fir_n11_strm_mul_bkb_MulnS_0'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 175.098 ; gain = 84.941
+INFO: [VHDL 208-304] Generating VHDL RTL for fir_n11_strm.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir_n11_strm.
+INFO: [HLS 200-112] Total elapsed time: 14.13 seconds; peak allocated memory: 106.856 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lab2-1_hls/FIR.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 175.176 ; gain = 84.891
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 175.176 ; gain = 84.891
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 175.176 ; gain = 84.891
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 175.176 ; gain = 84.891
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 175.176 ; gain = 84.891
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'XFER_LOOP' (lab2-1_hls/FIR.cpp:22:65) in function 'fir_n11_strm' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'an32ShiftReg' (lab2-1_hls/FIR.cpp:29:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'an32ShiftReg' (lab2-1_hls/FIR.cpp:32:5)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 175.176 ; gain = 84.891
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir_n11_strm' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_n11_strm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'SHIFT_ACC_LOOP'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 2, Final II = 2, Depth = 8.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 12.244 seconds; current allocated memory: 104.396 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 104.749 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_n11_strm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/an32Coef' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/regXferLeng_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir_n11_strm' to 's_axilite & ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'fir_n11_strm_an32ShiftReg' to 'fir_n11_strm_an32bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Bundling port 'return', 'an32Coef' and 'regXferLeng_V' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'fir_n11_strm_mul_32s_32s_32_5_1' to 'fir_n11_strm_mul_cud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fir_n11_strm_mul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_n11_strm'.
+INFO: [HLS 200-111]  Elapsed time: 0.129 seconds; current allocated memory: 105.626 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 243.78 MHz
+INFO: [RTMG 210-282] Generating pipelined core: 'fir_n11_strm_mul_cud_MulnS_0'
+INFO: [RTMG 210-278] Implementing memory 'fir_n11_strm_an32bkb_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 175.176 ; gain = 84.891
+INFO: [VHDL 208-304] Generating VHDL RTL for fir_n11_strm.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir_n11_strm.
+INFO: [HLS 200-112] Total elapsed time: 13.809 seconds; peak allocated memory: 105.626 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lab2-1_hls/FIR.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 174.723 ; gain = 84.547
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 174.723 ; gain = 84.547
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 174.723 ; gain = 84.547
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 174.723 ; gain = 84.547
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 174.723 ; gain = 84.547
+INFO: [HLS 200-472] Inferring partial write operation for 'an32ShiftReg' (lab2-1_hls/FIR.cpp:29:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'an32ShiftReg' (lab2-1_hls/FIR.cpp:32:5)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 174.723 ; gain = 84.547
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir_n11_strm' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_n11_strm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 11.773 seconds; current allocated memory: 104.233 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.056 seconds; current allocated memory: 104.552 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_n11_strm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/an32Coef' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/regXferLeng_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir_n11_strm' to 's_axilite & ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'fir_n11_strm_an32ShiftReg' to 'fir_n11_strm_an32bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Bundling port 'return', 'an32Coef' and 'regXferLeng_V' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'fir_n11_strm_mul_32s_32s_32_5_1' to 'fir_n11_strm_mul_cud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fir_n11_strm_mul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_n11_strm'.
+INFO: [HLS 200-111]  Elapsed time: 0.123 seconds; current allocated memory: 105.333 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 243.78 MHz
+INFO: [RTMG 210-282] Generating pipelined core: 'fir_n11_strm_mul_cud_MulnS_0'
+INFO: [RTMG 210-278] Implementing memory 'fir_n11_strm_an32bkb_ram (RAM)' using distributed RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 174.723 ; gain = 84.547
+INFO: [VHDL 208-304] Generating VHDL RTL for fir_n11_strm.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir_n11_strm.
+INFO: [HLS 200-112] Total elapsed time: 13.169 seconds; peak allocated memory: 105.333 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lab2-1_hls/FIR.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 175.504 ; gain = 85.301
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 175.504 ; gain = 85.301
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 175.504 ; gain = 85.301
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 175.504 ; gain = 85.301
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 175.504 ; gain = 85.301
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'XFER_LOOP' (lab2-1_hls/FIR.cpp:22:65) in function 'fir_n11_strm' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'an32ShiftReg' (lab2-1_hls/FIR.cpp:29:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'an32ShiftReg' (lab2-1_hls/FIR.cpp:32:5)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 175.504 ; gain = 85.301
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir_n11_strm' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_n11_strm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'SHIFT_ACC_LOOP'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 2, Final II = 2, Depth = 8.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 12.226 seconds; current allocated memory: 104.412 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.072 seconds; current allocated memory: 104.749 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_n11_strm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/an32Coef' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/regXferLeng_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir_n11_strm' to 's_axilite & ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'fir_n11_strm_an32ShiftReg' to 'fir_n11_strm_an32bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Bundling port 'return', 'an32Coef' and 'regXferLeng_V' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'fir_n11_strm_mul_32s_32s_32_5_1' to 'fir_n11_strm_mul_cud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fir_n11_strm_mul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_n11_strm'.
+INFO: [HLS 200-111]  Elapsed time: 0.131 seconds; current allocated memory: 105.626 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 243.78 MHz
+INFO: [RTMG 210-282] Generating pipelined core: 'fir_n11_strm_mul_cud_MulnS_0'
+INFO: [RTMG 210-278] Implementing memory 'fir_n11_strm_an32bkb_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 175.504 ; gain = 85.301
+INFO: [VHDL 208-304] Generating VHDL RTL for fir_n11_strm.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir_n11_strm.
+INFO: [HLS 200-112] Total elapsed time: 13.805 seconds; peak allocated memory: 105.626 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lab2-1_hls/FIR.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 174.738 ; gain = 82.285
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 174.738 ; gain = 82.285
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 174.738 ; gain = 82.285
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 174.738 ; gain = 82.285
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'XFER_LOOP' (lab2-1_hls/FIR.cpp:22) in function 'fir_n11_strm' for pipelining.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'SHIFT_ACC_LOOP' (lab2-1_hls/FIR.cpp:27) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT_ACC_LOOP' (lab2-1_hls/FIR.cpp:27) in function 'fir_n11_strm' completely with a factor of 11.
+INFO: [XFORM 203-102] Partitioning array 'an32ShiftReg' automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'fir_n11_strm' (lab2-1_hls/FIR.cpp:4)...19 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 174.738 ; gain = 82.285
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 174.738 ; gain = 82.285
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir_n11_strm' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_n11_strm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'XFER_LOOP'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('an32Coef_load_3', lab2-1_hls/FIR.cpp:35) on array 'an32Coef' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'an32Coef'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 2, Final II = 11, Depth = 20.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 14.918 seconds; current allocated memory: 104.838 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.129 seconds; current allocated memory: 105.438 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_n11_strm' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmOutput_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/an32Coef' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/regXferLeng_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir_n11_strm' to 's_axilite & ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_0' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'return', 'an32Coef' and 'regXferLeng_V' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'fir_n11_strm_mul_32s_32s_32_5_1' to 'fir_n11_strm_mul_bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fir_n11_strm_mul_bkb': 11 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_n11_strm'.
+INFO: [HLS 200-111]  Elapsed time: 0.222 seconds; current allocated memory: 106.871 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 228.78 MHz
+INFO: [RTMG 210-282] Generating pipelined core: 'fir_n11_strm_mul_bkb_MulnS_0'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 174.738 ; gain = 82.285
+INFO: [VHDL 208-304] Generating VHDL RTL for fir_n11_strm.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir_n11_strm.
+INFO: [HLS 200-112] Total elapsed time: 16.816 seconds; peak allocated memory: 106.871 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.

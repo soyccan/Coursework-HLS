@@ -1,0 +1,274 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lab2_hls/FIR.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 174.348 ; gain = 84.977
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 174.348 ; gain = 84.977
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 174.348 ; gain = 84.977
+INFO: [HLS 200-10] Checking synthesizability ...
+ERROR: [SYNCHK 200-61] lab2_hls/FIR.cpp:18: unsupported memory access on variable 'pn32HPInput' which is (or contains) an array with unknown size at compile time.
+INFO: [SYNCHK 200-10] 1 error(s), 0 warning(s).
+ERROR: [HLS 200-70] Synthesizability check failed.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lab2_hls/FIR.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 174.484 ; gain = 83.742
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 174.484 ; gain = 83.742
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 174.484 ; gain = 83.742
+INFO: [HLS 200-10] Checking synthesizability ...
+ERROR: [SYNCHK 200-61] lab2_hls/FIR.cpp:18: unsupported memory access on variable 'pn32HPInput' which is (or contains) an array with unknown size at compile time.
+INFO: [SYNCHK 200-10] 1 error(s), 0 warning(s).
+ERROR: [HLS 200-70] Synthesizability check failed.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lab2_hls/FIR.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 175.074 ; gain = 84.855
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 175.074 ; gain = 84.855
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 175.074 ; gain = 84.855
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 175.074 ; gain = 84.855
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 175.074 ; gain = 84.855
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'gmem' (lab2_hls/FIR.cpp:18:3). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst write of variable length on port 'gmem' (lab2_hls/FIR.cpp:30:3). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-472] Inferring partial write operation for 'an32ShiftReg' (lab2_hls/FIR.cpp:22:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'an32ShiftReg' (lab2_hls/FIR.cpp:25:5)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 175.074 ; gain = 84.855
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir_n11_maxi' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_n11_maxi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 11.843 seconds; current allocated memory: 100.884 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 101.154 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_n11_maxi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_maxi/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_maxi/pn32HPInput' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_maxi/pn32HPOutput' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_maxi/an32Coef' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_maxi/regXferLeng_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir_n11_maxi' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'fir_n11_maxi_an32ShiftReg' to 'fir_n11_maxi_an32bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Bundling port 'pn32HPInput' and 'pn32HPOutput' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'fir_n11_maxi_mul_32s_32s_32_5_1' to 'fir_n11_maxi_mul_cud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fir_n11_maxi_mul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_n11_maxi'.
+INFO: [HLS 200-111]  Elapsed time: 0.098 seconds; current allocated memory: 101.976 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 228.57 MHz
+INFO: [RTMG 210-282] Generating pipelined core: 'fir_n11_maxi_mul_cud_MulnS_0'
+INFO: [RTMG 210-278] Implementing memory 'fir_n11_maxi_an32bkb_ram (RAM)' using distributed RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 175.074 ; gain = 84.855
+INFO: [VHDL 208-304] Generating VHDL RTL for fir_n11_maxi.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir_n11_maxi.
+INFO: [HLS 200-112] Total elapsed time: 13.526 seconds; peak allocated memory: 101.976 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+WARNING: [COSIM 212-369] AXI_master port 'pn32HPInput' has a depth of '600'. Insufficient depth may result in simulation mismatch or freeze.
+WARNING: [COSIM 212-369] AXI_master port 'pn32HPOutput' has a depth of '600'. Insufficient depth may result in simulation mismatch or freeze.
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lab2_hls/FIR.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 175.066 ; gain = 84.766
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 175.066 ; gain = 84.766
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 175.066 ; gain = 84.766
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 175.066 ; gain = 84.766
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 175.066 ; gain = 84.766
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'gmem' (lab2_hls/FIR.cpp:18:3). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst write of variable length on port 'gmem' (lab2_hls/FIR.cpp:30:3). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-472] Inferring partial write operation for 'an32ShiftReg' (lab2_hls/FIR.cpp:22:5)
+INFO: [HLS 200-472] Inferring partial write operation for 'an32ShiftReg' (lab2_hls/FIR.cpp:25:5)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 175.066 ; gain = 84.766
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir_n11_maxi' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_n11_maxi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 11.826 seconds; current allocated memory: 100.889 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.052 seconds; current allocated memory: 101.206 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_n11_maxi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_maxi/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_maxi/pn32HPInput' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_maxi/pn32HPOutput' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_maxi/an32Coef' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_maxi/regXferLeng_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir_n11_maxi' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'fir_n11_maxi_an32ShiftReg' to 'fir_n11_maxi_an32bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Bundling port 'pn32HPInput', 'pn32HPOutput', 'an32Coef' and 'regXferLeng_V' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'fir_n11_maxi_mul_32s_32s_32_5_1' to 'fir_n11_maxi_mul_cud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fir_n11_maxi_mul_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_n11_maxi'.
+INFO: [HLS 200-111]  Elapsed time: 0.088 seconds; current allocated memory: 102.047 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 228.57 MHz
+INFO: [RTMG 210-282] Generating pipelined core: 'fir_n11_maxi_mul_cud_MulnS_0'
+INFO: [RTMG 210-278] Implementing memory 'fir_n11_maxi_an32bkb_ram (RAM)' using distributed RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 175.066 ; gain = 84.766
+INFO: [VHDL 208-304] Generating VHDL RTL for fir_n11_maxi.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir_n11_maxi.
+INFO: [HLS 200-112] Total elapsed time: 13.352 seconds; peak allocated memory: 102.047 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lab2_hls/FIR.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 174.625 ; gain = 85.188
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 174.625 ; gain = 85.188
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 174.625 ; gain = 85.188
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 174.625 ; gain = 85.188
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'XFER_LOOP' (lab2_hls/FIR.cpp:16) in function 'fir_n11_maxi' for pipelining.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'SHIFT_ACC_LOOP' (lab2_hls/FIR.cpp:20) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT_ACC_LOOP' (lab2_hls/FIR.cpp:20) in function 'fir_n11_maxi' completely with a factor of 11.
+INFO: [XFORM 203-102] Partitioning array 'an32ShiftReg' automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'fir_n11_maxi' (lab2_hls/FIR.cpp:4)...10 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 174.625 ; gain = 85.188
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'gmem' (lab2_hls/FIR.cpp:18:3). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst write of variable length on port 'gmem' (lab2_hls/FIR.cpp:30:3). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 174.625 ; gain = 85.188
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fir_n11_maxi' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fir_n11_maxi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'XFER_LOOP'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('an32Coef_load_8', lab2_hls/FIR.cpp:28) on array 'an32Coef' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'an32Coef'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 2, Final II = 11, Depth = 20.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 12.063 seconds; current allocated memory: 101.436 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.142 seconds; current allocated memory: 102.062 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fir_n11_maxi' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_maxi/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_maxi/pn32HPInput' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_maxi/pn32HPOutput' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_maxi/an32Coef' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_maxi/regXferLeng_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fir_n11_maxi' to 's_axilite & ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'an32ShiftReg_0' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'return', 'pn32HPInput', 'pn32HPOutput', 'an32Coef' and 'regXferLeng_V' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'fir_n11_maxi_mul_32s_32s_32_5_1' to 'fir_n11_maxi_mul_bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fir_n11_maxi_mul_bkb': 11 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_n11_maxi'.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 103.571 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 228.57 MHz
+INFO: [RTMG 210-282] Generating pipelined core: 'fir_n11_maxi_mul_bkb_MulnS_0'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:14 . Memory (MB): peak = 174.625 ; gain = 85.188
+INFO: [VHDL 208-304] Generating VHDL RTL for fir_n11_maxi.
+INFO: [VLOG 209-307] Generating Verilog RTL for fir_n11_maxi.
+INFO: [HLS 200-112] Total elapsed time: 13.804 seconds; peak allocated memory: 103.571 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+WARNING: [COSIM 212-369] AXI_master port 'pn32HPInput' has a depth of '600'. Insufficient depth may result in simulation mismatch or freeze.
+WARNING: [COSIM 212-369] AXI_master port 'pn32HPOutput' has a depth of '600'. Insufficient depth may result in simulation mismatch or freeze.
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.

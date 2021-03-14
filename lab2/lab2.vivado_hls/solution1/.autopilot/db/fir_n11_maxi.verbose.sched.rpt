@@ -1,0 +1,546 @@
+
+
+================================================================
+== Vivado HLS Report for 'fir_n11_maxi'
+================================================================
+* Date:           Sun Mar  7 01:03:06 2021
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        lab2_hls
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 4.375 ns |   0.63 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |             |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- XFER_LOOP  |        ?|        ?|        20|         11|          2|     ?|    yes   |
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 11, depth = 20
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 33
+* Pipeline : 1
+  Pipeline-0 : II = 11, D = 20, States = { 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 29 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 9 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.55>
+ST_1 : Operation 34 [1/1] (1.00ns)   --->   "%regXferLeng_V_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %regXferLeng_V)"   --->   Operation 34 'read' 'regXferLeng_V_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 35 [1/1] (1.00ns)   --->   "%pn32HPOutput_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %pn32HPOutput)"   --->   Operation 35 'read' 'pn32HPOutput_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 36 [1/1] (1.00ns)   --->   "%pn32HPInput_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %pn32HPInput)"   --->   Operation 36 'read' 'pn32HPInput_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%pn32HPOutput3 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %pn32HPOutput_read, i32 2, i32 31)"   --->   Operation 37 'partselect' 'pn32HPOutput3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%pn32HPInput1 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %pn32HPInput_read, i32 2, i32 31)"   --->   Operation 38 'partselect' 'pn32HPInput1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%zext_ln16 = zext i32 %regXferLeng_V_read to i33" [lab2_hls/FIR.cpp:16]   --->   Operation 39 'zext' 'zext_ln16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (2.55ns)   --->   "%add_ln16 = add i33 %zext_ln16, 3" [lab2_hls/FIR.cpp:16]   --->   Operation 40 'add' 'add_ln16' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%trunc_ln = call i31 @_ssdm_op_PartSelect.i31.i33.i32.i32(i33 %add_ln16, i32 2, i32 32)" [lab2_hls/FIR.cpp:28]   --->   Operation 41 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 4.37>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%empty = zext i30 %pn32HPOutput3 to i64"   --->   Operation 42 'zext' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%gmem_addr = getelementptr i32* %gmem, i64 %empty"   --->   Operation 43 'getelementptr' 'gmem_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%empty_6 = zext i30 %pn32HPInput1 to i64"   --->   Operation 44 'zext' 'empty_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%gmem_addr_1 = getelementptr i32* %gmem, i64 %empty_6"   --->   Operation 45 'getelementptr' 'gmem_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%empty_8 = zext i31 %trunc_ln to i32" [lab2_hls/FIR.cpp:28]   --->   Operation 46 'zext' 'empty_8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 47 [7/7] (4.37ns)   --->   "%gmem_addr_1_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %gmem_addr_1, i32 %empty_8)" [lab2_hls/FIR.cpp:18]   --->   Operation 47 'readreq' 'gmem_addr_1_rd_req' <Predicate = true> <Delay = 4.37> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_2 : Operation 48 [1/1] (4.37ns)   --->   "%gmem_addr_wr_req = call i1 @_ssdm_op_WriteReq.m_axi.i32P(i32* %gmem_addr, i32 %empty_8)" [lab2_hls/FIR.cpp:30]   --->   Operation 48 'writereq' 'gmem_addr_wr_req' <Predicate = true> <Delay = 4.37> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 3 <SV = 2> <Delay = 4.37>
+ST_3 : Operation 49 [6/7] (4.37ns)   --->   "%gmem_addr_1_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %gmem_addr_1, i32 %empty_8)" [lab2_hls/FIR.cpp:18]   --->   Operation 49 'readreq' 'gmem_addr_1_rd_req' <Predicate = true> <Delay = 4.37> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 4.37>
+ST_4 : Operation 50 [5/7] (4.37ns)   --->   "%gmem_addr_1_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %gmem_addr_1, i32 %empty_8)" [lab2_hls/FIR.cpp:18]   --->   Operation 50 'readreq' 'gmem_addr_1_rd_req' <Predicate = true> <Delay = 4.37> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 4.37>
+ST_5 : Operation 51 [4/7] (4.37ns)   --->   "%gmem_addr_1_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %gmem_addr_1, i32 %empty_8)" [lab2_hls/FIR.cpp:18]   --->   Operation 51 'readreq' 'gmem_addr_1_rd_req' <Predicate = true> <Delay = 4.37> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 4.37>
+ST_6 : Operation 52 [3/7] (4.37ns)   --->   "%gmem_addr_1_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %gmem_addr_1, i32 %empty_8)" [lab2_hls/FIR.cpp:18]   --->   Operation 52 'readreq' 'gmem_addr_1_rd_req' <Predicate = true> <Delay = 4.37> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 4.37>
+ST_7 : Operation 53 [2/7] (4.37ns)   --->   "%gmem_addr_1_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %gmem_addr_1, i32 %empty_8)" [lab2_hls/FIR.cpp:18]   --->   Operation 53 'readreq' 'gmem_addr_1_rd_req' <Predicate = true> <Delay = 4.37> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 4.37>
+ST_8 : Operation 54 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %gmem), !map !42"   --->   Operation 54 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 55 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([12 x i32]* %an32Coef), !map !49"   --->   Operation 55 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 56 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %regXferLeng_V), !map !55"   --->   Operation 56 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 57 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([13 x i8]* @fir_n11_maxi_str) nounwind"   --->   Operation 57 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 58 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %gmem, [6 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 600, [5 x i8]* @p_str2, [6 x i8]* @p_str3, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [lab2_hls/FIR.cpp:6]   --->   Operation 58 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 59 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %pn32HPInput, [10 x i8]* @mode, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 600, [1 x i8]* @bundle, [6 x i8]* @p_str3, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [lab2_hls/FIR.cpp:6]   --->   Operation 59 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 60 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %pn32HPOutput, [10 x i8]* @mode1, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 600, [1 x i8]* @bundle2, [6 x i8]* @p_str3, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [lab2_hls/FIR.cpp:6]   --->   Operation 60 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 61 [1/1] (0.00ns)   --->   "%empty_7 = call i32 (...)* @_ssdm_op_SpecMemCore([12 x i32]* %an32Coef, [1 x i8]* @p_str6, [7 x i8]* @RAM_1P_str, [1 x i8]* @p_str6, i32 -1, [1 x i8]* @p_str6, [1 x i8]* @p_str6, [1 x i8]* @p_str6, [1 x i8]* @p_str6, [1 x i8]* @p_str6)" [lab2_hls/FIR.cpp:6]   --->   Operation 61 'specmemcore' 'empty_7' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 62 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([12 x i32]* %an32Coef, [10 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [lab2_hls/FIR.cpp:6]   --->   Operation 62 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 63 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %regXferLeng_V, [10 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [lab2_hls/FIR.cpp:6]   --->   Operation 63 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 64 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [lab2_hls/FIR.cpp:6]   --->   Operation 64 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 65 [1/1] (0.00ns)   --->   "%an32Coef_addr = getelementptr [12 x i32]* %an32Coef, i64 0, i64 10" [lab2_hls/FIR.cpp:28]   --->   Operation 65 'getelementptr' 'an32Coef_addr' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 66 [1/1] (0.00ns)   --->   "%an32Coef_addr_1 = getelementptr [12 x i32]* %an32Coef, i64 0, i64 9" [lab2_hls/FIR.cpp:28]   --->   Operation 66 'getelementptr' 'an32Coef_addr_1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 67 [1/1] (0.00ns)   --->   "%an32Coef_addr_2 = getelementptr [12 x i32]* %an32Coef, i64 0, i64 8" [lab2_hls/FIR.cpp:28]   --->   Operation 67 'getelementptr' 'an32Coef_addr_2' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 68 [1/1] (0.00ns)   --->   "%an32Coef_addr_3 = getelementptr [12 x i32]* %an32Coef, i64 0, i64 7" [lab2_hls/FIR.cpp:28]   --->   Operation 68 'getelementptr' 'an32Coef_addr_3' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 69 [1/1] (0.00ns)   --->   "%an32Coef_addr_4 = getelementptr [12 x i32]* %an32Coef, i64 0, i64 6" [lab2_hls/FIR.cpp:28]   --->   Operation 69 'getelementptr' 'an32Coef_addr_4' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 70 [1/1] (0.00ns)   --->   "%an32Coef_addr_5 = getelementptr [12 x i32]* %an32Coef, i64 0, i64 5" [lab2_hls/FIR.cpp:28]   --->   Operation 70 'getelementptr' 'an32Coef_addr_5' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 71 [1/1] (0.00ns)   --->   "%an32Coef_addr_6 = getelementptr [12 x i32]* %an32Coef, i64 0, i64 4" [lab2_hls/FIR.cpp:28]   --->   Operation 71 'getelementptr' 'an32Coef_addr_6' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 72 [1/1] (0.00ns)   --->   "%an32Coef_addr_7 = getelementptr [12 x i32]* %an32Coef, i64 0, i64 3" [lab2_hls/FIR.cpp:28]   --->   Operation 72 'getelementptr' 'an32Coef_addr_7' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 73 [1/1] (0.00ns)   --->   "%an32Coef_addr_8 = getelementptr [12 x i32]* %an32Coef, i64 0, i64 2" [lab2_hls/FIR.cpp:28]   --->   Operation 73 'getelementptr' 'an32Coef_addr_8' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 74 [1/1] (0.00ns)   --->   "%an32Coef_addr_9 = getelementptr [12 x i32]* %an32Coef, i64 0, i64 1" [lab2_hls/FIR.cpp:28]   --->   Operation 74 'getelementptr' 'an32Coef_addr_9' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 75 [1/1] (0.00ns)   --->   "%an32Coef_addr_10 = getelementptr [12 x i32]* %an32Coef, i64 0, i64 0" [lab2_hls/FIR.cpp:28]   --->   Operation 75 'getelementptr' 'an32Coef_addr_10' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 76 [1/7] (4.37ns)   --->   "%gmem_addr_1_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %gmem_addr_1, i32 %empty_8)" [lab2_hls/FIR.cpp:18]   --->   Operation 76 'readreq' 'gmem_addr_1_rd_req' <Predicate = true> <Delay = 4.37> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 77 [1/1] (1.76ns)   --->   "br label %1" [lab2_hls/FIR.cpp:16]   --->   Operation 77 'br' <Predicate = true> <Delay = 1.76>
+
+State 9 <SV = 8> <Delay = 3.44>
+ST_9 : Operation 78 [1/1] (0.00ns)   --->   "%n32XferCnt_0 = phi i31 [ 0, %0 ], [ %n32XferCnt, %XFER_LOOP ]"   --->   Operation 78 'phi' 'n32XferCnt_0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 79 [1/1] (2.47ns)   --->   "%icmp_ln16 = icmp eq i31 %n32XferCnt_0, %trunc_ln" [lab2_hls/FIR.cpp:16]   --->   Operation 79 'icmp' 'icmp_ln16' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 80 [1/1] (2.52ns)   --->   "%n32XferCnt = add i31 %n32XferCnt_0, 1" [lab2_hls/FIR.cpp:16]   --->   Operation 80 'add' 'n32XferCnt' <Predicate = true> <Delay = 2.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 81 [1/1] (0.00ns)   --->   "br i1 %icmp_ln16, label %2, label %XFER_LOOP" [lab2_hls/FIR.cpp:16]   --->   Operation 81 'br' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 82 [2/2] (2.32ns)   --->   "%an32Coef_load_6 = load i32* %an32Coef_addr_6, align 4" [lab2_hls/FIR.cpp:28]   --->   Operation 82 'load' 'an32Coef_load_6' <Predicate = (!icmp_ln16)> <Delay = 2.32> <Core = "RAM_1P">   --->   Core 44 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 12> <RAM>
+
+State 10 <SV = 9> <Delay = 4.37>
+ST_10 : Operation 83 [1/1] (4.37ns)   --->   "%n32Temp = call i32 @_ssdm_op_Read.m_axi.i32P(i32* %gmem_addr_1)" [lab2_hls/FIR.cpp:18]   --->   Operation 83 'read' 'n32Temp' <Predicate = (!icmp_ln16)> <Delay = 4.37> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_10 : Operation 84 [1/2] (2.32ns)   --->   "%an32Coef_load_6 = load i32* %an32Coef_addr_6, align 4" [lab2_hls/FIR.cpp:28]   --->   Operation 84 'load' 'an32Coef_load_6' <Predicate = (!icmp_ln16)> <Delay = 2.32> <Core = "RAM_1P">   --->   Core 44 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 12> <RAM>
+ST_10 : Operation 85 [2/2] (2.32ns)   --->   "%an32Coef_load_7 = load i32* %an32Coef_addr_7, align 4" [lab2_hls/FIR.cpp:28]   --->   Operation 85 'load' 'an32Coef_load_7' <Predicate = (!icmp_ln16)> <Delay = 2.32> <Core = "RAM_1P">   --->   Core 44 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 12> <RAM>
+
+State 11 <SV = 10> <Delay = 3.95>
+ST_11 : Operation 86 [1/1] (0.00ns)   --->   "%an32ShiftReg_3_load = load i32* @an32ShiftReg_3, align 4" [lab2_hls/FIR.cpp:25]   --->   Operation 86 'load' 'an32ShiftReg_3_load' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_11 : Operation 87 [5/5] (3.95ns)   --->   "%mul_ln28_6 = mul nsw i32 %an32ShiftReg_3_load, %an32Coef_load_6" [lab2_hls/FIR.cpp:28]   --->   Operation 87 'mul' 'mul_ln28_6' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 88 [1/2] (2.32ns)   --->   "%an32Coef_load_7 = load i32* %an32Coef_addr_7, align 4" [lab2_hls/FIR.cpp:28]   --->   Operation 88 'load' 'an32Coef_load_7' <Predicate = (!icmp_ln16)> <Delay = 2.32> <Core = "RAM_1P">   --->   Core 44 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 12> <RAM>
+ST_11 : Operation 89 [2/2] (2.32ns)   --->   "%an32Coef_load_8 = load i32* %an32Coef_addr_8, align 4" [lab2_hls/FIR.cpp:28]   --->   Operation 89 'load' 'an32Coef_load_8' <Predicate = (!icmp_ln16)> <Delay = 2.32> <Core = "RAM_1P">   --->   Core 44 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 12> <RAM>
+
+State 12 <SV = 11> <Delay = 3.95>
+ST_12 : Operation 90 [4/5] (3.95ns)   --->   "%mul_ln28_6 = mul nsw i32 %an32ShiftReg_3_load, %an32Coef_load_6" [lab2_hls/FIR.cpp:28]   --->   Operation 90 'mul' 'mul_ln28_6' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 91 [1/1] (0.00ns)   --->   "%an32ShiftReg_2_load = load i32* @an32ShiftReg_2, align 8" [lab2_hls/FIR.cpp:25]   --->   Operation 91 'load' 'an32ShiftReg_2_load' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_12 : Operation 92 [1/1] (0.00ns)   --->   "store i32 %an32ShiftReg_2_load, i32* @an32ShiftReg_3, align 4" [lab2_hls/FIR.cpp:25]   --->   Operation 92 'store' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_12 : Operation 93 [5/5] (3.95ns)   --->   "%mul_ln28_7 = mul nsw i32 %an32ShiftReg_2_load, %an32Coef_load_7" [lab2_hls/FIR.cpp:28]   --->   Operation 93 'mul' 'mul_ln28_7' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 94 [1/2] (2.32ns)   --->   "%an32Coef_load_8 = load i32* %an32Coef_addr_8, align 4" [lab2_hls/FIR.cpp:28]   --->   Operation 94 'load' 'an32Coef_load_8' <Predicate = (!icmp_ln16)> <Delay = 2.32> <Core = "RAM_1P">   --->   Core 44 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 12> <RAM>
+ST_12 : Operation 95 [2/2] (2.32ns)   --->   "%an32Coef_load_9 = load i32* %an32Coef_addr_9, align 4" [lab2_hls/FIR.cpp:28]   --->   Operation 95 'load' 'an32Coef_load_9' <Predicate = (!icmp_ln16)> <Delay = 2.32> <Core = "RAM_1P">   --->   Core 44 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 12> <RAM>
+
+State 13 <SV = 12> <Delay = 3.95>
+ST_13 : Operation 96 [3/5] (3.95ns)   --->   "%mul_ln28_6 = mul nsw i32 %an32ShiftReg_3_load, %an32Coef_load_6" [lab2_hls/FIR.cpp:28]   --->   Operation 96 'mul' 'mul_ln28_6' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 97 [4/5] (3.95ns)   --->   "%mul_ln28_7 = mul nsw i32 %an32ShiftReg_2_load, %an32Coef_load_7" [lab2_hls/FIR.cpp:28]   --->   Operation 97 'mul' 'mul_ln28_7' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 98 [1/1] (0.00ns)   --->   "%an32ShiftReg_1_load = load i32* @an32ShiftReg_1, align 4" [lab2_hls/FIR.cpp:25]   --->   Operation 98 'load' 'an32ShiftReg_1_load' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_13 : Operation 99 [1/1] (0.00ns)   --->   "store i32 %an32ShiftReg_1_load, i32* @an32ShiftReg_2, align 8" [lab2_hls/FIR.cpp:25]   --->   Operation 99 'store' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_13 : Operation 100 [5/5] (3.95ns)   --->   "%mul_ln28_8 = mul nsw i32 %an32ShiftReg_1_load, %an32Coef_load_8" [lab2_hls/FIR.cpp:28]   --->   Operation 100 'mul' 'mul_ln28_8' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 101 [1/2] (2.32ns)   --->   "%an32Coef_load_9 = load i32* %an32Coef_addr_9, align 4" [lab2_hls/FIR.cpp:28]   --->   Operation 101 'load' 'an32Coef_load_9' <Predicate = (!icmp_ln16)> <Delay = 2.32> <Core = "RAM_1P">   --->   Core 44 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 12> <RAM>
+ST_13 : Operation 102 [2/2] (2.32ns)   --->   "%an32Coef_load_10 = load i32* %an32Coef_addr_10, align 4" [lab2_hls/FIR.cpp:28]   --->   Operation 102 'load' 'an32Coef_load_10' <Predicate = (!icmp_ln16)> <Delay = 2.32> <Core = "RAM_1P">   --->   Core 44 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 12> <RAM>
+
+State 14 <SV = 13> <Delay = 3.95>
+ST_14 : Operation 103 [2/2] (2.32ns)   --->   "%an32Coef_load = load i32* %an32Coef_addr, align 4" [lab2_hls/FIR.cpp:28]   --->   Operation 103 'load' 'an32Coef_load' <Predicate = (!icmp_ln16)> <Delay = 2.32> <Core = "RAM_1P">   --->   Core 44 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 12> <RAM>
+ST_14 : Operation 104 [2/5] (3.95ns)   --->   "%mul_ln28_6 = mul nsw i32 %an32ShiftReg_3_load, %an32Coef_load_6" [lab2_hls/FIR.cpp:28]   --->   Operation 104 'mul' 'mul_ln28_6' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 105 [3/5] (3.95ns)   --->   "%mul_ln28_7 = mul nsw i32 %an32ShiftReg_2_load, %an32Coef_load_7" [lab2_hls/FIR.cpp:28]   --->   Operation 105 'mul' 'mul_ln28_7' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 106 [4/5] (3.95ns)   --->   "%mul_ln28_8 = mul nsw i32 %an32ShiftReg_1_load, %an32Coef_load_8" [lab2_hls/FIR.cpp:28]   --->   Operation 106 'mul' 'mul_ln28_8' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 107 [1/1] (0.00ns)   --->   "%an32ShiftReg_0_load = load i32* @an32ShiftReg_0, align 16" [lab2_hls/FIR.cpp:25]   --->   Operation 107 'load' 'an32ShiftReg_0_load' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_14 : Operation 108 [1/1] (0.00ns)   --->   "store i32 %an32ShiftReg_0_load, i32* @an32ShiftReg_1, align 4" [lab2_hls/FIR.cpp:25]   --->   Operation 108 'store' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_14 : Operation 109 [5/5] (3.95ns)   --->   "%mul_ln28_9 = mul nsw i32 %an32ShiftReg_0_load, %an32Coef_load_9" [lab2_hls/FIR.cpp:28]   --->   Operation 109 'mul' 'mul_ln28_9' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 110 [1/1] (0.00ns)   --->   "store i32 %n32Temp, i32* @an32ShiftReg_0, align 16" [lab2_hls/FIR.cpp:22]   --->   Operation 110 'store' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_14 : Operation 111 [1/2] (2.32ns)   --->   "%an32Coef_load_10 = load i32* %an32Coef_addr_10, align 4" [lab2_hls/FIR.cpp:28]   --->   Operation 111 'load' 'an32Coef_load_10' <Predicate = (!icmp_ln16)> <Delay = 2.32> <Core = "RAM_1P">   --->   Core 44 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 12> <RAM>
+
+State 15 <SV = 14> <Delay = 3.95>
+ST_15 : Operation 112 [1/2] (2.32ns)   --->   "%an32Coef_load = load i32* %an32Coef_addr, align 4" [lab2_hls/FIR.cpp:28]   --->   Operation 112 'load' 'an32Coef_load' <Predicate = (!icmp_ln16)> <Delay = 2.32> <Core = "RAM_1P">   --->   Core 44 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 12> <RAM>
+ST_15 : Operation 113 [2/2] (2.32ns)   --->   "%an32Coef_load_1 = load i32* %an32Coef_addr_1, align 4" [lab2_hls/FIR.cpp:28]   --->   Operation 113 'load' 'an32Coef_load_1' <Predicate = (!icmp_ln16)> <Delay = 2.32> <Core = "RAM_1P">   --->   Core 44 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 12> <RAM>
+ST_15 : Operation 114 [1/5] (3.95ns)   --->   "%mul_ln28_6 = mul nsw i32 %an32ShiftReg_3_load, %an32Coef_load_6" [lab2_hls/FIR.cpp:28]   --->   Operation 114 'mul' 'mul_ln28_6' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 115 [2/5] (3.95ns)   --->   "%mul_ln28_7 = mul nsw i32 %an32ShiftReg_2_load, %an32Coef_load_7" [lab2_hls/FIR.cpp:28]   --->   Operation 115 'mul' 'mul_ln28_7' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 116 [3/5] (3.95ns)   --->   "%mul_ln28_8 = mul nsw i32 %an32ShiftReg_1_load, %an32Coef_load_8" [lab2_hls/FIR.cpp:28]   --->   Operation 116 'mul' 'mul_ln28_8' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 117 [4/5] (3.95ns)   --->   "%mul_ln28_9 = mul nsw i32 %an32ShiftReg_0_load, %an32Coef_load_9" [lab2_hls/FIR.cpp:28]   --->   Operation 117 'mul' 'mul_ln28_9' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 118 [5/5] (3.95ns)   --->   "%mul_ln28_10 = mul nsw i32 %n32Temp, %an32Coef_load_10" [lab2_hls/FIR.cpp:28]   --->   Operation 118 'mul' 'mul_ln28_10' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 3.95>
+ST_16 : Operation 119 [1/1] (0.00ns)   --->   "%an32ShiftReg_9_load = load i32* @an32ShiftReg_9, align 4" [lab2_hls/FIR.cpp:25]   --->   Operation 119 'load' 'an32ShiftReg_9_load' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_16 : Operation 120 [5/5] (3.95ns)   --->   "%mul_ln28 = mul nsw i32 %an32ShiftReg_9_load, %an32Coef_load" [lab2_hls/FIR.cpp:28]   --->   Operation 120 'mul' 'mul_ln28' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 121 [1/2] (2.32ns)   --->   "%an32Coef_load_1 = load i32* %an32Coef_addr_1, align 4" [lab2_hls/FIR.cpp:28]   --->   Operation 121 'load' 'an32Coef_load_1' <Predicate = (!icmp_ln16)> <Delay = 2.32> <Core = "RAM_1P">   --->   Core 44 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 12> <RAM>
+ST_16 : Operation 122 [2/2] (2.32ns)   --->   "%an32Coef_load_2 = load i32* %an32Coef_addr_2, align 4" [lab2_hls/FIR.cpp:28]   --->   Operation 122 'load' 'an32Coef_load_2' <Predicate = (!icmp_ln16)> <Delay = 2.32> <Core = "RAM_1P">   --->   Core 44 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 12> <RAM>
+ST_16 : Operation 123 [1/5] (3.95ns)   --->   "%mul_ln28_7 = mul nsw i32 %an32ShiftReg_2_load, %an32Coef_load_7" [lab2_hls/FIR.cpp:28]   --->   Operation 123 'mul' 'mul_ln28_7' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 124 [2/5] (3.95ns)   --->   "%mul_ln28_8 = mul nsw i32 %an32ShiftReg_1_load, %an32Coef_load_8" [lab2_hls/FIR.cpp:28]   --->   Operation 124 'mul' 'mul_ln28_8' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 125 [3/5] (3.95ns)   --->   "%mul_ln28_9 = mul nsw i32 %an32ShiftReg_0_load, %an32Coef_load_9" [lab2_hls/FIR.cpp:28]   --->   Operation 125 'mul' 'mul_ln28_9' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 126 [4/5] (3.95ns)   --->   "%mul_ln28_10 = mul nsw i32 %n32Temp, %an32Coef_load_10" [lab2_hls/FIR.cpp:28]   --->   Operation 126 'mul' 'mul_ln28_10' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 3.95>
+ST_17 : Operation 127 [4/5] (3.95ns)   --->   "%mul_ln28 = mul nsw i32 %an32ShiftReg_9_load, %an32Coef_load" [lab2_hls/FIR.cpp:28]   --->   Operation 127 'mul' 'mul_ln28' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 128 [1/1] (0.00ns)   --->   "%an32ShiftReg_8_load = load i32* @an32ShiftReg_8, align 16" [lab2_hls/FIR.cpp:25]   --->   Operation 128 'load' 'an32ShiftReg_8_load' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_17 : Operation 129 [1/1] (0.00ns)   --->   "store i32 %an32ShiftReg_8_load, i32* @an32ShiftReg_9, align 4" [lab2_hls/FIR.cpp:25]   --->   Operation 129 'store' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_17 : Operation 130 [5/5] (3.95ns)   --->   "%mul_ln28_1 = mul nsw i32 %an32ShiftReg_8_load, %an32Coef_load_1" [lab2_hls/FIR.cpp:28]   --->   Operation 130 'mul' 'mul_ln28_1' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 131 [1/2] (2.32ns)   --->   "%an32Coef_load_2 = load i32* %an32Coef_addr_2, align 4" [lab2_hls/FIR.cpp:28]   --->   Operation 131 'load' 'an32Coef_load_2' <Predicate = (!icmp_ln16)> <Delay = 2.32> <Core = "RAM_1P">   --->   Core 44 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 12> <RAM>
+ST_17 : Operation 132 [2/2] (2.32ns)   --->   "%an32Coef_load_3 = load i32* %an32Coef_addr_3, align 4" [lab2_hls/FIR.cpp:28]   --->   Operation 132 'load' 'an32Coef_load_3' <Predicate = (!icmp_ln16)> <Delay = 2.32> <Core = "RAM_1P">   --->   Core 44 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 12> <RAM>
+ST_17 : Operation 133 [1/5] (3.95ns)   --->   "%mul_ln28_8 = mul nsw i32 %an32ShiftReg_1_load, %an32Coef_load_8" [lab2_hls/FIR.cpp:28]   --->   Operation 133 'mul' 'mul_ln28_8' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 134 [2/5] (3.95ns)   --->   "%mul_ln28_9 = mul nsw i32 %an32ShiftReg_0_load, %an32Coef_load_9" [lab2_hls/FIR.cpp:28]   --->   Operation 134 'mul' 'mul_ln28_9' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 135 [3/5] (3.95ns)   --->   "%mul_ln28_10 = mul nsw i32 %n32Temp, %an32Coef_load_10" [lab2_hls/FIR.cpp:28]   --->   Operation 135 'mul' 'mul_ln28_10' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 136 [1/1] (2.55ns)   --->   "%add_ln28_4 = add i32 %mul_ln28_6, %mul_ln28_7" [lab2_hls/FIR.cpp:28]   --->   Operation 136 'add' 'add_ln28_4' <Predicate = (!icmp_ln16)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 3.95>
+ST_18 : Operation 137 [3/5] (3.95ns)   --->   "%mul_ln28 = mul nsw i32 %an32ShiftReg_9_load, %an32Coef_load" [lab2_hls/FIR.cpp:28]   --->   Operation 137 'mul' 'mul_ln28' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 138 [4/5] (3.95ns)   --->   "%mul_ln28_1 = mul nsw i32 %an32ShiftReg_8_load, %an32Coef_load_1" [lab2_hls/FIR.cpp:28]   --->   Operation 138 'mul' 'mul_ln28_1' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 139 [1/1] (0.00ns)   --->   "%an32ShiftReg_7_load = load i32* @an32ShiftReg_7, align 4" [lab2_hls/FIR.cpp:25]   --->   Operation 139 'load' 'an32ShiftReg_7_load' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_18 : Operation 140 [1/1] (0.00ns)   --->   "store i32 %an32ShiftReg_7_load, i32* @an32ShiftReg_8, align 16" [lab2_hls/FIR.cpp:25]   --->   Operation 140 'store' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_18 : Operation 141 [5/5] (3.95ns)   --->   "%mul_ln28_2 = mul nsw i32 %an32ShiftReg_7_load, %an32Coef_load_2" [lab2_hls/FIR.cpp:28]   --->   Operation 141 'mul' 'mul_ln28_2' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 142 [1/2] (2.32ns)   --->   "%an32Coef_load_3 = load i32* %an32Coef_addr_3, align 4" [lab2_hls/FIR.cpp:28]   --->   Operation 142 'load' 'an32Coef_load_3' <Predicate = (!icmp_ln16)> <Delay = 2.32> <Core = "RAM_1P">   --->   Core 44 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 12> <RAM>
+ST_18 : Operation 143 [2/2] (2.32ns)   --->   "%an32Coef_load_4 = load i32* %an32Coef_addr_4, align 4" [lab2_hls/FIR.cpp:28]   --->   Operation 143 'load' 'an32Coef_load_4' <Predicate = (!icmp_ln16)> <Delay = 2.32> <Core = "RAM_1P">   --->   Core 44 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 12> <RAM>
+ST_18 : Operation 144 [1/5] (3.95ns)   --->   "%mul_ln28_9 = mul nsw i32 %an32ShiftReg_0_load, %an32Coef_load_9" [lab2_hls/FIR.cpp:28]   --->   Operation 144 'mul' 'mul_ln28_9' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 145 [2/5] (3.95ns)   --->   "%mul_ln28_10 = mul nsw i32 %n32Temp, %an32Coef_load_10" [lab2_hls/FIR.cpp:28]   --->   Operation 145 'mul' 'mul_ln28_10' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 3.95>
+ST_19 : Operation 146 [2/5] (3.95ns)   --->   "%mul_ln28 = mul nsw i32 %an32ShiftReg_9_load, %an32Coef_load" [lab2_hls/FIR.cpp:28]   --->   Operation 146 'mul' 'mul_ln28' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 147 [3/5] (3.95ns)   --->   "%mul_ln28_1 = mul nsw i32 %an32ShiftReg_8_load, %an32Coef_load_1" [lab2_hls/FIR.cpp:28]   --->   Operation 147 'mul' 'mul_ln28_1' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 148 [4/5] (3.95ns)   --->   "%mul_ln28_2 = mul nsw i32 %an32ShiftReg_7_load, %an32Coef_load_2" [lab2_hls/FIR.cpp:28]   --->   Operation 148 'mul' 'mul_ln28_2' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 149 [1/1] (0.00ns)   --->   "%an32ShiftReg_6_load = load i32* @an32ShiftReg_6, align 8" [lab2_hls/FIR.cpp:25]   --->   Operation 149 'load' 'an32ShiftReg_6_load' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_19 : Operation 150 [1/1] (0.00ns)   --->   "store i32 %an32ShiftReg_6_load, i32* @an32ShiftReg_7, align 4" [lab2_hls/FIR.cpp:25]   --->   Operation 150 'store' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_19 : Operation 151 [5/5] (3.95ns)   --->   "%mul_ln28_3 = mul nsw i32 %an32ShiftReg_6_load, %an32Coef_load_3" [lab2_hls/FIR.cpp:28]   --->   Operation 151 'mul' 'mul_ln28_3' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 152 [1/2] (2.32ns)   --->   "%an32Coef_load_4 = load i32* %an32Coef_addr_4, align 4" [lab2_hls/FIR.cpp:28]   --->   Operation 152 'load' 'an32Coef_load_4' <Predicate = (!icmp_ln16)> <Delay = 2.32> <Core = "RAM_1P">   --->   Core 44 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 12> <RAM>
+ST_19 : Operation 153 [2/2] (2.32ns)   --->   "%an32Coef_load_5 = load i32* %an32Coef_addr_5, align 4" [lab2_hls/FIR.cpp:28]   --->   Operation 153 'load' 'an32Coef_load_5' <Predicate = (!icmp_ln16)> <Delay = 2.32> <Core = "RAM_1P">   --->   Core 44 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 12> <RAM>
+ST_19 : Operation 154 [1/5] (3.95ns)   --->   "%mul_ln28_10 = mul nsw i32 %n32Temp, %an32Coef_load_10" [lab2_hls/FIR.cpp:28]   --->   Operation 154 'mul' 'mul_ln28_10' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 4.37>
+ST_20 : Operation 155 [1/5] (3.95ns)   --->   "%mul_ln28 = mul nsw i32 %an32ShiftReg_9_load, %an32Coef_load" [lab2_hls/FIR.cpp:28]   --->   Operation 155 'mul' 'mul_ln28' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 156 [2/5] (3.95ns)   --->   "%mul_ln28_1 = mul nsw i32 %an32ShiftReg_8_load, %an32Coef_load_1" [lab2_hls/FIR.cpp:28]   --->   Operation 156 'mul' 'mul_ln28_1' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 157 [3/5] (3.95ns)   --->   "%mul_ln28_2 = mul nsw i32 %an32ShiftReg_7_load, %an32Coef_load_2" [lab2_hls/FIR.cpp:28]   --->   Operation 157 'mul' 'mul_ln28_2' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 158 [4/5] (3.95ns)   --->   "%mul_ln28_3 = mul nsw i32 %an32ShiftReg_6_load, %an32Coef_load_3" [lab2_hls/FIR.cpp:28]   --->   Operation 158 'mul' 'mul_ln28_3' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 159 [1/1] (0.00ns)   --->   "%an32ShiftReg_5_load = load i32* @an32ShiftReg_5, align 4" [lab2_hls/FIR.cpp:25]   --->   Operation 159 'load' 'an32ShiftReg_5_load' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_20 : Operation 160 [1/1] (0.00ns)   --->   "store i32 %an32ShiftReg_5_load, i32* @an32ShiftReg_6, align 8" [lab2_hls/FIR.cpp:25]   --->   Operation 160 'store' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_20 : Operation 161 [5/5] (3.95ns)   --->   "%mul_ln28_4 = mul nsw i32 %an32ShiftReg_5_load, %an32Coef_load_4" [lab2_hls/FIR.cpp:28]   --->   Operation 161 'mul' 'mul_ln28_4' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 162 [1/2] (2.32ns)   --->   "%an32Coef_load_5 = load i32* %an32Coef_addr_5, align 4" [lab2_hls/FIR.cpp:28]   --->   Operation 162 'load' 'an32Coef_load_5' <Predicate = (!icmp_ln16)> <Delay = 2.32> <Core = "RAM_1P">   --->   Core 44 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 12> <RAM>
+ST_20 : Operation 163 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln28_6 = add i32 %mul_ln28_9, %mul_ln28_10" [lab2_hls/FIR.cpp:28]   --->   Operation 163 'add' 'add_ln28_6' <Predicate = (!icmp_ln16)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_20 : Operation 164 [1/1] (4.37ns) (root node of TernaryAdder)   --->   "%add_ln28_7 = add i32 %add_ln28_6, %mul_ln28_8" [lab2_hls/FIR.cpp:28]   --->   Operation 164 'add' 'add_ln28_7' <Predicate = (!icmp_ln16)> <Delay = 4.37> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 21 <SV = 20> <Delay = 3.95>
+ST_21 : Operation 165 [1/5] (3.95ns)   --->   "%mul_ln28_1 = mul nsw i32 %an32ShiftReg_8_load, %an32Coef_load_1" [lab2_hls/FIR.cpp:28]   --->   Operation 165 'mul' 'mul_ln28_1' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 166 [2/5] (3.95ns)   --->   "%mul_ln28_2 = mul nsw i32 %an32ShiftReg_7_load, %an32Coef_load_2" [lab2_hls/FIR.cpp:28]   --->   Operation 166 'mul' 'mul_ln28_2' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 167 [3/5] (3.95ns)   --->   "%mul_ln28_3 = mul nsw i32 %an32ShiftReg_6_load, %an32Coef_load_3" [lab2_hls/FIR.cpp:28]   --->   Operation 167 'mul' 'mul_ln28_3' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 168 [4/5] (3.95ns)   --->   "%mul_ln28_4 = mul nsw i32 %an32ShiftReg_5_load, %an32Coef_load_4" [lab2_hls/FIR.cpp:28]   --->   Operation 168 'mul' 'mul_ln28_4' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 169 [1/1] (0.00ns)   --->   "%an32ShiftReg_4_load = load i32* @an32ShiftReg_4, align 16" [lab2_hls/FIR.cpp:25]   --->   Operation 169 'load' 'an32ShiftReg_4_load' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_21 : Operation 170 [1/1] (0.00ns)   --->   "store i32 %an32ShiftReg_4_load, i32* @an32ShiftReg_5, align 4" [lab2_hls/FIR.cpp:25]   --->   Operation 170 'store' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_21 : Operation 171 [5/5] (3.95ns)   --->   "%mul_ln28_5 = mul nsw i32 %an32ShiftReg_4_load, %an32Coef_load_5" [lab2_hls/FIR.cpp:28]   --->   Operation 171 'mul' 'mul_ln28_5' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 172 [1/1] (0.00ns)   --->   "store i32 %an32ShiftReg_3_load, i32* @an32ShiftReg_4, align 16" [lab2_hls/FIR.cpp:25]   --->   Operation 172 'store' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+
+State 22 <SV = 21> <Delay = 3.95>
+ST_22 : Operation 173 [1/5] (3.95ns)   --->   "%mul_ln28_2 = mul nsw i32 %an32ShiftReg_7_load, %an32Coef_load_2" [lab2_hls/FIR.cpp:28]   --->   Operation 173 'mul' 'mul_ln28_2' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 174 [2/5] (3.95ns)   --->   "%mul_ln28_3 = mul nsw i32 %an32ShiftReg_6_load, %an32Coef_load_3" [lab2_hls/FIR.cpp:28]   --->   Operation 174 'mul' 'mul_ln28_3' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 175 [3/5] (3.95ns)   --->   "%mul_ln28_4 = mul nsw i32 %an32ShiftReg_5_load, %an32Coef_load_4" [lab2_hls/FIR.cpp:28]   --->   Operation 175 'mul' 'mul_ln28_4' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 176 [4/5] (3.95ns)   --->   "%mul_ln28_5 = mul nsw i32 %an32ShiftReg_4_load, %an32Coef_load_5" [lab2_hls/FIR.cpp:28]   --->   Operation 176 'mul' 'mul_ln28_5' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 177 [1/1] (2.55ns)   --->   "%add_ln28 = add i32 %mul_ln28, %mul_ln28_1" [lab2_hls/FIR.cpp:28]   --->   Operation 177 'add' 'add_ln28' <Predicate = (!icmp_ln16)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 3.95>
+ST_23 : Operation 178 [1/5] (3.95ns)   --->   "%mul_ln28_3 = mul nsw i32 %an32ShiftReg_6_load, %an32Coef_load_3" [lab2_hls/FIR.cpp:28]   --->   Operation 178 'mul' 'mul_ln28_3' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 179 [2/5] (3.95ns)   --->   "%mul_ln28_4 = mul nsw i32 %an32ShiftReg_5_load, %an32Coef_load_4" [lab2_hls/FIR.cpp:28]   --->   Operation 179 'mul' 'mul_ln28_4' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 180 [3/5] (3.95ns)   --->   "%mul_ln28_5 = mul nsw i32 %an32ShiftReg_4_load, %an32Coef_load_5" [lab2_hls/FIR.cpp:28]   --->   Operation 180 'mul' 'mul_ln28_5' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 3.95>
+ST_24 : Operation 181 [1/5] (3.95ns)   --->   "%mul_ln28_4 = mul nsw i32 %an32ShiftReg_5_load, %an32Coef_load_4" [lab2_hls/FIR.cpp:28]   --->   Operation 181 'mul' 'mul_ln28_4' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 182 [2/5] (3.95ns)   --->   "%mul_ln28_5 = mul nsw i32 %an32ShiftReg_4_load, %an32Coef_load_5" [lab2_hls/FIR.cpp:28]   --->   Operation 182 'mul' 'mul_ln28_5' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 4.37>
+ST_25 : Operation 183 [1/5] (3.95ns)   --->   "%mul_ln28_5 = mul nsw i32 %an32ShiftReg_4_load, %an32Coef_load_5" [lab2_hls/FIR.cpp:28]   --->   Operation 183 'mul' 'mul_ln28_5' <Predicate = (!icmp_ln16)> <Delay = 3.95> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 4> <II = 1> <Delay = 3.95> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 184 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln28_1 = add i32 %mul_ln28_3, %mul_ln28_4" [lab2_hls/FIR.cpp:28]   --->   Operation 184 'add' 'add_ln28_1' <Predicate = (!icmp_ln16)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_25 : Operation 185 [1/1] (4.37ns) (root node of TernaryAdder)   --->   "%add_ln28_2 = add i32 %add_ln28_1, %mul_ln28_2" [lab2_hls/FIR.cpp:28]   --->   Operation 185 'add' 'add_ln28_2' <Predicate = (!icmp_ln16)> <Delay = 4.37> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 26 <SV = 25> <Delay = 4.37>
+ST_26 : Operation 186 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln28_5 = add i32 %add_ln28_4, %mul_ln28_5" [lab2_hls/FIR.cpp:28]   --->   Operation 186 'add' 'add_ln28_5' <Predicate = (!icmp_ln16)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_26 : Operation 187 [1/1] (4.37ns) (root node of TernaryAdder)   --->   "%add_ln28_8 = add i32 %add_ln28_7, %add_ln28_5" [lab2_hls/FIR.cpp:28]   --->   Operation 187 'add' 'add_ln28_8' <Predicate = (!icmp_ln16)> <Delay = 4.37> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 27 <SV = 26> <Delay = 4.37>
+ST_27 : Operation 188 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln28_3 = add i32 %add_ln28_2, %add_ln28" [lab2_hls/FIR.cpp:28]   --->   Operation 188 'add' 'add_ln28_3' <Predicate = (!icmp_ln16)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_27 : Operation 189 [1/1] (4.37ns) (root node of TernaryAdder)   --->   "%add_ln28_9 = add nsw i32 %add_ln28_8, %add_ln28_3" [lab2_hls/FIR.cpp:28]   --->   Operation 189 'add' 'add_ln28_9' <Predicate = (!icmp_ln16)> <Delay = 4.37> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 28 <SV = 27> <Delay = 4.37>
+ST_28 : Operation 190 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([10 x i8]* @p_str5) nounwind" [lab2_hls/FIR.cpp:16]   --->   Operation 190 'specloopname' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_28 : Operation 191 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([10 x i8]* @p_str5)" [lab2_hls/FIR.cpp:16]   --->   Operation 191 'specregionbegin' 'tmp' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_28 : Operation 192 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 2, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [lab2_hls/FIR.cpp:17]   --->   Operation 192 'specpipeline' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_28 : Operation 193 [1/1] (4.37ns)   --->   "call void @_ssdm_op_Write.m_axi.i32P(i32* %gmem_addr, i32 %add_ln28_9, i4 -1)" [lab2_hls/FIR.cpp:30]   --->   Operation 193 'write' <Predicate = (!icmp_ln16)> <Delay = 4.37> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_28 : Operation 194 [1/1] (0.00ns)   --->   "%empty_9 = call i32 (...)* @_ssdm_op_SpecRegionEnd([10 x i8]* @p_str5, i32 %tmp)" [lab2_hls/FIR.cpp:31]   --->   Operation 194 'specregionend' 'empty_9' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_28 : Operation 195 [1/1] (0.00ns)   --->   "br label %1" [lab2_hls/FIR.cpp:16]   --->   Operation 195 'br' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+
+State 29 <SV = 9> <Delay = 4.37>
+ST_29 : Operation 196 [5/5] (4.37ns)   --->   "%gmem_addr_wr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %gmem_addr)" [lab2_hls/FIR.cpp:30]   --->   Operation 196 'writeresp' 'gmem_addr_wr_resp' <Predicate = true> <Delay = 4.37> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 30 <SV = 10> <Delay = 4.37>
+ST_30 : Operation 197 [4/5] (4.37ns)   --->   "%gmem_addr_wr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %gmem_addr)" [lab2_hls/FIR.cpp:30]   --->   Operation 197 'writeresp' 'gmem_addr_wr_resp' <Predicate = true> <Delay = 4.37> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 31 <SV = 11> <Delay = 4.37>
+ST_31 : Operation 198 [3/5] (4.37ns)   --->   "%gmem_addr_wr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %gmem_addr)" [lab2_hls/FIR.cpp:30]   --->   Operation 198 'writeresp' 'gmem_addr_wr_resp' <Predicate = true> <Delay = 4.37> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 32 <SV = 12> <Delay = 4.37>
+ST_32 : Operation 199 [2/5] (4.37ns)   --->   "%gmem_addr_wr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %gmem_addr)" [lab2_hls/FIR.cpp:30]   --->   Operation 199 'writeresp' 'gmem_addr_wr_resp' <Predicate = true> <Delay = 4.37> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 33 <SV = 13> <Delay = 4.37>
+ST_33 : Operation 200 [1/5] (4.37ns)   --->   "%gmem_addr_wr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %gmem_addr)" [lab2_hls/FIR.cpp:30]   --->   Operation 200 'writeresp' 'gmem_addr_wr_resp' <Predicate = true> <Delay = 4.37> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_33 : Operation 201 [1/1] (0.00ns)   --->   "ret void" [lab2_hls/FIR.cpp:33]   --->   Operation 201 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 3.55ns
+The critical path consists of the following:
+	s_axi read on port 'regXferLeng_V' [17]  (1 ns)
+	'add' operation ('add_ln16', lab2_hls/FIR.cpp:16) [38]  (2.55 ns)
+
+ <State 2>: 4.38ns
+The critical path consists of the following:
+	'getelementptr' operation ('gmem_addr') [22]  (0 ns)
+	bus request on port 'gmem' (lab2_hls/FIR.cpp:30) [53]  (4.38 ns)
+
+ <State 3>: 4.38ns
+The critical path consists of the following:
+	bus request on port 'gmem' (lab2_hls/FIR.cpp:18) [52]  (4.38 ns)
+
+ <State 4>: 4.38ns
+The critical path consists of the following:
+	bus request on port 'gmem' (lab2_hls/FIR.cpp:18) [52]  (4.38 ns)
+
+ <State 5>: 4.38ns
+The critical path consists of the following:
+	bus request on port 'gmem' (lab2_hls/FIR.cpp:18) [52]  (4.38 ns)
+
+ <State 6>: 4.38ns
+The critical path consists of the following:
+	bus request on port 'gmem' (lab2_hls/FIR.cpp:18) [52]  (4.38 ns)
+
+ <State 7>: 4.38ns
+The critical path consists of the following:
+	bus request on port 'gmem' (lab2_hls/FIR.cpp:18) [52]  (4.38 ns)
+
+ <State 8>: 4.38ns
+The critical path consists of the following:
+	bus request on port 'gmem' (lab2_hls/FIR.cpp:18) [52]  (4.38 ns)
+
+ <State 9>: 3.45ns
+The critical path consists of the following:
+	'icmp' operation ('icmp_ln16', lab2_hls/FIR.cpp:16) [57]  (2.47 ns)
+	blocking operation 0.978 ns on control path)
+
+ <State 10>: 4.38ns
+The critical path consists of the following:
+	bus read on port 'gmem' (lab2_hls/FIR.cpp:18) [64]  (4.38 ns)
+
+ <State 11>: 3.95ns
+The critical path consists of the following:
+	'load' operation ('an32ShiftReg_3_load', lab2_hls/FIR.cpp:25) on static variable 'an32ShiftReg_3' [88]  (0 ns)
+	'mul' operation ('mul_ln28_6', lab2_hls/FIR.cpp:28) [91]  (3.95 ns)
+
+ <State 12>: 3.95ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln28_6', lab2_hls/FIR.cpp:28) [91]  (3.95 ns)
+
+ <State 13>: 3.95ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln28_6', lab2_hls/FIR.cpp:28) [91]  (3.95 ns)
+
+ <State 14>: 3.95ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln28_6', lab2_hls/FIR.cpp:28) [91]  (3.95 ns)
+
+ <State 15>: 3.95ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln28_6', lab2_hls/FIR.cpp:28) [91]  (3.95 ns)
+
+ <State 16>: 3.95ns
+The critical path consists of the following:
+	'load' operation ('an32ShiftReg_9_load', lab2_hls/FIR.cpp:25) on static variable 'an32ShiftReg_9' [65]  (0 ns)
+	'mul' operation ('mul_ln28', lab2_hls/FIR.cpp:28) [67]  (3.95 ns)
+
+ <State 17>: 3.95ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln28', lab2_hls/FIR.cpp:28) [67]  (3.95 ns)
+
+ <State 18>: 3.95ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln28', lab2_hls/FIR.cpp:28) [67]  (3.95 ns)
+
+ <State 19>: 3.95ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln28', lab2_hls/FIR.cpp:28) [67]  (3.95 ns)
+
+ <State 20>: 4.37ns
+The critical path consists of the following:
+	'add' operation ('add_ln28_6', lab2_hls/FIR.cpp:28) [113]  (0 ns)
+	'add' operation ('add_ln28_7', lab2_hls/FIR.cpp:28) [114]  (4.37 ns)
+
+ <State 21>: 3.95ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln28_1', lab2_hls/FIR.cpp:28) [71]  (3.95 ns)
+
+ <State 22>: 3.95ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln28_2', lab2_hls/FIR.cpp:28) [75]  (3.95 ns)
+
+ <State 23>: 3.95ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln28_3', lab2_hls/FIR.cpp:28) [79]  (3.95 ns)
+
+ <State 24>: 3.95ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln28_4', lab2_hls/FIR.cpp:28) [83]  (3.95 ns)
+
+ <State 25>: 4.37ns
+The critical path consists of the following:
+	'add' operation ('add_ln28_1', lab2_hls/FIR.cpp:28) [108]  (0 ns)
+	'add' operation ('add_ln28_2', lab2_hls/FIR.cpp:28) [109]  (4.37 ns)
+
+ <State 26>: 4.37ns
+The critical path consists of the following:
+	'add' operation ('add_ln28_5', lab2_hls/FIR.cpp:28) [112]  (0 ns)
+	'add' operation ('add_ln28_8', lab2_hls/FIR.cpp:28) [115]  (4.37 ns)
+
+ <State 27>: 4.37ns
+The critical path consists of the following:
+	'add' operation ('add_ln28_3', lab2_hls/FIR.cpp:28) [110]  (0 ns)
+	'add' operation ('add_ln28_9', lab2_hls/FIR.cpp:28) [116]  (4.37 ns)
+
+ <State 28>: 4.38ns
+The critical path consists of the following:
+	bus write on port 'gmem' (lab2_hls/FIR.cpp:30) [117]  (4.38 ns)
+
+ <State 29>: 4.38ns
+The critical path consists of the following:
+	bus access on port 'gmem' (lab2_hls/FIR.cpp:30) [121]  (4.38 ns)
+
+ <State 30>: 4.38ns
+The critical path consists of the following:
+	bus access on port 'gmem' (lab2_hls/FIR.cpp:30) [121]  (4.38 ns)
+
+ <State 31>: 4.38ns
+The critical path consists of the following:
+	bus access on port 'gmem' (lab2_hls/FIR.cpp:30) [121]  (4.38 ns)
+
+ <State 32>: 4.38ns
+The critical path consists of the following:
+	bus access on port 'gmem' (lab2_hls/FIR.cpp:30) [121]  (4.38 ns)
+
+ <State 33>: 4.38ns
+The critical path consists of the following:
+	bus access on port 'gmem' (lab2_hls/FIR.cpp:30) [121]  (4.38 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,12 @@
+sv work "glbl.v"
+sv xil_defaultlib "AESL_axi_slave_AXILiteS.v"
+sv xil_defaultlib "AESL_axi_s_pstrmInput.v"
+sv xil_defaultlib "AESL_axi_s_pstrmOutput.v"
+sv xil_defaultlib "AESL_fifo.v"
+sv xil_defaultlib "fir_n11_strm.autotb.v"
+sv xil_defaultlib "fir_n11_strm.v"
+sv xil_defaultlib "fir_n11_strm_an32bkb.v"
+sv xil_defaultlib "fir_n11_strm_AXILiteS_s_axi.v"
+sv xil_defaultlib "fir_n11_strm_mul_cud.v"
+sv xil_defaultlib "regslice_core.v"
+

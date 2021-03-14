@@ -1,0 +1,145 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "fir_n11_maxi",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "m_axi",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "depth",
+                "value": "600"
+              },
+              {
+                "name": "port",
+                "value": "pn32HPInput",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "offset",
+                "value": "slave"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "fir_n11_maxi",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "m_axi",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "depth",
+                "value": "600"
+              },
+              {
+                "name": "port",
+                "value": "pn32HPOutput",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "offset",
+                "value": "slave"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "fir_n11_maxi",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "port",
+                "value": "an32Coef",
+                "positionalBoolean": "4"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "fir_n11_maxi",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "port",
+                "value": "regXferLeng",
+                "positionalBoolean": "4"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "fir_n11_maxi",
+          "label": "XFER_LOOP",
+          "functionLabel": "",
+          "pragma": {
+            "name": "PIPELINE",
+            "option": [{
+                "name": "II",
+                "value": "2"
+              }]
+          }
+        },
+        {
+          "functionName": "fir_n11_maxi",
+          "label": "SHIFT_ACC_LOOP",
+          "functionLabel": "",
+          "pragma": {
+            "name": "PIPELINE",
+            "option": [{
+                "name": "II",
+                "value": "2"
+              }]
+          }
+        },
+        {
+          "functionName": "fir_n11_maxi",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "port",
+                "value": "return",
+                "positionalBoolean": "4"
+              }
+            ]
+          }
+        }
+      ]
+    }]}
