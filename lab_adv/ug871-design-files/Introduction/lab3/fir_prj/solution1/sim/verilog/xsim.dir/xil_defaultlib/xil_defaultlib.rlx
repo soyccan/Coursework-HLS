@@ -1,8 +1,0 @@
-0.6
-2019.1
-Sep  4 2019
-09:57:52
-C:/wrk/ETH_ToE_Github/ug871-design-files/Introduction/lab3/fir_prj/solution1/sim/verilog/AESL_automem_c.v,1570177885,systemVerilog,,,,AESL_automem_c,C:/Xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed;smartconnect_v1_0;unisims_ver;xil_defaultlib;xpm,,,,,,
-C:/wrk/ETH_ToE_Github/ug871-design-files/Introduction/lab3/fir_prj/solution1/sim/verilog/fir.autotb.v,1570177885,systemVerilog,,,,apatb_fir_top,C:/Xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed;smartconnect_v1_0;unisims_ver;xil_defaultlib;xpm,,,,,,
-C:/wrk/ETH_ToE_Github/ug871-design-files/Introduction/lab3/fir_prj/solution1/sim/verilog/fir.v,1570177840,systemVerilog,,,,fir,C:/Xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed;smartconnect_v1_0;unisims_ver;xil_defaultlib;xpm,,,,,,
-C:/wrk/ETH_ToE_Github/ug871-design-files/Introduction/lab3/fir_prj/solution1/sim/verilog/fir_shift_reg.v,1570177841,systemVerilog,,,,fir_shift_reg;fir_shift_reg_ram,C:/Xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed;smartconnect_v1_0;unisims_ver;xil_defaultlib;xpm,,,,,,

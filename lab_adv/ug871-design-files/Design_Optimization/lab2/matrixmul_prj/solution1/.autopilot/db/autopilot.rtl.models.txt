@@ -1,4 +1,0 @@
-matrixmul_mux_32_bkb
-matrixmul_mac_mulcud
-matrixmul_mac_muldEe
-matrixmul

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
-  <source>
-    <originFiles name="window_fn_top.cpp" path="C:\wrk\ETH_ToE_Github\ug871-design-files\Arbitrary_Precision\lab1\window_fn_top.cpp"/>
-  </source>
-  <testbench>
-    <originFiles name="window_fn_test.cpp" path="C:\wrk\ETH_ToE_Github\ug871-design-files\Arbitrary_Precision\lab1\window_fn_test.cpp"/>
-  </testbench>
-</autopilotfilemapping:AutoPilotFileMapping>
