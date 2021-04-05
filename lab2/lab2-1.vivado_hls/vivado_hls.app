@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="fir_n11_strm" name="lab2-1_hls">
+<project xmlns="com.autoesl.autopilot.project" name="lab2-1.vivado_hls" top="fir_n11_strm">
     <includePaths/>
     <libraryPaths/>
     <Simulation>
@@ -6,8 +6,7 @@
     </Simulation>
     <files xmlns="">
         <file name="../FIRTester.cpp" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" csimflags=" -Wno-unknown-pragmas" blackbox="false"/>
-        <file name="lab2-1_hls/FIR.h" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
-        <file name="lab2-1_hls/FIR.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
+        <file name="lab2-1.vivado_hls/FIR.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
     </files>
     <solutions xmlns="">
         <solution name="solution1" status="active"/>

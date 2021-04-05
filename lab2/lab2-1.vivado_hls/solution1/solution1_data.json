@@ -15,15 +15,22 @@
   "HlsSolution": {
     "Config": [
       "config_export -format=ip_catalog",
-      "config_export -rtl=verilog"
+      "config_export -rtl=verilog",
+      "config_export -vivado_optimization_level=2",
+      "config_export -vivado_phys_opt=place",
+      "config_export -vivado_report_level=0",
+      "config_sdx -optimization_level=none",
+      "config_sdx -target=none"
     ],
     "DirectiveTcl": [
       "set_directive_pipeline fir_n11_strm\/SHIFT_ACC_LOOP -II 2",
-      "set_directive_pipeline fir_n11_strm\/XFER_LOOP -II 2"
+      "set_directive_pipeline fir_n11_strm\/XFER_LOOP -II 2",
+      "set_directive_loop_tripcount fir_n11_strm\/XFER_LOOP -max 600"
     ],
     "DirectiveInfo": [
       "pipeline fir_n11_strm\/SHIFT_ACC_LOOP {{II 2}} {}",
-      "pipeline fir_n11_strm\/XFER_LOOP {{II 2}} {}"
+      "pipeline fir_n11_strm\/XFER_LOOP {{II 2}} {}",
+      "loop_tripcount fir_n11_strm\/XFER_LOOP {{tripcount positionBooleanCmd} {max 600}} {}"
     ]
   },
   "Args": {
@@ -137,13 +144,13 @@
   },
   "ClockInfo": {
     "ClockName": "ap_clk",
-    "ClockPeriod": "5",
+    "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "undef",
-    "Uncertainty": "0.625"
+    "Latency": "16",
+    "Uncertainty": "1.25"
   },
-  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 5.000 [get_ports ap_clk]"]},
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
   "Ipx": {
     "Vendor": "xilinx.com",
     "Library": "hls",
@@ -159,13 +166,11 @@
     "CSource": ["..\/FIR.cpp"],
     "Vhdl": [
       "impl\/vhdl\/fir_n11_strm_AXILiteS_s_axi.vhd",
-      "impl\/vhdl\/fir_n11_strm_mul_bkb.vhd",
       "impl\/vhdl\/regslice_core.vhd",
       "impl\/vhdl\/fir_n11_strm.vhd"
     ],
     "Verilog": [
       "impl\/verilog\/fir_n11_strm_AXILiteS_s_axi.v",
-      "impl\/verilog\/fir_n11_strm_mul_bkb.v",
       "impl\/verilog\/regslice_core.v",
       "impl\/verilog\/fir_n11_strm.v"
     ],
@@ -180,9 +185,9 @@
       "impl\/misc\/drivers\/fir_n11_strm_v1_0\/src\/xfir_n11_strm_sinit.c"
     ],
     "Misc": ["impl\/misc\/logo.png"],
-    "DesignXml": "D:\/Vivado\/lab2-1_hls\/solution1\/.autopilot\/db\/fir_n11_strm.design.xml",
-    "DebugDir": "D:\/Vivado\/lab2-1_hls\/solution1\/.debug",
-    "ProtoInst": ["D:\/Vivado\/lab2-1_hls\/solution1\/.debug\/fir_n11_strm.protoinst"]
+    "DesignXml": "D:\/Repo\/hls\/lab2\/lab2-1.vivado_hls\/solution1\/.autopilot\/db\/fir_n11_strm.design.xml",
+    "DebugDir": "D:\/Repo\/hls\/lab2\/lab2-1.vivado_hls\/solution1\/.debug",
+    "ProtoInst": ["D:\/Repo\/hls\/lab2\/lab2-1.vivado_hls\/solution1\/.debug\/fir_n11_strm.protoinst"]
   },
   "SubcoreInfo": {
     "HasXpmMemory": false,
@@ -713,30 +718,34 @@
       }},
     "Metrics": {"fir_n11_strm": {
         "Latency": {
-          "LatencyBest": "",
-          "LatencyAvg": "",
-          "LatencyWorst": "",
-          "PipelineII": "",
+          "LatencyBest": "16",
+          "LatencyAvg": "3316",
+          "LatencyWorst": "6616",
+          "PipelineIIMin": "17",
+          "PipelineIIMax": "6617",
+          "PipelineII": "17 ~ 6617",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
-          "Target": "5.00",
-          "Uncertainty": "0.63",
-          "Estimate": "4.371"
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.510"
         },
         "Loops": [{
             "Name": "XFER_LOOP",
             "TripCount": "",
-            "Latency": "",
+            "LatencyMin": "14",
+            "LatencyMax": "6614",
+            "Latency": "14 ~ 6614",
             "PipelineII": "11",
-            "PipelineDepth": "20"
+            "PipelineDepth": "15"
           }],
         "Area": {
           "BRAM_18K": "2",
           "DSP48E": "33",
-          "FF": "3741",
-          "LUT": "786",
+          "FF": "1172",
+          "LUT": "995",
           "URAM": "0"
         }
       }}
@@ -751,7 +760,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2021-03-08 00:46:09 +0800",
+    "Time": "2021-03-26 22:08:17 +0800",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2"
   }

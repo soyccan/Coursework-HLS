@@ -10,6 +10,11 @@
                 <option name="II" value="2"/>
             </pragma>
         </directive>
+        <directive functionName="fir_n11_strm" label="XFER_LOOP" functionLabel="">
+            <pragma name="LOOP_TRIPCOUNT">
+                <option name="max" value="600"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

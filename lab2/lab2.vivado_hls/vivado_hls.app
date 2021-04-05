@@ -1,16 +1,15 @@
-<project xmlns="com.autoesl.autopilot.project" top="fir_n11_maxi" name="lab2_hls">
-    <includePaths/>
-    <libraryPaths/>
-    <Simulation>
-        <SimFlow name="csim" csimMode="0" lastCsimMode="0"/>
-    </Simulation>
-    <files xmlns="">
-        <file name="../FIRTester.cpp" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" csimflags=" -Wno-unknown-pragmas" blackbox="false"/>
-        <file name="lab2_hls/FIR.h" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
-        <file name="lab2_hls/FIR.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
-    </files>
-    <solutions xmlns="">
-        <solution name="solution1" status="active"/>
-    </solutions>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="com.autoesl.autopilot.project" name="lab2_hls" top="fir_n11_maxi">
+  <files>
+    <file name="../FIRTester.cpp" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" blackbox="false" csimflags=" -Wno-unknown-pragmas"/>
+    <file name="FIR.cpp" sc="0" tb="false" cflags="" blackbox="false"/>
+  </files>
+  <solutions>
+    <solution name="solution1" status="active"/>
+  </solutions>
+  <includePaths/>
+  <libraryPaths/>
+  <Simulation>
+    <SimFlow name="csim" csimMode="0" lastCsimMode="0"/>
+  </Simulation>
 </project>
-

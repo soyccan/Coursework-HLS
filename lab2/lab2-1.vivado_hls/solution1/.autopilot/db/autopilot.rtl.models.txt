@@ -1,4 +1,3 @@
-fir_n11_strm_mul_bkb
 fir_n11_strm_AXILiteS_s_axi
 regslice_core
 fir_n11_strm

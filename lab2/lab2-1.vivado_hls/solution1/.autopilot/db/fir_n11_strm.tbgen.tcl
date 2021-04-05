@@ -131,13 +131,13 @@ set NewPortList {[
  	{ "name": "pstrmOutput_TDEST", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "pstrmOutput_V_dest_V", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"],
 		"CDFG" : "fir_n11_strm",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "-1", "EstimateLatencyMax" : "-1",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "16", "EstimateLatencyMax" : "6616",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -176,31 +176,20 @@ set RtlHierarchyInfo {[
 			{"Name" : "an32ShiftReg_1", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "an32ShiftReg_0", "Type" : "OVld", "Direction" : "IO"}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fir_n11_strm_AXILiteS_s_axi_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fir_n11_strm_mul_bkb_U1", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fir_n11_strm_mul_bkb_U2", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fir_n11_strm_mul_bkb_U3", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fir_n11_strm_mul_bkb_U4", "Parent" : "0"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fir_n11_strm_mul_bkb_U5", "Parent" : "0"},
-	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fir_n11_strm_mul_bkb_U6", "Parent" : "0"},
-	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fir_n11_strm_mul_bkb_U7", "Parent" : "0"},
-	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fir_n11_strm_mul_bkb_U8", "Parent" : "0"},
-	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fir_n11_strm_mul_bkb_U9", "Parent" : "0"},
-	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fir_n11_strm_mul_bkb_U10", "Parent" : "0"},
-	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.fir_n11_strm_mul_bkb_U11", "Parent" : "0"},
-	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmInput_V_data_V_U", "Parent" : "0"},
-	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmInput_V_keep_V_U", "Parent" : "0"},
-	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmInput_V_strb_V_U", "Parent" : "0"},
-	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmInput_V_user_V_U", "Parent" : "0"},
-	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmInput_V_last_V_U", "Parent" : "0"},
-	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmInput_V_id_V_U", "Parent" : "0"},
-	{"ID" : "19", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmInput_V_dest_V_U", "Parent" : "0"},
-	{"ID" : "20", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmOutput_V_data_V_U", "Parent" : "0"},
-	{"ID" : "21", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmOutput_V_keep_V_U", "Parent" : "0"},
-	{"ID" : "22", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmOutput_V_strb_V_U", "Parent" : "0"},
-	{"ID" : "23", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmOutput_V_user_V_U", "Parent" : "0"},
-	{"ID" : "24", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmOutput_V_last_V_U", "Parent" : "0"},
-	{"ID" : "25", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmOutput_V_id_V_U", "Parent" : "0"},
-	{"ID" : "26", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmOutput_V_dest_V_U", "Parent" : "0"}]}
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmInput_V_data_V_U", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmInput_V_keep_V_U", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmInput_V_strb_V_U", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmInput_V_user_V_U", "Parent" : "0"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmInput_V_last_V_U", "Parent" : "0"},
+	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmInput_V_id_V_U", "Parent" : "0"},
+	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmInput_V_dest_V_U", "Parent" : "0"},
+	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmOutput_V_data_V_U", "Parent" : "0"},
+	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmOutput_V_keep_V_U", "Parent" : "0"},
+	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmOutput_V_strb_V_U", "Parent" : "0"},
+	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmOutput_V_user_V_U", "Parent" : "0"},
+	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmOutput_V_last_V_U", "Parent" : "0"},
+	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmOutput_V_id_V_U", "Parent" : "0"},
+	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_pstrmOutput_V_dest_V_U", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -212,13 +201,13 @@ set ArgLastReadFirstWriteLatency {
 		pstrmInput_V_last_V {Type I LastRead 7 FirstWrite -1}
 		pstrmInput_V_id_V {Type I LastRead 7 FirstWrite -1}
 		pstrmInput_V_dest_V {Type I LastRead 7 FirstWrite -1}
-		pstrmOutput_V_data_V {Type O LastRead -1 FirstWrite 19}
-		pstrmOutput_V_keep_V {Type O LastRead -1 FirstWrite 19}
-		pstrmOutput_V_strb_V {Type O LastRead -1 FirstWrite 19}
-		pstrmOutput_V_user_V {Type O LastRead -1 FirstWrite 19}
-		pstrmOutput_V_last_V {Type O LastRead -1 FirstWrite 19}
-		pstrmOutput_V_id_V {Type O LastRead -1 FirstWrite 19}
-		pstrmOutput_V_dest_V {Type O LastRead -1 FirstWrite 19}
+		pstrmOutput_V_data_V {Type O LastRead -1 FirstWrite 14}
+		pstrmOutput_V_keep_V {Type O LastRead -1 FirstWrite 14}
+		pstrmOutput_V_strb_V {Type O LastRead -1 FirstWrite 14}
+		pstrmOutput_V_user_V {Type O LastRead -1 FirstWrite 14}
+		pstrmOutput_V_last_V {Type O LastRead -1 FirstWrite 14}
+		pstrmOutput_V_id_V {Type O LastRead -1 FirstWrite 14}
+		pstrmOutput_V_dest_V {Type O LastRead -1 FirstWrite 14}
 		an32Coef {Type I LastRead 11 FirstWrite -1}
 		regXferLeng_V {Type I LastRead 0 FirstWrite -1}
 		an32ShiftReg_9 {Type IO LastRead -1 FirstWrite -1}
@@ -235,8 +224,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "-1", "Max" : "-1"}
-	, {"Name" : "Interval", "Min" : "0", "Max" : "0"}
+	{"Name" : "Latency", "Min" : "16", "Max" : "6616"}
+	, {"Name" : "Interval", "Min" : "17", "Max" : "6617"}
 ]}
 
 set PipelineEnableSignalInfo {[

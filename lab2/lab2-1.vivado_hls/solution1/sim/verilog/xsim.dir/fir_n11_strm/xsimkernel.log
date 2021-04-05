@@ -1,7 +1,7 @@
-Running: xsim.dir/fir_n11_strm/xsimk.exe -simmode gui -wdb fir_n11_strm.wdb -simrunnum 0 -socket 62703
+Running: xsim.dir/fir_n11_strm/xsimk.exe -simmode gui -wdb fir_n11_strm.wdb -simrunnum 0 -socket 5892
 Design successfully loaded
-Design Loading Memory Usage: 5988 KB (Peak: 5988 KB)
-Design Loading CPU Usage: 0 ms
+Design Loading Memory Usage: 6524 KB (Peak: 6524 KB)
+Design Loading CPU Usage: 46 ms
 Simulation completed
-Simulation Memory Usage: 16644 KB (Peak: 16644 KB)
-Simulation CPU Usage: 624 ms
+Simulation Memory Usage: 17160 KB (Peak: 17160 KB)
+Simulation CPU Usage: 389 ms

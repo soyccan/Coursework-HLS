@@ -11,27 +11,32 @@
 <Name>fir_n11_strm</Name>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
-<TargetClockPeriod>5.00</TargetClockPeriod>
-<ClockUncertainty>0.63</ClockUncertainty>
-<EstimatedClockPeriod>4.371</EstimatedClockPeriod>
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>1.25</ClockUncertainty>
+<EstimatedClockPeriod>8.510</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>undef</Best-caseLatency>
-<Average-caseLatency>undef</Average-caseLatency>
-<Worst-caseLatency>undef</Worst-caseLatency>
-<Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
-<PipelineInitiationInterval>undef</PipelineInitiationInterval>
+<Best-caseLatency>16</Best-caseLatency>
+<Average-caseLatency>3316</Average-caseLatency>
+<Worst-caseLatency>6616</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.160 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>33.160 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>66.160 us</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>17 ~ 6617</PipelineInitiationInterval>
 <PipelineType>none</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <XFER_LOOP>
 <Name>XFER_LOOP</Name>
-<TripCount>undef</TripCount>
-<Latency>undef</Latency>
+<TripCount>
+<range>
+<min>0</min>
+<max>600</max>
+</range>
+</TripCount>
+<Latency>14 ~ 6614</Latency>
 <PipelineII>11</PipelineII>
-<PipelineDepth>20</PipelineDepth>
+<PipelineDepth>15</PipelineDepth>
 </XFER_LOOP>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
@@ -39,8 +44,8 @@
 <Resources>
 <BRAM_18K>2</BRAM_18K>
 <DSP48E>33</DSP48E>
-<FF>3741</FF>
-<LUT>786</LUT>
+<FF>1172</FF>
+<LUT>995</LUT>
 <URAM>0</URAM>
 </Resources>
 </AreaEstimates>

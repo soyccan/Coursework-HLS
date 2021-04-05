@@ -1,6 +1,6 @@
-INFO-FLOW: Workspace D:/Vivado/lab2-1_hls/solution1 opened at Mon Mar 08 00:45:53 +0800 2021
-Execute     config_clock -quiet -name default -period 5 -default=false 
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO-FLOW: Workspace D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1 opened at Fri Mar 26 22:08:03 +0800 2021
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     open_platform DefaultPlatform 
 Execute     import_lib C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq 
 Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
@@ -42,8 +42,8 @@ Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.
 Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
 Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.138 sec.
-Command     ap_source done; 0.138 sec.
+Command       ap_source done; 0.123 sec.
+Command     ap_source done; 0.123 sec.
 Execute     open_platform DefaultPlatform 
 Execute     import_lib C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6 
 Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
@@ -58,7 +58,7 @@ Execute     source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fp
 Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 Execute     set_part xc7z020-clg400-1 
 Execute       ap_part_info -name xc7z020-clg400-1 -data single -quiet 
-Command       ap_part_info done; 0.742 sec.
+Command       ap_part_info done; 0.521 sec.
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 Execute       add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
 Execute         get_default_platform 
@@ -71,22 +71,10 @@ Execute         ap_part_info -name xc7z020-clg400-1 -data info
 Execute         config_chip_info -quiet -speed slow 
 Execute       add_library xilinx/zynq/zynq_fpv6 
 Execute         get_default_platform 
-Execute         open_platform DefaultPlatform 
-Execute         import_lib C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6 
-Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
-Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
-Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
-Execute               source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
-Execute               source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
-Execute                 source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
-Execute                 source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
-Execute               source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
-Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
-Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 Execute       get_default_platform 
-Command     set_part done; 0.876 sec.
+Command     set_part done; 0.666 sec.
 Execute     ap_part_info -data single -name xc7z020-clg400-1 
 Execute     ap_part_info -name xc7z020-clg400-1 -data resources 
 Execute     ap_part_info -name xc7z020-clg400-1 -data info 
@@ -96,10 +84,39 @@ Execute     ap_part_info -name xc7z020-clg400-1 -data info
 Execute     config_chip_info -quiet -speed slow 
 Execute     config_export -format=ip_catalog 
 Execute     config_export -rtl=verilog 
-Command   open_solution done; 1.124 sec.
-Execute   set_part xc7z020clg400-1 
-Execute     ap_part_info -name xc7z020clg400-1 -data single -quiet 
-Execute     ap_part_info -name xc7z020clg400-1 -data info 
+Execute     config_export -vivado_optimization_level=2 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute     config_export -vivado_phys_opt=place 
+Execute     config_export -vivado_report_level=0 
+Execute     config_sdx -optimization_level=none 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -optimization_level' config_export -vivado_optimization_level=2 
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+Execute       config_export -vivado_optimization_level=2 
+Execute         get_config_export -vivado_impl_strategy 
+Execute         get_config_export -vivado_phys_opt 
+Execute     config_sdx -target=none 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_export -vivado_optimization_level=2 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+Execute       config_export -vivado_optimization_level=2 
+Execute         get_config_export -vivado_impl_strategy 
+Execute         get_config_export -vivado_phys_opt 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_compile -name_max_length 
+Execute       get_config_schedule -enable_dsp_full_reg 
+Execute       get_config_rtl -register_reset_num 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_interface -m_axi_addr64 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' set_clock_uncertainty default 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+Execute       set_clock_uncertainty default 
+Execute         get_clock_period -default -name=default 
+Execute         config_clock -quiet -name default -uncertainty 1.25 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+Command   open_solution done; 0.888 sec.
+Execute   set_part xc7z020-clg400-1 
+Execute     ap_part_info -name xc7z020-clg400-1 -data single -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
 Execute     add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
 Execute       get_default_platform 
 Execute       ap_part_info -data single -name xc7z020-clg400-1 
@@ -111,31 +128,46 @@ Execute       ap_part_info -name xc7z020-clg400-1 -data info
 Execute       config_chip_info -quiet -speed slow 
 Execute     add_library xilinx/zynq/zynq_fpv6 
 Execute       get_default_platform 
-Execute       open_platform DefaultPlatform 
-Execute       import_lib C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6 
-Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
-Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
-Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
-Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
-Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
-Execute               source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
-Execute               source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
-Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
-Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
-Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 Execute     ap_part_info -name xc7z020-clg400-1 -data info 
 Execute     get_default_platform 
-Command   set_part done; 0.136 sec.
-Execute   create_clock -period 5 -name default 
-Execute     config_clock -quiet -name default -period 5 -default=false 
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
-Execute   config_export -format ip_catalog -rtl verilog 
-Execute   source ./lab2-1_hls/solution1/directives.tcl 
+Command   set_part done; 0.123 sec.
+Execute   create_clock -period 10 -name default 
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute   config_export -format ip_catalog -rtl verilog -vivado_optimization_level 2 -vivado_phys_opt place -vivado_report_level 0 
+Execute     get_config_export -vivado_impl_strategy 
+Execute   config_sdx -optimization_level none -target none 
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+Execute     send_msg_by_id INFO @200-435@%s%s 'config_sdx -optimization_level' config_export -vivado_optimization_level=2 
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+Execute     config_export -vivado_optimization_level=2 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute     send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_export -vivado_optimization_level=2 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+Execute     config_export -vivado_optimization_level=2 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute     get_config_compile -pipeline_loops 
+Execute     get_config_compile -name_max_length 
+Execute     get_config_schedule -enable_dsp_full_reg 
+Execute     get_config_rtl -register_reset_num 
+Execute     get_config_rtl -module_auto_prefix 
+Execute     get_config_interface -m_axi_addr64 
+Execute     send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' set_clock_uncertainty default 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+Execute     set_clock_uncertainty default 
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+Execute   source ./lab2-1.vivado_hls/solution1/directives.tcl 
 Execute     set_directive_pipeline -II 2 fir_n11_strm/SHIFT_ACC_LOOP 
 INFO-FLOW: Setting directive 'PIPELINE' II=2 
 Execute     set_directive_pipeline -II 2 fir_n11_strm/XFER_LOOP 
 INFO-FLOW: Setting directive 'PIPELINE' II=2 
 INFO-FLOW: Setting directive 'PIPELINE' II=2 
+Execute     set_directive_loop_tripcount -max 600 fir_n11_strm/XFER_LOOP 
+INFO-FLOW: Setting directive 'PIPELINE' II=2 
+INFO-FLOW: Setting directive 'PIPELINE' II=2 
+INFO-FLOW: Setting directive 'LOOP_TRIPCOUNT' tripcount=positionBooleanCmd max=600 
 Execute   csynth_design 
 Execute     get_config_compile -dump_cfg 
 Execute     get_config_compile -effort 
@@ -151,104 +183,106 @@ Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0
 Execute       get_config_schedule -relax_ii_for_timing 
 INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
 Execute       get_config_schedule -suppress_dependence_error_break 
-INFO: [HLS 200-10] Analyzing design file 'lab2-1_hls/FIR.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'lab2-1.vivado_hls/FIR.cpp' ... 
 INFO-FLOW: Compiling one TU...
 Execute       is_m_axi_addr64 
-INFO-FLOW: Handling lab2-1_hls/FIR.cpp as C++
+INFO-FLOW: Handling lab2-1.vivado_hls/FIR.cpp as C++
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
-Execute       is_encrypted lab2-1_hls/FIR.cpp 
+Execute       is_encrypted lab2-1.vivado_hls/FIR.cpp 
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 INFO-FLOW: Running: GCC PP
 INFO-FLOW: Source preprocessing
-Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "lab2-1_hls/FIR.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "D:/Vivado/lab2-1_hls/solution1/.autopilot/db/FIR.pp.0.cpp" 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.2/msys -hls -fno-exceptions -D__llvm__ -E lab2-1_hls/FIR.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.2/common/technology/autopilot -I C:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o D:/Vivado/lab2-1_hls/solution1/.autopilot/db/FIR.pp.0.cpp
-Command       clang done; 1.2 sec.
-Execute       tidy_31 xilinx-xfmat-array-geometry D:/Vivado/lab2-1_hls/solution1/.autopilot/db/FIR.pp.0.cpp std=gnu++98 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix D:/Vivado/lab2-1_hls/solution1/.autopilot/db/FIR.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.72 sec.
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "lab2-1.vivado_hls/FIR.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/FIR.pp.0.cpp" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.2/msys -hls -fno-exceptions -D__llvm__ -E lab2-1.vivado_hls/FIR.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.2/common/technology/autopilot -I C:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/FIR.pp.0.cpp
+Command       clang done; 1.081 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/FIR.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/FIR.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.531 sec.
 INFO-FLOW: Syntax Checking before pre-processing...
-Execute       clang -syntaxcheck -src D:/Vivado/lab2-1_hls/solution1/.autopilot/db/FIR.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "D:/Vivado/lab2-1_hls/solution1/.autopilot/db/FIR.pp.0.cpp"  -o "D:/Vivado/lab2-1_hls/solution1/.autopilot/db/useless.bc"  
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.2/common/technology/autopilot -I C:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ D:/Vivado/lab2-1_hls/solution1/.autopilot/db/FIR.pp.0.cpp -o D:/Vivado/lab2-1_hls/solution1/.autopilot/db/useless.bc
-Command       clang done; 1.402 sec.
-INFO-FLOW: Done: GCC PP time: 3.3 seconds per iteration
+Execute       clang -syntaxcheck -src D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/FIR.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/FIR.pp.0.cpp"  -o "D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.2/common/technology/autopilot -I C:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/FIR.pp.0.cpp -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/useless.bc
+Command       clang done; 1.351 sec.
+INFO-FLOW: Done: GCC PP time: 3 seconds per iteration
 INFO-FLOW: Setting directive 'PIPELINE' II=2 
 INFO-FLOW: Setting directive 'PIPELINE' II=2 
+INFO-FLOW: Setting directive 'LOOP_TRIPCOUNT' tripcount=positionBooleanCmd max=600 
 Execute       source C:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
 Execute       source C:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
 Execute         source C:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/try/try.tcl 
 INFO-FLOW: Setting directive 'PIPELINE' II=2 
 INFO-FLOW: Setting directive 'PIPELINE' II=2 
+INFO-FLOW: Setting directive 'LOOP_TRIPCOUNT' tripcount=positionBooleanCmd max=600 
 Execute       list_core -type functional_unit 
-Execute       tidy_31 xilinx-systemc-detector D:/Vivado/lab2-1_hls/solution1/.autopilot/db/FIR.pp.0.cpp std=gnu++98 -directive=D:/Vivado/lab2-1_hls/solution1/.autopilot/db/.systemc_flag 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=D:/Vivado/lab2-1_hls/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors D:/Vivado/lab2-1_hls/solution1/.autopilot/db/FIR.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.497 sec.
+Execute       tidy_31 xilinx-systemc-detector D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/FIR.pp.0.cpp std=gnu++98 -directive=D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/FIR.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.533 sec.
 INFO-FLOW: Running: tidy-3.1 CDT preprocess
-Execute       tidy_31 xilinx-directive2pragma D:/Vivado/lab2-1_hls/solution1/.autopilot/db/FIR.pp.0.cpp std=gnu++98 -directive=D:/Vivado/lab2-1_hls/solution1/.autopilot/db/all.directive.json 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=D:/Vivado/lab2-1_hls/solution1/.autopilot/db/all.directive.json -quiet -fix-errors D:/Vivado/lab2-1_hls/solution1/.autopilot/db/FIR.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.893 sec.
+Execute       tidy_31 xilinx-directive2pragma D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/FIR.pp.0.cpp std=gnu++98 -directive=D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/all.directive.json -quiet -fix-errors D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/FIR.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.883 sec.
 Execute       get_config_dataflow -strict_mode 
-Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/Vivado/lab2-1_hls/solution1/.autopilot/db/xilinx-dataflow-lawyer.FIR.pp.0.cpp.diag.yml D:/Vivado/lab2-1_hls/solution1/.autopilot/db/FIR.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > D:/Vivado/lab2-1_hls/solution1/.autopilot/db/xilinx-dataflow-lawyer.FIR.pp.0.cpp.out.log 2> D:/Vivado/lab2-1_hls/solution1/.autopilot/db/xilinx-dataflow-lawyer.FIR.pp.0.cpp.err.log 
-Command       ap_eval done; 0.594 sec.
-Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry D:/Vivado/lab2-1_hls/solution1/.autopilot/db/FIR.pp.0.cpp std=gnu++98 
-Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=D:/Vivado/lab2-1_hls/solution1/.autopilot/db/tidy-3.1.FIR.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors D:/Vivado/lab2-1_hls/solution1/.autopilot/db/FIR.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Vivado/lab2-1_hls/solution1/.autopilot/db/tidy-3.1.FIR.pp.0.cpp.out.log 2> D:/Vivado/lab2-1_hls/solution1/.autopilot/db/tidy-3.1.FIR.pp.0.cpp.err.log 
-Command         ap_eval done; 0.985 sec.
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/xilinx-dataflow-lawyer.FIR.pp.0.cpp.diag.yml D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/FIR.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/xilinx-dataflow-lawyer.FIR.pp.0.cpp.out.log 2> D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/xilinx-dataflow-lawyer.FIR.pp.0.cpp.err.log 
+Command       ap_eval done; 0.469 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/FIR.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/tidy-3.1.FIR.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/FIR.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/tidy-3.1.FIR.pp.0.cpp.out.log 2> D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/tidy-3.1.FIR.pp.0.cpp.err.log 
+Command         ap_eval done; 0.958 sec.
 Execute         source C:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
 Execute           source C:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
-Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter D:/Vivado/lab2-1_hls/solution1/.autopilot/db/FIR.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Vivado/lab2-1_hls/solution1/.autopilot/db/xilinx-legacy-rewriter.FIR.pp.0.cpp.out.log 2> D:/Vivado/lab2-1_hls/solution1/.autopilot/db/xilinx-legacy-rewriter.FIR.pp.0.cpp.err.log 
-Command         ap_eval done; 0.429 sec.
-Command       tidy_31 done; 1.43 sec.
-INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 2.9 seconds per iteration
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/FIR.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/xilinx-legacy-rewriter.FIR.pp.0.cpp.out.log 2> D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/xilinx-legacy-rewriter.FIR.pp.0.cpp.err.log 
+Command         ap_eval done; 0.311 sec.
+Command       tidy_31 done; 1.284 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 2.6 seconds per iteration
 INFO-FLOW: Pragma Handling...
-Execute       tidy_31 xilinx-ssdm-intrinsics-arguments D:/Vivado/lab2-1_hls/solution1/.autopilot/db/FIR.pragma.1.cpp std=gnu++98 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors D:/Vivado/lab2-1_hls/solution1/.autopilot/db/FIR.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 1.006 sec.
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/FIR.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/FIR.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.968 sec.
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 INFO-FLOW: Processing labels
-Execute       clang -src D:/Vivado/lab2-1_hls/solution1/.autopilot/db/FIR.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "D:/Vivado/lab2-1_hls/solution1/.autopilot/db/FIR.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "D:/Vivado/lab2-1_hls/solution1/.autopilot/db/FIR.bc" 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w D:/Vivado/lab2-1_hls/solution1/.autopilot/db/FIR.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.2/common/technology/autopilot -I C:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/Vivado/lab2-1_hls/solution1/.autopilot/db/FIR.bc
-Command       clang done; 1.379 sec.
+Execute       clang -src D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/FIR.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/FIR.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/FIR.bc" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/FIR.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.2/common/technology/autopilot -I C:/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/FIR.bc
+Command       clang done; 1.362 sec.
 INFO-FLOW: Linking Debug ...
-Execute       llvm-ld D:/Vivado/lab2-1_hls/solution1/.autopilot/db/FIR.g.bc -hls-opt -except-internalize fir_n11_strm -LC:/Xilinx/Vivado/2019.2/win64/lib -lhlsm -lhlsmc++ -o D:/Vivado/lab2-1_hls/solution1/.autopilot/db/a.g 
-Command       llvm-ld done; 2.182 sec.
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 174.738 ; gain = 82.285
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:13 . Memory (MB): peak = 174.738 ; gain = 82.285
+Execute       llvm-ld D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/FIR.g.bc -hls-opt -except-internalize fir_n11_strm -LC:/Xilinx/Vivado/2019.2/win64/lib -lhlsm -lhlsmc++ -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 0.915 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 176.297 ; gain = 84.801
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 176.297 ; gain = 84.801
 Execute       get_config_sdx -target 
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
-Execute         transform -promote-dbg-pointer D:/Vivado/lab2-1_hls/solution1/.autopilot/db/a.pp.bc -o D:/Vivado/lab2-1_hls/solution1/.autopilot/db/a.pp.0.bc -f 
-Execute         llvm-ld D:/Vivado/lab2-1_hls/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LC:/Xilinx/Vivado/2019.2/win64/lib -lfloatconversion -o D:/Vivado/lab2-1_hls/solution1/.autopilot/db/a.g.0 
-Command         llvm-ld done; 0.551 sec.
+Execute         transform -promote-dbg-pointer D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/a.pp.bc -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LC:/Xilinx/Vivado/2019.2/win64/lib -lfloatconversion -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.588 sec.
 INFO-FLOW: Running Standard Transforms...
-Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top fir_n11_strm -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name D:/Vivado/lab2-1_hls/solution1/.autopilot/db/a.g.0.bc -o D:/Vivado/lab2-1_hls/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 174.738 ; gain = 82.285
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top fir_n11_strm -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/a.g.0.bc -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 176.297 ; gain = 84.801
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
-Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin D:/Vivado/lab2-1_hls/solution1/.autopilot/db/a.g.1.bc -o D:/Vivado/lab2-1_hls/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/a.g.1.bc -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/a.g.2.prechk.bc -f 
 INFO-FLOW: Checking Synthesizability 2/2..
-Execute         transform -syn-check D:/Vivado/lab2-1_hls/solution1/.autopilot/db/a.g.2.prechk.bc -o D:/Vivado/lab2-1_hls/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 174.738 ; gain = 82.285
+Execute         transform -syn-check D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/a.g.2.prechk.bc -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 176.297 ; gain = 84.801
 INFO-FLOW: Compiler optimizing ...
-INFO-FLOW: Share syncheck's 1.bc for syn flow: copy D:/Vivado/lab2-1_hls/solution1/.autopilot/db/a.g.1.bc to D:/Vivado/lab2-1_hls/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/a.g.1.bc to D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
-Execute         transform -hls -tmp D:/Vivado/lab2-1_hls/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name D:/Vivado/lab2-1_hls/solution1/.autopilot/db/a.o.1.bc -o D:/Vivado/lab2-1_hls/solution1/.autopilot/db/a.o.1.tmp.bc -f 
-INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'XFER_LOOP' (lab2-1_hls/FIR.cpp:22) in function 'fir_n11_strm' for pipelining.
-WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'SHIFT_ACC_LOOP' (lab2-1_hls/FIR.cpp:27) because its parent loop or function is pipelined.
-INFO: [HLS 200-489] Unrolling loop 'SHIFT_ACC_LOOP' (lab2-1_hls/FIR.cpp:27) in function 'fir_n11_strm' completely with a factor of 11.
+Execute         transform -hls -tmp D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/a.o.1.bc -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'XFER_LOOP' (lab2-1.vivado_hls/FIR.cpp:22) in function 'fir_n11_strm' for pipelining.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'SHIFT_ACC_LOOP' (lab2-1.vivado_hls/FIR.cpp:27) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT_ACC_LOOP' (lab2-1.vivado_hls/FIR.cpp:27) in function 'fir_n11_strm' completely with a factor of 11.
 INFO: [XFORM 203-102] Partitioning array 'an32ShiftReg' automatically.
-Command         transform done; 0.208 sec.
+Command         transform done; 0.21 sec.
 INFO-FLOW: Presyn 2...
-Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name D:/Vivado/lab2-1_hls/solution1/.autopilot/db/a.o.1.tmp.bc -o D:/Vivado/lab2-1_hls/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
-INFO: [XFORM 203-11] Balancing expressions in function 'fir_n11_strm' (lab2-1_hls/FIR.cpp:4)...19 expression(s) balanced.
-Command         transform done; 0.103 sec.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 174.738 ; gain = 82.285
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/a.o.1.tmp.bc -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-11] Balancing expressions in function 'fir_n11_strm' (lab2-1.vivado_hls/FIR.cpp:4)...19 expression(s) balanced.
+Command         transform done; 0.116 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 176.297 ; gain = 84.801
 INFO-FLOW: Building ssdm...
-Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build D:/Vivado/lab2-1_hls/solution1/.autopilot/db/a.o.2.bc -o D:/Vivado/lab2-1_hls/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
-Command         transform done; 0.191 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 174.738 ; gain = 82.285
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/a.o.2.bc -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Command         transform done; 0.181 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 176.297 ; gain = 84.801
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 1.29 sec.
-Command     elaborate done; 12.739 sec.
+Command       opt_and_import_c done; 1.247 sec.
+Command     elaborate done; 10.772 sec.
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO-FLOW: Synthesizing C/C++ design ...
@@ -274,13 +308,12 @@ Execute       set_default_model fir_n11_strm
 Execute       schedule -model fir_n11_strm 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'XFER_LOOP'.
-WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('an32Coef_load_3', lab2-1_hls/FIR.cpp:35) on array 'an32Coef' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'an32Coef'.
-INFO: [SCHED 204-61] Pipelining result : Target II = 2, Final II = 11, Depth = 20.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('an32Coef_load_3', lab2-1.vivado_hls/FIR.cpp:35) on array 'an32Coef' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'an32Coef'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 2, Final II = 11, Depth = 15.
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.226 sec.
-INFO: [HLS 200-111]  Elapsed time: 14.918 seconds; current allocated memory: 104.838 MB.
-Execute       syn_report -verbosereport -o D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.verbose.sched.rpt 
-Execute       db_write -o D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.sched.adb -f 
+INFO: [HLS 200-111]  Elapsed time: 12.42 seconds; current allocated memory: 106.185 MB.
+Execute       syn_report -verbosereport -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.verbose.sched.rpt 
+Execute       db_write -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.sched.adb -f 
 INFO-FLOW: Finish scheduling fir_n11_strm.
 Execute       set_default_model fir_n11_strm 
 Execute       bind -model fir_n11_strm 
@@ -290,9 +323,9 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.129 seconds; current allocated memory: 105.438 MB.
-Execute       syn_report -verbosereport -o D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.verbose.bind.rpt 
-Execute       db_write -o D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.bind.adb -f 
+INFO: [HLS 200-111]  Elapsed time: 0.142 seconds; current allocated memory: 106.676 MB.
+Execute       syn_report -verbosereport -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.verbose.bind.rpt 
+Execute       db_write -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.bind.adb -f 
 INFO-FLOW: Finish binding fir_n11_strm.
 Execute       get_model_list fir_n11_strm -filter all-wo-channel 
 INFO-FLOW: Preprocessing for RTLGen ...
@@ -303,7 +336,7 @@ INFO: [HLS 200-10] -- Generating RTL for module 'fir_n11_strm'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       get_config_rtl -module_prefix 
 Execute       get_config_rtl -module_auto_prefix 
-Execute       create_rtl_model fir_n11_strm -vendor xilinx -mg_file D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.compgen.tcl 
+Execute       create_rtl_model fir_n11_strm -vendor xilinx -mg_file D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.compgen.tcl 
 INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_data_V' to 'axis' (register, both mode).
 INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_keep_V' to 'axis' (register, both mode).
 INFO: [RTGEN 206-500] Setting interface mode on port 'fir_n11_strm/pstrmInput_V_strb_V' to 'axis' (register, both mode).
@@ -332,43 +365,38 @@ WARNING: [RTGEN 206-101] Register 'an32ShiftReg_2' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'an32ShiftReg_1' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'an32ShiftReg_0' is power-on initialization.
 INFO: [RTGEN 206-100] Bundling port 'return', 'an32Coef' and 'regXferLeng_V' to AXI-Lite port AXILiteS.
-INFO: [SYN 201-210] Renamed object name 'fir_n11_strm_mul_32s_32s_32_5_1' to 'fir_n11_strm_mul_bkb' due to the length limit 20
-INFO: [RTGEN 206-100] Generating core module 'fir_n11_strm_mul_bkb': 11 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'fir_n11_strm'.
-Command       create_rtl_model done; 0.103 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.222 seconds; current allocated memory: 106.871 MB.
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
-Execute       gen_rtl fir_n11_strm -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Vivado/lab2-1_hls/solution1/syn/systemc/fir_n11_strm -synmodules fir_n11_strm 
-Execute       gen_rtl fir_n11_strm -istop -style xilinx -f -lang vhdl -o D:/Vivado/lab2-1_hls/solution1/syn/vhdl/fir_n11_strm 
-Execute       gen_rtl fir_n11_strm -istop -style xilinx -f -lang vlog -o D:/Vivado/lab2-1_hls/solution1/syn/verilog/fir_n11_strm 
-Execute       syn_report -csynth -model fir_n11_strm -o D:/Vivado/lab2-1_hls/solution1/syn/report/fir_n11_strm_csynth.rpt 
-Execute       syn_report -rtlxml -model fir_n11_strm -o D:/Vivado/lab2-1_hls/solution1/syn/report/fir_n11_strm_csynth.xml 
-Execute       syn_report -verbosereport -model fir_n11_strm -o D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.verbose.rpt 
-Command       syn_report done; 0.502 sec.
-Execute       db_write -model fir_n11_strm -f -o D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.adb 
-Execute       gen_tb_info fir_n11_strm -p D:/Vivado/lab2-1_hls/solution1/.autopilot/db -o D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm 
-Execute       export_constraint_db -f -tool general -o D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.constraint.tcl 
-Execute       syn_report -designview -model fir_n11_strm -o D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.design.xml 
+Command       create_rtl_model done; 0.102 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.206 seconds; current allocated memory: 107.821 MB.
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fir_n11_strm -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/syn/systemc/fir_n11_strm -synmodules fir_n11_strm 
+Execute       gen_rtl fir_n11_strm -istop -style xilinx -f -lang vhdl -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/syn/vhdl/fir_n11_strm 
+Execute       gen_rtl fir_n11_strm -istop -style xilinx -f -lang vlog -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/syn/verilog/fir_n11_strm 
+Execute       syn_report -csynth -model fir_n11_strm -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/syn/report/fir_n11_strm_csynth.rpt 
+Execute       syn_report -rtlxml -model fir_n11_strm -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/syn/report/fir_n11_strm_csynth.xml 
+Execute       syn_report -verbosereport -model fir_n11_strm -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.verbose.rpt 
+Command       syn_report done; 0.446 sec.
+Execute       db_write -model fir_n11_strm -f -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.adb 
+Execute       gen_tb_info fir_n11_strm -p D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm 
+Execute       export_constraint_db -f -tool general -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.constraint.tcl 
+Execute       syn_report -designview -model fir_n11_strm -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.design.xml 
 Execute       get_config_rtl -disable_wave_debug 
-Execute       syn_report -wcfg -model fir_n11_strm -o D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm_dataflow_ana.wcfg 
-Execute       syn_report -protoinst -model fir_n11_strm -o D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.protoinst 
+Execute       syn_report -wcfg -model fir_n11_strm -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model fir_n11_strm -o D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.protoinst 
 Execute       get_config_debug -directory 
 Execute       sc_get_clocks fir_n11_strm 
 Execute       get_config_export -vivado_clock 
 Execute       sc_get_portdomain fir_n11_strm 
 INFO-FLOW: Model list for RTL component generation: fir_n11_strm
 INFO-FLOW: Handling components in module [fir_n11_strm] ... 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.compgen.tcl 
-INFO-FLOW: Found component fir_n11_strm_mul_bkb.
-INFO-FLOW: Append model fir_n11_strm_mul_bkb
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.compgen.tcl 
 INFO-FLOW: Found component fir_n11_strm_AXILiteS_s_axi.
 INFO-FLOW: Append model fir_n11_strm_AXILiteS_s_axi
 INFO-FLOW: Found component regslice_core.
 INFO-FLOW: Append model regslice_core
 INFO-FLOW: Append model fir_n11_strm
 INFO-FLOW: Generating RTL model list ...
-INFO-FLOW: All models in this session: fir_n11_strm_mul_bkb fir_n11_strm_AXILiteS_s_axi regslice_core fir_n11_strm
-INFO-FLOW: To file: write model fir_n11_strm_mul_bkb
+INFO-FLOW: All models in this session: fir_n11_strm_AXILiteS_s_axi regslice_core fir_n11_strm
 INFO-FLOW: To file: write model fir_n11_strm_AXILiteS_s_axi
 INFO-FLOW: To file: write model regslice_core
 INFO-FLOW: To file: write model fir_n11_strm
@@ -380,17 +408,17 @@ INFO-FLOW: CAS Generation done.
 INFO-FLOW: CBC Generation done.
 Execute       syn_report -model fir_n11_strm -printsummary 
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 228.78 MHz
+INFO: [HLS 200-789] **** Estimated Fmax: 117.51 MHz
 INFO-FLOW: DBG:CMD: auto_generate_csynth_design
-INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d D:/Vivado/lab2-1_hls/solution1
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
-INFO-FLOW: DBG:CMD: read_platform_lib D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl
 Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
 Execute         source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
 Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
 Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
 Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
 Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
 Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
 Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
@@ -410,30 +438,25 @@ Command         ap_source done; 0.118 sec.
 Command       ap_source done; 0.118 sec.
 Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
-INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=5.000 (was NA)
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
 Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.compgen.tcl 
-Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-INFO: [RTMG 210-282] Generating pipelined core: 'fir_n11_strm_mul_bkb_MulnS_0'
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.compgen.tcl 
 Execute         source ./AXILiteS.slave.tcl 
 Execute         is_m_axi_addr64 
-INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d D:/Vivado/lab2-1_hls/solution1
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
-INFO-FLOW: DBG:CMD: read_platform_lib D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl
 Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
 Execute         source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
 Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
 Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
 Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
 Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
 Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
 Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
@@ -449,23 +472,23 @@ Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/uti
 Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
 Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source done; 0.118 sec.
+Command         ap_source done; 0.119 sec.
 Command       ap_source done; 0.119 sec.
 Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=fir_n11_strm xml_exists=0
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
 INFO-FLOW: DBG:CMD:       export_impl_rtl
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.compgen.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.compgen.tcl 
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.compgen.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.compgen.tcl 
 Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
@@ -481,65 +504,65 @@ Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet
 Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.compgen.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.compgen.tcl 
 Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
 Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.constraint.tcl 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.constraint.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
 INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=28
 INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=16
-INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=1 #modelList=4 #gSsdmPorts=28
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=1 #modelList=3 #gSsdmPorts=28
 Execute       source C:/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
 Execute       get_config_export -xo 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.compgen.dataonly.tcl 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.compgen.dataonly.tcl 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.compgen.dataonly.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.compgen.dataonly.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
 Execute       get_config_sdx -target 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.compgen.dataonly.tcl 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.compgen.dataonly.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
 Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.constraint.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.constraint.tcl 
 Execute       sc_get_clocks fir_n11_strm 
 Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
 Execute       get_config_debug -directory 
-Execute       source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute       source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
 Execute       get_config_sdx -target 
 Execute       get_config_sdx -profile 
 Execute       get_config_rtl -kernel_profile 
 Execute       get_config_rtl -stall_sig_gen 
 Execute       get_config_rtl -profile 
-INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: D:/Vivado/lab2-1_hls/solution1/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/kernel.internal.xml
 INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:17 . Memory (MB): peak = 174.738 ; gain = 82.285
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 176.297 ; gain = 84.801
 INFO: [VHDL 208-304] Generating VHDL RTL for fir_n11_strm.
 INFO: [VLOG 209-307] Generating Verilog RTL for fir_n11_strm.
-Command     autosyn done; 2.14 sec.
-Command   csynth_design done; 14.885 sec.
-Command ap_source done; 16.177 sec.
+Command     autosyn done; 1.889 sec.
+Command   csynth_design done; 12.667 sec.
+Command ap_source done; 13.707 sec.
 Execute cleanup_all 
-INFO-FLOW: Workspace D:/Vivado/lab2-1_hls/solution1 opened at Mon Mar 08 00:46:44 +0800 2021
-Execute     config_clock -quiet -name default -period 5 -default=false 
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO-FLOW: Workspace D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1 opened at Fri Mar 26 22:09:16 +0800 2021
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     open_platform DefaultPlatform 
 Execute     import_lib C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq 
 Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
@@ -581,12 +604,24 @@ Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.
 Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
 Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.126 sec.
-Command     ap_source done; 0.126 sec.
-Execute     set_part xc7z020clg400-1 
-Execute       ap_part_info -name xc7z020clg400-1 -data single -quiet 
-Command       ap_part_info done; 0.495 sec.
-Execute       ap_part_info -name xc7z020clg400-1 -data info 
+Command       ap_source done; 0.124 sec.
+Command     ap_source done; 0.124 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xc7z020-clg400-1 
+Execute       ap_part_info -name xc7z020-clg400-1 -data single -quiet 
+Command       ap_part_info done; 0.515 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 Execute       add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
 Execute         get_default_platform 
 Execute         ap_part_info -data single -name xc7z020-clg400-1 
@@ -598,32 +633,283 @@ Execute         ap_part_info -name xc7z020-clg400-1 -data info
 Execute         config_chip_info -quiet -speed slow 
 Execute       add_library xilinx/zynq/zynq_fpv6 
 Execute         get_default_platform 
-Execute         open_platform DefaultPlatform 
-Execute         import_lib C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6 
-Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
-Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
-Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
-Execute               source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
-Execute               source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
-Execute                 source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
-Execute                 source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
-Execute               source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
-Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
-Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 Execute       get_default_platform 
-Command     set_part done; 0.629 sec.
-Execute     ap_part_info -data single -name xc7z020clg400-1 
-Execute     ap_part_info -name xc7z020clg400-1 -data resources 
-Execute     ap_part_info -name xc7z020clg400-1 -data info 
-Execute     ap_part_info -name xc7z020clg400-1 -data info 
+Command     set_part done; 0.635 sec.
+Execute     ap_part_info -data single -name xc7z020-clg400-1 
+Execute     ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
 Execute     config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
-Execute     ap_part_info -name xc7z020clg400-1 -data info 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
 Execute     config_chip_info -quiet -speed slow 
 Execute     config_export -format=ip_catalog 
 Execute     config_export -rtl=verilog 
-Command   open_solution done; 0.814 sec.
+Execute     config_export -vivado_optimization_level=2 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute     config_export -vivado_phys_opt=place 
+Execute     config_export -vivado_report_level=0 
+Execute     config_sdx -optimization_level=none 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -optimization_level' config_export -vivado_optimization_level=2 
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+Execute       config_export -vivado_optimization_level=2 
+Execute         get_config_export -vivado_impl_strategy 
+Execute         get_config_export -vivado_phys_opt 
+Execute     config_sdx -target=none 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_export -vivado_optimization_level=2 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+Execute       config_export -vivado_optimization_level=2 
+Execute         get_config_export -vivado_impl_strategy 
+Execute         get_config_export -vivado_phys_opt 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_compile -name_max_length 
+Execute       get_config_schedule -enable_dsp_full_reg 
+Execute       get_config_rtl -register_reset_num 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_interface -m_axi_addr64 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' set_clock_uncertainty default 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+Execute       set_clock_uncertainty default 
+Execute         get_clock_period -default -name=default 
+Execute         config_clock -quiet -name default -uncertainty 1.25 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+Command   open_solution done; 0.867 sec.
+Execute   cosim_design -trace_level all -tool xsim 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl
+Execute     source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
+Execute     source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.12 sec.
+Command     ap_source done; 0.12 sec.
+Execute     source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     is_encrypted D:/Repo/hls/lab2/lab2-1.vivado_hls/FIRTester.cpp 
+Execute     is_encrypted D:/Repo/hls/lab2/lab2-1.vivado_hls/FIR.cpp 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: TB processing: D:/Repo/hls/lab2/lab2-1.vivado_hls/FIRTester.cpp D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/./sim/autowrap/testbench/FIRTester.cpp_pre.cpp
+Execute     tidy_31 xilinx-tb-xfmat D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/./sim/autowrap/testbench/FIRTester.cpp_pre.cpp std=c++11 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/./sim/autowrap/testbench/FIRTester.cpp_pre.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command     tidy_31 done; 1.106 sec.
+Execute     tidy_31 xilinx-tb31-process D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/./sim/autowrap/testbench/FIRTester.cpp_pre.cpp.tb.cpp std=c++11 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/./sim/autowrap/testbench/FIRTester.cpp_pre.cpp.tb.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command     tidy_31 done; 2.388 sec.
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: TB processing: D:/Repo/hls/lab2/lab2-1.vivado_hls/FIR.cpp D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/./sim/autowrap/testbench/FIR.cpp_pre.cpp
+Execute     tidy_31 xilinx-tb-xfmat D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/./sim/autowrap/testbench/FIR.cpp_pre.cpp std=c++11 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/./sim/autowrap/testbench/FIR.cpp_pre.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command     tidy_31 done; 1.211 sec.
+Execute     tidy_31 xilinx-tb31-process D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/./sim/autowrap/testbench/FIR.cpp_pre.cpp.tb.cpp std=c++11 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/./sim/autowrap/testbench/FIR.cpp_pre.cpp.tb.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command     tidy_31 done; 1.21 sec.
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     source .run_sim.tcl 
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Command     ap_source done; 0.392 sec.
+INFO: [COSIM 212-333] Generating C post check test bench ...
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+INFO: [COSIM 212-12] Generating RTL test bench ...
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+Execute     source .run_sim.tcl 
+Execute       source check_sim.tcl 
+Execute       source .sim.status.tcl 
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+Command     ap_source done; 12.061 sec.
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+Command   cosim_design done; 29.801 sec.
+Command ap_source done; 30.672 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1 opened at Fri Mar 26 22:10:18 +0800 2021
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.125 sec.
+Command     ap_source done; 0.125 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xc7z020-clg400-1 
+Execute       ap_part_info -name xc7z020-clg400-1 -data single -quiet 
+Command       ap_part_info done; 0.536 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xc7z020-clg400-1 
+Execute         ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.666 sec.
+Execute     ap_part_info -data single -name xc7z020-clg400-1 
+Execute     ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_chip_info -quiet -speed slow 
+Execute     config_export -format=ip_catalog 
+Execute     config_export -rtl=verilog 
+Execute     config_export -vivado_optimization_level=2 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_phys_opt 
+Execute     config_export -vivado_phys_opt=place 
+Execute     config_export -vivado_report_level=0 
+Execute     config_sdx -optimization_level=none 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -optimization_level' config_export -vivado_optimization_level=2 
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+Execute       config_export -vivado_optimization_level=2 
+Execute         get_config_export -vivado_impl_strategy 
+Execute         get_config_export -vivado_phys_opt 
+Execute     config_sdx -target=none 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' config_export -vivado_optimization_level=2 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+Execute       config_export -vivado_optimization_level=2 
+Execute         get_config_export -vivado_impl_strategy 
+Execute         get_config_export -vivado_phys_opt 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_compile -name_max_length 
+Execute       get_config_schedule -enable_dsp_full_reg 
+Execute       get_config_rtl -register_reset_num 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_interface -m_axi_addr64 
+Execute       send_msg_by_id INFO @200-435@%s%s 'config_sdx -target' set_clock_uncertainty default 
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+Execute       set_clock_uncertainty default 
+Execute         get_clock_period -default -name=default 
+Execute         config_clock -quiet -name default -uncertainty 1.25 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+Command   open_solution done; 0.886 sec.
 Execute   export_design -rtl verilog -format ip_catalog 
 Execute     get_config_export -acc 
 Execute     get_config_export -clock_margin 
@@ -645,7 +931,7 @@ Execute     get_config_export -version
 Execute     get_config_export -xo 
 Execute     config_export -format=ip_catalog -rtl=verilog 
 INFO-FLOW: DBG:CMD: export_design_wrap: -format ip_catalog -rtl verilog
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
 Execute     get_config_export -vivado_clock 
 Execute     get_top 
 Execute     get_config_sdx -target 
@@ -653,14 +939,14 @@ Execute     get_config_rtl -module_auto_prefix
 Execute     get_config_sdx -target 
 Execute     get_config_sdx -target 
 INFO-FLOW: DBG:CMD:   auto_impl: pack: -export -tool vivado -rtl verilog -sdx-target none
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
-INFO-FLOW: DBG:CMD: read_platform_lib D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl
 Execute     source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
 Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
 Execute     source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
 Execute     source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
 Execute     source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
 Execute     source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
 Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
 Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
@@ -680,22 +966,157 @@ Command       ap_source done; 0.119 sec.
 Command     ap_source done; 0.119 sec.
 Execute     source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
-INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=5.000 (was NA)
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
 Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
 INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
 INFO-FLOW: DBG:CMD: automg_wrap -export -pcore_version 1.00.a -rtl vlog -sdx-target none -tool Vivado -impltomg_flag
 INFO-FLOW: DBG:CMD:     auto_generate -export -pcore_version 1.00.a -rtl vlog -sdx-target none -tool Vivado -impltomg_flag
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
-INFO-FLOW: DBG:CMD: read_platform_lib D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl
 Execute     source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
 Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
 Execute     source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
 Execute     source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
 Execute     source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.116 sec.
+Command     ap_source done; 0.116 sec.
+Execute     source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=fir_n11_strm xml_exists=1
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.compgen.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.compgen.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.constraint.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=28
+INFO-FLOW: DBG:CMD:       copying IP vlog from D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/impl/verilog
+INFO-FLOW: DBG:CMD:       copying IP vhdl from D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/impl/vhdl
+INFO-FLOW: DBG:CMD:       copy ip_driver_dir 1_0 D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/driver
+INFO-FLOW: DBG:CMD:       generate_ip_script #gSsdmPorts=28
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.compgen.dataonly.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.compgen.dataonly.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_sdx -target 
+Execute     get_config_debug -directory 
+INFO-FLOW: DBG:CMD:       generate_ip_auxiliary
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=fir_n11_strm
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_top_info
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=fir_n11_strm
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_bd_script
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.constraint.tcl 
+INFO-FLOW: DBG:CMD:       generate_ipi_example_script
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_syn_sh
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       generate_imp_constraints
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.constraint.tcl 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       copy-tb-files D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/impl/.verilog/sim_tbs
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl
+Execute     source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
+Execute     source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
+Execute     source D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/.autopilot/db/global.setting.tcl 
 Execute     source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
 Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
 Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
@@ -715,143 +1136,9 @@ Command       ap_source done; 0.117 sec.
 Command     ap_source done; 0.117 sec.
 Execute     source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
-INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=fir_n11_strm xml_exists=1
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-INFO-FLOW: DBG:CMD:       export_impl_rtl
-INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.compgen.tcl 
-INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.compgen.tcl 
-Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.compgen.tcl 
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.constraint.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=28
-INFO-FLOW: DBG:CMD:       copying IP vlog from D:/Vivado/lab2-1_hls/solution1/impl/verilog
-INFO-FLOW: DBG:CMD:       copying IP vhdl from D:/Vivado/lab2-1_hls/solution1/impl/vhdl
-INFO-FLOW: DBG:CMD:       copy ip_driver_dir 1_0 D:/Vivado/lab2-1_hls/solution1/.autopilot/db/driver
-INFO-FLOW: DBG:CMD:       generate_ip_script #gSsdmPorts=28
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.compgen.dataonly.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.compgen.dataonly.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
-Execute     get_config_sdx -target 
-Execute     get_config_debug -directory 
-INFO-FLOW: DBG:CMD:       generate_ip_auxiliary
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
-INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=fir_n11_strm
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-INFO-FLOW: DBG:CMD:       generate_top_info
-INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=fir_n11_strm
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.rtl_wrap.cfg.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-INFO-FLOW: DBG:CMD:       generate_ip_bd_script
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.constraint.tcl 
-INFO-FLOW: DBG:CMD:       generate_ipi_example_script
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-INFO-FLOW: DBG:CMD:       generate_syn_sh
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
-INFO-FLOW: DBG:CMD:       generate_imp_constraints
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.constraint.tcl 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/fir_n11_strm.tbgen.tcl 
-INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-INFO-FLOW: DBG:CMD: read_platform_lib D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl
-Execute     source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
-Execute       source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
-Execute     source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
-Execute     source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
-Execute     source C:/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
-Execute     source D:/Vivado/lab2-1_hls/solution1/.autopilot/db/global.setting.tcl 
-Execute     source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
-Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
-Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
-Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
-Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
-Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
-Execute           source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
-Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
-Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
-Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
-Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
-Execute         source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.119 sec.
-Command     ap_source done; 0.119 sec.
-Execute     source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
-Execute       source C:/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-INFO-FLOW: DBG:CMD:     exec D:/Vivado/lab2-1_hls/solution1/impl/ip/pack.bat
-Command   export_design done; 9.662 sec.
-Command ap_source done; 10.48 sec.
+INFO-FLOW: DBG:CMD:     exec D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/impl/ip/pack.bat
+Command   export_design done; 9.103 sec.
+Command ap_source done; 9.993 sec.
 Execute cleanup_all 

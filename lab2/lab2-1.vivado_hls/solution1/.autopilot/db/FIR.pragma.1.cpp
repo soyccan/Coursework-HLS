@@ -1,5 +1,5 @@
-# 1 "lab2-1_hls/FIR.cpp"
-# 1 "lab2-1_hls/FIR.cpp" 1
+# 1 "lab2-1.vivado_hls/FIR.cpp"
+# 1 "lab2-1.vivado_hls/FIR.cpp" 1
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 152 "<built-in>" 3
@@ -150,9 +150,9 @@ extern "C" {
 }
 # 9 "<command line>" 2
 # 1 "<built-in>" 2
-# 1 "lab2-1_hls/FIR.cpp" 2
+# 1 "lab2-1.vivado_hls/FIR.cpp" 2
 
-# 1 "lab2-1_hls/fir.h" 1
+# 1 "lab2-1.vivado_hls/fir.h" 1
 
 
 
@@ -6430,7 +6430,7 @@ template<int D>
     qdma_axis(ap_uint<D> d = ap_uint<D>(), ap_uint<(D+7)/8> k = ap_uint<(D+7)/8>(), ap_uint<1> l = ap_uint<1>()) : data(d), keep(k), last(l) {}
     qdma_axis(const qdma_axis<D, 0, 0, 0> &d) : data(d.data), keep(d.keep), last(d.last) {}
   };
-# 5 "lab2-1_hls/fir.h" 2
+# 5 "lab2-1.vivado_hls/fir.h" 2
 # 1 "C:/Xilinx/Vivado/2019.2/common/technology/autopilot\\hls_stream.h" 1
 # 66 "C:/Xilinx/Vivado/2019.2/common/technology/autopilot\\hls_stream.h"
 # 1 "C:/Xilinx/Vivado/2019.2/common/technology/autopilot/etc/autopilot_enum.h" 1
@@ -6632,7 +6632,7 @@ class stream
 
 
 }
-# 6 "lab2-1_hls/fir.h" 2
+# 6 "lab2-1.vivado_hls/fir.h" 2
 
 
 
@@ -6645,7 +6645,7 @@ typedef signed int int32_t;
 typedef unsigned int uint32_t;
 
 void fir_n11_strm(stream_t* pstrmInput, stream_t* pstrmOutput, int32_t an32Coef[(((11 + 3) >> 2) << 2)], reg32_t regXferLeng);
-# 3 "lab2-1_hls/FIR.cpp" 2
+# 3 "lab2-1.vivado_hls/FIR.cpp" 2
 
 void fir_n11_strm(stream_t* pstrmInput, stream_t* pstrmOutput, int32_t an32Coef[(((11 + 3) >> 2) << 2)], reg32_t regXferLeng)
 {_ssdm_SpecArrayDimSize(an32Coef, 12);
@@ -6666,8 +6666,11 @@ _ssdm_op_SpecInterface(0, "s_axilite", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "
     n32NumXfer4B = (regXferLeng + (sizeof(int32_t) - 1)) / sizeof(int32_t);
 XFER_LOOP:
  for (n32XferCnt = 0; n32XferCnt < n32NumXfer4B; n32XferCnt++) {
+_ssdm_op_SpecLoopTripCount(0, 600, 300, "");
+# 22 "lab2-1.vivado_hls/FIR.cpp"
+
 _ssdm_op_SpecPipeline(2, 1, 1, 0, "");
-# 22 "lab2-1_hls/FIR.cpp"
+# 22 "lab2-1.vivado_hls/FIR.cpp"
 
   n32Acc = 0;
   value_t valTemp = pstrmInput->read();
@@ -6675,7 +6678,7 @@ _ssdm_op_SpecPipeline(2, 1, 1, 0, "");
 SHIFT_ACC_LOOP:
   for (n32Loop = 11 - 1; n32Loop >= 0; n32Loop--) {
 _ssdm_op_SpecPipeline(2, 1, 1, 0, "");
-# 27 "lab2-1_hls/FIR.cpp"
+# 27 "lab2-1.vivado_hls/FIR.cpp"
 
    if (n32Loop == 0) {
     an32ShiftReg[0] = n32Temp;

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="FIR.cpp" path="D:\Vivado\lab2-1_hls\FIR.cpp"/>
-    <originFiles name="FIR.h" path="D:\Vivado\lab2-1_hls\FIR.h"/>
+    <originFiles name="FIR.cpp" path="D:\Repo\hls\lab2\lab2-1.vivado_hls\FIR.cpp"/>
   </source>
   <testbench>
-    <originFiles name="FIRTester.cpp" path="D:\Vivado\lab2-1_hls\FIRTester.cpp"/>
+    <originFiles name="FIRTester.cpp" path="D:\Repo\hls\lab2\lab2-1.vivado_hls\FIRTester.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

@@ -1,10 +1,10 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'fir_n11_strm'" level="0">
-<item name = "Date">Mon Mar  8 00:46:07 2021
+<item name = "Date">Fri Mar 26 22:08:16 2021
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
-<item name = "Project">lab2-1_hls</item>
+<item name = "Project">lab2-1.vivado_hls</item>
 <item name = "Solution">solution1</item>
 <item name = "Product family">zynq</item>
 <item name = "Target device">xc7z020-clg400-1</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">5.00 ns, 4.371 ns, 0.63 ns</column>
+<column name="ap_clk">10.00 ns, 8.510 ns, 1.25 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">?, ?, ?, ?, ?, ?, none</column>
+<column name="">16, 6616, 0.160 us, 66.160 us, 16, 6616, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- XFER_LOOP">?, ?, 20, 11, 2, ?, yes</column>
+<column name="- XFER_LOOP">14, 6614, 15, 11, 2, 0 ~ 600, yes</column>
 </table>
 </item>
 </section>

@@ -1,6 +1,6 @@
 
 set TopModule "fir_n11_strm"
-set ClockPeriod 5
+set ClockPeriod 10
 set ClockList ap_clk
 set HasVivadoClockPeriod 0
 set CombLogicFlag 0
@@ -42,7 +42,7 @@ set SCTraceOption all
 set TargetInfo xc7z020:-clg400:-1
 set SourceFiles {sc {} c ../FIR.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile D:/Vivado/lab2-1_hls/solution1/solution1.directive
+set DirectiveFile D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/solution1.directive
 set TBFiles {verilog ../FIRTester.cpp bc ../FIRTester.cpp vhdl ../FIRTester.cpp sc ../FIRTester.cpp cas ../FIRTester.cpp c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

@@ -24,6 +24,18 @@
                 "value": "2"
               }]
           }
+        },
+        {
+          "functionName": "fir_n11_strm",
+          "label": "XFER_LOOP",
+          "functionLabel": "",
+          "pragma": {
+            "name": "LOOP_TRIPCOUNT",
+            "option": [{
+                "name": "max",
+                "value": "600"
+              }]
+          }
         }
       ]
     }]}

@@ -5,3 +5,4 @@
 ############################################################
 set_directive_pipeline -II 2 "fir_n11_strm/SHIFT_ACC_LOOP"
 set_directive_pipeline -II 2 "fir_n11_strm/XFER_LOOP"
+set_directive_loop_tripcount -max 600 "fir_n11_strm/XFER_LOOP"

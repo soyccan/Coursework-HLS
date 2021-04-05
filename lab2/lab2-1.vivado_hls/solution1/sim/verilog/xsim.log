@@ -2,12 +2,12 @@
 # xsim v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sun Mar  7 17:12:02 2021
-# Process ID: 7540
-# Current directory: D:/Vivado/lab2-1_hls/solution1/sim/verilog
+# Start of session at: Fri Mar 26 22:09:41 2021
+# Process ID: 18596
+# Current directory: D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/sim/verilog
 # Command line: xsim.exe -mode tcl -source {xsim.dir/fir_n11_strm/xsim_script.tcl}
-# Log file: D:/Vivado/lab2-1_hls/solution1/sim/verilog/xsim.log
-# Journal file: D:/Vivado/lab2-1_hls/solution1/sim/verilog\xsim.jou
+# Log file: D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/sim/verilog/xsim.log
+# Journal file: D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/sim/verilog\xsim.jou
 #-----------------------------------------------------------
 source xsim.dir/fir_n11_strm/xsim_script.tcl
 # xsim {fir_n11_strm} -autoloadwcfg -tclbatch {fir_n11_strm.tcl}
@@ -141,9 +141,9 @@ WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of o
 //
 // RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
 ////////////////////////////////////////////////////////////////////////////////////
-// RTL Simulation : 0 / 1 [n/a] @ "113000"
-// RTL Simulation : 1 / 1 [n/a] @ "93978000"
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "67935000"
 ////////////////////////////////////////////////////////////////////////////////////
-$finish called at time : 93997500 ps : File "D:/Vivado/lab2-1_hls/solution1/sim/verilog/fir_n11_strm.autotb.v" Line 472
+$finish called at time : 67975 ns : File "D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/sim/verilog/fir_n11_strm.autotb.v" Line 472
 ## quit
-INFO: [Common 17-206] Exiting xsim at Sun Mar  7 17:12:09 2021...
+INFO: [Common 17-206] Exiting xsim at Fri Mar 26 22:09:45 2021...

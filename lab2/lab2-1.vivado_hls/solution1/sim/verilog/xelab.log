@@ -3,30 +3,24 @@ Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
 Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_fir_n11_strm_top glbl -prj fir_n11_strm.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile C:/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s fir_n11_strm -debug wave 
 Multi-threading is on. Using 4 slave threads.
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/lab2-1_hls/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/sim/verilog/glbl.v" into library work
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/lab2-1_hls/solution1/sim/verilog/AESL_axi_slave_AXILiteS.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/sim/verilog/AESL_axi_slave_AXILiteS.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_axi_slave_AXILiteS
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/lab2-1_hls/solution1/sim/verilog/AESL_axi_s_pstrmInput.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/sim/verilog/AESL_axi_s_pstrmInput.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_axi_s_pstrmInput
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/lab2-1_hls/solution1/sim/verilog/AESL_axi_s_pstrmOutput.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/sim/verilog/AESL_axi_s_pstrmOutput.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_axi_s_pstrmOutput
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/lab2-1_hls/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module fifo
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/lab2-1_hls/solution1/sim/verilog/fir_n11_strm.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/sim/verilog/fir_n11_strm.autotb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module apatb_fir_n11_strm_top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/lab2-1_hls/solution1/sim/verilog/fir_n11_strm.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/sim/verilog/fir_n11_strm.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module fir_n11_strm
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/lab2-1_hls/solution1/sim/verilog/fir_n11_strm_an32bkb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fir_n11_strm_an32bkb_ram
-INFO: [VRFC 10-311] analyzing module fir_n11_strm_an32bkb
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/lab2-1_hls/solution1/sim/verilog/fir_n11_strm_AXILiteS_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/sim/verilog/fir_n11_strm_AXILiteS_s_axi.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module fir_n11_strm_AXILiteS_s_axi
 INFO: [VRFC 10-311] analyzing module fir_n11_strm_AXILiteS_s_axi_ram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/lab2-1_hls/solution1/sim/verilog/fir_n11_strm_mul_cud.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fir_n11_strm_mul_cud_MulnS_0
-INFO: [VRFC 10-311] analyzing module fir_n11_strm_mul_cud
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/lab2-1_hls/solution1/sim/verilog/regslice_core.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Repo/hls/lab2/lab2-1.vivado_hls/solution1/sim/verilog/regslice_core.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module regslice_both
 INFO: [VRFC 10-311] analyzing module regslice_forward
 INFO: [VRFC 10-311] analyzing module regslice_reverse
@@ -41,12 +35,8 @@ Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.fir_n11_strm_an32bkb_ram
-Compiling module xil_defaultlib.fir_n11_strm_an32bkb(DataWidth=3...
 Compiling module xil_defaultlib.fir_n11_strm_AXILiteS_s_axi_ram(...
 Compiling module xil_defaultlib.fir_n11_strm_AXILiteS_s_axi
-Compiling module xil_defaultlib.fir_n11_strm_mul_cud_MulnS_0
-Compiling module xil_defaultlib.fir_n11_strm_mul_cud(ID=1,NUM_ST...
 Compiling module xil_defaultlib.ibuf(W=33)
 Compiling module xil_defaultlib.obuf(W=33)
 Compiling module xil_defaultlib.regslice_both_default
