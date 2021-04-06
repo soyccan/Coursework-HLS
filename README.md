@@ -6,7 +6,7 @@ instructed by Pr. CL Yang (楊佳玲) and Pr. Jiin Lai (賴瑾), 2021 Spring,
 Department of Computer Science and Information Engineering, National Taiwan
 University
 
-## Lab1
+## Lab 1
 Task: 32-bit Multiplier on PYNQ-Z2
 
 Topics:
@@ -21,7 +21,7 @@ Topics:
     - Memory interface: RAM and FIFO
     - Bus protocol
 
-## Lab2
+## Lab 2
 Task: FIR (Finite impulse response) on PYNQ-Z2
 
 Topics:
@@ -31,3 +31,25 @@ Topics:
 - Transfers between stream and memory-mapped locations
     - MM2S/S2MM
 
+## Advaced Lab
+Reading material: Chapter 4 Interface Synthesis,
+Vivado Design Suite Tutorial: High-Level Synthesis (UG871)
+
+Topics:
+- Interfaces for HLS
+
+## Lab A
+
+Reading material: Chapter 6.1-6.4 Sequential and Combinational Hardware,
+HLS Bluebook Software Version v10.5b
+
+Topics:
+- Coding styles for sequential and combinational hardware in HLS
+
+## Lab 3
+
+Task: OpenCL application running on Xilinx Alveo U50
+
+Topics:
+- Interacting host and FPGA acceleration card with OpenCL API
+- Profiling and analysis for performance with Xilinx Vitis Analyzer
