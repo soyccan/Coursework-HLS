@@ -4,3 +4,6 @@
 [submodule "Vitis-Tutorials"]
 	path = Vitis-Tutorials
 	url = https://github.com/Xilinx/Vitis-Tutorials/
+[submodule "labA/hlslibs/ac_types"]
+	path = labA/hlslibs/ac_types
+	url = https://github.com/hlslibs/ac_types

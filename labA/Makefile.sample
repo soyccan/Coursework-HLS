@@ -1,0 +1,19 @@
+# Example Makefile
+
+CAT_HOME = $(MGC_HOME)
+TARGET = my_tb
+OBJECTS = main.o hello.o
+DEPENDS = hello.h
+INCLUDES = -I"$(CAT_HOME)/shared/include"
+DEFINES =
+CXX = /usr/bin/g++
+CXXFLAGS = -g -o3 $(DEFINES) $(INCLUDES)
+
+$(TARGET): $(OBJECTS)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJECTS)
+
+$(OBJECTS): $(DEPENDS)
+
+.PHONY: clean
+clean:
+	rm -f *.o *.exe
