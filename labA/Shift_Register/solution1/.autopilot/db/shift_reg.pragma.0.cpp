@@ -6604,6 +6604,10 @@ void shift_reg_template(dType din0,
                         int din1,
                         dType dout0[8],
                         int dout1[4]);
+
+void shift_reg_ip(dType din,
+                  dType dout[12],
+                  bool en);
 # 2 "Shift_Register/shift_reg.cpp" 2
 
 void shift_reg(dType din0,
@@ -6640,7 +6644,11 @@ void shift_reg(dType din0,
         shift_reg_class(din0, load_data, dout0, dout0 + 8, srst, load, en);
         break;
 
+    case 5:
+     shift_reg_ip(din0, dout0, en);
+        break;
+
     default:
-         shift_reg_template(din0, din1, dout0, dout1);
+        shift_reg_template(din0, din1, dout0, dout1);
     }
 }

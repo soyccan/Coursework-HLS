@@ -63696,6 +63696,10 @@ void shift_reg_template(dType din0,
                         int din1,
                         dType dout0[8],
                         int dout1[4]);
+
+void shift_reg_ip(dType din,
+                  dType dout[12],
+                  bool en);
 # 2 "D:/Repo/hls/labA/Shift_Register/shift_reg_tb.cpp" 2
 
 
@@ -63729,7 +63733,7 @@ bool shift_reg_template_tb()
         din0 = i;
         din1 = i;
 
-        select = 5;
+        select = 6;
         
 #ifndef HLS_FASTSIM
 #define shift_reg AESL_WRAP_shift_reg
@@ -63789,7 +63793,7 @@ bool shift_reg_tb()
 
     bool pass = true;
 
-    for (int select = 0; select < 5; select++) {
+    for (int select = 0; select < 6; select++) {
 
         din = 0;
         srst = 1;

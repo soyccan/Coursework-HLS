@@ -126,6 +126,7 @@
       "..\/shift_reg_template.cpp",
       "..\/shift_reg_sreset.cpp",
       "..\/shift_reg_load.cpp",
+      "..\/shift_reg_ip.cpp",
       "..\/shift_reg_en.cpp",
       "..\/shift_reg_class.cpp",
       "..\/shift_reg_basic.cpp",
@@ -133,11 +134,13 @@
     ],
     "Vhdl": [
       "impl\/vhdl\/shift_reg_shift_rbkb.vhd",
+      "impl\/vhdl\/shift_reg_Sreg_Arcud.vhd",
       "impl\/vhdl\/shift_reg.vhd"
     ],
     "Verilog": [
       "impl\/verilog\/shift_reg_shift_rbkb.v",
       "impl\/verilog\/shift_reg_shift_rbkb_ram.dat",
+      "impl\/verilog\/shift_reg_Sreg_Arcud.v",
       "impl\/verilog\/shift_reg.v"
     ],
     "Misc": ["impl\/misc\/logo.png"],
@@ -794,11 +797,11 @@
     "Metrics": {"shift_reg": {
         "Latency": {
           "LatencyBest": "1",
-          "LatencyAvg": "3",
-          "LatencyWorst": "11",
+          "LatencyAvg": "4",
+          "LatencyWorst": "12",
           "PipelineIIMin": "2",
-          "PipelineIIMax": "12",
-          "PipelineII": "2 ~ 12",
+          "PipelineIIMax": "13",
+          "PipelineII": "2 ~ 13",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -809,8 +812,8 @@
         },
         "Area": {
           "BRAM_18K": "1",
-          "FF": "726",
-          "LUT": "1061",
+          "FF": "802",
+          "LUT": "1275",
           "URAM": "0",
           "DSP48E": "0"
         }
@@ -826,7 +829,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2021-04-06 15:13:02 +0800",
+    "Time": "2021-04-07 22:51:51 +0800",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2"
   }

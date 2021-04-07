@@ -5169,3 +5169,303 @@ INFO: [COSIM 212-323] Starting verilog simulation.
 INFO: [COSIM 212-15] Starting XSIM ...
 INFO: [COSIM 212-316] Starting C post checking ...
 INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_template.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_sreset.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_load.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_ip.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_en.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_class.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_basic.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:01:04 . Memory (MB): peak = 176.516 ; gain = 87.188
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:01:04 . Memory (MB): peak = 176.516 ; gain = 87.188
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:01:05 . Memory (MB): peak = 176.516 ; gain = 87.188
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::set_enable' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:19) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::set_sync_rst' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::load' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:21) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 4>::set_enable' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:28) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::operator[]' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:34) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 4>::operator[]' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:47) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_reg_class' into 'shift_reg' (Shift_Register/shift_reg.cpp:34) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_reg_ip' into 'shift_reg' (Shift_Register/shift_reg.cpp:38) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_reg_template' into 'shift_reg' (Shift_Register/shift_reg.cpp:42) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:01:05 . Memory (MB): peak = 176.516 ; gain = 87.188
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_tmpl.h:10) in function 'shift_reg<2, int, 4>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_tmpl.h:19) in function 'shift_reg<2, int, 4>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_tmpl.h:10) in function 'shift_reg<1, signed char, 8>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_tmpl.h:19) in function 'shift_reg<1, signed char, 8>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_ip.cpp:23) in function 'shift_reg_ip' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_class.h:40) in function 'shift_class<signed char, 8>::shift' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_class.h:40) in function 'shift_class<signed char, 4>::shift' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_sreset.cpp:8) in function 'shift_reg_sreset' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_sreset.cpp:21) in function 'shift_reg_sreset' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_load.cpp:11) in function 'shift_reg_load' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_load.cpp:24) in function 'shift_reg_load' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_en.cpp:8) in function 'shift_reg_en' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_en.cpp:19) in function 'shift_reg_en' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_basic.cpp:8) in function 'shift_reg_basic' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_basic.cpp:17) in function 'shift_reg_basic' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE0' (Shift_Register/shift_reg_class.cpp:42) in function 'shift_reg_class' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'WRITE1' (Shift_Register/shift_reg_class.cpp:47) in function 'shift_reg_class' completely with a factor of 4.
+INFO: [XFORM 203-102] Partitioning array 'regs.9' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.8' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.7' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.6' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.5' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs' automatically.
+INFO: [XFORM 203-102] Automatically partitioning small array 'shift_reg1.regs' completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'dout1' (Shift_Register/shift_reg.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'dout0' (Shift_Register/shift_reg.cpp:6) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'load_data' (Shift_Register/shift_reg.cpp:5) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'shift_reg1.regs' in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::set_enable' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:19) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::set_sync_rst' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::load' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:21) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 4>::set_enable' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:28) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::operator[]' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:34) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 4>::shift' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:34) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 4>::operator[]' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:47) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_reg<1, signed char, 8>' into 'shift_reg_template' (Shift_Register/shift_reg_template.cpp:9) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_reg<2, int, 4>' into 'shift_reg_template' (Shift_Register/shift_reg_template.cpp:10) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_reg_basic' into 'shift_reg' (Shift_Register/shift_reg.cpp:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_reg_en' into 'shift_reg' (Shift_Register/shift_reg.cpp:22) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_reg_load' into 'shift_reg' (Shift_Register/shift_reg.cpp:26) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_reg_sreset' into 'shift_reg' (Shift_Register/shift_reg.cpp:30) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_reg_class' into 'shift_reg' (Shift_Register/shift_reg.cpp:34) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_reg_ip' into 'shift_reg' (Shift_Register/shift_reg.cpp:38) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_reg_template' into 'shift_reg' (Shift_Register/shift_reg.cpp:42) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Shift_Register/shift_class.h:44:17) to (Shift_Register/shift_class.h:52:13) in function 'shift_class<signed char, 8>::shift'... converting 3 basic blocks.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::shift' into 'shift_reg' (Shift_Register/shift_reg_class.cpp:35->Shift_Register/shift_reg.cpp:34) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:01:06 . Memory (MB): peak = 176.516 ; gain = 87.188
+INFO: [HLS 200-472] Inferring partial write operation for 'shift_reg0.regs' (Shift_Register/shift_class.h:45:21)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:01:06 . Memory (MB): peak = 176.516 ; gain = 87.188
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'shift_reg' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 66.337 seconds; current allocated memory: 100.074 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.166 seconds; current allocated memory: 101.140 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/din0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/din1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_10' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_11' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_6' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_7' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_8' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_9' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_10' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_11' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/srst' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/en' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/select_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'shift_reg' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'regs_5_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_0' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'shift_reg_shift_reg0_regs' to 'shift_reg_shift_rbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'shift_reg_Sreg_Array' to 'shift_reg_Sreg_Arcud' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg'.
+INFO: [HLS 200-111]  Elapsed time: 0.535 seconds; current allocated memory: 102.723 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 280.11 MHz
+INFO: [RTMG 210-278] Implementing memory 'shift_reg_shift_rbkb_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:01:09 . Memory (MB): peak = 176.516 ; gain = 87.188
+INFO: [VHDL 208-304] Generating VHDL RTL for shift_reg.
+INFO: [VLOG 209-307] Generating Verilog RTL for shift_reg.
+INFO: [HLS 200-112] Total elapsed time: 69.296 seconds; peak allocated memory: 102.723 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.

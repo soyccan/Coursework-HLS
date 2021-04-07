@@ -648,7 +648,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>4e283629</spirit:value>
+            <spirit:value>e81a8d3e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -664,7 +664,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>4efc9d33</spirit:value>
+            <spirit:value>a44886d7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -680,7 +680,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>3bf08142</spirit:value>
+            <spirit:value>a2c52647</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -696,7 +696,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>d5450747</spirit:value>
+            <spirit:value>c5ce8117</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1623,6 +1623,10 @@
         <spirit:userFileType>mif</spirit:userFileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/verilog/shift_reg_Sreg_Arcud.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/verilog/shift_reg.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
@@ -1637,6 +1641,11 @@
       <spirit:file>
         <spirit:name>hdl/verilog/shift_reg_shift_rbkb_ram.dat</spirit:name>
         <spirit:userFileType>mif</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/verilog/shift_reg_Sreg_Arcud.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/verilog/shift_reg.v</spirit:name>
@@ -1656,15 +1665,24 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/vhdl/shift_reg_Sreg_Arcud.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/vhdl/shift_reg.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_5213c6bf</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_c5cc2a8e</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
         <spirit:name>hdl/vhdl/shift_reg_shift_rbkb.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vhdl/shift_reg_Sreg_Arcud.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1743,13 +1761,13 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Shift_reg</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2104061513</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2021-04-06T07:13:22Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2104072253</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2021-04-07T14:53:19Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="c2a4d008"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="94c3b2bb"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="8e63d56d"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="a2d9e669"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="41888176"/>
     </xilinx:packagingInfo>

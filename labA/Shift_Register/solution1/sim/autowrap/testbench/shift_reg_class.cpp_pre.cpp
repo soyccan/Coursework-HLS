@@ -63754,6 +63754,10 @@ void shift_reg_template(dType din0,
                         int din1,
                         dType dout0[8],
                         int dout1[4]);
+
+void shift_reg_ip(dType din,
+                  dType dout[12],
+                  bool en);
 # 3 "D:/Repo/hls/labA/Shift_Register/shift_reg_class.cpp" 2
 
 void shift_reg_class(dType din,

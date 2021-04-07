@@ -59,4 +59,8 @@ void shift_reg_template(dType din0,
                         dType dout0[N_REGS0],
                         int dout1[N_REGS1]);
 
+void shift_reg_ip(dType din,
+                  dType dout[N_REGS],
+                  bool en);
+
 #endif

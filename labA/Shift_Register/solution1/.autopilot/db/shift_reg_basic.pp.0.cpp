@@ -6604,7 +6604,12 @@ void shift_reg_template(dType din0,
                         int din1,
                         dType dout0[8],
                         int dout1[4]);
-# 2 "Shift_Register/shift_reg_basic.cpp" 2
+
+void shift_reg_ip(dType din,
+                  dType dout[12],
+                  bool en);
+# 1 "Shift_Register/shift_reg_basic.cpp" 2
+
 
 void shift_reg_basic(dType din, dType dout[12])
 {_ssdm_SpecArrayDimSize(dout, 12);

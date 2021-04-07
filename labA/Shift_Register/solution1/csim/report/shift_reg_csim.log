@@ -1,6 +1,6 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-   Compiling ../../../shift_reg_class.cpp in debug mode
+   Compiling ../../../shift_reg_tb.cpp in debug mode
    Generating csim.exe
 --------------
 Testing shift_reg_tb

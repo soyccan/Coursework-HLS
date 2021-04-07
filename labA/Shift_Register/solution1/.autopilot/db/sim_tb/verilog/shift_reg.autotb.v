@@ -118,9 +118,9 @@
 `define AUTOTB_TVOUT_dout1_3_out_wrapc  "./impl_rtl.shift_reg.autotvout_dout1_3.dat"
 module `AUTOTB_TOP;
 
-parameter AUTOTB_TRANSACTION_NUM = 616;
+parameter AUTOTB_TRANSACTION_NUM = 719;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 11;
+parameter LATENCY_ESTIMATION = 12;
 parameter LENGTH_din0 = 1;
 parameter LENGTH_din1 = 1;
 parameter LENGTH_load_data_0 = 1;

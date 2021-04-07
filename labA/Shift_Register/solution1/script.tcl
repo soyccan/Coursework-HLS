@@ -11,11 +11,12 @@ add_files Shift_Register/shift_reg.h
 add_files Shift_Register/shift_reg_basic.cpp
 add_files Shift_Register/shift_reg_class.cpp
 add_files Shift_Register/shift_reg_en.cpp
+add_files Shift_Register/shift_reg_ip.cpp
 add_files Shift_Register/shift_reg_load.cpp
 add_files Shift_Register/shift_reg_sreset.cpp
 add_files Shift_Register/shift_reg_template.cpp
 add_files Shift_Register/shift_reg_tmpl.h
-add_files -tb Shift_Register/shift_reg_tb.cpp
+add_files -tb Shift_Register/shift_reg_tb.cpp -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution1"
 set_part {xc7z020clg400-1}
 create_clock -period 10 -name default

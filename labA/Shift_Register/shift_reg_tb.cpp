@@ -26,7 +26,7 @@ bool shift_reg_template_tb()
         din0 = i;
         din1 = i;
 
-        select = 5;
+        select = 6;
         shift_reg(din0, din1, load_data, dout0, dout1, srst, load, en, select);
 
         for (int j = N_REGS0 - 1; j >= 1; j--)
@@ -70,7 +70,7 @@ bool shift_reg_tb()
 
     bool pass = true;
 
-    for (int select = 0; select < 5; select++) {
+    for (int select = 0; select < 6; select++) {
         // initialize DUT
         din = 0;
         srst = 1;

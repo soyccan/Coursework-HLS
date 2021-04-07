@@ -18,7 +18,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../shift_reg_tb.cpp ../../../shift_reg_template.cpp ../../../shift_reg_sreset.cpp ../../../shift_reg_load.cpp ../../../shift_reg_en.cpp ../../../shift_reg_class.cpp ../../../shift_reg_basic.cpp ../../../shift_reg.cpp
+HLS_SOURCES = ../../../shift_reg_tb.cpp ../../../shift_reg_template.cpp ../../../shift_reg_sreset.cpp ../../../shift_reg_load.cpp ../../../shift_reg_ip.cpp ../../../shift_reg_en.cpp ../../../shift_reg_class.cpp ../../../shift_reg_basic.cpp ../../../shift_reg.cpp
 
 TARGET := csim.exe
 
@@ -94,6 +94,12 @@ $(ObjDir)/shift_reg_load.o: ../../../shift_reg_load.cpp $(ObjDir)/.dir
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/shift_reg_load.d
+
+$(ObjDir)/shift_reg_ip.o: ../../../shift_reg_ip.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../shift_reg_ip.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/shift_reg_ip.d
 
 $(ObjDir)/shift_reg_en.o: ../../../shift_reg_en.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../shift_reg_en.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)

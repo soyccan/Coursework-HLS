@@ -203,13 +203,13 @@ set NewPortList {[
  	{ "name": "select_V", "direction": "in", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "select_V", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2"],
 		"CDFG" : "shift_reg",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "11",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "12",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -310,8 +310,10 @@ set RtlHierarchyInfo {[
 			{"Name" : "regs_2", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "regs_1", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "regs_0", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "shift_reg0_regs", "Type" : "Memory", "Direction" : "IO"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.shift_reg0_regs_U", "Parent" : "0"}]}
+			{"Name" : "shift_reg0_regs", "Type" : "Memory", "Direction" : "IO"},
+			{"Name" : "Sreg_Array", "Type" : "Memory", "Direction" : "X"}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.shift_reg0_regs_U", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sreg_Array_U", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -409,13 +411,14 @@ set ArgLastReadFirstWriteLatency {
 		regs_2 {Type IO LastRead -1 FirstWrite -1}
 		regs_1 {Type IO LastRead -1 FirstWrite -1}
 		regs_0 {Type IO LastRead -1 FirstWrite -1}
-		shift_reg0_regs {Type IO LastRead -1 FirstWrite -1}}}
+		shift_reg0_regs {Type IO LastRead -1 FirstWrite -1}
+		Sreg_Array {Type X LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "1", "Max" : "11"}
-	, {"Name" : "Interval", "Min" : "2", "Max" : "12"}
+	{"Name" : "Latency", "Min" : "1", "Max" : "12"}
+	, {"Name" : "Interval", "Min" : "2", "Max" : "13"}
 ]}
 
 set PipelineEnableSignalInfo {[

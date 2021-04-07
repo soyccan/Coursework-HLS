@@ -10,6 +10,7 @@
         <file name="Shift_Register/shift_reg_template.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="Shift_Register/shift_reg_sreset.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="Shift_Register/shift_reg_load.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
+        <file name="Shift_Register/shift_reg_ip.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="Shift_Register/shift_reg_en.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="Shift_Register/shift_reg_class.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="Shift_Register/shift_reg_basic.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>

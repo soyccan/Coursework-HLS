@@ -40,8 +40,8 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xc7z020:-clg400:-1
-set SourceFiles {sc {} c {../shift_reg_template.cpp ../shift_reg_sreset.cpp ../shift_reg_load.cpp ../shift_reg_en.cpp ../shift_reg_class.cpp ../shift_reg_basic.cpp ../shift_reg.cpp}}
-set SourceFlags {sc {} c {{} {} {} {} {} {} {}}}
+set SourceFiles {sc {} c {../shift_reg_template.cpp ../shift_reg_sreset.cpp ../shift_reg_load.cpp ../shift_reg_ip.cpp ../shift_reg_en.cpp ../shift_reg_class.cpp ../shift_reg_basic.cpp ../shift_reg.cpp}}
+set SourceFlags {sc {} c {{} {} {} {} {} {} {} {}}}
 set DirectiveFile D:/Repo/hls/labA/Shift_Register/solution1/solution1.directive
 set TBFiles {verilog ../shift_reg_tb.cpp bc ../shift_reg_tb.cpp vhdl ../shift_reg_tb.cpp sc ../shift_reg_tb.cpp cas ../shift_reg_tb.cpp c {}}
 set SpecLanguage C
