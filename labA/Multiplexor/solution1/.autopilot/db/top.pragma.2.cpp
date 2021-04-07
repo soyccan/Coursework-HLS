@@ -6508,7 +6508,6 @@ void top(ap_uint<32> &leadone_in,
          int &max_out,
          int mode)
 {_ssdm_SpecArrayDimSize(mux_in, 8);_ssdm_SpecArrayDimSize(max_in, 8);
-_ssdm_InlineSelf(2, "");
 _ssdm_SpecArrayPartition( max_in, 1, "COMPLETE", 0, "");
 _ssdm_SpecArrayPartition( mux_in, 1, "COMPLETE", 0, "");
  switch (mode) {

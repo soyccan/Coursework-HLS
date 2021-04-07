@@ -6674,6 +6674,8 @@ void shift_reg_ip(dType din,
                   dType dout[12],
                   bool en)
 {_ssdm_SpecArrayDimSize(dout, 12);
+_ssdm_InlineSelf(2, "");
+_ssdm_InlineAll(1, "");
 
 
 

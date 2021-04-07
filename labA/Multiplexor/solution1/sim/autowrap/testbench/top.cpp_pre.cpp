@@ -63790,7 +63790,6 @@ void top(ap_uint<32> &leadone_in,
          int &max_out,
          int mode)
 {
-#pragma HLS INLINE off
 #pragma HLS ARRAY_PARTITION variable=max_in complete dim=1
 #pragma HLS ARRAY_PARTITION variable=mux_in complete dim=1
     switch (mode) {

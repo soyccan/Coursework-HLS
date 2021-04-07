@@ -6613,7 +6613,9 @@ void shift_reg_ip(dType din,
 
 void shift_reg_basic(dType din, dType dout[12])
 {_ssdm_SpecArrayDimSize(dout, 12);
-    static dType regs[12];
+#pragma HLS INLINE off
+
+ static dType regs[12];
 
 SHIFT:
     for (int i = 12 - 1; i >= 0; i--) {

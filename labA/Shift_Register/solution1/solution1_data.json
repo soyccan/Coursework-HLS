@@ -123,24 +123,35 @@
   },
   "Files": {
     "CSource": [
-      "..\/shift_reg_template.cpp",
-      "..\/shift_reg_sreset.cpp",
-      "..\/shift_reg_load.cpp",
-      "..\/shift_reg_ip.cpp",
-      "..\/shift_reg_en.cpp",
-      "..\/shift_reg_class.cpp",
+      "..\/shift_reg.cpp",
       "..\/shift_reg_basic.cpp",
-      "..\/shift_reg.cpp"
+      "..\/shift_reg_class.cpp",
+      "..\/shift_reg_en.cpp",
+      "..\/shift_reg_ip.cpp",
+      "..\/shift_reg_load.cpp",
+      "..\/shift_reg_sreset.cpp",
+      "..\/shift_reg_template.cpp"
     ],
     "Vhdl": [
-      "impl\/vhdl\/shift_reg_shift_rbkb.vhd",
-      "impl\/vhdl\/shift_reg_Sreg_Arcud.vhd",
+      "impl\/vhdl\/shift_reg_basic.vhd",
+      "impl\/vhdl\/shift_reg_class.vhd",
+      "impl\/vhdl\/shift_reg_en.vhd",
+      "impl\/vhdl\/shift_reg_ip.vhd",
+      "impl\/vhdl\/shift_reg_ip_Sregbkb.vhd",
+      "impl\/vhdl\/shift_reg_load.vhd",
+      "impl\/vhdl\/shift_reg_sreset.vhd",
+      "impl\/vhdl\/shift_reg_template.vhd",
       "impl\/vhdl\/shift_reg.vhd"
     ],
     "Verilog": [
-      "impl\/verilog\/shift_reg_shift_rbkb.v",
-      "impl\/verilog\/shift_reg_shift_rbkb_ram.dat",
-      "impl\/verilog\/shift_reg_Sreg_Arcud.v",
+      "impl\/verilog\/shift_reg_basic.v",
+      "impl\/verilog\/shift_reg_class.v",
+      "impl\/verilog\/shift_reg_en.v",
+      "impl\/verilog\/shift_reg_ip.v",
+      "impl\/verilog\/shift_reg_ip_Sregbkb.v",
+      "impl\/verilog\/shift_reg_load.v",
+      "impl\/verilog\/shift_reg_sreset.v",
+      "impl\/verilog\/shift_reg_template.v",
       "impl\/verilog\/shift_reg.v"
     ],
     "Misc": ["impl\/misc\/logo.png"],
@@ -786,38 +797,277 @@
     }
   },
   "ModuleInfo": {
-    "Hierarchy": {"ModuleName": "shift_reg"},
-    "Info": {"shift_reg": {
+    "Hierarchy": {
+      "ModuleName": "shift_reg",
+      "Instances": [
+        {
+          "ModuleName": "shift_reg_class",
+          "InstanceName": "grp_shift_reg_class_fu_470"
+        },
+        {
+          "ModuleName": "shift_reg_en",
+          "InstanceName": "grp_shift_reg_en_fu_522"
+        },
+        {
+          "ModuleName": "shift_reg_load",
+          "InstanceName": "call_ret4_shift_reg_load_fu_554"
+        },
+        {
+          "ModuleName": "shift_reg_sreset",
+          "InstanceName": "call_ret5_shift_reg_sreset_fu_598"
+        },
+        {
+          "ModuleName": "shift_reg_ip",
+          "InstanceName": "grp_shift_reg_ip_fu_626"
+        },
+        {
+          "ModuleName": "shift_reg_basic",
+          "InstanceName": "call_ret2_shift_reg_basic_fu_636"
+        },
+        {
+          "ModuleName": "shift_reg_template",
+          "InstanceName": "call_ret1_shift_reg_template_fu_663"
+        }
+      ]
+    },
+    "Info": {
+      "shift_reg_ip": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
         "isCombinational": "0",
         "isOneStateSeq": "0"
-      }},
-    "Metrics": {"shift_reg": {
+      },
+      "shift_reg_class": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "shift_reg_sreset": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "1"
+      },
+      "shift_reg_load": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "1"
+      },
+      "shift_reg_en": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "shift_reg_basic": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "1"
+      },
+      "shift_reg_template": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "1"
+      },
+      "shift_reg": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }
+    },
+    "Metrics": {
+      "shift_reg_ip": {
         "Latency": {
-          "LatencyBest": "1",
-          "LatencyAvg": "4",
+          "LatencyBest": "12",
+          "LatencyAvg": "12",
           "LatencyWorst": "12",
-          "PipelineIIMin": "2",
-          "PipelineIIMax": "13",
-          "PipelineII": "2 ~ 13",
+          "PipelineII": "12",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "3.570"
+          "Estimate": "1.617"
         },
         "Area": {
-          "BRAM_18K": "1",
-          "FF": "802",
-          "LUT": "1275",
-          "URAM": "0",
-          "DSP48E": "0"
+          "BRAM_18K": "0",
+          "FF": "165",
+          "LUT": "165",
+          "DSP48E": "0",
+          "URAM": "0"
         }
-      }}
+      },
+      "shift_reg_class": {
+        "Latency": {
+          "LatencyBest": "1",
+          "LatencyAvg": "1",
+          "LatencyWorst": "1",
+          "PipelineII": "1",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "1.769"
+        },
+        "Area": {
+          "FF": "282",
+          "LUT": "354",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "shift_reg_sreset": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "1.248"
+        },
+        "Area": {
+          "FF": "185",
+          "LUT": "204",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "shift_reg_load": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "1.248"
+        },
+        "Area": {
+          "FF": "185",
+          "LUT": "204",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "shift_reg_en": {
+        "Latency": {
+          "LatencyBest": "1",
+          "LatencyAvg": "1",
+          "LatencyWorst": "1",
+          "PipelineII": "1",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "1.769"
+        },
+        "Area": {
+          "FF": "282",
+          "LUT": "222",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "shift_reg_basic": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "0.000"
+        },
+        "Area": {
+          "FF": "185",
+          "LUT": "108",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "shift_reg_template": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "0.000"
+        },
+        "Area": {
+          "FF": "345",
+          "LUT": "108",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "shift_reg": {
+        "Latency": {
+          "LatencyBest": "1",
+          "LatencyAvg": "3",
+          "LatencyWorst": "13",
+          "PipelineIIMin": "2",
+          "PipelineIIMax": "14",
+          "PipelineII": "2 ~ 14",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "3.017"
+        },
+        "Area": {
+          "BRAM_18K": "0",
+          "FF": "1634",
+          "LUT": "1862",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      }
+    }
   },
   "Sdx": {
     "Target": "none",
@@ -829,7 +1079,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2021-04-07 22:51:51 +0800",
+    "Time": "2021-04-08 07:05:24 +0800",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2"
   }

@@ -191,5 +191,6 @@ T max(T *a)
 # 3 "Multiplexor/max.cpp" 2
 void max(int din[8], int &dout)
 {_ssdm_SpecArrayDimSize(din, 8);
-    dout = max<8>(din);
+#pragma HLS INLINE off
+ dout = max<8>(din);
 }

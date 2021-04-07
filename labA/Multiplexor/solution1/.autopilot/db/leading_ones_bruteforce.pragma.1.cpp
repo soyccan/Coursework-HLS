@@ -6446,7 +6446,8 @@ bool leading_ones_template(ap_uint<32> &din,
 bool leading_ones_bruteforce(ap_uint<32> din,
                              ap_uint<LOG2_CEIL<32>::val> &dout)
 {
-    int upper = 0, lower = 0;
+_ssdm_InlineSelf(2, "");
+ int upper = 0, lower = 0;
     bool flagu = false;
     bool flagl = false;
     for (int i = 32 - 1; i >= 32 / 2; i--)

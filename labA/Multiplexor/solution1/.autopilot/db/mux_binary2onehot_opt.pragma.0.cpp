@@ -6416,8 +6416,9 @@ dType mux_onehot_if(dType din[8], ap_uint<8> sel);
 
 dType mux_binary2onehot_opt(dType din[8], sType sel0, sType sel1, bool s)
 {_ssdm_SpecArrayDimSize(din, 8);
+#pragma HLS INLINE off
 
-    dType tmp;
+ dType tmp;
     if (s)
         tmp = din[sel0];
     else

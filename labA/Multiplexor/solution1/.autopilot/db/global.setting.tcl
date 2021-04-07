@@ -40,7 +40,7 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xc7z020:-clg400:-1
-set SourceFiles {sc {} c {../top.cpp ../mux_onehot_if.cpp ../mux_onehot.cpp ../mux_binary_opt.cpp ../mux_binary2onehot_opt.cpp ../mux_binary.cpp ../mux_2to1.cpp ../max_algorithmic.cpp ../max.cpp ../leading_ones_template.cpp ../leading_ones_log2.cpp ../leading_ones_bruteforce.cpp ../leading_ones.cpp}}
+set SourceFiles {sc {} c {../leading_ones.cpp ../leading_ones_bruteforce.cpp ../leading_ones_log2.cpp ../leading_ones_template.cpp ../max.cpp ../max_algorithmic.cpp ../mux_2to1.cpp ../mux_binary.cpp ../mux_binary2onehot_opt.cpp ../mux_binary_opt.cpp ../mux_onehot.cpp ../mux_onehot_if.cpp ../top.cpp}}
 set SourceFlags {sc {} c {{} {} {} {} {} {} {} {} {} {} {} {} {}}}
 set DirectiveFile D:/Repo/hls/labA/Multiplexor/solution1/solution1.directive
 set TBFiles {verilog ../testbench.cpp bc ../testbench.cpp vhdl ../testbench.cpp sc ../testbench.cpp cas ../testbench.cpp c {}}

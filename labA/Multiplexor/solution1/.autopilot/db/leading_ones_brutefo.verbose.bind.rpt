@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'leading_ones_brutefo'
 ================================================================
-* Date:           Thu Apr  8 02:15:54 2021
+* Date:           Thu Apr  8 05:50:00 2021
 
 * Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
 * Project:        Multiplexor
@@ -77,87 +77,87 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 2.19>
-ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%din_V_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %din_V)" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 4 'read' 'din_V_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%tmp = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 31)" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 5 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 6 [1/1] (2.19ns)   --->   "br i1 %tmp, label %.loopexit26, label %1" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 6 'br' <Predicate = true> <Delay = 2.19>
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%tmp_11 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 30)" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 7 'bitselect' 'tmp_11' <Predicate = (!tmp)> <Delay = 0.00>
-ST_1 : Operation 8 [1/1] (2.19ns)   --->   "br i1 %tmp_11, label %.loopexit26, label %2" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 8 'br' <Predicate = (!tmp)> <Delay = 2.19>
-ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%tmp_12 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 29)" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 9 'bitselect' 'tmp_12' <Predicate = (!tmp & !tmp_11)> <Delay = 0.00>
-ST_1 : Operation 10 [1/1] (2.19ns)   --->   "br i1 %tmp_12, label %.loopexit26, label %3" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 10 'br' <Predicate = (!tmp & !tmp_11)> <Delay = 2.19>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%tmp_13 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 28)" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 11 'bitselect' 'tmp_13' <Predicate = (!tmp & !tmp_11 & !tmp_12)> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (2.19ns)   --->   "br i1 %tmp_13, label %.loopexit26, label %4" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 12 'br' <Predicate = (!tmp & !tmp_11 & !tmp_12)> <Delay = 2.19>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%tmp_14 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 27)" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 13 'bitselect' 'tmp_14' <Predicate = (!tmp & !tmp_11 & !tmp_12 & !tmp_13)> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (2.19ns)   --->   "br i1 %tmp_14, label %.loopexit26, label %5" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 14 'br' <Predicate = (!tmp & !tmp_11 & !tmp_12 & !tmp_13)> <Delay = 2.19>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%tmp_15 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 26)" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 15 'bitselect' 'tmp_15' <Predicate = (!tmp & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14)> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (2.19ns)   --->   "br i1 %tmp_15, label %.loopexit26, label %6" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 16 'br' <Predicate = (!tmp & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14)> <Delay = 2.19>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%tmp_16 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 25)" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 17 'bitselect' 'tmp_16' <Predicate = (!tmp & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15)> <Delay = 0.00>
-ST_1 : Operation 18 [1/1] (2.19ns)   --->   "br i1 %tmp_16, label %.loopexit26, label %7" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 18 'br' <Predicate = (!tmp & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15)> <Delay = 2.19>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%tmp_17 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 24)" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 19 'bitselect' 'tmp_17' <Predicate = (!tmp & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15 & !tmp_16)> <Delay = 0.00>
-ST_1 : Operation 20 [1/1] (2.19ns)   --->   "br i1 %tmp_17, label %.loopexit26, label %8" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 20 'br' <Predicate = (!tmp & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15 & !tmp_16)> <Delay = 2.19>
-ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%tmp_18 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 23)" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 21 'bitselect' 'tmp_18' <Predicate = (!tmp & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15 & !tmp_16 & !tmp_17)> <Delay = 0.00>
-ST_1 : Operation 22 [1/1] (2.19ns)   --->   "br i1 %tmp_18, label %.loopexit26, label %9" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 22 'br' <Predicate = (!tmp & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15 & !tmp_16 & !tmp_17)> <Delay = 2.19>
-ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%tmp_19 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 22)" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 23 'bitselect' 'tmp_19' <Predicate = (!tmp & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15 & !tmp_16 & !tmp_17 & !tmp_18)> <Delay = 0.00>
-ST_1 : Operation 24 [1/1] (2.19ns)   --->   "br i1 %tmp_19, label %.loopexit26, label %10" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 24 'br' <Predicate = (!tmp & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15 & !tmp_16 & !tmp_17 & !tmp_18)> <Delay = 2.19>
-ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_20 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 21)" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 25 'bitselect' 'tmp_20' <Predicate = (!tmp & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15 & !tmp_16 & !tmp_17 & !tmp_18 & !tmp_19)> <Delay = 0.00>
-ST_1 : Operation 26 [1/1] (2.19ns)   --->   "br i1 %tmp_20, label %.loopexit26, label %11" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 26 'br' <Predicate = (!tmp & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15 & !tmp_16 & !tmp_17 & !tmp_18 & !tmp_19)> <Delay = 2.19>
-ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_21 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 20)" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 27 'bitselect' 'tmp_21' <Predicate = (!tmp & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15 & !tmp_16 & !tmp_17 & !tmp_18 & !tmp_19 & !tmp_20)> <Delay = 0.00>
-ST_1 : Operation 28 [1/1] (2.19ns)   --->   "br i1 %tmp_21, label %.loopexit26, label %12" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 28 'br' <Predicate = (!tmp & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15 & !tmp_16 & !tmp_17 & !tmp_18 & !tmp_19 & !tmp_20)> <Delay = 2.19>
-ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%tmp_22 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 19)" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 29 'bitselect' 'tmp_22' <Predicate = (!tmp & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15 & !tmp_16 & !tmp_17 & !tmp_18 & !tmp_19 & !tmp_20 & !tmp_21)> <Delay = 0.00>
-ST_1 : Operation 30 [1/1] (2.19ns)   --->   "br i1 %tmp_22, label %.loopexit26, label %13" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 30 'br' <Predicate = (!tmp & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15 & !tmp_16 & !tmp_17 & !tmp_18 & !tmp_19 & !tmp_20 & !tmp_21)> <Delay = 2.19>
-ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%tmp_23 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 18)" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 31 'bitselect' 'tmp_23' <Predicate = (!tmp & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15 & !tmp_16 & !tmp_17 & !tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22)> <Delay = 0.00>
-ST_1 : Operation 32 [1/1] (2.19ns)   --->   "br i1 %tmp_23, label %.loopexit26, label %14" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 32 'br' <Predicate = (!tmp & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15 & !tmp_16 & !tmp_17 & !tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22)> <Delay = 2.19>
-ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%tmp_24 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 17)" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 33 'bitselect' 'tmp_24' <Predicate = (!tmp & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15 & !tmp_16 & !tmp_17 & !tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23)> <Delay = 0.00>
-ST_1 : Operation 34 [1/1] (2.19ns)   --->   "br i1 %tmp_24, label %.loopexit26, label %15" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 34 'br' <Predicate = (!tmp & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15 & !tmp_16 & !tmp_17 & !tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23)> <Delay = 2.19>
-ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_25 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 16)" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 35 'bitselect' 'tmp_25' <Predicate = (!tmp & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15 & !tmp_16 & !tmp_17 & !tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23 & !tmp_24)> <Delay = 0.00>
-ST_1 : Operation 36 [1/1] (1.21ns)   --->   "%select_ln12 = select i1 %tmp_25, i5 -16, i5 0" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 36 'select' 'select_ln12' <Predicate = (!tmp & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15 & !tmp_16 & !tmp_17 & !tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23 & !tmp_24)> <Delay = 1.21> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_1 : Operation 37 [1/1] (2.19ns)   --->   "br label %.loopexit26" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 37 'br' <Predicate = (!tmp & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15 & !tmp_16 & !tmp_17 & !tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23 & !tmp_24)> <Delay = 2.19>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%din_V_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %din_V)" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 4 'read' 'din_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%tmp = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 31)" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 5 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (2.19ns)   --->   "br i1 %tmp, label %.loopexit26, label %1" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 6 'br' <Predicate = true> <Delay = 2.19>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%tmp_3 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 30)" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 7 'bitselect' 'tmp_3' <Predicate = (!tmp)> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (2.19ns)   --->   "br i1 %tmp_3, label %.loopexit26, label %2" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 8 'br' <Predicate = (!tmp)> <Delay = 2.19>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%tmp_4 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 29)" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 9 'bitselect' 'tmp_4' <Predicate = (!tmp & !tmp_3)> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (2.19ns)   --->   "br i1 %tmp_4, label %.loopexit26, label %3" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 10 'br' <Predicate = (!tmp & !tmp_3)> <Delay = 2.19>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%tmp_5 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 28)" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 11 'bitselect' 'tmp_5' <Predicate = (!tmp & !tmp_3 & !tmp_4)> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (2.19ns)   --->   "br i1 %tmp_5, label %.loopexit26, label %4" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 12 'br' <Predicate = (!tmp & !tmp_3 & !tmp_4)> <Delay = 2.19>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%tmp_6 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 27)" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 13 'bitselect' 'tmp_6' <Predicate = (!tmp & !tmp_3 & !tmp_4 & !tmp_5)> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (2.19ns)   --->   "br i1 %tmp_6, label %.loopexit26, label %5" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 14 'br' <Predicate = (!tmp & !tmp_3 & !tmp_4 & !tmp_5)> <Delay = 2.19>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%tmp_7 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 26)" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 15 'bitselect' 'tmp_7' <Predicate = (!tmp & !tmp_3 & !tmp_4 & !tmp_5 & !tmp_6)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (2.19ns)   --->   "br i1 %tmp_7, label %.loopexit26, label %6" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 16 'br' <Predicate = (!tmp & !tmp_3 & !tmp_4 & !tmp_5 & !tmp_6)> <Delay = 2.19>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%tmp_8 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 25)" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 17 'bitselect' 'tmp_8' <Predicate = (!tmp & !tmp_3 & !tmp_4 & !tmp_5 & !tmp_6 & !tmp_7)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (2.19ns)   --->   "br i1 %tmp_8, label %.loopexit26, label %7" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 18 'br' <Predicate = (!tmp & !tmp_3 & !tmp_4 & !tmp_5 & !tmp_6 & !tmp_7)> <Delay = 2.19>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%tmp_9 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 24)" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 19 'bitselect' 'tmp_9' <Predicate = (!tmp & !tmp_3 & !tmp_4 & !tmp_5 & !tmp_6 & !tmp_7 & !tmp_8)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (2.19ns)   --->   "br i1 %tmp_9, label %.loopexit26, label %8" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 20 'br' <Predicate = (!tmp & !tmp_3 & !tmp_4 & !tmp_5 & !tmp_6 & !tmp_7 & !tmp_8)> <Delay = 2.19>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%tmp_10 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 23)" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 21 'bitselect' 'tmp_10' <Predicate = (!tmp & !tmp_3 & !tmp_4 & !tmp_5 & !tmp_6 & !tmp_7 & !tmp_8 & !tmp_9)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (2.19ns)   --->   "br i1 %tmp_10, label %.loopexit26, label %9" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 22 'br' <Predicate = (!tmp & !tmp_3 & !tmp_4 & !tmp_5 & !tmp_6 & !tmp_7 & !tmp_8 & !tmp_9)> <Delay = 2.19>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%tmp_11 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 22)" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 23 'bitselect' 'tmp_11' <Predicate = (!tmp & !tmp_3 & !tmp_4 & !tmp_5 & !tmp_6 & !tmp_7 & !tmp_8 & !tmp_9 & !tmp_10)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (2.19ns)   --->   "br i1 %tmp_11, label %.loopexit26, label %10" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 24 'br' <Predicate = (!tmp & !tmp_3 & !tmp_4 & !tmp_5 & !tmp_6 & !tmp_7 & !tmp_8 & !tmp_9 & !tmp_10)> <Delay = 2.19>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_12 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 21)" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 25 'bitselect' 'tmp_12' <Predicate = (!tmp & !tmp_3 & !tmp_4 & !tmp_5 & !tmp_6 & !tmp_7 & !tmp_8 & !tmp_9 & !tmp_10 & !tmp_11)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (2.19ns)   --->   "br i1 %tmp_12, label %.loopexit26, label %11" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 26 'br' <Predicate = (!tmp & !tmp_3 & !tmp_4 & !tmp_5 & !tmp_6 & !tmp_7 & !tmp_8 & !tmp_9 & !tmp_10 & !tmp_11)> <Delay = 2.19>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_13 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 20)" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 27 'bitselect' 'tmp_13' <Predicate = (!tmp & !tmp_3 & !tmp_4 & !tmp_5 & !tmp_6 & !tmp_7 & !tmp_8 & !tmp_9 & !tmp_10 & !tmp_11 & !tmp_12)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (2.19ns)   --->   "br i1 %tmp_13, label %.loopexit26, label %12" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 28 'br' <Predicate = (!tmp & !tmp_3 & !tmp_4 & !tmp_5 & !tmp_6 & !tmp_7 & !tmp_8 & !tmp_9 & !tmp_10 & !tmp_11 & !tmp_12)> <Delay = 2.19>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%tmp_14 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 19)" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 29 'bitselect' 'tmp_14' <Predicate = (!tmp & !tmp_3 & !tmp_4 & !tmp_5 & !tmp_6 & !tmp_7 & !tmp_8 & !tmp_9 & !tmp_10 & !tmp_11 & !tmp_12 & !tmp_13)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (2.19ns)   --->   "br i1 %tmp_14, label %.loopexit26, label %13" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 30 'br' <Predicate = (!tmp & !tmp_3 & !tmp_4 & !tmp_5 & !tmp_6 & !tmp_7 & !tmp_8 & !tmp_9 & !tmp_10 & !tmp_11 & !tmp_12 & !tmp_13)> <Delay = 2.19>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%tmp_15 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 18)" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 31 'bitselect' 'tmp_15' <Predicate = (!tmp & !tmp_3 & !tmp_4 & !tmp_5 & !tmp_6 & !tmp_7 & !tmp_8 & !tmp_9 & !tmp_10 & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (2.19ns)   --->   "br i1 %tmp_15, label %.loopexit26, label %14" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 32 'br' <Predicate = (!tmp & !tmp_3 & !tmp_4 & !tmp_5 & !tmp_6 & !tmp_7 & !tmp_8 & !tmp_9 & !tmp_10 & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14)> <Delay = 2.19>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%tmp_16 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 17)" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 33 'bitselect' 'tmp_16' <Predicate = (!tmp & !tmp_3 & !tmp_4 & !tmp_5 & !tmp_6 & !tmp_7 & !tmp_8 & !tmp_9 & !tmp_10 & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (2.19ns)   --->   "br i1 %tmp_16, label %.loopexit26, label %15" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 34 'br' <Predicate = (!tmp & !tmp_3 & !tmp_4 & !tmp_5 & !tmp_6 & !tmp_7 & !tmp_8 & !tmp_9 & !tmp_10 & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15)> <Delay = 2.19>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_17 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 16)" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 35 'bitselect' 'tmp_17' <Predicate = (!tmp & !tmp_3 & !tmp_4 & !tmp_5 & !tmp_6 & !tmp_7 & !tmp_8 & !tmp_9 & !tmp_10 & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15 & !tmp_16)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (1.21ns)   --->   "%select_ln13 = select i1 %tmp_17, i5 -16, i5 0" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 36 'select' 'select_ln13' <Predicate = (!tmp & !tmp_3 & !tmp_4 & !tmp_5 & !tmp_6 & !tmp_7 & !tmp_8 & !tmp_9 & !tmp_10 & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15 & !tmp_16)> <Delay = 1.21> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 37 [1/1] (2.19ns)   --->   "br label %.loopexit26" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 37 'br' <Predicate = (!tmp & !tmp_3 & !tmp_4 & !tmp_5 & !tmp_6 & !tmp_7 & !tmp_8 & !tmp_9 & !tmp_10 & !tmp_11 & !tmp_12 & !tmp_13 & !tmp_14 & !tmp_15 & !tmp_16)> <Delay = 2.19>
 
 State 2 <SV = 1> <Delay = 2.17>
-ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%phi_ln24 = phi i5 [ -1, %0 ], [ -2, %1 ], [ -3, %2 ], [ -4, %3 ], [ -5, %4 ], [ -6, %5 ], [ -7, %6 ], [ -8, %7 ], [ -9, %8 ], [ -10, %9 ], [ -11, %10 ], [ -12, %11 ], [ -13, %12 ], [ -14, %13 ], [ -15, %14 ], [ %select_ln12, %15 ]" [Multiplexor/leading_ones_bruteforce.cpp:24]   --->   Operation 38 'phi' 'phi_ln24' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%flagu_0 = phi i1 [ true, %0 ], [ true, %1 ], [ true, %2 ], [ true, %3 ], [ true, %4 ], [ true, %5 ], [ true, %6 ], [ true, %7 ], [ true, %8 ], [ true, %9 ], [ true, %10 ], [ true, %11 ], [ true, %12 ], [ true, %13 ], [ true, %14 ], [ %tmp_25, %15 ]" [Multiplexor/leading_ones_bruteforce.cpp:12]   --->   Operation 39 'phi' 'flagu_0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%tmp_26 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 15)" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 40 'bitselect' 'tmp_26' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 41 [1/1] (2.17ns)   --->   "br i1 %tmp_26, label %.loopexit, label %16" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 41 'br' <Predicate = true> <Delay = 2.17>
-ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%tmp_27 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 14)" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 42 'bitselect' 'tmp_27' <Predicate = (!tmp_26)> <Delay = 0.00>
-ST_2 : Operation 43 [1/1] (2.17ns)   --->   "br i1 %tmp_27, label %.loopexit, label %17" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 43 'br' <Predicate = (!tmp_26)> <Delay = 2.17>
-ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%tmp_28 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 13)" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 44 'bitselect' 'tmp_28' <Predicate = (!tmp_26 & !tmp_27)> <Delay = 0.00>
-ST_2 : Operation 45 [1/1] (2.17ns)   --->   "br i1 %tmp_28, label %.loopexit, label %18" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 45 'br' <Predicate = (!tmp_26 & !tmp_27)> <Delay = 2.17>
-ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%tmp_29 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 12)" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 46 'bitselect' 'tmp_29' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28)> <Delay = 0.00>
-ST_2 : Operation 47 [1/1] (2.17ns)   --->   "br i1 %tmp_29, label %.loopexit, label %19" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 47 'br' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28)> <Delay = 2.17>
-ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%tmp_30 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 11)" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 48 'bitselect' 'tmp_30' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28 & !tmp_29)> <Delay = 0.00>
-ST_2 : Operation 49 [1/1] (2.17ns)   --->   "br i1 %tmp_30, label %.loopexit, label %20" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 49 'br' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28 & !tmp_29)> <Delay = 2.17>
-ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%tmp_31 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 10)" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 50 'bitselect' 'tmp_31' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30)> <Delay = 0.00>
-ST_2 : Operation 51 [1/1] (2.17ns)   --->   "br i1 %tmp_31, label %.loopexit, label %21" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 51 'br' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30)> <Delay = 2.17>
-ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%tmp_32 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 9)" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 52 'bitselect' 'tmp_32' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31)> <Delay = 0.00>
-ST_2 : Operation 53 [1/1] (2.17ns)   --->   "br i1 %tmp_32, label %.loopexit, label %22" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 53 'br' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31)> <Delay = 2.17>
-ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%tmp_33 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 8)" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 54 'bitselect' 'tmp_33' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31 & !tmp_32)> <Delay = 0.00>
-ST_2 : Operation 55 [1/1] (2.17ns)   --->   "br i1 %tmp_33, label %.loopexit, label %23" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 55 'br' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31 & !tmp_32)> <Delay = 2.17>
-ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%tmp_34 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 7)" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 56 'bitselect' 'tmp_34' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31 & !tmp_32 & !tmp_33)> <Delay = 0.00>
-ST_2 : Operation 57 [1/1] (2.17ns)   --->   "br i1 %tmp_34, label %.loopexit, label %24" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 57 'br' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31 & !tmp_32 & !tmp_33)> <Delay = 2.17>
-ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%tmp_35 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 6)" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 58 'bitselect' 'tmp_35' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31 & !tmp_32 & !tmp_33 & !tmp_34)> <Delay = 0.00>
-ST_2 : Operation 59 [1/1] (2.17ns)   --->   "br i1 %tmp_35, label %.loopexit, label %25" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 59 'br' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31 & !tmp_32 & !tmp_33 & !tmp_34)> <Delay = 2.17>
-ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%tmp_36 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 5)" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 60 'bitselect' 'tmp_36' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31 & !tmp_32 & !tmp_33 & !tmp_34 & !tmp_35)> <Delay = 0.00>
-ST_2 : Operation 61 [1/1] (2.17ns)   --->   "br i1 %tmp_36, label %.loopexit, label %26" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 61 'br' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31 & !tmp_32 & !tmp_33 & !tmp_34 & !tmp_35)> <Delay = 2.17>
-ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_37 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 4)" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 62 'bitselect' 'tmp_37' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31 & !tmp_32 & !tmp_33 & !tmp_34 & !tmp_35 & !tmp_36)> <Delay = 0.00>
-ST_2 : Operation 63 [1/1] (2.17ns)   --->   "br i1 %tmp_37, label %.loopexit, label %27" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 63 'br' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31 & !tmp_32 & !tmp_33 & !tmp_34 & !tmp_35 & !tmp_36)> <Delay = 2.17>
-ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%tmp_38 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 3)" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 64 'bitselect' 'tmp_38' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31 & !tmp_32 & !tmp_33 & !tmp_34 & !tmp_35 & !tmp_36 & !tmp_37)> <Delay = 0.00>
-ST_2 : Operation 65 [1/1] (2.17ns)   --->   "br i1 %tmp_38, label %.loopexit, label %28" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 65 'br' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31 & !tmp_32 & !tmp_33 & !tmp_34 & !tmp_35 & !tmp_36 & !tmp_37)> <Delay = 2.17>
-ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%tmp_39 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 2)" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 66 'bitselect' 'tmp_39' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31 & !tmp_32 & !tmp_33 & !tmp_34 & !tmp_35 & !tmp_36 & !tmp_37 & !tmp_38)> <Delay = 0.00>
-ST_2 : Operation 67 [1/1] (2.17ns)   --->   "br i1 %tmp_39, label %.loopexit, label %29" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 67 'br' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31 & !tmp_32 & !tmp_33 & !tmp_34 & !tmp_35 & !tmp_36 & !tmp_37 & !tmp_38)> <Delay = 2.17>
-ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%tmp_40 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 1)" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 68 'bitselect' 'tmp_40' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31 & !tmp_32 & !tmp_33 & !tmp_34 & !tmp_35 & !tmp_36 & !tmp_37 & !tmp_38 & !tmp_39)> <Delay = 0.00>
-ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%trunc_ln791 = trunc i32 %din_V_read to i1" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 69 'trunc' 'trunc_ln791' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31 & !tmp_32 & !tmp_33 & !tmp_34 & !tmp_35 & !tmp_36 & !tmp_37 & !tmp_38 & !tmp_39)> <Delay = 0.00>
-ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%zext_ln19 = zext i1 %tmp_40 to i4" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 70 'zext' 'zext_ln19' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31 & !tmp_32 & !tmp_33 & !tmp_34 & !tmp_35 & !tmp_36 & !tmp_37 & !tmp_38 & !tmp_39)> <Delay = 0.00>
-ST_2 : Operation 71 [1/1] (0.97ns)   --->   "%or_ln19 = or i1 %trunc_ln791, %tmp_40" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 71 'or' 'or_ln19' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31 & !tmp_32 & !tmp_33 & !tmp_34 & !tmp_35 & !tmp_36 & !tmp_37 & !tmp_38 & !tmp_39)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 72 [1/1] (2.17ns)   --->   "br label %.loopexit" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 72 'br' <Predicate = (!tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31 & !tmp_32 & !tmp_33 & !tmp_34 & !tmp_35 & !tmp_36 & !tmp_37 & !tmp_38 & !tmp_39)> <Delay = 2.17>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%phi_ln25 = phi i5 [ -1, %0 ], [ -2, %1 ], [ -3, %2 ], [ -4, %3 ], [ -5, %4 ], [ -6, %5 ], [ -7, %6 ], [ -8, %7 ], [ -9, %8 ], [ -10, %9 ], [ -11, %10 ], [ -12, %11 ], [ -13, %12 ], [ -14, %13 ], [ -15, %14 ], [ %select_ln13, %15 ]" [Multiplexor/leading_ones_bruteforce.cpp:25]   --->   Operation 38 'phi' 'phi_ln25' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%flagu_0 = phi i1 [ true, %0 ], [ true, %1 ], [ true, %2 ], [ true, %3 ], [ true, %4 ], [ true, %5 ], [ true, %6 ], [ true, %7 ], [ true, %8 ], [ true, %9 ], [ true, %10 ], [ true, %11 ], [ true, %12 ], [ true, %13 ], [ true, %14 ], [ %tmp_17, %15 ]" [Multiplexor/leading_ones_bruteforce.cpp:13]   --->   Operation 39 'phi' 'flagu_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%tmp_18 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 15)" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 40 'bitselect' 'tmp_18' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (2.17ns)   --->   "br i1 %tmp_18, label %.loopexit, label %16" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 41 'br' <Predicate = true> <Delay = 2.17>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%tmp_19 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 14)" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 42 'bitselect' 'tmp_19' <Predicate = (!tmp_18)> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (2.17ns)   --->   "br i1 %tmp_19, label %.loopexit, label %17" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 43 'br' <Predicate = (!tmp_18)> <Delay = 2.17>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%tmp_20 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 13)" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 44 'bitselect' 'tmp_20' <Predicate = (!tmp_18 & !tmp_19)> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (2.17ns)   --->   "br i1 %tmp_20, label %.loopexit, label %18" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 45 'br' <Predicate = (!tmp_18 & !tmp_19)> <Delay = 2.17>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%tmp_21 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 12)" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 46 'bitselect' 'tmp_21' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20)> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (2.17ns)   --->   "br i1 %tmp_21, label %.loopexit, label %19" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 47 'br' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20)> <Delay = 2.17>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%tmp_22 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 11)" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 48 'bitselect' 'tmp_22' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20 & !tmp_21)> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (2.17ns)   --->   "br i1 %tmp_22, label %.loopexit, label %20" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 49 'br' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20 & !tmp_21)> <Delay = 2.17>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%tmp_23 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 10)" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 50 'bitselect' 'tmp_23' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22)> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (2.17ns)   --->   "br i1 %tmp_23, label %.loopexit, label %21" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 51 'br' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22)> <Delay = 2.17>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%tmp_24 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 9)" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 52 'bitselect' 'tmp_24' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23)> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (2.17ns)   --->   "br i1 %tmp_24, label %.loopexit, label %22" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 53 'br' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23)> <Delay = 2.17>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%tmp_25 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 8)" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 54 'bitselect' 'tmp_25' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23 & !tmp_24)> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (2.17ns)   --->   "br i1 %tmp_25, label %.loopexit, label %23" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 55 'br' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23 & !tmp_24)> <Delay = 2.17>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%tmp_26 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 7)" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 56 'bitselect' 'tmp_26' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23 & !tmp_24 & !tmp_25)> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (2.17ns)   --->   "br i1 %tmp_26, label %.loopexit, label %24" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 57 'br' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23 & !tmp_24 & !tmp_25)> <Delay = 2.17>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%tmp_27 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 6)" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 58 'bitselect' 'tmp_27' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23 & !tmp_24 & !tmp_25 & !tmp_26)> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (2.17ns)   --->   "br i1 %tmp_27, label %.loopexit, label %25" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 59 'br' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23 & !tmp_24 & !tmp_25 & !tmp_26)> <Delay = 2.17>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%tmp_28 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 5)" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 60 'bitselect' 'tmp_28' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23 & !tmp_24 & !tmp_25 & !tmp_26 & !tmp_27)> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (2.17ns)   --->   "br i1 %tmp_28, label %.loopexit, label %26" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 61 'br' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23 & !tmp_24 & !tmp_25 & !tmp_26 & !tmp_27)> <Delay = 2.17>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_29 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 4)" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 62 'bitselect' 'tmp_29' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23 & !tmp_24 & !tmp_25 & !tmp_26 & !tmp_27 & !tmp_28)> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (2.17ns)   --->   "br i1 %tmp_29, label %.loopexit, label %27" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 63 'br' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23 & !tmp_24 & !tmp_25 & !tmp_26 & !tmp_27 & !tmp_28)> <Delay = 2.17>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%tmp_30 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 3)" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 64 'bitselect' 'tmp_30' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23 & !tmp_24 & !tmp_25 & !tmp_26 & !tmp_27 & !tmp_28 & !tmp_29)> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (2.17ns)   --->   "br i1 %tmp_30, label %.loopexit, label %28" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 65 'br' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23 & !tmp_24 & !tmp_25 & !tmp_26 & !tmp_27 & !tmp_28 & !tmp_29)> <Delay = 2.17>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%tmp_31 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 2)" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 66 'bitselect' 'tmp_31' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23 & !tmp_24 & !tmp_25 & !tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30)> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] (2.17ns)   --->   "br i1 %tmp_31, label %.loopexit, label %29" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 67 'br' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23 & !tmp_24 & !tmp_25 & !tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30)> <Delay = 2.17>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%tmp_32 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %din_V_read, i32 1)" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 68 'bitselect' 'tmp_32' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23 & !tmp_24 & !tmp_25 & !tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31)> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%trunc_ln791 = trunc i32 %din_V_read to i1" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 69 'trunc' 'trunc_ln791' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23 & !tmp_24 & !tmp_25 & !tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31)> <Delay = 0.00>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%zext_ln20 = zext i1 %tmp_32 to i4" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 70 'zext' 'zext_ln20' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23 & !tmp_24 & !tmp_25 & !tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31)> <Delay = 0.00>
+ST_2 : Operation 71 [1/1] (0.97ns)   --->   "%or_ln20 = or i1 %trunc_ln791, %tmp_32" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 71 'or' 'or_ln20' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23 & !tmp_24 & !tmp_25 & !tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 72 [1/1] (2.17ns)   --->   "br label %.loopexit" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 72 'br' <Predicate = (!tmp_18 & !tmp_19 & !tmp_20 & !tmp_21 & !tmp_22 & !tmp_23 & !tmp_24 & !tmp_25 & !tmp_26 & !tmp_27 & !tmp_28 & !tmp_29 & !tmp_30 & !tmp_31)> <Delay = 2.17>
 
 State 3 <SV = 2> <Delay = 1.21>
-ST_3 : Operation 73 [1/1] (0.00ns) (grouped into LUT with out node select_ln24)   --->   "%phi_ln24_1 = phi i4 [ -1, %.loopexit26 ], [ -2, %16 ], [ -3, %17 ], [ -4, %18 ], [ -5, %19 ], [ -6, %20 ], [ -7, %21 ], [ -8, %22 ], [ 7, %23 ], [ 6, %24 ], [ 5, %25 ], [ 4, %26 ], [ 3, %27 ], [ 2, %28 ], [ %zext_ln19, %29 ]" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 73 'phi' 'phi_ln24_1' <Predicate = (!flagu_0)> <Delay = 0.00>
-ST_3 : Operation 74 [1/1] (0.00ns) (grouped into LUT with out node or_ln25)   --->   "%flagl_0 = phi i1 [ true, %.loopexit26 ], [ true, %16 ], [ true, %17 ], [ true, %18 ], [ true, %19 ], [ true, %20 ], [ true, %21 ], [ true, %22 ], [ true, %23 ], [ true, %24 ], [ true, %25 ], [ true, %26 ], [ true, %27 ], [ true, %28 ], [ %or_ln19, %29 ]" [Multiplexor/leading_ones_bruteforce.cpp:19]   --->   Operation 74 'phi' 'flagl_0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 75 [1/1] (0.00ns) (grouped into LUT with out node select_ln24)   --->   "%zext_ln24 = zext i4 %phi_ln24_1 to i5" [Multiplexor/leading_ones_bruteforce.cpp:24]   --->   Operation 75 'zext' 'zext_ln24' <Predicate = (!flagu_0)> <Delay = 0.00>
-ST_3 : Operation 76 [1/1] (1.21ns) (out node of the LUT)   --->   "%select_ln24 = select i1 %flagu_0, i5 %phi_ln24, i5 %zext_ln24" [Multiplexor/leading_ones_bruteforce.cpp:24]   --->   Operation 76 'select' 'select_ln24' <Predicate = true> <Delay = 1.21> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_3 : Operation 77 [1/1] (0.97ns) (out node of the LUT)   --->   "%or_ln25 = or i1 %flagu_0, %flagl_0" [Multiplexor/leading_ones_bruteforce.cpp:25]   --->   Operation 77 'or' 'or_ln25' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 78 [1/1] (0.00ns)   --->   "%mrv = insertvalue { i1, i5 } undef, i1 %or_ln25, 0" [Multiplexor/leading_ones_bruteforce.cpp:25]   --->   Operation 78 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 79 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue { i1, i5 } %mrv, i5 %select_ln24, 1" [Multiplexor/leading_ones_bruteforce.cpp:25]   --->   Operation 79 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 80 [1/1] (0.00ns)   --->   "ret { i1, i5 } %mrv_1" [Multiplexor/leading_ones_bruteforce.cpp:25]   --->   Operation 80 'ret' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 73 [1/1] (0.00ns) (grouped into LUT with out node select_ln25)   --->   "%phi_ln25_1 = phi i4 [ -1, %.loopexit26 ], [ -2, %16 ], [ -3, %17 ], [ -4, %18 ], [ -5, %19 ], [ -6, %20 ], [ -7, %21 ], [ -8, %22 ], [ 7, %23 ], [ 6, %24 ], [ 5, %25 ], [ 4, %26 ], [ 3, %27 ], [ 2, %28 ], [ %zext_ln20, %29 ]" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 73 'phi' 'phi_ln25_1' <Predicate = (!flagu_0)> <Delay = 0.00>
+ST_3 : Operation 74 [1/1] (0.00ns) (grouped into LUT with out node or_ln26)   --->   "%flagl_0 = phi i1 [ true, %.loopexit26 ], [ true, %16 ], [ true, %17 ], [ true, %18 ], [ true, %19 ], [ true, %20 ], [ true, %21 ], [ true, %22 ], [ true, %23 ], [ true, %24 ], [ true, %25 ], [ true, %26 ], [ true, %27 ], [ true, %28 ], [ %or_ln20, %29 ]" [Multiplexor/leading_ones_bruteforce.cpp:20]   --->   Operation 74 'phi' 'flagl_0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 75 [1/1] (0.00ns) (grouped into LUT with out node select_ln25)   --->   "%zext_ln25 = zext i4 %phi_ln25_1 to i5" [Multiplexor/leading_ones_bruteforce.cpp:25]   --->   Operation 75 'zext' 'zext_ln25' <Predicate = (!flagu_0)> <Delay = 0.00>
+ST_3 : Operation 76 [1/1] (1.21ns) (out node of the LUT)   --->   "%select_ln25 = select i1 %flagu_0, i5 %phi_ln25, i5 %zext_ln25" [Multiplexor/leading_ones_bruteforce.cpp:25]   --->   Operation 76 'select' 'select_ln25' <Predicate = true> <Delay = 1.21> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 77 [1/1] (0.97ns) (out node of the LUT)   --->   "%or_ln26 = or i1 %flagu_0, %flagl_0" [Multiplexor/leading_ones_bruteforce.cpp:26]   --->   Operation 77 'or' 'or_ln26' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 78 [1/1] (0.00ns)   --->   "%mrv = insertvalue { i1, i5 } undef, i1 %or_ln26, 0" [Multiplexor/leading_ones_bruteforce.cpp:26]   --->   Operation 78 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 79 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue { i1, i5 } %mrv, i5 %select_ln25, 1" [Multiplexor/leading_ones_bruteforce.cpp:26]   --->   Operation 79 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 80 [1/1] (0.00ns)   --->   "ret { i1, i5 } %mrv_1" [Multiplexor/leading_ones_bruteforce.cpp:26]   --->   Operation 80 'ret' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -180,81 +180,81 @@ Port [ din_V]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; exte
 <method=bitvector/>
 din_V_read  (read       ) [ 0010]
 tmp         (bitselect  ) [ 0100]
-br_ln12     (br         ) [ 0110]
+br_ln13     (br         ) [ 0110]
+tmp_3       (bitselect  ) [ 0100]
+br_ln13     (br         ) [ 0110]
+tmp_4       (bitselect  ) [ 0100]
+br_ln13     (br         ) [ 0110]
+tmp_5       (bitselect  ) [ 0100]
+br_ln13     (br         ) [ 0110]
+tmp_6       (bitselect  ) [ 0100]
+br_ln13     (br         ) [ 0110]
+tmp_7       (bitselect  ) [ 0100]
+br_ln13     (br         ) [ 0110]
+tmp_8       (bitselect  ) [ 0100]
+br_ln13     (br         ) [ 0110]
+tmp_9       (bitselect  ) [ 0100]
+br_ln13     (br         ) [ 0110]
+tmp_10      (bitselect  ) [ 0100]
+br_ln13     (br         ) [ 0110]
 tmp_11      (bitselect  ) [ 0100]
-br_ln12     (br         ) [ 0110]
+br_ln13     (br         ) [ 0110]
 tmp_12      (bitselect  ) [ 0100]
-br_ln12     (br         ) [ 0110]
+br_ln13     (br         ) [ 0110]
 tmp_13      (bitselect  ) [ 0100]
-br_ln12     (br         ) [ 0110]
+br_ln13     (br         ) [ 0110]
 tmp_14      (bitselect  ) [ 0100]
-br_ln12     (br         ) [ 0110]
+br_ln13     (br         ) [ 0110]
 tmp_15      (bitselect  ) [ 0100]
-br_ln12     (br         ) [ 0110]
+br_ln13     (br         ) [ 0110]
 tmp_16      (bitselect  ) [ 0100]
-br_ln12     (br         ) [ 0110]
-tmp_17      (bitselect  ) [ 0100]
-br_ln12     (br         ) [ 0110]
-tmp_18      (bitselect  ) [ 0100]
-br_ln12     (br         ) [ 0110]
-tmp_19      (bitselect  ) [ 0100]
-br_ln12     (br         ) [ 0110]
-tmp_20      (bitselect  ) [ 0100]
-br_ln12     (br         ) [ 0110]
-tmp_21      (bitselect  ) [ 0100]
-br_ln12     (br         ) [ 0110]
-tmp_22      (bitselect  ) [ 0100]
-br_ln12     (br         ) [ 0110]
-tmp_23      (bitselect  ) [ 0100]
-br_ln12     (br         ) [ 0110]
-tmp_24      (bitselect  ) [ 0100]
-br_ln12     (br         ) [ 0110]
-tmp_25      (bitselect  ) [ 0110]
-select_ln12 (select     ) [ 0110]
-br_ln12     (br         ) [ 0110]
-phi_ln24    (phi        ) [ 0011]
+br_ln13     (br         ) [ 0110]
+tmp_17      (bitselect  ) [ 0110]
+select_ln13 (select     ) [ 0110]
+br_ln13     (br         ) [ 0110]
+phi_ln25    (phi        ) [ 0011]
 flagu_0     (phi        ) [ 0011]
+tmp_18      (bitselect  ) [ 0010]
+br_ln20     (br         ) [ 0011]
+tmp_19      (bitselect  ) [ 0010]
+br_ln20     (br         ) [ 0011]
+tmp_20      (bitselect  ) [ 0010]
+br_ln20     (br         ) [ 0011]
+tmp_21      (bitselect  ) [ 0010]
+br_ln20     (br         ) [ 0011]
+tmp_22      (bitselect  ) [ 0010]
+br_ln20     (br         ) [ 0011]
+tmp_23      (bitselect  ) [ 0010]
+br_ln20     (br         ) [ 0011]
+tmp_24      (bitselect  ) [ 0010]
+br_ln20     (br         ) [ 0011]
+tmp_25      (bitselect  ) [ 0010]
+br_ln20     (br         ) [ 0011]
 tmp_26      (bitselect  ) [ 0010]
-br_ln19     (br         ) [ 0011]
+br_ln20     (br         ) [ 0011]
 tmp_27      (bitselect  ) [ 0010]
-br_ln19     (br         ) [ 0011]
+br_ln20     (br         ) [ 0011]
 tmp_28      (bitselect  ) [ 0010]
-br_ln19     (br         ) [ 0011]
+br_ln20     (br         ) [ 0011]
 tmp_29      (bitselect  ) [ 0010]
-br_ln19     (br         ) [ 0011]
+br_ln20     (br         ) [ 0011]
 tmp_30      (bitselect  ) [ 0010]
-br_ln19     (br         ) [ 0011]
+br_ln20     (br         ) [ 0011]
 tmp_31      (bitselect  ) [ 0010]
-br_ln19     (br         ) [ 0011]
-tmp_32      (bitselect  ) [ 0010]
-br_ln19     (br         ) [ 0011]
-tmp_33      (bitselect  ) [ 0010]
-br_ln19     (br         ) [ 0011]
-tmp_34      (bitselect  ) [ 0010]
-br_ln19     (br         ) [ 0011]
-tmp_35      (bitselect  ) [ 0010]
-br_ln19     (br         ) [ 0011]
-tmp_36      (bitselect  ) [ 0010]
-br_ln19     (br         ) [ 0011]
-tmp_37      (bitselect  ) [ 0010]
-br_ln19     (br         ) [ 0011]
-tmp_38      (bitselect  ) [ 0010]
-br_ln19     (br         ) [ 0011]
-tmp_39      (bitselect  ) [ 0010]
-br_ln19     (br         ) [ 0011]
-tmp_40      (bitselect  ) [ 0000]
+br_ln20     (br         ) [ 0011]
+tmp_32      (bitselect  ) [ 0000]
 trunc_ln791 (trunc      ) [ 0000]
-zext_ln19   (zext       ) [ 0011]
-or_ln19     (or         ) [ 0011]
-br_ln19     (br         ) [ 0011]
-phi_ln24_1  (phi        ) [ 0001]
+zext_ln20   (zext       ) [ 0011]
+or_ln20     (or         ) [ 0011]
+br_ln20     (br         ) [ 0011]
+phi_ln25_1  (phi        ) [ 0001]
 flagl_0     (phi        ) [ 0001]
-zext_ln24   (zext       ) [ 0000]
-select_ln24 (select     ) [ 0000]
-or_ln25     (or         ) [ 0000]
+zext_ln25   (zext       ) [ 0000]
+select_ln25 (select     ) [ 0000]
+or_ln26     (or         ) [ 0000]
 mrv         (insertvalue) [ 0000]
 mrv_1       (insertvalue) [ 0000]
-ret_ln25    (ret        ) [ 0000]
+ret_ln26    (ret        ) [ 0000]
 </LifeTime>
 
 <model>
@@ -875,17 +875,17 @@ ret_ln25    (ret        ) [ 0000]
 </bind>
 </comp>
 
-<comp id="140" class="1005" name="phi_ln24_reg_140">
+<comp id="140" class="1005" name="phi_ln25_reg_140">
 <pin_list>
 <pin id="141" dir="0" index="0" bw="5" slack="1"/>
 <pin id="142" dir="1" index="1" bw="5" slack="1"/>
 </pin_list>
 <bind>
-<opset="phi_ln24 (phireg) "/>
+<opset="phi_ln25 (phireg) "/>
 </bind>
 </comp>
 
-<comp id="158" class="1004" name="phi_ln24_phi_fu_158">
+<comp id="158" class="1004" name="phi_ln25_phi_fu_158">
 <pin_list>
 <pin id="159" dir="0" index="0" bw="1" slack="1"/>
 <pin id="160" dir="0" index="1" bw="0" slack="2147483647"/>
@@ -923,7 +923,7 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="phi(47) " fcode="phi"/>
-<opset="phi_ln24/2 "/>
+<opset="phi_ln25/2 "/>
 </bind>
 </comp>
 
@@ -979,17 +979,17 @@ ret_ln25    (ret        ) [ 0000]
 </bind>
 </comp>
 
-<comp id="262" class="1005" name="phi_ln24_1_reg_262">
+<comp id="262" class="1005" name="phi_ln25_1_reg_262">
 <pin_list>
 <pin id="263" dir="0" index="0" bw="4" slack="1"/>
 <pin id="264" dir="1" index="1" bw="4" slack="1"/>
 </pin_list>
 <bind>
-<opset="phi_ln24_1 (phireg) "/>
+<opset="phi_ln25_1 (phireg) "/>
 </bind>
 </comp>
 
-<comp id="279" class="1004" name="phi_ln24_1_phi_fu_279">
+<comp id="279" class="1004" name="phi_ln25_1_phi_fu_279">
 <pin_list>
 <pin id="280" dir="0" index="0" bw="1" slack="1"/>
 <pin id="281" dir="0" index="1" bw="0" slack="2147483647"/>
@@ -1025,7 +1025,7 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="phi(47) " fcode="phi"/>
-<opset="phi_ln24_1/3 "/>
+<opset="phi_ln25_1/3 "/>
 </bind>
 </comp>
 
@@ -1092,7 +1092,7 @@ ret_ln25    (ret        ) [ 0000]
 </bind>
 </comp>
 
-<comp id="383" class="1004" name="tmp_11_fu_383">
+<comp id="383" class="1004" name="tmp_3_fu_383">
 <pin_list>
 <pin id="384" dir="0" index="0" bw="1" slack="0"/>
 <pin id="385" dir="0" index="1" bw="32" slack="0"/>
@@ -1101,11 +1101,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_11/1 "/>
+<opset="tmp_3/1 "/>
 </bind>
 </comp>
 
-<comp id="391" class="1004" name="tmp_12_fu_391">
+<comp id="391" class="1004" name="tmp_4_fu_391">
 <pin_list>
 <pin id="392" dir="0" index="0" bw="1" slack="0"/>
 <pin id="393" dir="0" index="1" bw="32" slack="0"/>
@@ -1114,11 +1114,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_12/1 "/>
+<opset="tmp_4/1 "/>
 </bind>
 </comp>
 
-<comp id="399" class="1004" name="tmp_13_fu_399">
+<comp id="399" class="1004" name="tmp_5_fu_399">
 <pin_list>
 <pin id="400" dir="0" index="0" bw="1" slack="0"/>
 <pin id="401" dir="0" index="1" bw="32" slack="0"/>
@@ -1127,11 +1127,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_13/1 "/>
+<opset="tmp_5/1 "/>
 </bind>
 </comp>
 
-<comp id="407" class="1004" name="tmp_14_fu_407">
+<comp id="407" class="1004" name="tmp_6_fu_407">
 <pin_list>
 <pin id="408" dir="0" index="0" bw="1" slack="0"/>
 <pin id="409" dir="0" index="1" bw="32" slack="0"/>
@@ -1140,11 +1140,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_14/1 "/>
+<opset="tmp_6/1 "/>
 </bind>
 </comp>
 
-<comp id="415" class="1004" name="tmp_15_fu_415">
+<comp id="415" class="1004" name="tmp_7_fu_415">
 <pin_list>
 <pin id="416" dir="0" index="0" bw="1" slack="0"/>
 <pin id="417" dir="0" index="1" bw="32" slack="0"/>
@@ -1153,11 +1153,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_15/1 "/>
+<opset="tmp_7/1 "/>
 </bind>
 </comp>
 
-<comp id="423" class="1004" name="tmp_16_fu_423">
+<comp id="423" class="1004" name="tmp_8_fu_423">
 <pin_list>
 <pin id="424" dir="0" index="0" bw="1" slack="0"/>
 <pin id="425" dir="0" index="1" bw="32" slack="0"/>
@@ -1166,11 +1166,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_16/1 "/>
+<opset="tmp_8/1 "/>
 </bind>
 </comp>
 
-<comp id="431" class="1004" name="tmp_17_fu_431">
+<comp id="431" class="1004" name="tmp_9_fu_431">
 <pin_list>
 <pin id="432" dir="0" index="0" bw="1" slack="0"/>
 <pin id="433" dir="0" index="1" bw="32" slack="0"/>
@@ -1179,11 +1179,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_17/1 "/>
+<opset="tmp_9/1 "/>
 </bind>
 </comp>
 
-<comp id="439" class="1004" name="tmp_18_fu_439">
+<comp id="439" class="1004" name="tmp_10_fu_439">
 <pin_list>
 <pin id="440" dir="0" index="0" bw="1" slack="0"/>
 <pin id="441" dir="0" index="1" bw="32" slack="0"/>
@@ -1192,11 +1192,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_18/1 "/>
+<opset="tmp_10/1 "/>
 </bind>
 </comp>
 
-<comp id="447" class="1004" name="tmp_19_fu_447">
+<comp id="447" class="1004" name="tmp_11_fu_447">
 <pin_list>
 <pin id="448" dir="0" index="0" bw="1" slack="0"/>
 <pin id="449" dir="0" index="1" bw="32" slack="0"/>
@@ -1205,11 +1205,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_19/1 "/>
+<opset="tmp_11/1 "/>
 </bind>
 </comp>
 
-<comp id="455" class="1004" name="tmp_20_fu_455">
+<comp id="455" class="1004" name="tmp_12_fu_455">
 <pin_list>
 <pin id="456" dir="0" index="0" bw="1" slack="0"/>
 <pin id="457" dir="0" index="1" bw="32" slack="0"/>
@@ -1218,11 +1218,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_20/1 "/>
+<opset="tmp_12/1 "/>
 </bind>
 </comp>
 
-<comp id="463" class="1004" name="tmp_21_fu_463">
+<comp id="463" class="1004" name="tmp_13_fu_463">
 <pin_list>
 <pin id="464" dir="0" index="0" bw="1" slack="0"/>
 <pin id="465" dir="0" index="1" bw="32" slack="0"/>
@@ -1231,11 +1231,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_21/1 "/>
+<opset="tmp_13/1 "/>
 </bind>
 </comp>
 
-<comp id="471" class="1004" name="tmp_22_fu_471">
+<comp id="471" class="1004" name="tmp_14_fu_471">
 <pin_list>
 <pin id="472" dir="0" index="0" bw="1" slack="0"/>
 <pin id="473" dir="0" index="1" bw="32" slack="0"/>
@@ -1244,11 +1244,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_22/1 "/>
+<opset="tmp_14/1 "/>
 </bind>
 </comp>
 
-<comp id="479" class="1004" name="tmp_23_fu_479">
+<comp id="479" class="1004" name="tmp_15_fu_479">
 <pin_list>
 <pin id="480" dir="0" index="0" bw="1" slack="0"/>
 <pin id="481" dir="0" index="1" bw="32" slack="0"/>
@@ -1257,11 +1257,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_23/1 "/>
+<opset="tmp_15/1 "/>
 </bind>
 </comp>
 
-<comp id="487" class="1004" name="tmp_24_fu_487">
+<comp id="487" class="1004" name="tmp_16_fu_487">
 <pin_list>
 <pin id="488" dir="0" index="0" bw="1" slack="0"/>
 <pin id="489" dir="0" index="1" bw="32" slack="0"/>
@@ -1270,11 +1270,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_24/1 "/>
+<opset="tmp_16/1 "/>
 </bind>
 </comp>
 
-<comp id="495" class="1004" name="tmp_25_fu_495">
+<comp id="495" class="1004" name="tmp_17_fu_495">
 <pin_list>
 <pin id="496" dir="0" index="0" bw="1" slack="0"/>
 <pin id="497" dir="0" index="1" bw="32" slack="0"/>
@@ -1283,11 +1283,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_25/1 "/>
+<opset="tmp_17/1 "/>
 </bind>
 </comp>
 
-<comp id="503" class="1004" name="select_ln12_fu_503">
+<comp id="503" class="1004" name="select_ln13_fu_503">
 <pin_list>
 <pin id="504" dir="0" index="0" bw="1" slack="0"/>
 <pin id="505" dir="0" index="1" bw="5" slack="0"/>
@@ -1296,11 +1296,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="select_ln12/1 "/>
+<opset="select_ln13/1 "/>
 </bind>
 </comp>
 
-<comp id="511" class="1004" name="tmp_26_fu_511">
+<comp id="511" class="1004" name="tmp_18_fu_511">
 <pin_list>
 <pin id="512" dir="0" index="0" bw="1" slack="0"/>
 <pin id="513" dir="0" index="1" bw="32" slack="1"/>
@@ -1309,11 +1309,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_26/2 "/>
+<opset="tmp_18/2 "/>
 </bind>
 </comp>
 
-<comp id="518" class="1004" name="tmp_27_fu_518">
+<comp id="518" class="1004" name="tmp_19_fu_518">
 <pin_list>
 <pin id="519" dir="0" index="0" bw="1" slack="0"/>
 <pin id="520" dir="0" index="1" bw="32" slack="1"/>
@@ -1322,11 +1322,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_27/2 "/>
+<opset="tmp_19/2 "/>
 </bind>
 </comp>
 
-<comp id="525" class="1004" name="tmp_28_fu_525">
+<comp id="525" class="1004" name="tmp_20_fu_525">
 <pin_list>
 <pin id="526" dir="0" index="0" bw="1" slack="0"/>
 <pin id="527" dir="0" index="1" bw="32" slack="1"/>
@@ -1335,11 +1335,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_28/2 "/>
+<opset="tmp_20/2 "/>
 </bind>
 </comp>
 
-<comp id="532" class="1004" name="tmp_29_fu_532">
+<comp id="532" class="1004" name="tmp_21_fu_532">
 <pin_list>
 <pin id="533" dir="0" index="0" bw="1" slack="0"/>
 <pin id="534" dir="0" index="1" bw="32" slack="1"/>
@@ -1348,11 +1348,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_29/2 "/>
+<opset="tmp_21/2 "/>
 </bind>
 </comp>
 
-<comp id="539" class="1004" name="tmp_30_fu_539">
+<comp id="539" class="1004" name="tmp_22_fu_539">
 <pin_list>
 <pin id="540" dir="0" index="0" bw="1" slack="0"/>
 <pin id="541" dir="0" index="1" bw="32" slack="1"/>
@@ -1361,11 +1361,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_30/2 "/>
+<opset="tmp_22/2 "/>
 </bind>
 </comp>
 
-<comp id="546" class="1004" name="tmp_31_fu_546">
+<comp id="546" class="1004" name="tmp_23_fu_546">
 <pin_list>
 <pin id="547" dir="0" index="0" bw="1" slack="0"/>
 <pin id="548" dir="0" index="1" bw="32" slack="1"/>
@@ -1374,11 +1374,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_31/2 "/>
+<opset="tmp_23/2 "/>
 </bind>
 </comp>
 
-<comp id="553" class="1004" name="tmp_32_fu_553">
+<comp id="553" class="1004" name="tmp_24_fu_553">
 <pin_list>
 <pin id="554" dir="0" index="0" bw="1" slack="0"/>
 <pin id="555" dir="0" index="1" bw="32" slack="1"/>
@@ -1387,11 +1387,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_32/2 "/>
+<opset="tmp_24/2 "/>
 </bind>
 </comp>
 
-<comp id="560" class="1004" name="tmp_33_fu_560">
+<comp id="560" class="1004" name="tmp_25_fu_560">
 <pin_list>
 <pin id="561" dir="0" index="0" bw="1" slack="0"/>
 <pin id="562" dir="0" index="1" bw="32" slack="1"/>
@@ -1400,11 +1400,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_33/2 "/>
+<opset="tmp_25/2 "/>
 </bind>
 </comp>
 
-<comp id="567" class="1004" name="tmp_34_fu_567">
+<comp id="567" class="1004" name="tmp_26_fu_567">
 <pin_list>
 <pin id="568" dir="0" index="0" bw="1" slack="0"/>
 <pin id="569" dir="0" index="1" bw="32" slack="1"/>
@@ -1413,11 +1413,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_34/2 "/>
+<opset="tmp_26/2 "/>
 </bind>
 </comp>
 
-<comp id="574" class="1004" name="tmp_35_fu_574">
+<comp id="574" class="1004" name="tmp_27_fu_574">
 <pin_list>
 <pin id="575" dir="0" index="0" bw="1" slack="0"/>
 <pin id="576" dir="0" index="1" bw="32" slack="1"/>
@@ -1426,11 +1426,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_35/2 "/>
+<opset="tmp_27/2 "/>
 </bind>
 </comp>
 
-<comp id="581" class="1004" name="tmp_36_fu_581">
+<comp id="581" class="1004" name="tmp_28_fu_581">
 <pin_list>
 <pin id="582" dir="0" index="0" bw="1" slack="0"/>
 <pin id="583" dir="0" index="1" bw="32" slack="1"/>
@@ -1439,11 +1439,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_36/2 "/>
+<opset="tmp_28/2 "/>
 </bind>
 </comp>
 
-<comp id="588" class="1004" name="tmp_37_fu_588">
+<comp id="588" class="1004" name="tmp_29_fu_588">
 <pin_list>
 <pin id="589" dir="0" index="0" bw="1" slack="0"/>
 <pin id="590" dir="0" index="1" bw="32" slack="1"/>
@@ -1452,11 +1452,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_37/2 "/>
+<opset="tmp_29/2 "/>
 </bind>
 </comp>
 
-<comp id="595" class="1004" name="tmp_38_fu_595">
+<comp id="595" class="1004" name="tmp_30_fu_595">
 <pin_list>
 <pin id="596" dir="0" index="0" bw="1" slack="0"/>
 <pin id="597" dir="0" index="1" bw="32" slack="1"/>
@@ -1465,11 +1465,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_38/2 "/>
+<opset="tmp_30/2 "/>
 </bind>
 </comp>
 
-<comp id="602" class="1004" name="tmp_39_fu_602">
+<comp id="602" class="1004" name="tmp_31_fu_602">
 <pin_list>
 <pin id="603" dir="0" index="0" bw="1" slack="0"/>
 <pin id="604" dir="0" index="1" bw="32" slack="1"/>
@@ -1478,11 +1478,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_39/2 "/>
+<opset="tmp_31/2 "/>
 </bind>
 </comp>
 
-<comp id="609" class="1004" name="tmp_40_fu_609">
+<comp id="609" class="1004" name="tmp_32_fu_609">
 <pin_list>
 <pin id="610" dir="0" index="0" bw="1" slack="0"/>
 <pin id="611" dir="0" index="1" bw="32" slack="1"/>
@@ -1491,7 +1491,7 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_40/2 "/>
+<opset="tmp_32/2 "/>
 </bind>
 </comp>
 
@@ -1506,18 +1506,18 @@ ret_ln25    (ret        ) [ 0000]
 </bind>
 </comp>
 
-<comp id="619" class="1004" name="zext_ln19_fu_619">
+<comp id="619" class="1004" name="zext_ln20_fu_619">
 <pin_list>
 <pin id="620" dir="0" index="0" bw="1" slack="0"/>
 <pin id="621" dir="1" index="1" bw="4" slack="1"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln19/2 "/>
+<opset="zext_ln20/2 "/>
 </bind>
 </comp>
 
-<comp id="623" class="1004" name="or_ln19_fu_623">
+<comp id="623" class="1004" name="or_ln20_fu_623">
 <pin_list>
 <pin id="624" dir="0" index="0" bw="1" slack="0"/>
 <pin id="625" dir="0" index="1" bw="1" slack="0"/>
@@ -1525,22 +1525,22 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="or_ln19/2 "/>
+<opset="or_ln20/2 "/>
 </bind>
 </comp>
 
-<comp id="629" class="1004" name="zext_ln24_fu_629">
+<comp id="629" class="1004" name="zext_ln25_fu_629">
 <pin_list>
 <pin id="630" dir="0" index="0" bw="4" slack="0"/>
 <pin id="631" dir="1" index="1" bw="5" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln24/3 "/>
+<opset="zext_ln25/3 "/>
 </bind>
 </comp>
 
-<comp id="633" class="1004" name="select_ln24_fu_633">
+<comp id="633" class="1004" name="select_ln25_fu_633">
 <pin_list>
 <pin id="634" dir="0" index="0" bw="1" slack="1"/>
 <pin id="635" dir="0" index="1" bw="5" slack="1"/>
@@ -1549,11 +1549,11 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="select_ln24/3 "/>
+<opset="select_ln25/3 "/>
 </bind>
 </comp>
 
-<comp id="641" class="1004" name="or_ln25_fu_641">
+<comp id="641" class="1004" name="or_ln26_fu_641">
 <pin_list>
 <pin id="642" dir="0" index="0" bw="1" slack="1"/>
 <pin id="643" dir="0" index="1" bw="1" slack="0"/>
@@ -1561,7 +1561,7 @@ ret_ln25    (ret        ) [ 0000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="or_ln25/3 "/>
+<opset="or_ln26/3 "/>
 </bind>
 </comp>
 
@@ -1599,43 +1599,43 @@ ret_ln25    (ret        ) [ 0000]
 </bind>
 </comp>
 
-<comp id="724" class="1005" name="tmp_25_reg_724">
+<comp id="724" class="1005" name="tmp_17_reg_724">
 <pin_list>
 <pin id="725" dir="0" index="0" bw="1" slack="1"/>
 <pin id="726" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_25 "/>
+<opset="tmp_17 "/>
 </bind>
 </comp>
 
-<comp id="729" class="1005" name="select_ln12_reg_729">
+<comp id="729" class="1005" name="select_ln13_reg_729">
 <pin_list>
 <pin id="730" dir="0" index="0" bw="5" slack="1"/>
 <pin id="731" dir="1" index="1" bw="5" slack="1"/>
 </pin_list>
 <bind>
-<opset="select_ln12 "/>
+<opset="select_ln13 "/>
 </bind>
 </comp>
 
-<comp id="776" class="1005" name="zext_ln19_reg_776">
+<comp id="776" class="1005" name="zext_ln20_reg_776">
 <pin_list>
 <pin id="777" dir="0" index="0" bw="4" slack="1"/>
 <pin id="778" dir="1" index="1" bw="4" slack="1"/>
 </pin_list>
 <bind>
-<opset="zext_ln19 "/>
+<opset="zext_ln20 "/>
 </bind>
 </comp>
 
-<comp id="781" class="1005" name="or_ln19_reg_781">
+<comp id="781" class="1005" name="or_ln20_reg_781">
 <pin_list>
 <pin id="782" dir="0" index="0" bw="1" slack="1"/>
 <pin id="783" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
-<opset="or_ln19 "/>
+<opset="or_ln20 "/>
 </bind>
 </comp>
 
@@ -2077,46 +2077,46 @@ ret_ln25    (ret        ) [ 0000]
 	Port: leading_ones_brutefo : din_V | {1 }
   - Chain level:
 	State 1
-		br_ln12 : 1
-		br_ln12 : 1
-		br_ln12 : 1
-		br_ln12 : 1
-		br_ln12 : 1
-		br_ln12 : 1
-		br_ln12 : 1
-		br_ln12 : 1
-		br_ln12 : 1
-		br_ln12 : 1
-		br_ln12 : 1
-		br_ln12 : 1
-		br_ln12 : 1
-		br_ln12 : 1
-		br_ln12 : 1
-		select_ln12 : 1
+		br_ln13 : 1
+		br_ln13 : 1
+		br_ln13 : 1
+		br_ln13 : 1
+		br_ln13 : 1
+		br_ln13 : 1
+		br_ln13 : 1
+		br_ln13 : 1
+		br_ln13 : 1
+		br_ln13 : 1
+		br_ln13 : 1
+		br_ln13 : 1
+		br_ln13 : 1
+		br_ln13 : 1
+		br_ln13 : 1
+		select_ln13 : 1
 	State 2
-		br_ln19 : 1
-		br_ln19 : 1
-		br_ln19 : 1
-		br_ln19 : 1
-		br_ln19 : 1
-		br_ln19 : 1
-		br_ln19 : 1
-		br_ln19 : 1
-		br_ln19 : 1
-		br_ln19 : 1
-		br_ln19 : 1
-		br_ln19 : 1
-		br_ln19 : 1
-		br_ln19 : 1
-		zext_ln19 : 1
-		or_ln19 : 1
+		br_ln20 : 1
+		br_ln20 : 1
+		br_ln20 : 1
+		br_ln20 : 1
+		br_ln20 : 1
+		br_ln20 : 1
+		br_ln20 : 1
+		br_ln20 : 1
+		br_ln20 : 1
+		br_ln20 : 1
+		br_ln20 : 1
+		br_ln20 : 1
+		br_ln20 : 1
+		br_ln20 : 1
+		zext_ln20 : 1
+		or_ln20 : 1
 	State 3
-		zext_ln24 : 1
-		select_ln24 : 2
-		or_ln25 : 1
+		zext_ln25 : 1
+		select_ln25 : 2
+		or_ln26 : 1
 		mrv : 1
 		mrv_1 : 2
-		ret_ln25 : 3
+		ret_ln26 : 3
 
 
 ============================================================
@@ -2127,50 +2127,50 @@ ret_ln25    (ret        ) [ 0000]
 |----------|------------------------|---------|---------|
 | Operation|     Functional Unit    |    FF   |   LUT   |
 |----------|------------------------|---------|---------|
-|  select  |   select_ln12_fu_503   |    0    |    5    |
-|          |   select_ln24_fu_633   |    0    |    5    |
+|  select  |   select_ln13_fu_503   |    0    |    5    |
+|          |   select_ln25_fu_633   |    0    |    5    |
 |----------|------------------------|---------|---------|
-|    or    |     or_ln19_fu_623     |    0    |    2    |
-|          |     or_ln25_fu_641     |    0    |    2    |
+|    or    |     or_ln20_fu_623     |    0    |    2    |
+|          |     or_ln26_fu_641     |    0    |    2    |
 |----------|------------------------|---------|---------|
 |   read   | din_V_read_read_fu_134 |    0    |    0    |
 |----------|------------------------|---------|---------|
 |          |       tmp_fu_375       |    0    |    0    |
-|          |      tmp_11_fu_383     |    0    |    0    |
-|          |      tmp_12_fu_391     |    0    |    0    |
-|          |      tmp_13_fu_399     |    0    |    0    |
-|          |      tmp_14_fu_407     |    0    |    0    |
-|          |      tmp_15_fu_415     |    0    |    0    |
-|          |      tmp_16_fu_423     |    0    |    0    |
-|          |      tmp_17_fu_431     |    0    |    0    |
-|          |      tmp_18_fu_439     |    0    |    0    |
-|          |      tmp_19_fu_447     |    0    |    0    |
-|          |      tmp_20_fu_455     |    0    |    0    |
-|          |      tmp_21_fu_463     |    0    |    0    |
-|          |      tmp_22_fu_471     |    0    |    0    |
-|          |      tmp_23_fu_479     |    0    |    0    |
-|          |      tmp_24_fu_487     |    0    |    0    |
-| bitselect|      tmp_25_fu_495     |    0    |    0    |
-|          |      tmp_26_fu_511     |    0    |    0    |
-|          |      tmp_27_fu_518     |    0    |    0    |
-|          |      tmp_28_fu_525     |    0    |    0    |
-|          |      tmp_29_fu_532     |    0    |    0    |
-|          |      tmp_30_fu_539     |    0    |    0    |
-|          |      tmp_31_fu_546     |    0    |    0    |
-|          |      tmp_32_fu_553     |    0    |    0    |
-|          |      tmp_33_fu_560     |    0    |    0    |
-|          |      tmp_34_fu_567     |    0    |    0    |
-|          |      tmp_35_fu_574     |    0    |    0    |
-|          |      tmp_36_fu_581     |    0    |    0    |
-|          |      tmp_37_fu_588     |    0    |    0    |
-|          |      tmp_38_fu_595     |    0    |    0    |
-|          |      tmp_39_fu_602     |    0    |    0    |
-|          |      tmp_40_fu_609     |    0    |    0    |
+|          |      tmp_3_fu_383      |    0    |    0    |
+|          |      tmp_4_fu_391      |    0    |    0    |
+|          |      tmp_5_fu_399      |    0    |    0    |
+|          |      tmp_6_fu_407      |    0    |    0    |
+|          |      tmp_7_fu_415      |    0    |    0    |
+|          |      tmp_8_fu_423      |    0    |    0    |
+|          |      tmp_9_fu_431      |    0    |    0    |
+|          |      tmp_10_fu_439     |    0    |    0    |
+|          |      tmp_11_fu_447     |    0    |    0    |
+|          |      tmp_12_fu_455     |    0    |    0    |
+|          |      tmp_13_fu_463     |    0    |    0    |
+|          |      tmp_14_fu_471     |    0    |    0    |
+|          |      tmp_15_fu_479     |    0    |    0    |
+|          |      tmp_16_fu_487     |    0    |    0    |
+| bitselect|      tmp_17_fu_495     |    0    |    0    |
+|          |      tmp_18_fu_511     |    0    |    0    |
+|          |      tmp_19_fu_518     |    0    |    0    |
+|          |      tmp_20_fu_525     |    0    |    0    |
+|          |      tmp_21_fu_532     |    0    |    0    |
+|          |      tmp_22_fu_539     |    0    |    0    |
+|          |      tmp_23_fu_546     |    0    |    0    |
+|          |      tmp_24_fu_553     |    0    |    0    |
+|          |      tmp_25_fu_560     |    0    |    0    |
+|          |      tmp_26_fu_567     |    0    |    0    |
+|          |      tmp_27_fu_574     |    0    |    0    |
+|          |      tmp_28_fu_581     |    0    |    0    |
+|          |      tmp_29_fu_588     |    0    |    0    |
+|          |      tmp_30_fu_595     |    0    |    0    |
+|          |      tmp_31_fu_602     |    0    |    0    |
+|          |      tmp_32_fu_609     |    0    |    0    |
 |----------|------------------------|---------|---------|
 |   trunc  |   trunc_ln791_fu_616   |    0    |    0    |
 |----------|------------------------|---------|---------|
-|   zext   |    zext_ln19_fu_619    |    0    |    0    |
-|          |    zext_ln24_fu_629    |    0    |    0    |
+|   zext   |    zext_ln20_fu_619    |    0    |    0    |
+|          |    zext_ln25_fu_629    |    0    |    0    |
 |----------|------------------------|---------|---------|
 |insertvalue|       mrv_fu_647       |    0    |    0    |
 |          |      mrv_1_fu_653      |    0    |    0    |
@@ -2188,12 +2188,12 @@ N/A
 | din_V_read_reg_659|   32   |
 |  flagl_0_reg_325  |    1   |
 |  flagu_0_reg_208  |    1   |
-|  or_ln19_reg_781  |    1   |
-| phi_ln24_1_reg_262|    4   |
-|  phi_ln24_reg_140 |    5   |
-|select_ln12_reg_729|    5   |
-|   tmp_25_reg_724  |    1   |
-| zext_ln19_reg_776 |    4   |
+|  or_ln20_reg_781  |    1   |
+| phi_ln25_1_reg_262|    4   |
+|  phi_ln25_reg_140 |    5   |
+|select_ln13_reg_729|    5   |
+|   tmp_17_reg_724  |    1   |
+| zext_ln20_reg_776 |    4   |
 +-------------------+--------+
 |       Total       |   54   |
 +-------------------+--------+
@@ -2202,9 +2202,9 @@ N/A
 |--------------------|------|------|------|--------||---------||---------|
 |        Comp        |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
 |--------------------|------|------|------|--------||---------||---------|
-|  phi_ln24_reg_140  |  p0  |  16  |   5  |   80   ||    33   |
+|  phi_ln25_reg_140  |  p0  |  16  |   5  |   80   ||    33   |
 |   flagu_0_reg_208  |  p0  |   2  |   1  |    2   ||    9    |
-| phi_ln24_1_reg_262 |  p0  |  14  |   4  |   56   ||    27   |
+| phi_ln25_1_reg_262 |  p0  |  14  |   4  |   56   ||    27   |
 |--------------------|------|------|------|--------||---------||---------|
 |        Total       |      |      |      |   138  ||  6.1176 ||    69   |
 |--------------------|------|------|------|--------||---------||---------|

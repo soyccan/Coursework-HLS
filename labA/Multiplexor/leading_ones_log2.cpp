@@ -4,6 +4,7 @@
 bool leading_ones_log2(ap_uint<NUM_BITS> din,
                        ap_uint<LOG2_CEIL<NUM_BITS>::val> &dout)
 {
+#pragma HLS INLINE off
     enum { P2 = NEXT_POW2<NUM_BITS>::val };
     enum { L2 = LOG2_CEIL<NUM_BITS>::val };
     ap_uint<P2> upper, lower;

@@ -5,6 +5,8 @@ void shift_reg_ip(dType din,
                   dType dout[N_REGS],
                   bool en)
 {
+#pragma HLS INLINE off
+#pragma HLS INLINE recursive
 	// Define a variable of type ap_shift_reg<type, depth>
 	// - Sreg must use the static qualifier
 	// - Sreg will hold integer data types

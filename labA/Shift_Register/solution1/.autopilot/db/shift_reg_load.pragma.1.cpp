@@ -6616,7 +6616,9 @@ void shift_reg_load(dType din,
                     dType dout[12],
                     bool load)
 {_ssdm_SpecArrayDimSize(load_data, 12);_ssdm_SpecArrayDimSize(dout, 12);
-    static dType regs[12];
+_ssdm_InlineSelf(2, "");
+
+ static dType regs[12];
 
 SHIFT:
     for (int i = 12 - 1; i >= 0; i--) {

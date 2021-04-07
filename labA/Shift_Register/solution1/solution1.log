@@ -5469,3 +5469,2037 @@ INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: conf
 INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
 INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
 INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_basic.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_class.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_en.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_ip.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_load.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_sreset.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_template.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:01:05 . Memory (MB): peak = 176.148 ; gain = 85.613
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:01:05 . Memory (MB): peak = 176.148 ; gain = 85.613
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:01:06 . Memory (MB): peak = 176.148 ; gain = 85.613
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::set_enable' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::set_sync_rst' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:21) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::load' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:22) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 4>::set_enable' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:29) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::operator[]' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:35) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 4>::operator[]' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:48) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:01:06 . Memory (MB): peak = 176.148 ; gain = 85.613
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_tmpl.h:10) in function 'shift_reg<2, int, 4>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_tmpl.h:19) in function 'shift_reg<2, int, 4>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_tmpl.h:10) in function 'shift_reg<1, signed char, 8>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_tmpl.h:19) in function 'shift_reg<1, signed char, 8>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_ip.cpp:24) in function 'shift_reg_ip' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_class.h:40) in function 'shift_class<signed char, 8>::shift' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_class.h:40) in function 'shift_class<signed char, 4>::shift' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_sreset.cpp:10) in function 'shift_reg_sreset' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_sreset.cpp:23) in function 'shift_reg_sreset' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_load.cpp:13) in function 'shift_reg_load' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_load.cpp:26) in function 'shift_reg_load' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_en.cpp:10) in function 'shift_reg_en' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_en.cpp:21) in function 'shift_reg_en' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_basic.cpp:10) in function 'shift_reg_basic' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_basic.cpp:19) in function 'shift_reg_basic' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE0' (Shift_Register/shift_reg_class.cpp:43) in function 'shift_reg_class' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'WRITE1' (Shift_Register/shift_reg_class.cpp:48) in function 'shift_reg_class' completely with a factor of 4.
+INFO: [XFORM 203-102] Partitioning array 'regs.9' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.8' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.7' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.6' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.5' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs' automatically.
+INFO: [XFORM 203-102] Automatically partitioning small array 'shift_reg1.regs' completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'dout1' (Shift_Register/shift_reg.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'dout0' (Shift_Register/shift_reg.cpp:6) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'load_data' (Shift_Register/shift_reg.cpp:5) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'shift_reg1.regs' in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::set_enable' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::set_sync_rst' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:21) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::load' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:22) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 4>::set_enable' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:29) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::operator[]' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:35) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 4>::shift' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:35) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 4>::operator[]' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:48) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_reg<1, signed char, 8>' into 'shift_reg_template' (Shift_Register/shift_reg_template.cpp:10) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_reg<2, int, 4>' into 'shift_reg_template' (Shift_Register/shift_reg_template.cpp:11) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Shift_Register/shift_class.h:44:17) to (Shift_Register/shift_class.h:52:13) in function 'shift_class<signed char, 8>::shift'... converting 3 basic blocks.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::shift' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:36) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:01:07 . Memory (MB): peak = 176.148 ; gain = 85.613
+INFO: [HLS 200-472] Inferring partial write operation for 'shift_reg0.regs' (Shift_Register/shift_class.h:45:21)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:01:08 . Memory (MB): peak = 218.609 ; gain = 128.074
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'shift_reg' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_ip' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 67.889 seconds; current allocated memory: 167.566 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.054 seconds; current allocated memory: 167.723 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_class' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.077 seconds; current allocated memory: 167.985 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.076 seconds; current allocated memory: 168.237 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_sreset' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.095 seconds; current allocated memory: 168.394 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.048 seconds; current allocated memory: 168.547 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_load' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.066 seconds; current allocated memory: 168.693 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.052 seconds; current allocated memory: 168.884 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_en' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.069 seconds; current allocated memory: 169.042 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.047 seconds; current allocated memory: 169.226 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_basic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.056 seconds; current allocated memory: 169.299 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.043 seconds; current allocated memory: 169.405 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_template' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.051 seconds; current allocated memory: 169.483 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.043 seconds; current allocated memory: 169.588 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.074 seconds; current allocated memory: 170.029 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.159 seconds; current allocated memory: 170.767 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_ip' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'shift_reg_ip_Sreg_Array' to 'shift_reg_ip_Sregbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_ip'.
+INFO: [HLS 200-111]  Elapsed time: 0.166 seconds; current allocated memory: 171.549 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_class' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_0' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'shift_reg_class_shift_reg0_regs' to 'shift_reg_class_scud' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_class'.
+INFO: [HLS 200-111]  Elapsed time: 0.773 seconds; current allocated memory: 172.473 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_sreset' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_8_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_sreset'.
+INFO: [HLS 200-111]  Elapsed time: 0.275 seconds; current allocated memory: 173.233 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_load' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_7_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_load'.
+INFO: [HLS 200-111]  Elapsed time: 0.252 seconds; current allocated memory: 173.959 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_en' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_6_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_11' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_en'.
+INFO: [HLS 200-111]  Elapsed time: 0.235 seconds; current allocated memory: 174.704 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_basic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_5_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_basic'.
+INFO: [HLS 200-111]  Elapsed time: 0.195 seconds; current allocated memory: 175.295 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_template' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_9_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_template'.
+INFO: [HLS 200-111]  Elapsed time: 0.189 seconds; current allocated memory: 175.874 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/din0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/din1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_10' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_11' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_6' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_7' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_8' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_9' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_10' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_11' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/srst' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/en' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/select_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'shift_reg' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg'.
+INFO: [HLS 200-111]  Elapsed time: 0.375 seconds; current allocated memory: 178.294 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 280.11 MHz
+INFO: [RTMG 210-278] Implementing memory 'shift_reg_class_scud_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:07 ; elapsed = 00:01:13 . Memory (MB): peak = 250.309 ; gain = 159.773
+INFO: [VHDL 208-304] Generating VHDL RTL for shift_reg.
+INFO: [VLOG 209-307] Generating Verilog RTL for shift_reg.
+INFO: [HLS 200-112] Total elapsed time: 73.305 seconds; peak allocated memory: 178.294 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_basic.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_class.cpp' ... 
+ERROR: [HLS 214-122] '#pragma HLS' is only allowed in function scope: D:\Repo\hls\labA\Shift_Register\shift_class.h:9
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_basic.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_class.cpp' ... 
+ERROR: [HLS 214-122] '#pragma HLS' is only allowed in function scope: D:\Repo\hls\labA\Shift_Register\shift_class.h:7
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_basic.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_class.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_en.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_ip.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_load.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_sreset.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_template.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:01:05 . Memory (MB): peak = 177.168 ; gain = 87.273
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:01:05 . Memory (MB): peak = 177.168 ; gain = 87.273
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 8>::operator[]' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:35).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 8>::operator[]' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:43).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 4>::operator[]' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:48).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:01:05 . Memory (MB): peak = 177.168 ; gain = 87.273
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::set_enable' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::set_sync_rst' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:21) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::load' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:22) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 4>::set_enable' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:29) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:01:05 . Memory (MB): peak = 177.168 ; gain = 87.273
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_tmpl.h:10) in function 'shift_reg<2, int, 4>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_tmpl.h:19) in function 'shift_reg<2, int, 4>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_tmpl.h:10) in function 'shift_reg<1, signed char, 8>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_tmpl.h:19) in function 'shift_reg<1, signed char, 8>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_ip.cpp:25) in function 'shift_reg_ip' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_class.h:40) in function 'shift_class<signed char, 8>::shift' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_class.h:40) in function 'shift_class<signed char, 4>::shift' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_sreset.cpp:10) in function 'shift_reg_sreset' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_sreset.cpp:23) in function 'shift_reg_sreset' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_load.cpp:13) in function 'shift_reg_load' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_load.cpp:26) in function 'shift_reg_load' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_en.cpp:10) in function 'shift_reg_en' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_en.cpp:21) in function 'shift_reg_en' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_basic.cpp:10) in function 'shift_reg_basic' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_basic.cpp:19) in function 'shift_reg_basic' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE0' (Shift_Register/shift_reg_class.cpp:43) in function 'shift_reg_class' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'WRITE1' (Shift_Register/shift_reg_class.cpp:48) in function 'shift_reg_class' completely with a factor of 4.
+INFO: [XFORM 203-102] Partitioning array 'shift_reg1.regs' automatically.
+INFO: [XFORM 203-102] Partitioning array 'shift_reg0.regs' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.9' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.8' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.7' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.6' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.5' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs' automatically.
+INFO: [XFORM 203-101] Partitioning array 'dout1' (Shift_Register/shift_reg.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'dout0' (Shift_Register/shift_reg.cpp:6) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'load_data' (Shift_Register/shift_reg.cpp:5) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::set_enable' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::set_sync_rst' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:21) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::load' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:22) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 4>::set_enable' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:29) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 4>::shift' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:35) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_reg<1, signed char, 8>' into 'shift_reg_template' (Shift_Register/shift_reg_template.cpp:10) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_reg<2, int, 4>' into 'shift_reg_template' (Shift_Register/shift_reg_template.cpp:11) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:01:06 . Memory (MB): peak = 177.168 ; gain = 87.273
+WARNING: [XFORM 203-631] Renaming function 'shift_class<signed char, 8>::shift' to 'shift' (Shift_Register/shift_class.h:37)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:01:07 . Memory (MB): peak = 228.488 ; gain = 138.594
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'shift_reg' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_ip' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 66.954 seconds; current allocated memory: 177.119 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.107 seconds; current allocated memory: 177.277 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.061 seconds; current allocated memory: 177.425 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.049 seconds; current allocated memory: 177.594 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_class' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.064 seconds; current allocated memory: 177.726 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.046 seconds; current allocated memory: 177.903 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_sreset' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.063 seconds; current allocated memory: 178.023 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.049 seconds; current allocated memory: 178.176 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_load' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.068 seconds; current allocated memory: 178.359 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.052 seconds; current allocated memory: 178.550 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_en' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.072 seconds; current allocated memory: 178.655 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.049 seconds; current allocated memory: 178.839 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_basic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.058 seconds; current allocated memory: 178.913 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.043 seconds; current allocated memory: 179.018 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_template' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.053 seconds; current allocated memory: 179.096 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.044 seconds; current allocated memory: 179.201 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.074 seconds; current allocated memory: 179.643 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.133 seconds; current allocated memory: 180.368 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_ip' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'shift_reg_ip_Sreg_Array' to 'shift_reg_ip_Sregbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_ip'.
+INFO: [HLS 200-111]  Elapsed time: 0.151 seconds; current allocated memory: 181.150 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift'.
+INFO: [HLS 200-111]  Elapsed time: 0.463 seconds; current allocated memory: 181.437 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_class' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'shift_reg0_en' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_sync_rst' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_ld' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_class'.
+INFO: [HLS 200-111]  Elapsed time: 0.208 seconds; current allocated memory: 182.241 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_sreset' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_8_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_sreset'.
+INFO: [HLS 200-111]  Elapsed time: 0.184 seconds; current allocated memory: 182.901 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_load' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_7_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_load'.
+INFO: [HLS 200-111]  Elapsed time: 0.267 seconds; current allocated memory: 183.681 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_en' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_6_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_11' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_en'.
+INFO: [HLS 200-111]  Elapsed time: 0.242 seconds; current allocated memory: 184.410 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_basic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_5_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_basic'.
+INFO: [HLS 200-111]  Elapsed time: 0.241 seconds; current allocated memory: 185.008 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_template' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_9_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_template'.
+INFO: [HLS 200-111]  Elapsed time: 0.182 seconds; current allocated memory: 185.579 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/din0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/din1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_10' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_11' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_6' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_7' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_8' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_9' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_10' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_11' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/srst' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/en' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/select_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'shift_reg' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg'.
+INFO: [HLS 200-111]  Elapsed time: 0.327 seconds; current allocated memory: 188.037 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 331.46 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:07 ; elapsed = 00:01:12 . Memory (MB): peak = 259.609 ; gain = 169.715
+INFO: [VHDL 208-304] Generating VHDL RTL for shift_reg.
+INFO: [VLOG 209-307] Generating Verilog RTL for shift_reg.
+INFO: [HLS 200-112] Total elapsed time: 72.056 seconds; peak allocated memory: 188.037 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_basic.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_class.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_en.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_ip.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_load.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_sreset.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_template.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:01:02 . Memory (MB): peak = 177.293 ; gain = 86.797
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:01:02 . Memory (MB): peak = 177.293 ; gain = 86.797
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 8>::operator[]' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:35).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 8>::operator[]' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:43).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 4>::shift' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:35).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 8>::shift' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:36).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 4>::operator[]' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:48).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:01:03 . Memory (MB): peak = 177.293 ; gain = 86.797
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::set_enable' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::set_sync_rst' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:21) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::load' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:22) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 4>::set_enable' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:29) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:01:03 . Memory (MB): peak = 177.293 ; gain = 86.797
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_tmpl.h:10) in function 'shift_reg<2, int, 4>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_tmpl.h:19) in function 'shift_reg<2, int, 4>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_tmpl.h:10) in function 'shift_reg<1, signed char, 8>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_tmpl.h:19) in function 'shift_reg<1, signed char, 8>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_ip.cpp:25) in function 'shift_reg_ip' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_sreset.cpp:10) in function 'shift_reg_sreset' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_sreset.cpp:23) in function 'shift_reg_sreset' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_load.cpp:13) in function 'shift_reg_load' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_load.cpp:26) in function 'shift_reg_load' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_en.cpp:10) in function 'shift_reg_en' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_en.cpp:21) in function 'shift_reg_en' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_basic.cpp:10) in function 'shift_reg_basic' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_basic.cpp:19) in function 'shift_reg_basic' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_class.h:41) in function 'shift_reg_class' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'WRITE0' (Shift_Register/shift_reg_class.cpp:43) in function 'shift_reg_class' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'WRITE1' (Shift_Register/shift_reg_class.cpp:48) in function 'shift_reg_class' completely with a factor of 4.
+INFO: [XFORM 203-102] Partitioning array 'shift_reg1.regs' automatically.
+INFO: [XFORM 203-102] Partitioning array 'shift_reg0.regs' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.9' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.8' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.7' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.6' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.5' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs' automatically.
+INFO: [XFORM 203-101] Partitioning array 'dout1' (Shift_Register/shift_reg.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'dout0' (Shift_Register/shift_reg.cpp:6) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'load_data' (Shift_Register/shift_reg.cpp:5) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::set_enable' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::set_sync_rst' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:21) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 8>::load' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:22) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_class<signed char, 4>::set_enable' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:29) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_reg<1, signed char, 8>' into 'shift_reg_template' (Shift_Register/shift_reg_template.cpp:10) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_reg<2, int, 4>' into 'shift_reg_template' (Shift_Register/shift_reg_template.cpp:11) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Shift_Register/shift_class.h:44:17) to (Shift_Register/shift_class.h:52:13) in function 'shift_reg_class'... converting 17 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:01:04 . Memory (MB): peak = 177.293 ; gain = 86.797
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:01:04 . Memory (MB): peak = 218.746 ; gain = 128.250
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'shift_reg' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_ip' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 64.471 seconds; current allocated memory: 167.527 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.049 seconds; current allocated memory: 167.685 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_class' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.066 seconds; current allocated memory: 167.879 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.056 seconds; current allocated memory: 168.156 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_sreset' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.077 seconds; current allocated memory: 168.276 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.046 seconds; current allocated memory: 168.466 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_load' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.065 seconds; current allocated memory: 168.612 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 168.803 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_en' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.067 seconds; current allocated memory: 168.924 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.046 seconds; current allocated memory: 169.108 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_basic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.055 seconds; current allocated memory: 169.182 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.041 seconds; current allocated memory: 169.288 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_template' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 169.365 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.042 seconds; current allocated memory: 169.470 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.073 seconds; current allocated memory: 169.912 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.215 seconds; current allocated memory: 170.699 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_ip' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'shift_reg_ip_Sreg_Array' to 'shift_reg_ip_Sregbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_ip'.
+INFO: [HLS 200-111]  Elapsed time: 0.148 seconds; current allocated memory: 171.481 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_class' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_class'.
+INFO: [HLS 200-111]  Elapsed time: 0.474 seconds; current allocated memory: 172.314 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_sreset' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_8_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_sreset'.
+INFO: [HLS 200-111]  Elapsed time: 0.224 seconds; current allocated memory: 173.070 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_load' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_7_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_load'.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 173.796 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_en' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_6_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_11' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_en'.
+INFO: [HLS 200-111]  Elapsed time: 0.201 seconds; current allocated memory: 174.525 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_basic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_5_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_basic'.
+INFO: [HLS 200-111]  Elapsed time: 0.187 seconds; current allocated memory: 175.115 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_template' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_9_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_template'.
+INFO: [HLS 200-111]  Elapsed time: 0.151 seconds; current allocated memory: 175.693 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/din0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/din1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_10' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_11' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_6' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_7' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_8' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_9' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_10' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_11' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/srst' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/en' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/select_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'shift_reg' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg'.
+INFO: [HLS 200-111]  Elapsed time: 0.303 seconds; current allocated memory: 178.134 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 331.46 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:01:09 . Memory (MB): peak = 250.117 ; gain = 159.621
+INFO: [VHDL 208-304] Generating VHDL RTL for shift_reg.
+INFO: [VLOG 209-307] Generating Verilog RTL for shift_reg.
+INFO: [HLS 200-112] Total elapsed time: 68.98 seconds; peak allocated memory: 178.134 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_basic.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_class.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_en.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_ip.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_load.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_sreset.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_template.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:01:05 . Memory (MB): peak = 176.957 ; gain = 86.527
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:01:05 . Memory (MB): peak = 176.957 ; gain = 86.527
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 8>::operator[]' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:37).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 8>::operator[]' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:45).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 4>::shift' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:37).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 8>::shift' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:38).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 4>::operator[]' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:50).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 8>::set_enable' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:22).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 8>::set_sync_rst' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:23).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 8>::load' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:24).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 4>::set_enable' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:31).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:01:06 . Memory (MB): peak = 176.957 ; gain = 86.527
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:01:06 . Memory (MB): peak = 176.957 ; gain = 86.527
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_tmpl.h:10) in function 'shift_reg<2, int, 4>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_tmpl.h:19) in function 'shift_reg<2, int, 4>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_tmpl.h:10) in function 'shift_reg<1, signed char, 8>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_tmpl.h:19) in function 'shift_reg<1, signed char, 8>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_ip.cpp:25) in function 'shift_reg_ip' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_sreset.cpp:10) in function 'shift_reg_sreset' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_sreset.cpp:23) in function 'shift_reg_sreset' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_load.cpp:13) in function 'shift_reg_load' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_load.cpp:26) in function 'shift_reg_load' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_en.cpp:10) in function 'shift_reg_en' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_en.cpp:21) in function 'shift_reg_en' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_basic.cpp:10) in function 'shift_reg_basic' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_basic.cpp:19) in function 'shift_reg_basic' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_class.h:41) in function 'shift_reg_class' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'WRITE0' (Shift_Register/shift_reg_class.cpp:45) in function 'shift_reg_class' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'WRITE1' (Shift_Register/shift_reg_class.cpp:50) in function 'shift_reg_class' completely with a factor of 4.
+INFO: [XFORM 203-102] Partitioning array 'shift_reg1.regs' automatically.
+INFO: [XFORM 203-102] Partitioning array 'shift_reg0.regs' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.9' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.8' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.7' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.6' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.5' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs' automatically.
+INFO: [XFORM 203-101] Partitioning array 'dout1' (Shift_Register/shift_reg.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'dout0' (Shift_Register/shift_reg.cpp:6) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'load_data' (Shift_Register/shift_reg.cpp:5) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'shift_reg<1, signed char, 8>' into 'shift_reg_template' (Shift_Register/shift_reg_template.cpp:10) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_reg<2, int, 4>' into 'shift_reg_template' (Shift_Register/shift_reg_template.cpp:11) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Shift_Register/shift_class.h:51:21) to (Shift_Register/shift_class.h:52:13) in function 'shift_reg_class'... converting 15 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:01:07 . Memory (MB): peak = 176.957 ; gain = 86.527
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:01:08 . Memory (MB): peak = 218.539 ; gain = 128.109
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'shift_reg' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_ip' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 67.844 seconds; current allocated memory: 167.508 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.072 seconds; current allocated memory: 167.666 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_class' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.067 seconds; current allocated memory: 167.858 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.058 seconds; current allocated memory: 168.134 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_sreset' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.077 seconds; current allocated memory: 168.270 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.046 seconds; current allocated memory: 168.460 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_load' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.065 seconds; current allocated memory: 168.606 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 168.797 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_en' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.069 seconds; current allocated memory: 168.902 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.047 seconds; current allocated memory: 169.086 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_basic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.055 seconds; current allocated memory: 169.160 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.041 seconds; current allocated memory: 169.265 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_template' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.051 seconds; current allocated memory: 169.359 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.043 seconds; current allocated memory: 169.464 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.074 seconds; current allocated memory: 169.905 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.153 seconds; current allocated memory: 170.677 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_ip' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'shift_reg_ip_Sreg_Array' to 'shift_reg_ip_Sregbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_ip'.
+INFO: [HLS 200-111]  Elapsed time: 0.162 seconds; current allocated memory: 171.459 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_class' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_3' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_class'.
+INFO: [HLS 200-111]  Elapsed time: 0.594 seconds; current allocated memory: 172.304 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_sreset' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_8_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_sreset'.
+INFO: [HLS 200-111]  Elapsed time: 0.234 seconds; current allocated memory: 173.068 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_load' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_7_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_load'.
+INFO: [HLS 200-111]  Elapsed time: 0.184 seconds; current allocated memory: 173.778 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_en' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_6_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_11' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_en'.
+INFO: [HLS 200-111]  Elapsed time: 0.258 seconds; current allocated memory: 174.523 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_basic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_5_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_basic'.
+INFO: [HLS 200-111]  Elapsed time: 0.177 seconds; current allocated memory: 175.113 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_template' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_9_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_template'.
+INFO: [HLS 200-111]  Elapsed time: 0.204 seconds; current allocated memory: 175.691 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/din0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/din1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_10' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_11' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_6' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_7' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_8' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_9' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_10' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_11' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/srst' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/en' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/select_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'shift_reg' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg'.
+INFO: [HLS 200-111]  Elapsed time: 0.328 seconds; current allocated memory: 178.116 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 331.46 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:07 ; elapsed = 00:01:13 . Memory (MB): peak = 249.516 ; gain = 159.086
+INFO: [VHDL 208-304] Generating VHDL RTL for shift_reg.
+INFO: [VLOG 209-307] Generating Verilog RTL for shift_reg.
+INFO: [HLS 200-112] Total elapsed time: 73.001 seconds; peak allocated memory: 178.116 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_basic.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_class.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_en.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_ip.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_load.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_sreset.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_template.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:01:03 . Memory (MB): peak = 176.430 ; gain = 86.719
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:01:03 . Memory (MB): peak = 176.430 ; gain = 86.719
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 8>::set_enable' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:25).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 8>::set_sync_rst' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:26).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 8>::load' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:27).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 4>::set_enable' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:34).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 8>::operator[]' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:40).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 8>::operator[]' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:48).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 4>::shift' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:40).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 8>::shift' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:41).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 4>::operator[]' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:53).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:01:04 . Memory (MB): peak = 176.430 ; gain = 86.719
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:01:04 . Memory (MB): peak = 176.430 ; gain = 86.719
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_tmpl.h:10) in function 'shift_reg<2, int, 4>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_tmpl.h:19) in function 'shift_reg<2, int, 4>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_tmpl.h:10) in function 'shift_reg<1, signed char, 8>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_tmpl.h:19) in function 'shift_reg<1, signed char, 8>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_ip.cpp:25) in function 'shift_reg_ip' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_sreset.cpp:10) in function 'shift_reg_sreset' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_sreset.cpp:23) in function 'shift_reg_sreset' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_load.cpp:13) in function 'shift_reg_load' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_load.cpp:26) in function 'shift_reg_load' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_en.cpp:10) in function 'shift_reg_en' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_en.cpp:21) in function 'shift_reg_en' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_basic.cpp:10) in function 'shift_reg_basic' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_basic.cpp:19) in function 'shift_reg_basic' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_class.h:46) in function 'shift_reg_class' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'WRITE0' (Shift_Register/shift_reg_class.cpp:48) in function 'shift_reg_class' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'WRITE1' (Shift_Register/shift_reg_class.cpp:53) in function 'shift_reg_class' completely with a factor of 4.
+INFO: [XFORM 203-102] Partitioning array 'shift_reg1.regs' automatically.
+INFO: [XFORM 203-102] Partitioning array 'shift_reg0.regs' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.9' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.8' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.7' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.6' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.5' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs' automatically.
+INFO: [XFORM 203-101] Partitioning array 'dout1' (Shift_Register/shift_reg.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'dout0' (Shift_Register/shift_reg.cpp:6) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'load_data' (Shift_Register/shift_reg.cpp:5) in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'shift_reg<1, signed char, 8>' into 'shift_reg_template' (Shift_Register/shift_reg_template.cpp:10) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_reg<2, int, 4>' into 'shift_reg_template' (Shift_Register/shift_reg_template.cpp:11) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Shift_Register/shift_class.h:56:21) to (Shift_Register/shift_class.h:57:13) in function 'shift_reg_class'... converting 15 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:01:04 . Memory (MB): peak = 176.430 ; gain = 86.719
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:01:05 . Memory (MB): peak = 218.742 ; gain = 129.031
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'shift_reg' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_ip' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 65.009 seconds; current allocated memory: 167.510 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.043 seconds; current allocated memory: 167.667 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_class' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.067 seconds; current allocated memory: 167.859 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.058 seconds; current allocated memory: 168.135 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_sreset' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.079 seconds; current allocated memory: 168.271 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.046 seconds; current allocated memory: 168.461 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_load' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.065 seconds; current allocated memory: 168.607 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.051 seconds; current allocated memory: 168.798 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_en' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.071 seconds; current allocated memory: 168.903 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.047 seconds; current allocated memory: 169.087 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_basic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.057 seconds; current allocated memory: 169.161 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.043 seconds; current allocated memory: 169.266 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_template' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 169.360 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.043 seconds; current allocated memory: 169.465 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.072 seconds; current allocated memory: 169.906 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 170.678 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_ip' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'shift_reg_ip_Sreg_Array' to 'shift_reg_ip_Sregbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_ip'.
+INFO: [HLS 200-111]  Elapsed time: 0.153 seconds; current allocated memory: 171.460 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_class' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_3' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_class'.
+INFO: [HLS 200-111]  Elapsed time: 0.482 seconds; current allocated memory: 172.305 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_sreset' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_8_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_sreset'.
+INFO: [HLS 200-111]  Elapsed time: 0.291 seconds; current allocated memory: 173.069 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_load' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_7_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_load'.
+INFO: [HLS 200-111]  Elapsed time: 0.203 seconds; current allocated memory: 173.779 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_en' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_6_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_11' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_en'.
+INFO: [HLS 200-111]  Elapsed time: 0.236 seconds; current allocated memory: 174.524 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_basic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_5_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_basic'.
+INFO: [HLS 200-111]  Elapsed time: 0.339 seconds; current allocated memory: 175.114 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_template' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_9_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_template'.
+INFO: [HLS 200-111]  Elapsed time: 0.168 seconds; current allocated memory: 175.692 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/din0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/din1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_10' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_11' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_6' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_7' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_8' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_9' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_10' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_11' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/srst' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/en' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/select_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'shift_reg' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg'.
+INFO: [HLS 200-111]  Elapsed time: 0.336 seconds; current allocated memory: 178.117 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 331.46 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:07 ; elapsed = 00:01:10 . Memory (MB): peak = 249.379 ; gain = 159.668
+INFO: [VHDL 208-304] Generating VHDL RTL for shift_reg.
+INFO: [VLOG 209-307] Generating Verilog RTL for shift_reg.
+INFO: [HLS 200-112] Total elapsed time: 69.933 seconds; peak allocated memory: 178.117 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_basic.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_class.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_en.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_ip.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_load.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_sreset.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'Shift_Register/shift_reg_template.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:01:03 . Memory (MB): peak = 177.152 ; gain = 86.652
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:01:03 . Memory (MB): peak = 177.152 ; gain = 86.652
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 8>::set_enable' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:25).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 8>::set_sync_rst' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:26).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 8>::load' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:27).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 4>::set_enable' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:34).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 8>::operator[]' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:40).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 8>::operator[]' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:48).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 4>::shift' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:40).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 8>::shift' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:41).
+INFO: [XFORM 203-603] Inlining function 'shift_class<signed char, 4>::operator[]' into 'shift_reg_class' (Shift_Register/shift_reg_class.cpp:53).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:01:04 . Memory (MB): peak = 177.152 ; gain = 86.652
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:01:04 . Memory (MB): peak = 177.152 ; gain = 86.652
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_tmpl.h:10) in function 'shift_reg<2, int, 4>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_tmpl.h:19) in function 'shift_reg<2, int, 4>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_tmpl.h:10) in function 'shift_reg<1, signed char, 8>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_tmpl.h:19) in function 'shift_reg<1, signed char, 8>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_ip.cpp:25) in function 'shift_reg_ip' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_sreset.cpp:10) in function 'shift_reg_sreset' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_sreset.cpp:23) in function 'shift_reg_sreset' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_load.cpp:13) in function 'shift_reg_load' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_load.cpp:26) in function 'shift_reg_load' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_en.cpp:10) in function 'shift_reg_en' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_en.cpp:21) in function 'shift_reg_en' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_reg_basic.cpp:10) in function 'shift_reg_basic' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'WRITE' (Shift_Register/shift_reg_basic.cpp:19) in function 'shift_reg_basic' completely with a factor of 12.
+INFO: [HLS 200-489] Unrolling loop 'SHIFT' (Shift_Register/shift_class.h:47) in function 'shift_reg_class' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'WRITE0' (Shift_Register/shift_reg_class.cpp:48) in function 'shift_reg_class' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'WRITE1' (Shift_Register/shift_reg_class.cpp:53) in function 'shift_reg_class' completely with a factor of 4.
+INFO: [XFORM 203-102] Partitioning array 'regs.9' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.8' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.7' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.6' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs.5' automatically.
+INFO: [XFORM 203-102] Partitioning array 'regs' automatically.
+INFO: [XFORM 203-101] Partitioning array 'dout1' (Shift_Register/shift_reg.cpp:7) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'dout0' (Shift_Register/shift_reg.cpp:6) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'load_data' (Shift_Register/shift_reg.cpp:5) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'shift_reg0.regs'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'shift_reg1.regs'  in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'shift_reg<1, signed char, 8>' into 'shift_reg_template' (Shift_Register/shift_reg_template.cpp:10) automatically.
+INFO: [XFORM 203-602] Inlining function 'shift_reg<2, int, 4>' into 'shift_reg_template' (Shift_Register/shift_reg_template.cpp:11) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Shift_Register/shift_class.h:57:21) to (Shift_Register/shift_class.h:58:13) in function 'shift_reg_class'... converting 15 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:01:05 . Memory (MB): peak = 177.152 ; gain = 86.652
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:01:05 . Memory (MB): peak = 218.641 ; gain = 128.141
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'shift_reg' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_ip' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 65.429 seconds; current allocated memory: 167.531 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.043 seconds; current allocated memory: 167.689 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_class' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.075 seconds; current allocated memory: 167.880 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.056 seconds; current allocated memory: 168.156 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_sreset' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.078 seconds; current allocated memory: 168.292 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.047 seconds; current allocated memory: 168.482 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_load' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.067 seconds; current allocated memory: 168.628 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.051 seconds; current allocated memory: 168.819 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_en' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.068 seconds; current allocated memory: 168.925 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.046 seconds; current allocated memory: 169.108 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_basic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.056 seconds; current allocated memory: 169.182 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.043 seconds; current allocated memory: 169.288 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg_template' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.056 seconds; current allocated memory: 169.381 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.044 seconds; current allocated memory: 169.486 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shift_reg' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.075 seconds; current allocated memory: 169.928 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.167 seconds; current allocated memory: 170.700 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_ip' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'shift_reg_ip_Sreg_Array' to 'shift_reg_ip_Sregbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_ip'.
+INFO: [HLS 200-111]  Elapsed time: 0.161 seconds; current allocated memory: 171.482 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_class' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg0_regs_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'shift_reg1_regs_3' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_class'.
+INFO: [HLS 200-111]  Elapsed time: 0.495 seconds; current allocated memory: 172.327 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_sreset' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_8_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_8_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_sreset'.
+INFO: [HLS 200-111]  Elapsed time: 0.258 seconds; current allocated memory: 173.090 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_load' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_7_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_7_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_load'.
+INFO: [HLS 200-111]  Elapsed time: 0.212 seconds; current allocated memory: 173.801 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_en' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_6_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_6_11' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_en'.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 174.545 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_basic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_5_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_5_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_basic'.
+INFO: [HLS 200-111]  Elapsed time: 0.175 seconds; current allocated memory: 175.136 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg_template' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Register 'regs_9_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_9_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'regs_0' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg_template'.
+INFO: [HLS 200-111]  Elapsed time: 0.179 seconds; current allocated memory: 175.714 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shift_reg' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/din0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/din1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_8' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_9' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_10' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load_data_11' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_6' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_7' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_8' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_9' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_10' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout0_11' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/dout1_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/srst' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/load' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/en' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'shift_reg/select_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'shift_reg' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shift_reg'.
+INFO: [HLS 200-111]  Elapsed time: 0.353 seconds; current allocated memory: 178.139 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 331.46 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:07 ; elapsed = 00:01:10 . Memory (MB): peak = 249.371 ; gain = 158.871
+INFO: [VHDL 208-304] Generating VHDL RTL for shift_reg.
+INFO: [VLOG 209-307] Generating Verilog RTL for shift_reg.
+INFO: [HLS 200-112] Total elapsed time: 70.244 seconds; peak allocated memory: 178.139 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.

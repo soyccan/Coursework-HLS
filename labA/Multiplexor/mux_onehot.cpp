@@ -2,6 +2,7 @@
 
 dType mux_onehot(dType din[N_REGS], ap_uint<N_REGS> sel)
 {
+#pragma HLS INLINE off
     dType tmp;
     switch (sel) {
     case 1:

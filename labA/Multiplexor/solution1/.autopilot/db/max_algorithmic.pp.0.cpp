@@ -164,7 +164,8 @@ void max_algorithmic(int din[8], int &dout);
 
 void max_algorithmic(int din[8], int &dout)
 {_ssdm_SpecArrayDimSize(din, 8);
-    int max;
+#pragma HLS INLINE off
+ int max;
     int tmp;
 
     for (int i = 0; i < 8; i++) {

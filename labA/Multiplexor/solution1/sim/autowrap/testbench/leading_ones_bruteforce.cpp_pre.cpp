@@ -63728,6 +63728,7 @@ bool leading_ones_template(ap_uint<32> &din,
 bool leading_ones_bruteforce(ap_uint<32> din,
                              ap_uint<LOG2_CEIL<32>::val> &dout)
 {
+#pragma HLS INLINE off
     int upper = 0, lower = 0;
     bool flagu = false;
     bool flagl = false;

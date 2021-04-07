@@ -6674,6 +6674,8 @@ void shift_reg_ip(dType din,
                   dType dout[12],
                   bool en)
 {_ssdm_SpecArrayDimSize(dout, 12);
+#pragma HLS INLINE off
+#pragma HLS INLINE recursive
 
 
 

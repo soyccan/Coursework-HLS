@@ -63704,6 +63704,8 @@ void shift_reg_ip(dType din,
 
 void shift_reg_en(dType din, dType dout[12], bool en)
 {
+#pragma HLS INLINE off
+
     static dType regs[12];
 
 SHIFT:

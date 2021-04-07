@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'leading_ones'" level="0">
-<item name = "Date">Thu Apr  8 02:15:56 2021
+<item name = "Date">Thu Apr  8 05:50:03 2021
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">Multiplexor</item>
@@ -106,7 +106,7 @@
 <column name="ap_condition_235">and, 0, 0, 2, 1, 1</column>
 <column name="ap_condition_239">and, 0, 0, 2, 1, 1</column>
 <column name="ap_condition_243">and, 0, 0, 2, 1, 1</column>
-<column name="or_ln10_fu_619_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln11_fu_619_p2">or, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">

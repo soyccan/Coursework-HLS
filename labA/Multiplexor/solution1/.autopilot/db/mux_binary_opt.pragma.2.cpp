@@ -6416,7 +6416,8 @@ dType mux_onehot_if(dType din[8], ap_uint<8> sel);
 
 dType mux_binary_opt(dType din[8], sType sel0, sType sel1, bool s)
 {_ssdm_SpecArrayDimSize(din, 8);
-    dType tmp;
+_ssdm_InlineSelf(2, "");
+ dType tmp;
     sType sel_int;
     if (s)
         sel_int = sel0;

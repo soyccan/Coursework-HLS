@@ -63707,6 +63707,8 @@ void shift_reg_load(dType din,
                     dType dout[12],
                     bool load)
 {
+#pragma HLS INLINE off
+
     static dType regs[12];
 
 SHIFT:

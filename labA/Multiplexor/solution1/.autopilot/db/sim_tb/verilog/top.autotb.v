@@ -96,7 +96,7 @@ module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 120;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 4;
+parameter LATENCY_ESTIMATION = 5;
 parameter LENGTH_leadone_in_V = 1;
 parameter LENGTH_leadone_out_V = 1;
 parameter LENGTH_leadone_ret = 1;

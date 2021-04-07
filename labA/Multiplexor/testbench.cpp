@@ -27,6 +27,8 @@ int main()
     dType mux_ret_gold;
     int max_out_gold;
 
+    // Set fixed seed
+    // otherwise co-sim will fail
     srand(0);
 
     for (int i = 0; i < 10; i++) {

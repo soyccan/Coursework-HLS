@@ -6444,7 +6444,8 @@ bool leading_ones_template(ap_uint<32> &din,
 bool leading_ones(ap_uint<32> din,
                   ap_uint<LOG2_CEIL<32>::val> &dout)
 {
-    int tmp = 0;
+_ssdm_InlineSelf(2, "");
+ int tmp = 0;
     bool flag = false;
     for (int i = 32 - 1; i >= 0; i--) {
 _ssdm_Unroll(0,0,0, "");

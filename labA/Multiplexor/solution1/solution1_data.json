@@ -140,24 +140,34 @@
   },
   "Files": {
     "CSource": [
-      "..\/top.cpp",
-      "..\/mux_onehot_if.cpp",
-      "..\/mux_onehot.cpp",
-      "..\/mux_binary_opt.cpp",
-      "..\/mux_binary2onehot_opt.cpp",
-      "..\/mux_binary.cpp",
-      "..\/mux_2to1.cpp",
-      "..\/max_algorithmic.cpp",
-      "..\/max.cpp",
-      "..\/leading_ones_template.cpp",
-      "..\/leading_ones_log2.cpp",
+      "..\/leading_ones.cpp",
       "..\/leading_ones_bruteforce.cpp",
-      "..\/leading_ones.cpp"
+      "..\/leading_ones_log2.cpp",
+      "..\/leading_ones_template.cpp",
+      "..\/max.cpp",
+      "..\/max_algorithmic.cpp",
+      "..\/mux_2to1.cpp",
+      "..\/mux_binary.cpp",
+      "..\/mux_binary2onehot_opt.cpp",
+      "..\/mux_binary_opt.cpp",
+      "..\/mux_onehot.cpp",
+      "..\/mux_onehot_if.cpp",
+      "..\/top.cpp"
     ],
     "Vhdl": [
       "impl\/vhdl\/leading_ones.vhd",
       "impl\/vhdl\/leading_ones_32_s.vhd",
       "impl\/vhdl\/leading_ones_brutefo.vhd",
+      "impl\/vhdl\/leading_ones_log2.vhd",
+      "impl\/vhdl\/leading_ones_templat.vhd",
+      "impl\/vhdl\/max.vhd",
+      "impl\/vhdl\/max_algorithmic.vhd",
+      "impl\/vhdl\/mux_2to1.vhd",
+      "impl\/vhdl\/mux_binary.vhd",
+      "impl\/vhdl\/mux_binary2onehot_op.vhd",
+      "impl\/vhdl\/mux_binary_opt.vhd",
+      "impl\/vhdl\/mux_onehot.vhd",
+      "impl\/vhdl\/mux_onehot_if.vhd",
       "impl\/vhdl\/top_mux_83_8_1_1.vhd",
       "impl\/vhdl\/top_mux_83_32_1_1.vhd",
       "impl\/vhdl\/top.vhd"
@@ -166,6 +176,16 @@
       "impl\/verilog\/leading_ones.v",
       "impl\/verilog\/leading_ones_32_s.v",
       "impl\/verilog\/leading_ones_brutefo.v",
+      "impl\/verilog\/leading_ones_log2.v",
+      "impl\/verilog\/leading_ones_templat.v",
+      "impl\/verilog\/max.v",
+      "impl\/verilog\/max_algorithmic.v",
+      "impl\/verilog\/mux_2to1.v",
+      "impl\/verilog\/mux_binary.v",
+      "impl\/verilog\/mux_binary2onehot_op.v",
+      "impl\/verilog\/mux_binary_opt.v",
+      "impl\/verilog\/mux_onehot.v",
+      "impl\/verilog\/mux_onehot_if.v",
       "impl\/verilog\/top_mux_83_8_1_1.v",
       "impl\/verilog\/top_mux_83_32_1_1.v",
       "impl\/verilog\/top.v"
@@ -643,25 +663,128 @@
       "ModuleName": "top",
       "Instances": [
         {
-          "ModuleName": "leading_ones_32_s",
-          "InstanceName": "call_ret_i_leading_ones_32_s_fu_340"
+          "ModuleName": "max_algorithmic",
+          "InstanceName": "grp_max_algorithmic_fu_284"
+        },
+        {
+          "ModuleName": "max",
+          "InstanceName": "grp_max_fu_305"
+        },
+        {
+          "ModuleName": "mux_onehot_if",
+          "InstanceName": "grp_mux_onehot_if_fu_326"
+        },
+        {
+          "ModuleName": "leading_ones_templat",
+          "InstanceName": "call_ret7_leading_ones_templat_fu_349",
+          "Instances": [{
+              "ModuleName": "leading_ones_32_s",
+              "InstanceName": "call_ret_leading_ones_32_s_fu_12"
+            }]
+        },
+        {
+          "ModuleName": "mux_onehot",
+          "InstanceName": "op2_V_assign_2_s_mux_onehot_fu_355"
         },
         {
           "ModuleName": "leading_ones_brutefo",
-          "InstanceName": "grp_leading_ones_brutefo_fu_346"
+          "InstanceName": "grp_leading_ones_brutefo_fu_378"
+        },
+        {
+          "ModuleName": "leading_ones_log2",
+          "InstanceName": "grp_leading_ones_log2_fu_384"
+        },
+        {
+          "ModuleName": "mux_binary2onehot_op",
+          "InstanceName": "op2_V_assign_4_s_mux_binary2onehot_op_fu_390"
         },
         {
           "ModuleName": "leading_ones",
-          "InstanceName": "grp_leading_ones_fu_352"
+          "InstanceName": "grp_leading_ones_fu_417"
+        },
+        {
+          "ModuleName": "mux_binary_opt",
+          "InstanceName": "op2_V_assign_5_s_mux_binary_opt_fu_423"
+        },
+        {
+          "ModuleName": "mux_binary",
+          "InstanceName": "op2_V_assign_1_s_mux_binary_fu_450"
+        },
+        {
+          "ModuleName": "mux_2to1",
+          "InstanceName": "op2_V_assign_s_mux_2to1_fu_473"
         }
       ]
     },
     "Info": {
+      "max": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "mux_binary_opt": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "1",
+        "isOneStateSeq": "0"
+      },
+      "mux_binary2onehot_op": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "1",
+        "isOneStateSeq": "0"
+      },
+      "mux_onehot_if": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "mux_onehot": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "1",
+        "isOneStateSeq": "0"
+      },
+      "mux_binary": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "1",
+        "isOneStateSeq": "0"
+      },
+      "mux_2to1": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "1",
+        "isOneStateSeq": "0"
+      },
       "leading_ones_32_s": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
         "isCombinational": "1",
+        "isOneStateSeq": "0"
+      },
+      "leading_ones_templat": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "1",
+        "isOneStateSeq": "0"
+      },
+      "leading_ones_log2": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
         "isOneStateSeq": "0"
       },
       "leading_ones_brutefo": {
@@ -678,6 +801,13 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
+      "max_algorithmic": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
       "top": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
@@ -687,6 +817,160 @@
       }
     },
     "Metrics": {
+      "max": {
+        "Latency": {
+          "LatencyBest": "1",
+          "LatencyAvg": "1",
+          "LatencyWorst": "1",
+          "PipelineII": "1",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "6.342"
+        },
+        "Area": {
+          "FF": "66",
+          "LUT": "365",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "mux_binary_opt": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "3.459"
+        },
+        "Area": {
+          "FF": "0",
+          "LUT": "48",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "mux_binary2onehot_op": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "3.727"
+        },
+        "Area": {
+          "FF": "0",
+          "LUT": "98",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "mux_onehot_if": {
+        "Latency": {
+          "LatencyBest": "1",
+          "LatencyAvg": "1",
+          "LatencyWorst": "1",
+          "PipelineII": "1",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.397"
+        },
+        "Area": {
+          "FF": "18",
+          "LUT": "226",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "mux_onehot": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "6.543"
+        },
+        "Area": {
+          "FF": "0",
+          "LUT": "168",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "mux_binary": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "2.479"
+        },
+        "Area": {
+          "FF": "0",
+          "LUT": "45",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "mux_2to1": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "1.248"
+        },
+        "Area": {
+          "FF": "0",
+          "LUT": "8",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
       "leading_ones_32_s": {
         "Latency": {
           "LatencyBest": "0",
@@ -704,6 +988,50 @@
         "Area": {
           "FF": "0",
           "LUT": "226",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "leading_ones_templat": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "6.483"
+        },
+        "Area": {
+          "FF": "0",
+          "LUT": "226",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "leading_ones_log2": {
+        "Latency": {
+          "LatencyBest": "1",
+          "LatencyAvg": "1",
+          "LatencyWorst": "1",
+          "PipelineII": "1",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "6.033"
+        },
+        "Area": {
+          "FF": "13",
+          "LUT": "142",
           "BRAM_18K": "0",
           "DSP48E": "0",
           "URAM": "0"
@@ -753,25 +1081,47 @@
           "URAM": "0"
         }
       },
-      "top": {
+      "max_algorithmic": {
         "Latency": {
-          "LatencyBest": "1",
-          "LatencyAvg": "2",
+          "LatencyBest": "4",
+          "LatencyAvg": "4",
           "LatencyWorst": "4",
-          "PipelineIIMin": "2",
-          "PipelineIIMax": "5",
-          "PipelineII": "2 ~ 5",
+          "PipelineII": "4",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "8.667"
+          "Estimate": "8.424"
         },
         "Area": {
-          "FF": "405",
-          "LUT": "2230",
+          "FF": "80",
+          "LUT": "488",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "top": {
+        "Latency": {
+          "LatencyBest": "1",
+          "LatencyAvg": "2",
+          "LatencyWorst": "5",
+          "PipelineIIMin": "2",
+          "PipelineIIMax": "6",
+          "PipelineII": "2 ~ 6",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "1.25",
+          "Estimate": "8.424"
+        },
+        "Area": {
+          "FF": "539",
+          "LUT": "2436",
           "BRAM_18K": "0",
           "DSP48E": "0",
           "URAM": "0"
@@ -789,7 +1139,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2021-04-08 02:15:57 +0800",
+    "Time": "2021-04-08 05:50:05 +0800",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2"
   }

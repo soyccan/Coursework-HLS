@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'shift_reg'" level="0">
-<item name = "Date">Wed Apr  7 22:51:49 2021
+<item name = "Date">Thu Apr  8 07:05:23 2021
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">Shift_Register</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 3.570 ns, 1.25 ns</column>
+<column name="ap_clk">10.00 ns, 3.017 ns, 1.25 ns</column>
 </table>
 </item>
 </section>
@@ -24,13 +24,20 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1, 12, 10.000 ns, 0.120 us, 1, 12, none</column>
+<column name="">1, 13, 10.000 ns, 0.130 us, 1, 13, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_shift_reg_class_fu_470">shift_reg_class, 1, 1, 10.000 ns, 10.000 ns, 1, 1, none</column>
+<column name="grp_shift_reg_en_fu_522">shift_reg_en, 1, 1, 10.000 ns, 10.000 ns, 1, 1, none</column>
+<column name="call_ret4_shift_reg_load_fu_554">shift_reg_load, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="call_ret5_shift_reg_sreset_fu_598">shift_reg_sreset, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="grp_shift_reg_ip_fu_626">shift_reg_ip, 12, 12, 0.120 us, 0.120 us, 12, 12, none</column>
+<column name="call_ret2_shift_reg_basic_fu_636">shift_reg_basic, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="call_ret1_shift_reg_template_fu_663">shift_reg_template, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -47,20 +54,27 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 324, -</column>
+<column name="Expression">-, -, 0, 2, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, -, -, -, -</column>
-<column name="Memory">1, -, 64, 32, 0</column>
-<column name="Multiplexer">-, -, -, 919, -</column>
-<column name="Register">-, -, 738, -, -</column>
+<column name="Instance">0, -, 1629, 1365, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 495, -</column>
+<column name="Register">-, -, 5, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">~0, 0, ~0, 2, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, 1, 3, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="call_ret2_shift_reg_basic_fu_636">shift_reg_basic, 0, 0, 185, 108, 0</column>
+<column name="grp_shift_reg_class_fu_470">shift_reg_class, 0, 0, 282, 354, 0</column>
+<column name="grp_shift_reg_en_fu_522">shift_reg_en, 0, 0, 282, 222, 0</column>
+<column name="grp_shift_reg_ip_fu_626">shift_reg_ip, 0, 0, 165, 165, 0</column>
+<column name="call_ret4_shift_reg_load_fu_554">shift_reg_load, 0, 0, 185, 204, 0</column>
+<column name="call_ret5_shift_reg_sreset_fu_598">shift_reg_sreset, 0, 0, 185, 204, 0</column>
+<column name="call_ret1_shift_reg_template_fu_663">shift_reg_template, 0, 0, 345, 108, 0</column>
 </table>
 </item>
 <item name = "DSP48E"><table name="" hasTotal="0">
@@ -69,8 +83,6 @@
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
-<column name="Sreg_Array_U">shift_reg_Sreg_Arcud, 0, 64, 32, 0, 12, 32, 1, 384</column>
-<column name="shift_reg0_regs_U">shift_reg_shift_rbkb, 1, 0, 0, 0, 8, 8, 1, 64</column>
 </table>
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">
@@ -79,57 +91,13 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="ap_condition_211">and, 0, 0, 2, 1, 1</column>
-<column name="or_ln44_fu_1647_p2">or, 0, 0, 2, 1, 1</column>
-<column name="select_ln10_10_fu_860_p3">select, 0, 0, 8, 1, 1</column>
-<column name="select_ln10_11_fu_875_p3">select, 0, 0, 8, 1, 1</column>
-<column name="select_ln10_1_fu_689_p3">select, 0, 0, 8, 1, 1</column>
-<column name="select_ln10_2_fu_708_p3">select, 0, 0, 8, 1, 1</column>
-<column name="select_ln10_3_fu_727_p3">select, 0, 0, 8, 1, 1</column>
-<column name="select_ln10_4_fu_746_p3">select, 0, 0, 8, 1, 1</column>
-<column name="select_ln10_5_fu_765_p3">select, 0, 0, 8, 1, 1</column>
-<column name="select_ln10_6_fu_784_p3">select, 0, 0, 8, 1, 1</column>
-<column name="select_ln10_7_fu_803_p3">select, 0, 0, 8, 1, 1</column>
-<column name="select_ln10_8_fu_822_p3">select, 0, 0, 8, 1, 1</column>
-<column name="select_ln10_9_fu_841_p3">select, 0, 0, 8, 1, 1</column>
-<column name="select_ln10_fu_676_p3">select, 0, 0, 8, 1, 1</column>
-<column name="select_ln13_10_fu_1078_p3">select, 0, 0, 8, 1, 8</column>
-<column name="select_ln13_11_fu_1093_p3">select, 0, 0, 8, 1, 8</column>
-<column name="select_ln13_1_fu_907_p3">select, 0, 0, 8, 1, 8</column>
-<column name="select_ln13_2_fu_926_p3">select, 0, 0, 8, 1, 8</column>
-<column name="select_ln13_3_fu_945_p3">select, 0, 0, 8, 1, 8</column>
-<column name="select_ln13_4_fu_964_p3">select, 0, 0, 8, 1, 8</column>
-<column name="select_ln13_5_fu_983_p3">select, 0, 0, 8, 1, 8</column>
-<column name="select_ln13_6_fu_1002_p3">select, 0, 0, 8, 1, 8</column>
-<column name="select_ln13_7_fu_1021_p3">select, 0, 0, 8, 1, 8</column>
-<column name="select_ln13_8_fu_1040_p3">select, 0, 0, 8, 1, 8</column>
-<column name="select_ln13_9_fu_1059_p3">select, 0, 0, 8, 1, 8</column>
-<column name="select_ln13_fu_894_p3">select, 0, 0, 8, 1, 8</column>
-<column name="select_ln44_10_fu_1705_p3">select, 0, 0, 8, 1, 1</column>
-<column name="select_ln44_11_fu_1711_p3">select, 0, 0, 8, 1, 8</column>
-<column name="select_ln44_12_fu_1718_p3">select, 0, 0, 8, 1, 1</column>
-<column name="select_ln44_13_fu_1724_p3">select, 0, 0, 8, 1, 8</column>
-<column name="select_ln44_14_fu_1640_p3">select, 0, 0, 8, 1, 1</column>
-<column name="select_ln44_1_fu_1737_p3">select, 0, 0, 8, 1, 8</column>
-<column name="select_ln44_2_fu_1651_p3">select, 0, 0, 8, 1, 1</column>
-<column name="select_ln44_3_fu_1657_p3">select, 0, 0, 8, 1, 8</column>
-<column name="select_ln44_4_fu_1665_p3">select, 0, 0, 8, 1, 1</column>
-<column name="select_ln44_5_fu_1671_p3">select, 0, 0, 8, 1, 8</column>
-<column name="select_ln44_6_fu_1679_p3">select, 0, 0, 8, 1, 1</column>
-<column name="select_ln44_7_fu_1685_p3">select, 0, 0, 8, 1, 8</column>
-<column name="select_ln44_8_fu_1692_p3">select, 0, 0, 8, 1, 1</column>
-<column name="select_ln44_9_fu_1698_p3">select, 0, 0, 8, 1, 8</column>
-<column name="select_ln44_fu_1731_p3">select, 0, 0, 8, 1, 1</column>
-<column name="select_ln46_fu_1635_p3">select, 0, 0, 8, 1, 8</column>
+<column name="ap_block_state2_on_subcall_done">or, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="Sreg_Array_address0">56, 13, 4, 52</column>
-<column name="Sreg_Array_ce0">9, 2, 1, 2</column>
-<column name="Sreg_Array_we0">9, 2, 1, 2</column>
-<column name="ap_NS_fsm">121, 26, 1, 26</column>
-<column name="dout0_0">38, 7, 8, 56</column>
+<column name="ap_NS_fsm">15, 3, 1, 3</column>
+<column name="dout0_0">41, 8, 8, 64</column>
 <column name="dout0_1">41, 8, 8, 64</column>
 <column name="dout0_10">38, 7, 8, 56</column>
 <column name="dout0_11">38, 7, 8, 56</column>
@@ -139,110 +107,16 @@
 <column name="dout0_5">41, 8, 8, 64</column>
 <column name="dout0_6">41, 8, 8, 64</column>
 <column name="dout0_7">41, 8, 8, 64</column>
-<column name="dout0_7_write_assig_reg_523">9, 2, 8, 16</column>
 <column name="dout0_8">38, 7, 8, 56</column>
 <column name="dout0_9">38, 7, 8, 56</column>
-<column name="dout_0_write_assign_3_reg_633">9, 2, 8, 16</column>
-<column name="dout_10_write_assig_reg_533">9, 2, 8, 16</column>
-<column name="dout_1_write_assign_5_reg_623">9, 2, 8, 16</column>
-<column name="dout_2_write_assign_5_reg_613">9, 2, 8, 16</column>
-<column name="dout_3_write_assign_5_reg_603">9, 2, 8, 16</column>
-<column name="dout_4_write_assign_4_reg_593">9, 2, 8, 16</column>
-<column name="dout_5_write_assign_4_reg_583">9, 2, 8, 16</column>
-<column name="dout_6_write_assign_4_reg_573">9, 2, 8, 16</column>
-<column name="dout_7_write_assign_4_reg_563">9, 2, 8, 16</column>
-<column name="dout_8_write_assign_4_reg_553">9, 2, 8, 16</column>
-<column name="dout_9_write_assign_4_reg_543">9, 2, 8, 16</column>
-<column name="shift_reg0_regs_address0">44, 9, 3, 27</column>
-<column name="shift_reg0_regs_address1">41, 8, 3, 24</column>
-<column name="shift_reg0_regs_d0">27, 5, 8, 40</column>
-<column name="shift_reg0_regs_d1">27, 5, 8, 40</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">25, 0, 25, 0</column>
-<column name="dout0_7_write_assig_reg_523">8, 0, 8, 0</column>
-<column name="dout_0_write_assign_3_reg_633">8, 0, 8, 0</column>
-<column name="dout_10_write_assig_reg_533">8, 0, 8, 0</column>
-<column name="dout_1_write_assign_5_reg_623">8, 0, 8, 0</column>
-<column name="dout_2_write_assign_5_reg_613">8, 0, 8, 0</column>
-<column name="dout_3_write_assign_5_reg_603">8, 0, 8, 0</column>
-<column name="dout_4_write_assign_4_reg_593">8, 0, 8, 0</column>
-<column name="dout_5_write_assign_4_reg_583">8, 0, 8, 0</column>
-<column name="dout_6_write_assign_4_reg_573">8, 0, 8, 0</column>
-<column name="dout_7_write_assign_4_reg_563">8, 0, 8, 0</column>
-<column name="dout_8_write_assign_4_reg_553">8, 0, 8, 0</column>
-<column name="dout_9_write_assign_4_reg_543">8, 0, 8, 0</column>
-<column name="or_ln44_reg_1926">1, 0, 1, 0</column>
-<column name="regs_0">32, 0, 32, 0</column>
-<column name="regs_1">32, 0, 32, 0</column>
-<column name="regs_2">32, 0, 32, 0</column>
-<column name="regs_5_0">8, 0, 8, 0</column>
-<column name="regs_5_1">8, 0, 8, 0</column>
-<column name="regs_5_10">8, 0, 8, 0</column>
-<column name="regs_5_2">8, 0, 8, 0</column>
-<column name="regs_5_3">8, 0, 8, 0</column>
-<column name="regs_5_4">8, 0, 8, 0</column>
-<column name="regs_5_5">8, 0, 8, 0</column>
-<column name="regs_5_6">8, 0, 8, 0</column>
-<column name="regs_5_7">8, 0, 8, 0</column>
-<column name="regs_5_8">8, 0, 8, 0</column>
-<column name="regs_5_9">8, 0, 8, 0</column>
-<column name="regs_6_0">8, 0, 8, 0</column>
-<column name="regs_6_1">8, 0, 8, 0</column>
-<column name="regs_6_10">8, 0, 8, 0</column>
-<column name="regs_6_11">8, 0, 8, 0</column>
-<column name="regs_6_2">8, 0, 8, 0</column>
-<column name="regs_6_3">8, 0, 8, 0</column>
-<column name="regs_6_4">8, 0, 8, 0</column>
-<column name="regs_6_5">8, 0, 8, 0</column>
-<column name="regs_6_6">8, 0, 8, 0</column>
-<column name="regs_6_7">8, 0, 8, 0</column>
-<column name="regs_6_8">8, 0, 8, 0</column>
-<column name="regs_6_9">8, 0, 8, 0</column>
-<column name="regs_7_0">8, 0, 8, 0</column>
-<column name="regs_7_1">8, 0, 8, 0</column>
-<column name="regs_7_10">8, 0, 8, 0</column>
-<column name="regs_7_2">8, 0, 8, 0</column>
-<column name="regs_7_3">8, 0, 8, 0</column>
-<column name="regs_7_4">8, 0, 8, 0</column>
-<column name="regs_7_5">8, 0, 8, 0</column>
-<column name="regs_7_6">8, 0, 8, 0</column>
-<column name="regs_7_7">8, 0, 8, 0</column>
-<column name="regs_7_8">8, 0, 8, 0</column>
-<column name="regs_7_9">8, 0, 8, 0</column>
-<column name="regs_8_0">8, 0, 8, 0</column>
-<column name="regs_8_1">8, 0, 8, 0</column>
-<column name="regs_8_10">8, 0, 8, 0</column>
-<column name="regs_8_2">8, 0, 8, 0</column>
-<column name="regs_8_3">8, 0, 8, 0</column>
-<column name="regs_8_4">8, 0, 8, 0</column>
-<column name="regs_8_5">8, 0, 8, 0</column>
-<column name="regs_8_6">8, 0, 8, 0</column>
-<column name="regs_8_7">8, 0, 8, 0</column>
-<column name="regs_8_8">8, 0, 8, 0</column>
-<column name="regs_8_9">8, 0, 8, 0</column>
-<column name="regs_9_0">8, 0, 8, 0</column>
-<column name="regs_9_1">8, 0, 8, 0</column>
-<column name="regs_9_2">8, 0, 8, 0</column>
-<column name="regs_9_3">8, 0, 8, 0</column>
-<column name="regs_9_4">8, 0, 8, 0</column>
-<column name="regs_9_5">8, 0, 8, 0</column>
-<column name="regs_9_6">8, 0, 8, 0</column>
-<column name="select_ln44_11_reg_1955">8, 0, 8, 0</column>
-<column name="select_ln44_13_reg_1960">8, 0, 8, 0</column>
-<column name="select_ln44_14_reg_1921">8, 0, 8, 0</column>
-<column name="select_ln44_1_reg_1965">8, 0, 8, 0</column>
-<column name="select_ln44_3_reg_1935">8, 0, 8, 0</column>
-<column name="select_ln44_5_reg_1940">8, 0, 8, 0</column>
-<column name="select_ln44_7_reg_1945">8, 0, 8, 0</column>
-<column name="select_ln44_9_reg_1950">8, 0, 8, 0</column>
-<column name="shift_reg0_regs_load_7_reg_1915">8, 0, 8, 0</column>
-<column name="shift_reg1_regs_0">8, 0, 8, 0</column>
-<column name="shift_reg1_regs_1">8, 0, 8, 0</column>
-<column name="shift_reg1_regs_2">8, 0, 8, 0</column>
-<column name="shift_reg1_regs_3">8, 0, 8, 0</column>
+<column name="ap_CS_fsm">2, 0, 2, 0</column>
+<column name="grp_shift_reg_class_fu_470_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_shift_reg_en_fu_522_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_shift_reg_ip_fu_626_ap_start_reg">1, 0, 1, 0</column>
 </table>
 </item>
 </section>

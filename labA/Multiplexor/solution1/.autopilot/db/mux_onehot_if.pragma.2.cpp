@@ -6416,7 +6416,8 @@ dType mux_onehot_if(dType din[8], ap_uint<8> sel);
 
 dType mux_onehot_if(dType din[8], ap_uint<8> sel)
 {_ssdm_SpecArrayDimSize(din, 8);
-    dType tmp;
+_ssdm_InlineSelf(2, "");
+ dType tmp;
     if (sel == 1)
         tmp = din[0];
     else if (sel == 2)

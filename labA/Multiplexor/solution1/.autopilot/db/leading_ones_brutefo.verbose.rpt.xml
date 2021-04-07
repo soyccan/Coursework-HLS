@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'leading_ones_brutefo'" level="0">
-<item name = "Date">Thu Apr  8 02:15:55 2021
+<item name = "Date">Thu Apr  8 05:50:03 2021
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">Multiplexor</item>
@@ -104,10 +104,10 @@
 <column name="ap_condition_261">and, 0, 0, 2, 1, 1</column>
 <column name="ap_condition_265">and, 0, 0, 2, 1, 1</column>
 <column name="ap_condition_77">and, 0, 0, 2, 1, 1</column>
-<column name="or_ln19_fu_623_p2">or, 0, 0, 2, 1, 1</column>
-<column name="or_ln25_fu_641_p2">or, 0, 0, 2, 1, 1</column>
-<column name="select_ln12_fu_503_p3">select, 0, 0, 6, 1, 6</column>
-<column name="select_ln24_fu_633_p3">select, 0, 0, 5, 1, 5</column>
+<column name="or_ln20_fu_623_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln26_fu_641_p2">or, 0, 0, 2, 1, 1</column>
+<column name="select_ln13_fu_503_p3">select, 0, 0, 6, 1, 6</column>
+<column name="select_ln25_fu_633_p3">select, 0, 0, 5, 1, 5</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -117,8 +117,8 @@
 <column name="ap_return_1">9, 2, 5, 10</column>
 <column name="flagl_0_reg_325">9, 2, 1, 2</column>
 <column name="flagu_0_reg_208">9, 2, 1, 2</column>
-<column name="phi_ln24_1_reg_262">62, 15, 4, 60</column>
-<column name="phi_ln24_reg_140">65, 16, 5, 80</column>
+<column name="phi_ln25_1_reg_262">62, 15, 4, 60</column>
+<column name="phi_ln25_reg_140">65, 16, 5, 80</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -128,8 +128,8 @@
 <column name="ap_return_1_preg">5, 0, 5, 0</column>
 <column name="flagl_0_reg_325">1, 0, 1, 0</column>
 <column name="flagu_0_reg_208">1, 0, 1, 0</column>
-<column name="phi_ln24_1_reg_262">4, 0, 4, 0</column>
-<column name="phi_ln24_reg_140">5, 0, 5, 0</column>
+<column name="phi_ln25_1_reg_262">4, 0, 4, 0</column>
+<column name="phi_ln25_reg_140">5, 0, 5, 0</column>
 </table>
 </item>
 </section>

@@ -2,6 +2,7 @@
 
 void max_algorithmic(int din[N_REGS], int &dout)
 {
+#pragma HLS INLINE off
     int max;
     int tmp;
 

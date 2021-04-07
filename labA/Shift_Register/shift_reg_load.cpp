@@ -5,6 +5,8 @@ void shift_reg_load(dType din,
                     dType dout[N_REGS],
                     bool load)
 {
+#pragma HLS INLINE off
+
     static dType regs[N_REGS];
 
 SHIFT:

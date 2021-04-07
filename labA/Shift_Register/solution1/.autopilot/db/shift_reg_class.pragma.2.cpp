@@ -159,14 +159,17 @@ template <typename dataType, int NUM_REGS>
 class shift_class
 {
 private:
-    dataType regs[NUM_REGS];
+ dataType regs[NUM_REGS];
     bool en;
     bool sync_rst;
     bool ld;
 
 
 public:
-    shift_class() : en(true), sync_rst(false), ld(false) {}
+    shift_class() : en(true), sync_rst(false), ld(false) {
+_ssdm_InlineSelf(0, "");
+_ssdm_SpecArrayPartition( regs, 1, "COMPLETE", 0, "");
+ }
 
 
 
@@ -175,24 +178,27 @@ public:
 
     void set_sync_rst(bool srst)
     {
-        sync_rst = srst;
+_ssdm_InlineSelf(0, "");
+ sync_rst = srst;
     }
 
     void load(bool load_in)
     {
-        ld = load_in;
+_ssdm_InlineSelf(0, "");
+ ld = load_in;
     }
 
     void set_enable(bool enable)
     {
-        en = enable;
+_ssdm_InlineSelf(0, "");
+ en = enable;
     }
 
     void shift(dataType din, dataType load_data[NUM_REGS])
     {
-    SHIFT:
+_ssdm_InlineSelf(0, "");
+ SHIFT:
         for (int i = NUM_REGS - 1; i >= 0; i--) {
-
 _ssdm_Unroll(0,0,0, "");
  if (en) {
                 if (sync_rst)
@@ -209,7 +215,8 @@ _ssdm_Unroll(0,0,0, "");
 
     dataType operator[](int i)
     {
-        return regs[i];
+_ssdm_InlineSelf(0, "");
+ return regs[i];
     }
 };
 # 2 "Shift_Register/shift_reg_class.cpp" 2
@@ -6680,6 +6687,12 @@ void shift_reg_class(dType din,
                      bool load,
                      bool en)
 {_ssdm_SpecArrayDimSize(load_data, 8);_ssdm_SpecArrayDimSize(dout0, 8);_ssdm_SpecArrayDimSize(dout1, 4);
+
+_ssdm_InlineSelf(2, "");
+
+
+_ssdm_InlineAll(1, "");
+
 
 
 

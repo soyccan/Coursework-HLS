@@ -4,6 +4,7 @@
 bool leading_ones_bruteforce(ap_uint<NUM_BITS> din,
                              ap_uint<LOG2_CEIL<NUM_BITS>::val> &dout)
 {
+#pragma HLS INLINE off
     int upper = 0, lower = 0;
     bool flagu = false;
     bool flagl = false;

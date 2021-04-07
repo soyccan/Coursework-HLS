@@ -19,6 +19,7 @@ void max_algorithmic(int din[8], int &dout);
 
 void max_algorithmic(int din[8], int &dout)
 {
+#pragma HLS INLINE off
     int max;
     int tmp;
 

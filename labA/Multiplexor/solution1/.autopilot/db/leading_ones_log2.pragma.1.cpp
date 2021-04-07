@@ -6446,7 +6446,8 @@ bool leading_ones_template(ap_uint<32> &din,
 bool leading_ones_log2(ap_uint<32> din,
                        ap_uint<LOG2_CEIL<32>::val> &dout)
 {
-    enum { P2 = NEXT_POW2<32>::val };
+_ssdm_InlineSelf(2, "");
+ enum { P2 = NEXT_POW2<32>::val };
     enum { L2 = LOG2_CEIL<32>::val };
     ap_uint<P2> upper, lower;
     ap_uint<P2> mask = 0;

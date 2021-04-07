@@ -37,21 +37,6 @@
 			<location>D:/Repo/hls/labA/Multiplexor/.apc/.tb</location>
 		</link>
 		<link>
-			<name>.reference/ap_common.h</name>
-			<type>1</type>
-			<location>C:/Xilinx/Vivado/2019.2/include/ap_common.h</location>
-		</link>
-		<link>
-			<name>.reference/ap_int.h</name>
-			<type>1</type>
-			<location>C:/Xilinx/Vivado/2019.2/include/ap_int.h</location>
-		</link>
-		<link>
-			<name>.reference/ap_int_base.h</name>
-			<type>1</type>
-			<location>C:/Xilinx/Vivado/2019.2/include/ap_int_base.h</location>
-		</link>
-		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
 			<location>D:/Repo/hls/labA/Multiplexor/solution1/.tcls</location>

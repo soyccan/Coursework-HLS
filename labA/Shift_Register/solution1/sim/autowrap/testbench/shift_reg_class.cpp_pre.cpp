@@ -10,14 +10,17 @@ template <typename dataType, int NUM_REGS>
 class shift_class
 {
 private:
-    dataType regs[NUM_REGS];
+ dataType regs[NUM_REGS];
     bool en;
     bool sync_rst;
     bool ld;
 
 
 public:
-    shift_class() : en(true), sync_rst(false), ld(false) {}
+    shift_class() : en(true), sync_rst(false), ld(false) {
+#pragma HLS INLINE
+#pragma HLS ARRAY_PARTITION variable=regs complete dim=1
+    }
 
 
 
@@ -26,24 +29,27 @@ public:
 
     void set_sync_rst(bool srst)
     {
+#pragma HLS INLINE
         sync_rst = srst;
     }
 
     void load(bool load_in)
     {
+#pragma HLS INLINE
         ld = load_in;
     }
 
     void set_enable(bool enable)
     {
+#pragma HLS INLINE
         en = enable;
     }
 
     void shift(dataType din, dataType load_data[NUM_REGS])
     {
+#pragma HLS INLINE
     SHIFT:
         for (int i = NUM_REGS - 1; i >= 0; i--) {
-
 #pragma HLS UNROLL
             if (en) {
                 if (sync_rst)
@@ -60,6 +66,7 @@ public:
 
     dataType operator[](int i)
     {
+#pragma HLS INLINE
         return regs[i];
     }
 };
@@ -63768,6 +63775,12 @@ void shift_reg_class(dType din,
                      bool load,
                      bool en)
 {
+
+#pragma HLS INLINE off
+
+
+#pragma HLS INLINE recursive
+
 
 
 

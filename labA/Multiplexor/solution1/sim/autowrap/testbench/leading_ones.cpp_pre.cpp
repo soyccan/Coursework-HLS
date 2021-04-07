@@ -63726,6 +63726,7 @@ bool leading_ones_template(ap_uint<32> &din,
 bool leading_ones(ap_uint<32> din,
                   ap_uint<LOG2_CEIL<32>::val> &dout)
 {
+#pragma HLS INLINE off
     int tmp = 0;
     bool flag = false;
     for (int i = 32 - 1; i >= 0; i--) {

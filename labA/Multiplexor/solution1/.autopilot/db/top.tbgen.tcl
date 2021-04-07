@@ -147,13 +147,13 @@ set NewPortList {[
  	{ "name": "mode", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "mode", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "8", "9", "10", "12", "13", "14", "15", "18", "19", "21", "23"],
 		"CDFG" : "top",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "4",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "5",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -161,8 +161,12 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "0",
 		"HasNonBlockingOperation" : "0",
 		"WaitState" : [
-			{"State" : "ap_ST_fsm_state4", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_leading_ones_brutefo_fu_346"},
-			{"State" : "ap_ST_fsm_state4", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_leading_ones_fu_352"}],
+			{"State" : "ap_ST_fsm_state2", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_max_algorithmic_fu_284"},
+			{"State" : "ap_ST_fsm_state2", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_max_fu_305"},
+			{"State" : "ap_ST_fsm_state2", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_mux_onehot_if_fu_326"},
+			{"State" : "ap_ST_fsm_state2", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_leading_ones_brutefo_fu_378"},
+			{"State" : "ap_ST_fsm_state2", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_leading_ones_log2_fu_384"},
+			{"State" : "ap_ST_fsm_state2", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_leading_ones_fu_417"}],
 		"Port" : [
 			{"Name" : "leadone_in_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "leadone_out_V", "Type" : "Vld", "Direction" : "O"},
@@ -190,7 +194,95 @@ set RtlHierarchyInfo {[
 			{"Name" : "max_in_7", "Type" : "None", "Direction" : "I"},
 			{"Name" : "max_out", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "mode", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.call_ret_i_leading_ones_32_s_fu_340", "Parent" : "0",
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_max_algorithmic_fu_284", "Parent" : "0", "Child" : ["2", "3", "4", "5", "6", "7"],
+		"CDFG" : "max_algorithmic",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "4", "EstimateLatencyMax" : "4",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"Port" : [
+			{"Name" : "din_0_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_1_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_2_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_3_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_4_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_5_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_6_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_7_read", "Type" : "None", "Direction" : "I"}]},
+	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_max_algorithmic_fu_284.top_mux_83_32_1_1_U71", "Parent" : "1"},
+	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_max_algorithmic_fu_284.top_mux_83_32_1_1_U72", "Parent" : "1"},
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_max_algorithmic_fu_284.top_mux_83_32_1_1_U73", "Parent" : "1"},
+	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_max_algorithmic_fu_284.top_mux_83_32_1_1_U74", "Parent" : "1"},
+	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_max_algorithmic_fu_284.top_mux_83_32_1_1_U75", "Parent" : "1"},
+	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_max_algorithmic_fu_284.top_mux_83_32_1_1_U76", "Parent" : "1"},
+	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_max_fu_305", "Parent" : "0",
+		"CDFG" : "max",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "1",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"Port" : [
+			{"Name" : "din_0_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_1_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_2_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_3_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_4_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_5_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_6_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_7_read", "Type" : "None", "Direction" : "I"}]},
+	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_mux_onehot_if_fu_326", "Parent" : "0",
+		"CDFG" : "mux_onehot_if",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "1",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"Port" : [
+			{"Name" : "din_0_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_1_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_2_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_3_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_4_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_5_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_6_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_7_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sel_V", "Type" : "None", "Direction" : "I"}]},
+	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.call_ret7_leading_ones_templat_fu_349", "Parent" : "0", "Child" : ["11"],
+		"CDFG" : "leading_ones_templat",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "1",
+		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
+		"Combinational" : "1",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"Port" : [
+			{"Name" : "din_V_read", "Type" : "None", "Direction" : "I"}]},
+	{"ID" : "11", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.call_ret7_leading_ones_templat_fu_349.call_ret_leading_ones_32_s_fu_12", "Parent" : "10",
 		"CDFG" : "leading_ones_32_s",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
@@ -205,7 +297,30 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"Port" : [
 			{"Name" : "din_V_read", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_leading_ones_brutefo_fu_346", "Parent" : "0",
+	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.op2_V_assign_2_s_mux_onehot_fu_355", "Parent" : "0",
+		"CDFG" : "mux_onehot",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "1",
+		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
+		"Combinational" : "1",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"Port" : [
+			{"Name" : "din_0_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_1_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_2_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_3_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_4_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_5_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_6_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_7_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sel_V", "Type" : "None", "Direction" : "I"}]},
+	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_leading_ones_brutefo_fu_378", "Parent" : "0",
 		"CDFG" : "leading_ones_brutefo",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -220,7 +335,49 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"Port" : [
 			{"Name" : "din_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_leading_ones_fu_352", "Parent" : "0",
+	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_leading_ones_log2_fu_384", "Parent" : "0",
+		"CDFG" : "leading_ones_log2",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "1",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"Port" : [
+			{"Name" : "din_V", "Type" : "None", "Direction" : "I"}]},
+	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.op2_V_assign_4_s_mux_binary2onehot_op_fu_390", "Parent" : "0", "Child" : ["16", "17"],
+		"CDFG" : "mux_binary2onehot_op",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "1",
+		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
+		"Combinational" : "1",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"Port" : [
+			{"Name" : "din_0_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_1_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_2_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_3_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_4_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_5_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_6_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_7_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sel0_V", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sel1_V", "Type" : "None", "Direction" : "I"},
+			{"Name" : "s", "Type" : "None", "Direction" : "I"}]},
+	{"ID" : "16", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.op2_V_assign_4_s_mux_binary2onehot_op_fu_390.top_mux_83_8_1_1_U22", "Parent" : "15"},
+	{"ID" : "17", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.op2_V_assign_4_s_mux_binary2onehot_op_fu_390.top_mux_83_8_1_1_U23", "Parent" : "15"},
+	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_leading_ones_fu_417", "Parent" : "0",
 		"CDFG" : "leading_ones",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -235,15 +392,73 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"Port" : [
 			{"Name" : "din_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.top_mux_83_8_1_1_U4", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.top_mux_83_8_1_1_U5", "Parent" : "0"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.top_mux_83_8_1_1_U6", "Parent" : "0"},
-	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.top_mux_83_32_1_1_U7", "Parent" : "0"},
-	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.top_mux_83_32_1_1_U8", "Parent" : "0"},
-	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.top_mux_83_32_1_1_U9", "Parent" : "0"},
-	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.top_mux_83_32_1_1_U10", "Parent" : "0"},
-	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.top_mux_83_32_1_1_U11", "Parent" : "0"},
-	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.top_mux_83_32_1_1_U12", "Parent" : "0"}]}
+	{"ID" : "19", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.op2_V_assign_5_s_mux_binary_opt_fu_423", "Parent" : "0", "Child" : ["20"],
+		"CDFG" : "mux_binary_opt",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "1",
+		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
+		"Combinational" : "1",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"Port" : [
+			{"Name" : "din_0_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_1_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_2_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_3_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_4_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_5_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_6_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_7_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sel0_V", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sel1_V", "Type" : "None", "Direction" : "I"},
+			{"Name" : "s", "Type" : "None", "Direction" : "I"}]},
+	{"ID" : "20", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.op2_V_assign_5_s_mux_binary_opt_fu_423.top_mux_83_8_1_1_U9", "Parent" : "19"},
+	{"ID" : "21", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.op2_V_assign_1_s_mux_binary_fu_450", "Parent" : "0", "Child" : ["22"],
+		"CDFG" : "mux_binary",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "1",
+		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
+		"Combinational" : "1",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"Port" : [
+			{"Name" : "din_0_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_1_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_2_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_3_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_4_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_5_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_6_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_7_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sel_V", "Type" : "None", "Direction" : "I"}]},
+	{"ID" : "22", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.op2_V_assign_1_s_mux_binary_fu_450.top_mux_83_8_1_1_U53", "Parent" : "21"},
+	{"ID" : "23", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.op2_V_assign_s_mux_2to1_fu_473", "Parent" : "0",
+		"CDFG" : "mux_2to1",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "1", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "1",
+		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
+		"Combinational" : "1",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"Port" : [
+			{"Name" : "din_0_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din_1_V_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sel", "Type" : "None", "Direction" : "I"}]}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -267,25 +482,105 @@ set ArgLastReadFirstWriteLatency {
 		max_in_0 {Type I LastRead 0 FirstWrite -1}
 		max_in_1 {Type I LastRead 0 FirstWrite -1}
 		max_in_2 {Type I LastRead 0 FirstWrite -1}
-		max_in_3 {Type I LastRead 1 FirstWrite -1}
-		max_in_4 {Type I LastRead 2 FirstWrite -1}
-		max_in_5 {Type I LastRead 2 FirstWrite -1}
-		max_in_6 {Type I LastRead 3 FirstWrite -1}
-		max_in_7 {Type I LastRead 4 FirstWrite -1}
+		max_in_3 {Type I LastRead 0 FirstWrite -1}
+		max_in_4 {Type I LastRead 0 FirstWrite -1}
+		max_in_5 {Type I LastRead 0 FirstWrite -1}
+		max_in_6 {Type I LastRead 0 FirstWrite -1}
+		max_in_7 {Type I LastRead 0 FirstWrite -1}
 		max_out {Type O LastRead -1 FirstWrite 1}
 		mode {Type I LastRead 0 FirstWrite -1}}
+	max_algorithmic {
+		din_0_read {Type I LastRead 0 FirstWrite -1}
+		din_1_read {Type I LastRead 0 FirstWrite -1}
+		din_2_read {Type I LastRead 0 FirstWrite -1}
+		din_3_read {Type I LastRead 1 FirstWrite -1}
+		din_4_read {Type I LastRead 2 FirstWrite -1}
+		din_5_read {Type I LastRead 2 FirstWrite -1}
+		din_6_read {Type I LastRead 3 FirstWrite -1}
+		din_7_read {Type I LastRead 4 FirstWrite -1}}
+	max {
+		din_0_read {Type I LastRead 0 FirstWrite -1}
+		din_1_read {Type I LastRead 0 FirstWrite -1}
+		din_2_read {Type I LastRead 0 FirstWrite -1}
+		din_3_read {Type I LastRead 0 FirstWrite -1}
+		din_4_read {Type I LastRead 0 FirstWrite -1}
+		din_5_read {Type I LastRead 0 FirstWrite -1}
+		din_6_read {Type I LastRead 0 FirstWrite -1}
+		din_7_read {Type I LastRead 0 FirstWrite -1}}
+	mux_onehot_if {
+		din_0_V_read {Type I LastRead 1 FirstWrite -1}
+		din_1_V_read {Type I LastRead 1 FirstWrite -1}
+		din_2_V_read {Type I LastRead 1 FirstWrite -1}
+		din_3_V_read {Type I LastRead 1 FirstWrite -1}
+		din_4_V_read {Type I LastRead 1 FirstWrite -1}
+		din_5_V_read {Type I LastRead 1 FirstWrite -1}
+		din_6_V_read {Type I LastRead 1 FirstWrite -1}
+		din_7_V_read {Type I LastRead 1 FirstWrite -1}
+		sel_V {Type I LastRead 0 FirstWrite -1}}
+	leading_ones_templat {
+		din_V_read {Type I LastRead 0 FirstWrite -1}}
 	leading_ones_32_s {
 		din_V_read {Type I LastRead 0 FirstWrite -1}}
+	mux_onehot {
+		din_0_V_read {Type I LastRead 0 FirstWrite -1}
+		din_1_V_read {Type I LastRead 0 FirstWrite -1}
+		din_2_V_read {Type I LastRead 0 FirstWrite -1}
+		din_3_V_read {Type I LastRead 0 FirstWrite -1}
+		din_4_V_read {Type I LastRead 0 FirstWrite -1}
+		din_5_V_read {Type I LastRead 0 FirstWrite -1}
+		din_6_V_read {Type I LastRead 0 FirstWrite -1}
+		din_7_V_read {Type I LastRead 0 FirstWrite -1}
+		sel_V {Type I LastRead 0 FirstWrite -1}}
 	leading_ones_brutefo {
 		din_V {Type I LastRead 0 FirstWrite -1}}
+	leading_ones_log2 {
+		din_V {Type I LastRead 0 FirstWrite -1}}
+	mux_binary2onehot_op {
+		din_0_V_read {Type I LastRead 0 FirstWrite -1}
+		din_1_V_read {Type I LastRead 0 FirstWrite -1}
+		din_2_V_read {Type I LastRead 0 FirstWrite -1}
+		din_3_V_read {Type I LastRead 0 FirstWrite -1}
+		din_4_V_read {Type I LastRead 0 FirstWrite -1}
+		din_5_V_read {Type I LastRead 0 FirstWrite -1}
+		din_6_V_read {Type I LastRead 0 FirstWrite -1}
+		din_7_V_read {Type I LastRead 0 FirstWrite -1}
+		sel0_V {Type I LastRead 0 FirstWrite -1}
+		sel1_V {Type I LastRead 0 FirstWrite -1}
+		s {Type I LastRead 0 FirstWrite -1}}
 	leading_ones {
-		din_V {Type I LastRead 0 FirstWrite -1}}}
+		din_V {Type I LastRead 0 FirstWrite -1}}
+	mux_binary_opt {
+		din_0_V_read {Type I LastRead 0 FirstWrite -1}
+		din_1_V_read {Type I LastRead 0 FirstWrite -1}
+		din_2_V_read {Type I LastRead 0 FirstWrite -1}
+		din_3_V_read {Type I LastRead 0 FirstWrite -1}
+		din_4_V_read {Type I LastRead 0 FirstWrite -1}
+		din_5_V_read {Type I LastRead 0 FirstWrite -1}
+		din_6_V_read {Type I LastRead 0 FirstWrite -1}
+		din_7_V_read {Type I LastRead 0 FirstWrite -1}
+		sel0_V {Type I LastRead 0 FirstWrite -1}
+		sel1_V {Type I LastRead 0 FirstWrite -1}
+		s {Type I LastRead 0 FirstWrite -1}}
+	mux_binary {
+		din_0_V_read {Type I LastRead 0 FirstWrite -1}
+		din_1_V_read {Type I LastRead 0 FirstWrite -1}
+		din_2_V_read {Type I LastRead 0 FirstWrite -1}
+		din_3_V_read {Type I LastRead 0 FirstWrite -1}
+		din_4_V_read {Type I LastRead 0 FirstWrite -1}
+		din_5_V_read {Type I LastRead 0 FirstWrite -1}
+		din_6_V_read {Type I LastRead 0 FirstWrite -1}
+		din_7_V_read {Type I LastRead 0 FirstWrite -1}
+		sel_V {Type I LastRead 0 FirstWrite -1}}
+	mux_2to1 {
+		din_0_V_read {Type I LastRead 0 FirstWrite -1}
+		din_1_V_read {Type I LastRead 0 FirstWrite -1}
+		sel {Type I LastRead 0 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "1", "Max" : "4"}
-	, {"Name" : "Interval", "Min" : "2", "Max" : "5"}
+	{"Name" : "Latency", "Min" : "1", "Max" : "5"}
+	, {"Name" : "Interval", "Min" : "2", "Max" : "6"}
 ]}
 
 set PipelineEnableSignalInfo {[

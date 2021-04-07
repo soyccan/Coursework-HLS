@@ -9,6 +9,12 @@ void shift_reg_class(dType din,
                      bool load,
                      bool en)
 {
+// do not inline upward
+#pragma HLS INLINE off
+
+// recursively inline all function call below
+#pragma HLS INLINE recursive
+
     // connect shift_reg0 wires:
     //   load data
     //   enable

@@ -63813,6 +63813,8 @@ void shift_reg_ip(dType din,
                   dType dout[12],
                   bool en)
 {
+#pragma HLS INLINE off
+#pragma HLS INLINE recursive
 
 
 

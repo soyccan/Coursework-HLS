@@ -47,7 +47,7 @@
             <Obj>
               <type>0</type>
               <id>2</id>
-              <name>din_V_read_1</name>
+              <name>din_V_read_2</name>
               <fileName>Multiplexor/leading_ones_tmpl.h</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>9</lineNumber>
@@ -13626,7 +13626,7 @@
       <count>1</count>
       <item_version>0</item_version>
       <item>
-        <first>din_V_read_1_read_fu_98</first>
+        <first>din_V_read_2_read_fu_98</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

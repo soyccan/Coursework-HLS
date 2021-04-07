@@ -6508,7 +6508,6 @@ void top(ap_uint<32> &leadone_in,
          int &max_out,
          int mode)
 {_ssdm_SpecArrayDimSize(mux_in, 8);_ssdm_SpecArrayDimSize(max_in, 8);
-#pragma HLS INLINE off
 #pragma HLS ARRAY_PARTITION variable=&max_in complete dim=1
 #pragma HLS ARRAY_PARTITION variable=&mux_in complete dim=1
  switch (mode) {

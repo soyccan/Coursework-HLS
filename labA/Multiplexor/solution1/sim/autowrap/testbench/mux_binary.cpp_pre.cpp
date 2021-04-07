@@ -63698,5 +63698,6 @@ dType mux_onehot_if(dType din[8], ap_uint<8> sel);
 
 dType mux_binary(dType din[8], sType sel)
 {
+#pragma HLS INLINE off
     return din[sel];
 }

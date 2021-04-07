@@ -42,5 +42,6 @@ T max(T *a)
 # 3 "D:/Repo/hls/labA/Multiplexor/max.cpp" 2
 void max(int din[8], int &dout)
 {
+#pragma HLS INLINE off
     dout = max<8>(din);
 }

@@ -203,19 +203,23 @@ set NewPortList {[
  	{ "name": "select_V", "direction": "in", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "select_V", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "7", "8"],
 		"CDFG" : "shift_reg",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "12",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "13",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
 		"HasSubDataflow" : "0",
 		"InDataflowNetwork" : "0",
 		"HasNonBlockingOperation" : "0",
+		"WaitState" : [
+			{"State" : "ap_ST_fsm_state2", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_shift_reg_class_fu_470"},
+			{"State" : "ap_ST_fsm_state2", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_shift_reg_en_fu_522"},
+			{"State" : "ap_ST_fsm_state2", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_shift_reg_ip_fu_626"}],
 		"Port" : [
 			{"Name" : "din0", "Type" : "None", "Direction" : "I"},
 			{"Name" : "din1", "Type" : "None", "Direction" : "I"},
@@ -251,17 +255,264 @@ set RtlHierarchyInfo {[
 			{"Name" : "load", "Type" : "None", "Direction" : "I"},
 			{"Name" : "en", "Type" : "None", "Direction" : "I"},
 			{"Name" : "select_V", "Type" : "None", "Direction" : "I"},
-			{"Name" : "regs_5_10", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "regs_5_9", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "regs_5_8", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "regs_5_7", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "regs_5_6", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "regs_5_5", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "regs_5_4", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "regs_5_3", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "regs_5_2", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "regs_5_1", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "regs_5_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "regs_5_10", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "7", "SubInstance" : "call_ret2_shift_reg_basic_fu_636", "Port" : "regs_5_10"}]},
+			{"Name" : "regs_5_9", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "7", "SubInstance" : "call_ret2_shift_reg_basic_fu_636", "Port" : "regs_5_9"}]},
+			{"Name" : "regs_5_8", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "7", "SubInstance" : "call_ret2_shift_reg_basic_fu_636", "Port" : "regs_5_8"}]},
+			{"Name" : "regs_5_7", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "7", "SubInstance" : "call_ret2_shift_reg_basic_fu_636", "Port" : "regs_5_7"}]},
+			{"Name" : "regs_5_6", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "7", "SubInstance" : "call_ret2_shift_reg_basic_fu_636", "Port" : "regs_5_6"}]},
+			{"Name" : "regs_5_5", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "7", "SubInstance" : "call_ret2_shift_reg_basic_fu_636", "Port" : "regs_5_5"}]},
+			{"Name" : "regs_5_4", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "7", "SubInstance" : "call_ret2_shift_reg_basic_fu_636", "Port" : "regs_5_4"}]},
+			{"Name" : "regs_5_3", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "7", "SubInstance" : "call_ret2_shift_reg_basic_fu_636", "Port" : "regs_5_3"}]},
+			{"Name" : "regs_5_2", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "7", "SubInstance" : "call_ret2_shift_reg_basic_fu_636", "Port" : "regs_5_2"}]},
+			{"Name" : "regs_5_1", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "7", "SubInstance" : "call_ret2_shift_reg_basic_fu_636", "Port" : "regs_5_1"}]},
+			{"Name" : "regs_5_0", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "7", "SubInstance" : "call_ret2_shift_reg_basic_fu_636", "Port" : "regs_5_0"}]},
+			{"Name" : "regs_6_10", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "2", "SubInstance" : "grp_shift_reg_en_fu_522", "Port" : "regs_6_10"}]},
+			{"Name" : "regs_6_9", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "2", "SubInstance" : "grp_shift_reg_en_fu_522", "Port" : "regs_6_9"}]},
+			{"Name" : "regs_6_8", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "2", "SubInstance" : "grp_shift_reg_en_fu_522", "Port" : "regs_6_8"}]},
+			{"Name" : "regs_6_7", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "2", "SubInstance" : "grp_shift_reg_en_fu_522", "Port" : "regs_6_7"}]},
+			{"Name" : "regs_6_6", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "2", "SubInstance" : "grp_shift_reg_en_fu_522", "Port" : "regs_6_6"}]},
+			{"Name" : "regs_6_5", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "2", "SubInstance" : "grp_shift_reg_en_fu_522", "Port" : "regs_6_5"}]},
+			{"Name" : "regs_6_4", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "2", "SubInstance" : "grp_shift_reg_en_fu_522", "Port" : "regs_6_4"}]},
+			{"Name" : "regs_6_3", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "2", "SubInstance" : "grp_shift_reg_en_fu_522", "Port" : "regs_6_3"}]},
+			{"Name" : "regs_6_2", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "2", "SubInstance" : "grp_shift_reg_en_fu_522", "Port" : "regs_6_2"}]},
+			{"Name" : "regs_6_1", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "2", "SubInstance" : "grp_shift_reg_en_fu_522", "Port" : "regs_6_1"}]},
+			{"Name" : "regs_6_0", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "2", "SubInstance" : "grp_shift_reg_en_fu_522", "Port" : "regs_6_0"}]},
+			{"Name" : "regs_6_11", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "2", "SubInstance" : "grp_shift_reg_en_fu_522", "Port" : "regs_6_11"}]},
+			{"Name" : "regs_7_10", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "3", "SubInstance" : "call_ret4_shift_reg_load_fu_554", "Port" : "regs_7_10"}]},
+			{"Name" : "regs_7_9", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "3", "SubInstance" : "call_ret4_shift_reg_load_fu_554", "Port" : "regs_7_9"}]},
+			{"Name" : "regs_7_8", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "3", "SubInstance" : "call_ret4_shift_reg_load_fu_554", "Port" : "regs_7_8"}]},
+			{"Name" : "regs_7_7", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "3", "SubInstance" : "call_ret4_shift_reg_load_fu_554", "Port" : "regs_7_7"}]},
+			{"Name" : "regs_7_6", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "3", "SubInstance" : "call_ret4_shift_reg_load_fu_554", "Port" : "regs_7_6"}]},
+			{"Name" : "regs_7_5", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "3", "SubInstance" : "call_ret4_shift_reg_load_fu_554", "Port" : "regs_7_5"}]},
+			{"Name" : "regs_7_4", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "3", "SubInstance" : "call_ret4_shift_reg_load_fu_554", "Port" : "regs_7_4"}]},
+			{"Name" : "regs_7_3", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "3", "SubInstance" : "call_ret4_shift_reg_load_fu_554", "Port" : "regs_7_3"}]},
+			{"Name" : "regs_7_2", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "3", "SubInstance" : "call_ret4_shift_reg_load_fu_554", "Port" : "regs_7_2"}]},
+			{"Name" : "regs_7_1", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "3", "SubInstance" : "call_ret4_shift_reg_load_fu_554", "Port" : "regs_7_1"}]},
+			{"Name" : "regs_7_0", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "3", "SubInstance" : "call_ret4_shift_reg_load_fu_554", "Port" : "regs_7_0"}]},
+			{"Name" : "regs_8_10", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "4", "SubInstance" : "call_ret5_shift_reg_sreset_fu_598", "Port" : "regs_8_10"}]},
+			{"Name" : "regs_8_9", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "4", "SubInstance" : "call_ret5_shift_reg_sreset_fu_598", "Port" : "regs_8_9"}]},
+			{"Name" : "regs_8_8", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "4", "SubInstance" : "call_ret5_shift_reg_sreset_fu_598", "Port" : "regs_8_8"}]},
+			{"Name" : "regs_8_7", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "4", "SubInstance" : "call_ret5_shift_reg_sreset_fu_598", "Port" : "regs_8_7"}]},
+			{"Name" : "regs_8_6", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "4", "SubInstance" : "call_ret5_shift_reg_sreset_fu_598", "Port" : "regs_8_6"}]},
+			{"Name" : "regs_8_5", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "4", "SubInstance" : "call_ret5_shift_reg_sreset_fu_598", "Port" : "regs_8_5"}]},
+			{"Name" : "regs_8_4", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "4", "SubInstance" : "call_ret5_shift_reg_sreset_fu_598", "Port" : "regs_8_4"}]},
+			{"Name" : "regs_8_3", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "4", "SubInstance" : "call_ret5_shift_reg_sreset_fu_598", "Port" : "regs_8_3"}]},
+			{"Name" : "regs_8_2", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "4", "SubInstance" : "call_ret5_shift_reg_sreset_fu_598", "Port" : "regs_8_2"}]},
+			{"Name" : "regs_8_1", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "4", "SubInstance" : "call_ret5_shift_reg_sreset_fu_598", "Port" : "regs_8_1"}]},
+			{"Name" : "regs_8_0", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "4", "SubInstance" : "call_ret5_shift_reg_sreset_fu_598", "Port" : "regs_8_0"}]},
+			{"Name" : "shift_reg0_regs_7", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "grp_shift_reg_class_fu_470", "Port" : "shift_reg0_regs_7"}]},
+			{"Name" : "shift_reg1_regs_2", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "grp_shift_reg_class_fu_470", "Port" : "shift_reg1_regs_2"}]},
+			{"Name" : "shift_reg1_regs_1", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "grp_shift_reg_class_fu_470", "Port" : "shift_reg1_regs_1"}]},
+			{"Name" : "shift_reg1_regs_0", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "grp_shift_reg_class_fu_470", "Port" : "shift_reg1_regs_0"}]},
+			{"Name" : "shift_reg0_regs_6", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "grp_shift_reg_class_fu_470", "Port" : "shift_reg0_regs_6"}]},
+			{"Name" : "shift_reg0_regs_5", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "grp_shift_reg_class_fu_470", "Port" : "shift_reg0_regs_5"}]},
+			{"Name" : "shift_reg0_regs_4", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "grp_shift_reg_class_fu_470", "Port" : "shift_reg0_regs_4"}]},
+			{"Name" : "shift_reg0_regs_3", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "grp_shift_reg_class_fu_470", "Port" : "shift_reg0_regs_3"}]},
+			{"Name" : "shift_reg0_regs_2", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "grp_shift_reg_class_fu_470", "Port" : "shift_reg0_regs_2"}]},
+			{"Name" : "shift_reg0_regs_1", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "grp_shift_reg_class_fu_470", "Port" : "shift_reg0_regs_1"}]},
+			{"Name" : "shift_reg0_regs_0", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "grp_shift_reg_class_fu_470", "Port" : "shift_reg0_regs_0"}]},
+			{"Name" : "shift_reg1_regs_3", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "1", "SubInstance" : "grp_shift_reg_class_fu_470", "Port" : "shift_reg1_regs_3"}]},
+			{"Name" : "Sreg_Array", "Type" : "Memory", "Direction" : "X",
+				"SubConnect" : [
+					{"ID" : "5", "SubInstance" : "grp_shift_reg_ip_fu_626", "Port" : "Sreg_Array"}]},
+			{"Name" : "regs_9_6", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "8", "SubInstance" : "call_ret1_shift_reg_template_fu_663", "Port" : "regs_9_6"}]},
+			{"Name" : "regs_9_5", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "8", "SubInstance" : "call_ret1_shift_reg_template_fu_663", "Port" : "regs_9_5"}]},
+			{"Name" : "regs_9_4", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "8", "SubInstance" : "call_ret1_shift_reg_template_fu_663", "Port" : "regs_9_4"}]},
+			{"Name" : "regs_9_3", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "8", "SubInstance" : "call_ret1_shift_reg_template_fu_663", "Port" : "regs_9_3"}]},
+			{"Name" : "regs_9_2", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "8", "SubInstance" : "call_ret1_shift_reg_template_fu_663", "Port" : "regs_9_2"}]},
+			{"Name" : "regs_9_1", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "8", "SubInstance" : "call_ret1_shift_reg_template_fu_663", "Port" : "regs_9_1"}]},
+			{"Name" : "regs_9_0", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "8", "SubInstance" : "call_ret1_shift_reg_template_fu_663", "Port" : "regs_9_0"}]},
+			{"Name" : "regs_2", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "8", "SubInstance" : "call_ret1_shift_reg_template_fu_663", "Port" : "regs_2"}]},
+			{"Name" : "regs_1", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "8", "SubInstance" : "call_ret1_shift_reg_template_fu_663", "Port" : "regs_1"}]},
+			{"Name" : "regs_0", "Type" : "OVld", "Direction" : "IO",
+				"SubConnect" : [
+					{"ID" : "8", "SubInstance" : "call_ret1_shift_reg_template_fu_663", "Port" : "regs_0"}]}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_shift_reg_class_fu_470", "Parent" : "0",
+		"CDFG" : "shift_reg_class",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "1",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"Port" : [
+			{"Name" : "din", "Type" : "None", "Direction" : "I"},
+			{"Name" : "load_data_0_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "load_data_1_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "load_data_2_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "load_data_3_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "load_data_4_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "load_data_5_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "load_data_6_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "load_data_7_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "srst", "Type" : "None", "Direction" : "I"},
+			{"Name" : "load", "Type" : "None", "Direction" : "I"},
+			{"Name" : "en", "Type" : "None", "Direction" : "I"},
+			{"Name" : "shift_reg0_regs_7", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "shift_reg1_regs_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "shift_reg1_regs_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "shift_reg1_regs_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "shift_reg0_regs_6", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "shift_reg0_regs_5", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "shift_reg0_regs_4", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "shift_reg0_regs_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "shift_reg0_regs_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "shift_reg0_regs_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "shift_reg0_regs_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "shift_reg1_regs_3", "Type" : "OVld", "Direction" : "IO"}]},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_shift_reg_en_fu_522", "Parent" : "0",
+		"CDFG" : "shift_reg_en",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1", "EstimateLatencyMax" : "1",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"Port" : [
+			{"Name" : "din", "Type" : "None", "Direction" : "I"},
+			{"Name" : "en", "Type" : "None", "Direction" : "I"},
 			{"Name" : "regs_6_10", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "regs_6_9", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "regs_6_8", "Type" : "OVld", "Direction" : "IO"},
@@ -273,7 +524,35 @@ set RtlHierarchyInfo {[
 			{"Name" : "regs_6_2", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "regs_6_1", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "regs_6_0", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "regs_6_11", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "regs_6_11", "Type" : "OVld", "Direction" : "IO"}]},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.call_ret4_shift_reg_load_fu_554", "Parent" : "0",
+		"CDFG" : "shift_reg_load",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "1",
+		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"Port" : [
+			{"Name" : "din", "Type" : "None", "Direction" : "I"},
+			{"Name" : "load_data_0_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "load_data_1_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "load_data_2_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "load_data_3_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "load_data_4_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "load_data_5_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "load_data_6_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "load_data_7_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "load_data_8_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "load_data_9_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "load_data_10_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "load_data_11_read", "Type" : "None", "Direction" : "I"},
+			{"Name" : "load", "Type" : "None", "Direction" : "I"},
 			{"Name" : "regs_7_10", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "regs_7_9", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "regs_7_8", "Type" : "OVld", "Direction" : "IO"},
@@ -284,7 +563,23 @@ set RtlHierarchyInfo {[
 			{"Name" : "regs_7_3", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "regs_7_2", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "regs_7_1", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "regs_7_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "regs_7_0", "Type" : "OVld", "Direction" : "IO"}]},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.call_ret5_shift_reg_sreset_fu_598", "Parent" : "0",
+		"CDFG" : "shift_reg_sreset",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "1",
+		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"Port" : [
+			{"Name" : "din", "Type" : "None", "Direction" : "I"},
+			{"Name" : "srst", "Type" : "None", "Direction" : "I"},
 			{"Name" : "regs_8_10", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "regs_8_9", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "regs_8_8", "Type" : "OVld", "Direction" : "IO"},
@@ -295,11 +590,67 @@ set RtlHierarchyInfo {[
 			{"Name" : "regs_8_3", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "regs_8_2", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "regs_8_1", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "regs_8_0", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "shift_reg1_regs_2", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "shift_reg1_regs_3", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "shift_reg1_regs_1", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "shift_reg1_regs_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "regs_8_0", "Type" : "OVld", "Direction" : "IO"}]},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_shift_reg_ip_fu_626", "Parent" : "0", "Child" : ["6"],
+		"CDFG" : "shift_reg_ip",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "12", "EstimateLatencyMax" : "12",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"Port" : [
+			{"Name" : "din", "Type" : "None", "Direction" : "I"},
+			{"Name" : "en", "Type" : "None", "Direction" : "I"},
+			{"Name" : "Sreg_Array", "Type" : "Memory", "Direction" : "X"}]},
+	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_shift_reg_ip_fu_626.Sreg_Array_U", "Parent" : "5"},
+	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.call_ret2_shift_reg_basic_fu_636", "Parent" : "0",
+		"CDFG" : "shift_reg_basic",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "1",
+		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"Port" : [
+			{"Name" : "din", "Type" : "None", "Direction" : "I"},
+			{"Name" : "regs_5_10", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "regs_5_9", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "regs_5_8", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "regs_5_7", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "regs_5_6", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "regs_5_5", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "regs_5_4", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "regs_5_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "regs_5_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "regs_5_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "regs_5_0", "Type" : "OVld", "Direction" : "IO"}]},
+	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.call_ret1_shift_reg_template_fu_663", "Parent" : "0",
+		"CDFG" : "shift_reg_template",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "1",
+		"VariableLatency" : "0", "ExactLatency" : "0", "EstimateLatencyMin" : "0", "EstimateLatencyMax" : "0",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"Port" : [
+			{"Name" : "din0", "Type" : "None", "Direction" : "I"},
+			{"Name" : "din1", "Type" : "None", "Direction" : "I"},
 			{"Name" : "regs_9_6", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "regs_9_5", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "regs_9_4", "Type" : "OVld", "Direction" : "IO"},
@@ -309,11 +660,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "regs_9_0", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "regs_2", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "regs_1", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "regs_0", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "shift_reg0_regs", "Type" : "Memory", "Direction" : "IO"},
-			{"Name" : "Sreg_Array", "Type" : "Memory", "Direction" : "X"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.shift_reg0_regs_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Sreg_Array_U", "Parent" : "0"}]}
+			{"Name" : "regs_0", "Type" : "OVld", "Direction" : "IO"}]}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -328,26 +675,26 @@ set ArgLastReadFirstWriteLatency {
 		load_data_5 {Type I LastRead 0 FirstWrite -1}
 		load_data_6 {Type I LastRead 0 FirstWrite -1}
 		load_data_7 {Type I LastRead 0 FirstWrite -1}
-		load_data_8 {Type I LastRead 0 FirstWrite -1}
-		load_data_9 {Type I LastRead 0 FirstWrite -1}
-		load_data_10 {Type I LastRead 0 FirstWrite -1}
-		load_data_11 {Type I LastRead 0 FirstWrite -1}
-		dout0_0 {Type O LastRead -1 FirstWrite 0}
-		dout0_1 {Type O LastRead -1 FirstWrite 0}
-		dout0_2 {Type O LastRead -1 FirstWrite 0}
-		dout0_3 {Type O LastRead -1 FirstWrite 0}
-		dout0_4 {Type O LastRead -1 FirstWrite 0}
-		dout0_5 {Type O LastRead -1 FirstWrite 0}
-		dout0_6 {Type O LastRead -1 FirstWrite 0}
-		dout0_7 {Type O LastRead -1 FirstWrite 0}
-		dout0_8 {Type O LastRead -1 FirstWrite 0}
-		dout0_9 {Type O LastRead -1 FirstWrite 0}
-		dout0_10 {Type O LastRead -1 FirstWrite 0}
-		dout0_11 {Type O LastRead -1 FirstWrite 0}
-		dout1_0 {Type O LastRead -1 FirstWrite 0}
-		dout1_1 {Type O LastRead -1 FirstWrite 0}
-		dout1_2 {Type O LastRead -1 FirstWrite 0}
-		dout1_3 {Type O LastRead -1 FirstWrite 0}
+		load_data_8 {Type I LastRead 1 FirstWrite -1}
+		load_data_9 {Type I LastRead 1 FirstWrite -1}
+		load_data_10 {Type I LastRead 1 FirstWrite -1}
+		load_data_11 {Type I LastRead 1 FirstWrite -1}
+		dout0_0 {Type O LastRead -1 FirstWrite 1}
+		dout0_1 {Type O LastRead -1 FirstWrite 1}
+		dout0_2 {Type O LastRead -1 FirstWrite 1}
+		dout0_3 {Type O LastRead -1 FirstWrite 1}
+		dout0_4 {Type O LastRead -1 FirstWrite 1}
+		dout0_5 {Type O LastRead -1 FirstWrite 1}
+		dout0_6 {Type O LastRead -1 FirstWrite 1}
+		dout0_7 {Type O LastRead -1 FirstWrite 1}
+		dout0_8 {Type O LastRead -1 FirstWrite 1}
+		dout0_9 {Type O LastRead -1 FirstWrite 1}
+		dout0_10 {Type O LastRead -1 FirstWrite 1}
+		dout0_11 {Type O LastRead -1 FirstWrite 1}
+		dout1_0 {Type O LastRead -1 FirstWrite 1}
+		dout1_1 {Type O LastRead -1 FirstWrite 1}
+		dout1_2 {Type O LastRead -1 FirstWrite 1}
+		dout1_3 {Type O LastRead -1 FirstWrite 1}
 		srst {Type I LastRead 0 FirstWrite -1}
 		load {Type I LastRead 0 FirstWrite -1}
 		en {Type I LastRead 0 FirstWrite -1}
@@ -397,10 +744,19 @@ set ArgLastReadFirstWriteLatency {
 		regs_8_2 {Type IO LastRead -1 FirstWrite -1}
 		regs_8_1 {Type IO LastRead -1 FirstWrite -1}
 		regs_8_0 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg0_regs_7 {Type IO LastRead -1 FirstWrite -1}
 		shift_reg1_regs_2 {Type IO LastRead -1 FirstWrite -1}
-		shift_reg1_regs_3 {Type IO LastRead -1 FirstWrite -1}
 		shift_reg1_regs_1 {Type IO LastRead -1 FirstWrite -1}
 		shift_reg1_regs_0 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg0_regs_6 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg0_regs_5 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg0_regs_4 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg0_regs_3 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg0_regs_2 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg0_regs_1 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg0_regs_0 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg1_regs_3 {Type IO LastRead -1 FirstWrite -1}
+		Sreg_Array {Type X LastRead -1 FirstWrite -1}
 		regs_9_6 {Type IO LastRead -1 FirstWrite -1}
 		regs_9_5 {Type IO LastRead -1 FirstWrite -1}
 		regs_9_4 {Type IO LastRead -1 FirstWrite -1}
@@ -410,15 +766,123 @@ set ArgLastReadFirstWriteLatency {
 		regs_9_0 {Type IO LastRead -1 FirstWrite -1}
 		regs_2 {Type IO LastRead -1 FirstWrite -1}
 		regs_1 {Type IO LastRead -1 FirstWrite -1}
-		regs_0 {Type IO LastRead -1 FirstWrite -1}
-		shift_reg0_regs {Type IO LastRead -1 FirstWrite -1}
-		Sreg_Array {Type X LastRead -1 FirstWrite -1}}}
+		regs_0 {Type IO LastRead -1 FirstWrite -1}}
+	shift_reg_class {
+		din {Type I LastRead 0 FirstWrite -1}
+		load_data_0_read {Type I LastRead 0 FirstWrite -1}
+		load_data_1_read {Type I LastRead 0 FirstWrite -1}
+		load_data_2_read {Type I LastRead 0 FirstWrite -1}
+		load_data_3_read {Type I LastRead 0 FirstWrite -1}
+		load_data_4_read {Type I LastRead 0 FirstWrite -1}
+		load_data_5_read {Type I LastRead 0 FirstWrite -1}
+		load_data_6_read {Type I LastRead 0 FirstWrite -1}
+		load_data_7_read {Type I LastRead 0 FirstWrite -1}
+		srst {Type I LastRead 0 FirstWrite -1}
+		load {Type I LastRead 0 FirstWrite -1}
+		en {Type I LastRead 0 FirstWrite -1}
+		shift_reg0_regs_7 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg1_regs_2 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg1_regs_1 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg1_regs_0 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg0_regs_6 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg0_regs_5 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg0_regs_4 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg0_regs_3 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg0_regs_2 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg0_regs_1 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg0_regs_0 {Type IO LastRead -1 FirstWrite -1}
+		shift_reg1_regs_3 {Type IO LastRead -1 FirstWrite -1}}
+	shift_reg_en {
+		din {Type I LastRead 0 FirstWrite -1}
+		en {Type I LastRead 0 FirstWrite -1}
+		regs_6_10 {Type IO LastRead -1 FirstWrite -1}
+		regs_6_9 {Type IO LastRead -1 FirstWrite -1}
+		regs_6_8 {Type IO LastRead -1 FirstWrite -1}
+		regs_6_7 {Type IO LastRead -1 FirstWrite -1}
+		regs_6_6 {Type IO LastRead -1 FirstWrite -1}
+		regs_6_5 {Type IO LastRead -1 FirstWrite -1}
+		regs_6_4 {Type IO LastRead -1 FirstWrite -1}
+		regs_6_3 {Type IO LastRead -1 FirstWrite -1}
+		regs_6_2 {Type IO LastRead -1 FirstWrite -1}
+		regs_6_1 {Type IO LastRead -1 FirstWrite -1}
+		regs_6_0 {Type IO LastRead -1 FirstWrite -1}
+		regs_6_11 {Type IO LastRead -1 FirstWrite -1}}
+	shift_reg_load {
+		din {Type I LastRead 0 FirstWrite -1}
+		load_data_0_read {Type I LastRead 0 FirstWrite -1}
+		load_data_1_read {Type I LastRead 0 FirstWrite -1}
+		load_data_2_read {Type I LastRead 0 FirstWrite -1}
+		load_data_3_read {Type I LastRead 0 FirstWrite -1}
+		load_data_4_read {Type I LastRead 0 FirstWrite -1}
+		load_data_5_read {Type I LastRead 0 FirstWrite -1}
+		load_data_6_read {Type I LastRead 0 FirstWrite -1}
+		load_data_7_read {Type I LastRead 0 FirstWrite -1}
+		load_data_8_read {Type I LastRead 0 FirstWrite -1}
+		load_data_9_read {Type I LastRead 0 FirstWrite -1}
+		load_data_10_read {Type I LastRead 0 FirstWrite -1}
+		load_data_11_read {Type I LastRead 0 FirstWrite -1}
+		load {Type I LastRead 0 FirstWrite -1}
+		regs_7_10 {Type IO LastRead -1 FirstWrite -1}
+		regs_7_9 {Type IO LastRead -1 FirstWrite -1}
+		regs_7_8 {Type IO LastRead -1 FirstWrite -1}
+		regs_7_7 {Type IO LastRead -1 FirstWrite -1}
+		regs_7_6 {Type IO LastRead -1 FirstWrite -1}
+		regs_7_5 {Type IO LastRead -1 FirstWrite -1}
+		regs_7_4 {Type IO LastRead -1 FirstWrite -1}
+		regs_7_3 {Type IO LastRead -1 FirstWrite -1}
+		regs_7_2 {Type IO LastRead -1 FirstWrite -1}
+		regs_7_1 {Type IO LastRead -1 FirstWrite -1}
+		regs_7_0 {Type IO LastRead -1 FirstWrite -1}}
+	shift_reg_sreset {
+		din {Type I LastRead 0 FirstWrite -1}
+		srst {Type I LastRead 0 FirstWrite -1}
+		regs_8_10 {Type IO LastRead -1 FirstWrite -1}
+		regs_8_9 {Type IO LastRead -1 FirstWrite -1}
+		regs_8_8 {Type IO LastRead -1 FirstWrite -1}
+		regs_8_7 {Type IO LastRead -1 FirstWrite -1}
+		regs_8_6 {Type IO LastRead -1 FirstWrite -1}
+		regs_8_5 {Type IO LastRead -1 FirstWrite -1}
+		regs_8_4 {Type IO LastRead -1 FirstWrite -1}
+		regs_8_3 {Type IO LastRead -1 FirstWrite -1}
+		regs_8_2 {Type IO LastRead -1 FirstWrite -1}
+		regs_8_1 {Type IO LastRead -1 FirstWrite -1}
+		regs_8_0 {Type IO LastRead -1 FirstWrite -1}}
+	shift_reg_ip {
+		din {Type I LastRead 0 FirstWrite -1}
+		en {Type I LastRead 0 FirstWrite -1}
+		Sreg_Array {Type X LastRead -1 FirstWrite -1}}
+	shift_reg_basic {
+		din {Type I LastRead 0 FirstWrite -1}
+		regs_5_10 {Type IO LastRead -1 FirstWrite -1}
+		regs_5_9 {Type IO LastRead -1 FirstWrite -1}
+		regs_5_8 {Type IO LastRead -1 FirstWrite -1}
+		regs_5_7 {Type IO LastRead -1 FirstWrite -1}
+		regs_5_6 {Type IO LastRead -1 FirstWrite -1}
+		regs_5_5 {Type IO LastRead -1 FirstWrite -1}
+		regs_5_4 {Type IO LastRead -1 FirstWrite -1}
+		regs_5_3 {Type IO LastRead -1 FirstWrite -1}
+		regs_5_2 {Type IO LastRead -1 FirstWrite -1}
+		regs_5_1 {Type IO LastRead -1 FirstWrite -1}
+		regs_5_0 {Type IO LastRead -1 FirstWrite -1}}
+	shift_reg_template {
+		din0 {Type I LastRead 0 FirstWrite -1}
+		din1 {Type I LastRead 0 FirstWrite -1}
+		regs_9_6 {Type IO LastRead -1 FirstWrite -1}
+		regs_9_5 {Type IO LastRead -1 FirstWrite -1}
+		regs_9_4 {Type IO LastRead -1 FirstWrite -1}
+		regs_9_3 {Type IO LastRead -1 FirstWrite -1}
+		regs_9_2 {Type IO LastRead -1 FirstWrite -1}
+		regs_9_1 {Type IO LastRead -1 FirstWrite -1}
+		regs_9_0 {Type IO LastRead -1 FirstWrite -1}
+		regs_2 {Type IO LastRead -1 FirstWrite -1}
+		regs_1 {Type IO LastRead -1 FirstWrite -1}
+		regs_0 {Type IO LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "1", "Max" : "12"}
-	, {"Name" : "Interval", "Min" : "2", "Max" : "13"}
+	{"Name" : "Latency", "Min" : "1", "Max" : "13"}
+	, {"Name" : "Interval", "Min" : "2", "Max" : "14"}
 ]}
 
 set PipelineEnableSignalInfo {[

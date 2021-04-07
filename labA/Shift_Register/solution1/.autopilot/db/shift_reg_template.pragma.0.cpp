@@ -6640,6 +6640,7 @@ void shift_reg_template(dType din0,
                         dType dout0[8],
                         int dout1[4])
 {_ssdm_SpecArrayDimSize(dout0, 8);_ssdm_SpecArrayDimSize(dout1, 4);
-    shift_reg<1, dType, 8>(din0, dout0);
+#pragma HLS INLINE off
+ shift_reg<1, dType, 8>(din0, dout0);
     shift_reg<2, int, 4>(din1, dout1);
 }

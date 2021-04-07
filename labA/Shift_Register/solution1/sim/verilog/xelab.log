@@ -9,22 +9,38 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Repo/hls/labA/Shift_Regist
 INFO: [VRFC 10-311] analyzing module apatb_shift_reg_top
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Repo/hls/labA/Shift_Register/solution1/sim/verilog/shift_reg.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module shift_reg
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Repo/hls/labA/Shift_Register/solution1/sim/verilog/shift_reg_shift_rbkb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module shift_reg_shift_rbkb_ram
-INFO: [VRFC 10-311] analyzing module shift_reg_shift_rbkb
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Repo/hls/labA/Shift_Register/solution1/sim/verilog/shift_reg_Sreg_Arcud.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module shift_reg_Sreg_Arcud_core
-INFO: [VRFC 10-311] analyzing module shift_reg_Sreg_Arcud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Repo/hls/labA/Shift_Register/solution1/sim/verilog/shift_reg_basic.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shift_reg_basic
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Repo/hls/labA/Shift_Register/solution1/sim/verilog/shift_reg_class.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shift_reg_class
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Repo/hls/labA/Shift_Register/solution1/sim/verilog/shift_reg_en.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shift_reg_en
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Repo/hls/labA/Shift_Register/solution1/sim/verilog/shift_reg_ip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shift_reg_ip
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Repo/hls/labA/Shift_Register/solution1/sim/verilog/shift_reg_ip_Sregbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shift_reg_ip_Sregbkb_core
+INFO: [VRFC 10-311] analyzing module shift_reg_ip_Sregbkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Repo/hls/labA/Shift_Register/solution1/sim/verilog/shift_reg_load.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shift_reg_load
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Repo/hls/labA/Shift_Register/solution1/sim/verilog/shift_reg_sreset.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shift_reg_sreset
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Repo/hls/labA/Shift_Register/solution1/sim/verilog/shift_reg_template.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shift_reg_template
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.shift_reg_shift_rbkb_ram
-Compiling module xil_defaultlib.shift_reg_shift_rbkb(DataWidth=8...
-Compiling module xil_defaultlib.shift_reg_Sreg_Arcud_core(DATA_W...
-Compiling module xil_defaultlib.shift_reg_Sreg_Arcud(DataWidth=3...
+Compiling module xil_defaultlib.shift_reg_class
+Compiling module xil_defaultlib.shift_reg_en
+Compiling module xil_defaultlib.shift_reg_load
+Compiling module xil_defaultlib.shift_reg_sreset
+Compiling module xil_defaultlib.shift_reg_ip_Sregbkb_core(DATA_W...
+Compiling module xil_defaultlib.shift_reg_ip_Sregbkb(DataWidth=3...
+Compiling module xil_defaultlib.shift_reg_ip
+Compiling module xil_defaultlib.shift_reg_basic
+Compiling module xil_defaultlib.shift_reg_template
 Compiling module xil_defaultlib.shift_reg
 Compiling module xil_defaultlib.apatb_shift_reg_top
 Compiling module work.glbl

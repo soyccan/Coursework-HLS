@@ -2,6 +2,8 @@
 
 void shift_reg_en(dType din, dType dout[N_REGS], bool en)
 {
+#pragma HLS INLINE off
+
     static dType regs[N_REGS];
 
 SHIFT:

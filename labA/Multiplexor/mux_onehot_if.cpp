@@ -2,6 +2,7 @@
 
 dType mux_onehot_if(dType din[N_REGS], ap_uint<N_REGS> sel)
 {
+#pragma HLS INLINE off
     dType tmp;
     if (sel == 1)
         tmp = din[0];

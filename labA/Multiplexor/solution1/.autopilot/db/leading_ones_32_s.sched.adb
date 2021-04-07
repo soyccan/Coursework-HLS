@@ -47,7 +47,7 @@
 					<Obj>
 						<type>0</type>
 						<id>2</id>
-						<name>din_V_read_1</name>
+						<name>din_V_read_2</name>
 						<fileName>Multiplexor/leading_ones_tmpl.h</fileName>
 						<fileDirectory>D:\Repo\hls\labA</fileDirectory>
 						<lineNumber>9</lineNumber>
