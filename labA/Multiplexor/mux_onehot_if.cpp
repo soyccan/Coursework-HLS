@@ -1,6 +1,6 @@
 #include "mux.h"
 
-dType mux_onehot_if(dType din[N_REGS], sType sel)
+dType mux_onehot_if(dType din[N_REGS], ap_uint<N_REGS> sel)
 {
     dType tmp;
     if (sel == 1)
@@ -11,6 +11,14 @@ dType mux_onehot_if(dType din[N_REGS], sType sel)
         tmp = din[2];
     else if (sel == 8)
         tmp = din[3];
+    else if (sel == 16)
+        tmp = din[4];
+    else if (sel == 32)
+        tmp = din[5];
+    else if (sel == 64)
+        tmp = din[6];
+    else if (sel == 128)
+        tmp = din[7];
     else
         tmp = 0;
     return tmp;

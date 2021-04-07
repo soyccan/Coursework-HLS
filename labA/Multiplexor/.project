@@ -37,6 +37,21 @@
 			<location>D:/Repo/hls/labA/Multiplexor/.apc/.tb</location>
 		</link>
 		<link>
+			<name>.reference/ap_common.h</name>
+			<type>1</type>
+			<location>C:/Xilinx/Vivado/2019.2/include/ap_common.h</location>
+		</link>
+		<link>
+			<name>.reference/ap_int.h</name>
+			<type>1</type>
+			<location>C:/Xilinx/Vivado/2019.2/include/ap_int.h</location>
+		</link>
+		<link>
+			<name>.reference/ap_int_base.h</name>
+			<type>1</type>
+			<location>C:/Xilinx/Vivado/2019.2/include/ap_int_base.h</location>
+		</link>
+		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
 			<location>D:/Repo/hls/labA/Multiplexor/solution1/.tcls</location>
@@ -60,6 +75,11 @@
 			<name>source/leading_ones_log2.cpp</name>
 			<type>1</type>
 			<location>D:/Repo/hls/labA/Multiplexor/leading_ones_log2.cpp</location>
+		</link>
+		<link>
+			<name>source/leading_ones_template.cpp</name>
+			<type>1</type>
+			<location>D:/Repo/hls/labA/Multiplexor/leading_ones_template.cpp</location>
 		</link>
 		<link>
 			<name>source/leading_ones_tmpl.h</name>
@@ -130,6 +150,16 @@
 			<name>source/nextpow2.h</name>
 			<type>1</type>
 			<location>D:/Repo/hls/labA/Multiplexor/nextpow2.h</location>
+		</link>
+		<link>
+			<name>source/top.cpp</name>
+			<type>1</type>
+			<location>D:/Repo/hls/labA/Multiplexor/top.cpp</location>
+		</link>
+		<link>
+			<name>testbench/testbench.cpp</name>
+			<type>1</type>
+			<location>D:/Repo/hls/labA/Multiplexor/testbench.cpp</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>

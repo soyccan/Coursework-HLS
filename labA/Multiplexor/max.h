@@ -1,7 +1,7 @@
 #ifndef __MAX__
 #define __MAX__
 
-#define N_REGS 4
+#define N_REGS 8
 
 void max(int din[N_REGS], int &dout);
 

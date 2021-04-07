@@ -1,6 +1,6 @@
 #include "mux.h"
 
-dType mux_onehot(dType din[N_REGS], sType sel)
+dType mux_onehot(dType din[N_REGS], ap_uint<N_REGS> sel)
 {
     dType tmp;
     switch (sel) {
@@ -15,6 +15,18 @@ dType mux_onehot(dType din[N_REGS], sType sel)
         break;
     case 8:
         tmp = din[3];
+        break;
+    case 16:
+        tmp = din[4];
+        break;
+    case 32:
+        tmp = din[5];
+        break;
+    case 64:
+        tmp = din[6];
+        break;
+    case 128:
+        tmp = din[7];
         break;
     default:
         tmp = 0;

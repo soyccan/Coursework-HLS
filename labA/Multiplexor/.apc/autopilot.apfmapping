@@ -19,6 +19,10 @@
     <originFiles name="mux_onehot.cpp" path="D:\Repo\hls\labA\Multiplexor\mux_onehot.cpp"/>
     <originFiles name="mux_onehot_if.cpp" path="D:\Repo\hls\labA\Multiplexor\mux_onehot_if.cpp"/>
     <originFiles name="nextpow2.h" path="D:\Repo\hls\labA\Multiplexor\nextpow2.h"/>
+    <originFiles name="top.cpp" path="D:\Repo\hls\labA\Multiplexor\top.cpp"/>
+    <originFiles name="leading_ones_template.cpp" path="D:\Repo\hls\labA\Multiplexor\leading_ones_template.cpp"/>
   </source>
-  <testbench/>
+  <testbench>
+    <originFiles name="testbench.cpp" path="D:\Repo\hls\labA\Multiplexor\testbench.cpp"/>
+  </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>
