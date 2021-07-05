@@ -53,3 +53,11 @@ Task: OpenCL application running on Xilinx Alveo U50
 Topics:
 - Interacting host and FPGA acceleration card with OpenCL API
 - Profiling and analysis for performance with Xilinx Vitis Analyzer
+
+## Final Project
+
+[Burrows-Wheeler Aligner](https://github.com/soyccan/bwa_hls)
+
+A DNA short read aligner.
+
+
