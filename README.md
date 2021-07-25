@@ -1,10 +1,15 @@
 # High-Level Systhesis, 2021 Spring, NTU CSIE
 
-This repository stores the work for project and assignments of the course
+Assignments of the course
 Advanced Computer Architecture (CSIE5059), and its High-Level Synthesis Lab, 
-instructed by Pr. CL Yang (楊佳玲) and Pr. Jiin Lai (賴瑾), 2021 Spring, 
-Department of Computer Science and Information Engineering, National Taiwan
-University
+instructed by Pr. CL Yang (楊佳玲) and Pr. Jiin Lai (賴瑾), 2021 Spring,
+National Taiwan University
+
+- IDE: Xilinx Vivado/Vivado HLS 2019.2 Webpack (free)
+- Board: [PYNQ-Z2](https://www.tul.com.tw/ProductsPYNQ-Z2.html)
+    - SoC: ZYNQ XC7Z020-1CLG400C
+    - FPGA: Artix-7
+- [PYNQ Documentation](https://pynq.readthedocs.io)
 
 ## Lab 1
 Task: 32-bit Multiplier on PYNQ-Z2
@@ -12,7 +17,7 @@ Task: 32-bit Multiplier on PYNQ-Z2
 Topics:
 - Environment setup
     - Vivado and Vivado HLS
-    - PYNQ-Z2
+    - [PYNQ-Z2 board file for Vivado](https://dpoauwgwqsy2x.cloudfront.net/Download/pynq-z2.zip)
 - High-level synthesis with Vivado HLS
 - Kernel IO Interface
     - Block-level protocol
